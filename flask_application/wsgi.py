@@ -7,4 +7,4 @@ site.addsitedir(os.path.dirname(__file__))
 
 logging.basicConfig(stream = sys.stderr)
 
-from web import app as application
+from flask_application import app as application
