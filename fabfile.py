@@ -50,11 +50,10 @@ def pre_deploy():
 @task
 def deploy():
     global code_dir
-    '''Final deployment of the application'''
+    '''Final deployment of the application to Heroku'''
     with cd(code_dir):
         run("git pull")
-        run("touch flask_application.wsgi")
-        # run("sudo apachectl restart")
+        run("git push heroku master")
 
 
 @task
@@ -77,7 +76,7 @@ def env_init(site_name=SITE_NAME):
     import random
     import string
 
-    CHARS = string.letters + string.digits
+    `CHARS = string.letters + string.digits
     SECRET_KEY = "".join([random.choice(CHARS) for i in range(50)])
 
     print blue("Configuring the secret key...")
