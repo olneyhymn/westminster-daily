@@ -99,7 +99,8 @@ def page_not_found(e):
 
 @app.route('/')
 def render_today():
-    return render_content(*get_today_content())
+    page_title = "A Daily Reading"
+    return render_content(*get_today_content(), page_title=page_title)
 
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
@@ -111,7 +112,7 @@ def render_day(month, day):
     return render_content(month, day, content)
 
 
-def render_content(month, day, content):
+def render_content(month, day, content, page_title=None):
     get_date(month, day)
     if content[0].abbv == "wcf":
         assert len(content) == 1
@@ -119,16 +120,22 @@ def render_content(month, day, content):
         chapter = content.data.keys()[0]
         section = content.data.values()[0].keys()[0]
         body = content.data[chapter][section]
+        if page_title is None:
+            page_title = "{} {}.{}".format(content.doc_title, chapter, section)
         return render_template('confession_t.html',
                                title=content.doc_title,
                                chapter=chapter,
                                section=section,
                                content=body,
-                               date=get_date(month, day))
+                               date=get_date(month, day),
+                               page_title=page_title)
     else:
+        if page_title is None:
+            page_title = ', '.join(["{} Q. {}".format(c.abbv.upper(), c.data.keys()[0]) for c in content])
         return render_template('catechism_t.html',
                                content=content,
-                               date=get_date(month, day))
+                               date=get_date(month, day),
+                               page_title=page_title)
 
 def get_date(month, day):
     now = dt.datetime.now()
