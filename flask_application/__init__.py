@@ -53,7 +53,7 @@ def after_request(response):
 
 @app.context_processor
 def inject_site_defaults():
-    return dict(site_title="Daily Westminster")
+    return dict(site_title="Westminster Standards")
 
 
 def next_datetime(date):
