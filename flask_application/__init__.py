@@ -57,23 +57,27 @@ def inject_site_defaults():
 
 
 def next_datetime(date):
-    return format_datetime(parser.parse(date) + dt.timedelta(days=1))
+    return format_datetime(parser.parse(date) + dt.timedelta(days=1), post=" > ")
 
 
 def prev_datetime(date):
-    return format_datetime(parser.parse(date) - dt.timedelta(days=1))
+    return format_datetime(parser.parse(date) - dt.timedelta(days=1), pre=" < ")
 
 
 def today_datetime(date):
     return format_datetime(parser.parse(date))
 
 
-def format_datetime(date):
-    return Markup("<a href=\"/{month}/{day}\">{Month} {Day}</a>".format(
+def format_datetime(date, pre=None, post=None):
+    pre = "" if pre is None else pre
+    post = "" if post is None else post
+    return Markup("<a href=\"/{month}/{day}\">{pre}{Month} {Day}{post}</a>".format(
             month=date.strftime('%m'),
             day=date.strftime('%d'),
-            Month=date.strftime("%-B"),
+            Month=date.strftime("%-b"),
             Day=date.strftime("%-d"),
+            pre=pre,
+            post=post,
         ))
 
 app.jinja_env.filters['today'] = today_datetime
