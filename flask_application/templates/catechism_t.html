@@ -1,7 +1,7 @@
 {% extends "base_t2.html" %}
 {% block content %}
     {% for type, doc_name, excerpt in content %}
-        <h3>{{ doc_name }} </h3>
+        <h5>{{ doc_name }} </h5>
         <p>Q {{ excerpt.keys()[0] }}. {{ excerpt.values()[0]['question'] }}</p>
         <p>A. {{ excerpt.values()[0]['answer'] }}</p>
     {% endfor %}
