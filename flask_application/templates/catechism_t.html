@@ -1,6 +1,6 @@
 {% extends "base_t2.html" %}
 {% block content %}
-    {% for type, doc_name, excerpt in content %}
+    {% for _, doc_name, excerpt in content %}
         <h5>{{ doc_name }} </h5>
         <p class='question half-bottom'><span class="q">Q. {{ excerpt.keys()[0] }}</span>
         {{ excerpt.values()[0]['question'] | safe}}</p>
