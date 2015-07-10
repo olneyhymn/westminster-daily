@@ -1,7 +1,9 @@
 import datetime as dt
 import os
 
+from dateutil import parser
 from flask import Flask, session, render_template, request_started
+from flask import Markup
 from werkzeug import SharedDataMiddleware
 from werkzeug.routing import BaseConverter
 
@@ -54,20 +56,46 @@ def inject_site_defaults():
     return dict(site_title="Daily Westminster")
 
 
+def next_datetime(date):
+    return format_datetime(parser.parse(date) + dt.timedelta(days=1))
+
+
+def prev_datetime(date):
+    return format_datetime(parser.parse(date) - dt.timedelta(days=1))
+
+
+def today_datetime(date):
+    return format_datetime(parser.parse(date))
+
+
+def format_datetime(date):
+    return Markup("<a href=\"/{month}/{day}\">{Month} {Day}</a>".format(
+            month=date.strftime('%m'),
+            day=date.strftime('%d'),
+            Month=date.strftime("%-B"),
+            Day=date.strftime("%-d"),
+        ))
+
+app.jinja_env.filters['today'] = today_datetime
+app.jinja_env.filters['tomorrow'] = next_datetime
+app.jinja_env.filters['yesterday'] = prev_datetime
+
+
+
 def get_today_content():
     month = dt.datetime.today().month
     day = dt.datetime.today().day
-    return data.get_day(month, day)
+    return month, day, data.get_day(month, day)
 
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_content(get_today_content()), 404
+    return render_content(*get_today_content()), 404
 
 
 @app.route('/')
 def render_today():
-    return render_content(get_today_content())
+    return render_content(*get_today_content())
 
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
@@ -76,10 +104,11 @@ def render_day(month, day):
         content = data.get_day(month, day)
     except:
         content = get_today_content()
-    return render_content(content)
+    return render_content(month, day, content)
 
 
-def render_content(content):
+def render_content(month, day, content):
+    get_date(month, day)
     if content[0].abbv == "wcf":
         assert len(content) == 1
         content = content[0]
@@ -90,7 +119,14 @@ def render_content(content):
                                title=content.doc_title,
                                chapter=chapter,
                                section=section,
-                               content=body)
+                               content=body,
+                               date=get_date(month, day))
     else:
         return render_template('catechism_t.html',
-                               content=content)
+                               content=content,
+                               date=get_date(month, day))
+
+def get_date(month, day):
+    now = dt.datetime.now()
+    date = dt.date(now.year, int(month), int(day))
+    return date

@@ -6,9 +6,9 @@ from collections import namedtuple, OrderedDict
 
 
 catechisms = {
-    "wcf": "Westminster Confession of Faith",
-    "wlc": "Westminster Larger Catechsim",
-    "wsc": "Westminster Shorter Catechsim",
+    "wcf": "Confession of Faith",
+    "wlc": "Larger Catechsim",
+    "wsc": "Shorter Catechsim",
 }
 
 

@@ -76,7 +76,7 @@ def env_init(site_name=SITE_NAME):
     import random
     import string
 
-    `CHARS = string.letters + string.digits
+    CHARS = string.letters + string.digits
     SECRET_KEY = "".join([random.choice(CHARS) for i in range(50)])
 
     print blue("Configuring the secret key...")

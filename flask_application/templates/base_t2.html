@@ -1,8 +1,24 @@
 
 {% extends "base_t.html" %}
 {% block body %}
+    <div class="row">
     <div class="eight columns offset-by-four">
-        {% block content %}
-        {% endblock %}
+        <h1  style="text-align:center;">Westminster Daily</h1>
+    </div>
+    </div>
+    <div class="row">
+        <div class="eight columns offset-by-four" style="text-align:center;">
+            <p>
+            {{ date.strftime('%b %-d') | yesterday }} ~
+            {{ date.strftime('%b %-d') | today }} ~
+            {{ date.strftime('%b %-d') | tomorrow }}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="eight columns offset-by-four">
+            {% block content %}
+            {% endblock %}
+        </div>
     </div>
 {% endblock %}
