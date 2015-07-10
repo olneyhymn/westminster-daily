@@ -2,8 +2,9 @@
 {% block content %}
     {% for type, doc_name, excerpt in content %}
         <h5>{{ doc_name }} </h5>
-        <p>Q {{ excerpt.keys()[0] }}. {{ excerpt.values()[0]['question'] }}</p>
-        <p>A. {{ excerpt.values()[0]['answer'] }}</p>
+        <p class='question half-bottom'><span class="q">Q. {{ excerpt.keys()[0] }}</span>
+        {{ excerpt.values()[0]['question'] }}</p>
+        <p class='answer'>{{ excerpt.values()[0]['answer'] }}</p>
     {% endfor %}
 {% endblock %}
 

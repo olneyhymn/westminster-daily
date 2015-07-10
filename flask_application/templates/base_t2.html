@@ -3,7 +3,7 @@
 {% block body %}
     <div class="row">
         <div class="eight columns offset-by-four" style="text-align:center;">
-            <p>
+            <p class='remove-bottom'>
             {{ date.strftime('%b %-d') | yesterday }} ~
             {{ date.strftime('%b %-d') | today }} ~
             {{ date.strftime('%b %-d') | tomorrow }}

@@ -74,7 +74,7 @@
 	h6 { font-size: 14px; line-height: 21px; }
 	.subheader { color: #777; }
 
-	p { margin: 0 0 5px 0; }
+	p { margin: 0 0 20px 0; }
 	p img { margin: 0; }
 	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
 
@@ -265,5 +265,21 @@
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
+
+/* Custom
+================================================== */
+	.answer {
+		border-left: 1px solid rgba(0,0,0,.2);
+		padding-left: 7px;
+	}
+
+	.question {
+
+	}
+
+	.q {
+		font-size: 120%;
+		color: rgba(0,0,0,.6);
+	}
 
 
