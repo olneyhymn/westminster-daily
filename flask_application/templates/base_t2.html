@@ -2,11 +2,6 @@
 {% extends "base_t.html" %}
 {% block body %}
     <div class="row">
-    <div class="eight columns offset-by-four">
-        <h1  style="text-align:center;">Westminster Daily</h1>
-    </div>
-    </div>
-    <div class="row">
         <div class="eight columns offset-by-four" style="text-align:center;">
             <p>
             {{ date.strftime('%b %-d') | yesterday }} ~
