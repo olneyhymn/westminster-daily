@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/tdhopper/westminster-daily/badges/gpa.svg)](https://codeclimate.com/github/tdhopper/westminster-daily) [![Test Coverage](https://codeclimate.com/github/tdhopper/westminster-daily/badges/coverage.svg)](https://codeclimate.com/github/tdhopper/westminster-daily/coverage)
+
 Flask-Boilerplate
 ======================
 
