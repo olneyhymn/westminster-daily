@@ -21,3 +21,4 @@ pycrypto==2.6
 python-memcached==1.48
 paramiko
 sh
+pytest
