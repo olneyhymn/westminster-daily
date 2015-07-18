@@ -41,7 +41,6 @@ def get_confession(name, chapter, section):
             "body": wcf[chapter]['body'][section],
         }
     except:
-        print "error!", chapter, section
         raise Exception("Cannot find confession.")
 
 
@@ -150,7 +149,7 @@ plan = ([('WSC', 1), ('WLC', 1)], [('WCF', 1, 1)], [('WLC', 2)], [('WCF', 1, 2)]
         [('WSC', 88), ('WLC', 154)], [('WSC', 89), ('WLC', 155)], [('WLC', 156)],
         [('WSC', 90), ('WLC', 157)], [('WLC', 158)], [('WLC', 159)], [('WLC', 160)],
         [('WCF', 27, 1)], [('WSC', 92), ('WLC', 162)], [('WCF', 27, 2), ('WLC', 163)],
-        [('WCF', 27, 3)], [('WLC', 161), ('WSC,', 91)], [('WCF', 2, 4)], [('WSC', 93), ('WLC', 164)],
+        [('WCF', 27, 3)], [('WLC', 161), ('WSC', 91)], [('WCF', 27, 4)], [('WSC', 93), ('WLC', 164)],
         [('WCF', 27, 5)], [('WCF', 28, 1)], [('WSC', 94), ('WLC', 165)], [('WCF', 28, 2)],
         [('WCF', 28, 3)], [('WCF', 28, 4)], [('WSC', 95), ('WLC', 166)], [('WCF', 28, 5)],
         [('WCF', 28, 6)], [('WCF', 28, 7)], [('WLC', 167)], [('WCF', 29, 1)],
