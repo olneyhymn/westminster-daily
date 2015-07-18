@@ -13,4 +13,5 @@ if sys.flags.interactive:
 elif __name__ == '__main__':
     from flask_application import app
     app.debug = True
+    app.config['DEBUG'] = True
     app.run(host = "0.0.0.0", port = 8080)
