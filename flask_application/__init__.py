@@ -85,7 +85,7 @@ def render_day(month, day):
                                                        path=request.path,
                                                        month=month,
                                                        day=day)
-    return render_content(month, day, content, url=url)
+    return render_content(month, day, content, url=url, static=True)
 
 
 # Render page for generating facebook/twitter images
@@ -96,7 +96,8 @@ def render_image_page(month, day):
 
 
 # Render main page
-def render_content(month, day, content, page_title=None, template='content_page_t.html', url=None):
+def render_content(month, day, content, page_title=None,
+                   template='content_page_t.html', url=None, static=False):
     if page_title is None:
         page_title = ", ".join(c['citation'] for c in content)
     description = ", ".join(c['long_citation'] for c in content)
@@ -105,7 +106,8 @@ def render_content(month, day, content, page_title=None, template='content_page_
                            date=get_date(month, day),
                            page_title=page_title,
                            description=description,
-                           url=url)
+                           url=url,
+                           static=static)
 
 
 def get_date(month, day):
