@@ -39,6 +39,7 @@ def get_confession(name, chapter, section):
             "chapter": chapter,
             "paragraph": section,
             "citation": "{} {}.{}".format(name.upper(), chapter, section),
+            "long_citation": "{} {}.{}".format(catechisms[name], chapter, section),
             "body": wcf[chapter]['body'][section],
         }
     except:
@@ -58,6 +59,7 @@ def get_catechism(name, question):
             "name": catechisms[name],
             "section_title": "",
             "citation": "{} {}".format(name.upper(), question),
+            "long_citation": "{} {}".format(catechism[name], question),
             "number": question,
             "question": catechism[question]["question"],
             "answer": catechism[question]["answer"],

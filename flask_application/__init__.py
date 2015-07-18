@@ -122,6 +122,7 @@ def render_image_page(month, day):
 def render_content(month, day, content, page_title=None, template='content_page_t.html'):
     if page_title is None:
         page_title = ", ".join(c['citation'] for c in content)
+    description = ", ".join(c['long_citation'] for c in content)
     url = "http://{host}/{month:0>2}/{day:0>2}".format(host=request.host,
                                                path=request.path,
                                                month=month,
@@ -130,6 +131,7 @@ def render_content(month, day, content, page_title=None, template='content_page_
                            content=content,
                            date=get_date(month, day),
                            page_title=page_title,
+                           description=description,
                            url=url)
 
 
