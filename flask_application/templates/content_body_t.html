@@ -1,27 +1,27 @@
-    <div class="row">
-        <div class="eight columns offset-by-four" style="text-align:center;">
-            <p class='remove-bottom'>
-            <strong>
-            {{ date.strftime('%b %-d') | yesterday }} —
-            {{ date.strftime('%b %-d') | today }} —
-            {{ date.strftime('%b %-d') | tomorrow }}
-            </strong>
-            </p>
-        </div>
+<div class="row">
+    <div class="eight columns offset-by-four" style="text-align:center;">
+        <p class='remove-bottom'>
+        <strong>
+        {{ date.strftime('%b %-d') | yesterday }} —
+        {{ date.strftime('%b %-d') | today }} —
+        {{ date.strftime('%b %-d') | tomorrow }}
+        </strong>
+        </p>
     </div>
-    <div class="row remove-bottom">
-        <div class="eight columns offset-by-four remove-bottom">
-            {% for c in content %}
-                <h5 class="half-bottom">{{ c['name'] }} </h5>
-                {% include c['type'] + '_t.html' %}
-            {% endfor %}
-            {% if static %}
-            <div id="sharing" class="social">
-                <div class="Facebook fb-share-button" data-href="{{ url }}/" data-layout="button"></div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a class="twitter twitter-share-button" href="{{ url }}" data-count=none>
+</div>
+<div class="row remove-bottom">
+    <div class="eight columns offset-by-four remove-bottom">
+        {% for c in content %}
+            <h5 class="half-bottom">{{ c['name'] }} </h5>
+            {% include c['type'] + '_t.html' %}
+        {% endfor %}
+        {% if static %}
+        <div id="sharing" class="social">
+            <div class="Facebook fb-share-button" data-href="{{ url }}/" data-layout="button"></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="twitter twitter-share-button" href="{{ url }}" data-count=none>
 Tweet</a>
-            </div>
-            {% endif %}
         </div>
+        {% endif %}
     </div>
+</div>
