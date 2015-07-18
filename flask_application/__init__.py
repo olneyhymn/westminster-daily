@@ -1,14 +1,24 @@
 import datetime as dt
+import os
 
 from dateutil import parser
 from flask import Flask, render_template
-from flask import Markup, request
+from flask import Markup, request, request_started
+from werkzeug import SharedDataMiddleware
 from werkzeug.routing import BaseConverter
 
 import data
 
 # create our application
 app = Flask(__name__)
+
+
+# Source: http://www.jeffff.com/serving-media-in-the-flask-local-dev-server:w
+def serve_static(sender):
+    if app.config['DEBUG']:
+        app.wsgi_app = SharedDataMiddleware(app.wsgi_app,
+                                            {'/': os.path.join(os.path.dirname(__file__), 'static')})
+request_started.connect(serve_static, app)
 
 
 class RegexConverter(BaseConverter):
