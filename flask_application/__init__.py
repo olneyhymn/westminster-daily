@@ -75,14 +75,19 @@ def page_not_found(e):
 def render_today():
     page_title = "A Daily Reading"
     content = get_today_content()
-    return render_content(*content, page_title=page_title)
+    url = "http://{host}/".format(host=request.host)
+    return render_content(*content, page_title=page_title, url=url)
 
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>/')
 def render_day(month, day):
     content = data.get_day(month, day)
-    return render_content(month, day, content)
+    url = "http://{host}/{month:0>2}/{day:0>2}".format(host=request.host,
+                                                       path=request.path,
+                                                       month=month,
+                                                       day=day)
+    return render_content(month, day, content, url=url)
 
 
 # Render page for generating facebook/twitter images
@@ -93,14 +98,10 @@ def render_image_page(month, day):
 
 
 # Render main page
-def render_content(month, day, content, page_title=None, template='content_page_t.html'):
+def render_content(month, day, content, page_title=None, template='content_page_t.html', url=None):
     if page_title is None:
         page_title = ", ".join(c['citation'] for c in content)
     description = ", ".join(c['long_citation'] for c in content)
-    url = "http://{host}/{month:0>2}/{day:0>2}".format(host=request.host,
-                                                       path=request.path,
-                                                       month=month,
-                                                       day=day)
     return render_template(template,
                            content=content,
                            date=get_date(month, day),
