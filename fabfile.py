@@ -131,8 +131,8 @@ def skeletonize():
     os.chdir(PROJ_DIR + "/skeleton")
     # sh.git.pull("origin", "master")
     sh.rsync("-av", "images", "{0}/{1}/static/".format(PROJ_DIR, APP_NAME))
-    sh.rsync("-av", "stylesheets",  "{0}/{1}/static/".format(PROJ_DIR, APP_NAME))
-    sh.rsync("-av", "index.html",  "{0}/{1}/templates/base_t.html".format(PROJ_DIR, APP_NAME))
+    sh.rsync("-av", "stylesheets", "{0}/{1}/static/".format(PROJ_DIR, APP_NAME))
+    sh.rsync("-av", "index.html", "{0}/{1}/templates/base_t.html".format(PROJ_DIR, APP_NAME))
     os.chdir(PROJ_DIR)
 
     # Patch the base template with templating tags
@@ -177,11 +177,11 @@ def build_images(month):
     for date in (dt.datetime(2004, int(month), 01) + dt.timedelta(n) for n in range(31)):
         webkit2png = sh.Command("/usr/local/bin/webkit2png")
         p = webkit2png(date.strftime('http://0.0.0.0:8080/i/%m/%d'),
-                   selector="#content",
-                   filename=date.strftime('%m%d'),
-                   fullsize=True,
-                   dir="flask_application/static/images/docs/",
-                   )
+                       selector="#content",
+                       filename=date.strftime('%m%d'),
+                       fullsize=True,
+                       dir="flask_application/static/images/docs/",
+                       )
         print p.ran
         print "stdout: ", p.stdout
         print "stderr: ", p.stderr
