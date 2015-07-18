@@ -20,3 +20,4 @@ ssh==1.7.14
 pycrypto==2.6
 python-memcached==1.48
 paramiko
+sh
