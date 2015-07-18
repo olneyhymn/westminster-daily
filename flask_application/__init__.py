@@ -115,7 +115,7 @@ def render_day(month, day):
 def render_content(month, day, content, page_title=None):
     if page_title is None:
         page_title = ", ".join(c['citation'] for c in content)
-    return render_template('base_t2.html',
+    return render_template('content_page_t.html',
                            content=content,
                            date=get_date(month, day),
                            page_title=page_title)
