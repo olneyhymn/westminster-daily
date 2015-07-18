@@ -25,10 +25,10 @@
 <body>
 <div class="container">
     <div class="row">
-    <div style="width:600px;height:320px;overflow: hidden;padding:20px;" id="content">
-        <h4>Westminster Daily</h4>
+    <div style="width:600px;height:320px;overflow: hidden;padding:20px;font-size:125%;" id="content">
+        <h2>Westminster Daily</h2>
         {% for c in content %}
-            <h5 class="half-bottom">{{ c['name'] }} </h5>
+            <h4 class="half-bottom">{{ c['name'] }} </h4>
             {% include c['type'] + '_t.html' %}
         {% endfor %}
     </div>
