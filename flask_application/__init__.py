@@ -3,7 +3,7 @@ import os
 
 from dateutil import parser
 from flask import Flask, session, render_template, request_started
-from flask import Markup
+from flask import Markup, abort
 from werkzeug import SharedDataMiddleware
 from werkzeug.routing import BaseConverter
 
@@ -92,33 +92,28 @@ def get_today_content():
     return month, day, data.get_day(month, day)
 
 
-@app.errorhandler(404)
+@app.errorhandler(data.DataException)
 def page_not_found(e):
-    return render_content(*get_today_content()), 404
+    return render_template('404_t.html', message=e.message), 404
 
 
 @app.route('/')
 def render_today():
     page_title = "A Daily Reading"
-    return render_content(*get_today_content(), page_title=page_title)
+    content = get_today_content()
+    return render_content(*content, page_title=page_title)
 
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
 def render_day(month, day):
-    try:
-        content = data.get_day(month, day)
-    except:
-        content = get_today_content()
+    content = data.get_day(month, day)
     return render_content(month, day, content)
 
 
 # Render page for generating facebook/twitter images
 @app.route('/i/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
 def render_image_page(month, day):
-    try:
-        content = data.get_day(month, day)
-    except:
-        content = get_today_content()
+    content = data.get_day(month, day)
     return render_content(month, day, content, template='image_t.html')
 
 

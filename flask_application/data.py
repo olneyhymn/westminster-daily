@@ -2,7 +2,7 @@ import datetime as dt
 import simplejson as json
 import os
 
-from collections import namedtuple, OrderedDict
+from collections import OrderedDict
 
 
 catechisms = {
@@ -12,7 +12,8 @@ catechisms = {
 }
 
 
-Excerpt = namedtuple("Excerpt", "abbv doc_title data")
+class DataException(Exception):
+    pass
 
 
 def get(name, *args):
@@ -27,9 +28,9 @@ def get_confession(name, chapter, section):
     section = str(section)
     root_path = os.path.dirname(os.path.realpath(__file__))
     json_path = os.path.join(root_path, "static/confessions/{}.json".format("wcf"))
-    with open(json_path, "r") as f:
-        wcf = json.load(f, object_pairs_hook=OrderedDict)
     try:
+        with open(json_path, "r") as f:
+            wcf = json.load(f, object_pairs_hook=OrderedDict)
         return {
             "type": "confession",
             "abbv": name,
@@ -41,16 +42,16 @@ def get_confession(name, chapter, section):
             "body": wcf[chapter]['body'][section],
         }
     except:
-        raise Exception("Cannot find confession.")
+        raise DataException("Cannot find data for {} {}.{}.".format(name.upper(), chapter, section))
 
 
 def get_catechism(name, question):
     question = str(question)
     root_path = os.path.dirname(os.path.realpath(__file__))
     json_path = os.path.join(root_path, "static/confessions/{}.json".format(name))
-    with open(json_path, "r") as f:
-        catechism = json.load(f, object_pairs_hook=OrderedDict)
     try:
+        with open(json_path, "r") as f:
+            catechism = json.load(f, object_pairs_hook=OrderedDict)
         return {
             "type": "catechism",
             "abbv": name,
@@ -62,7 +63,7 @@ def get_catechism(name, question):
             "answer": catechism[question]["answer"],
         }
     except:
-        raise Exception("Cannot find catechism.")
+        raise DataException("Cannot find data for {} {}.".format(name.upper(), question))
 
 
 plan = ([('WSC', 1), ('WLC', 1)], [('WCF', 1, 1)], [('WLC', 2)], [('WCF', 1, 2)],
@@ -165,7 +166,10 @@ plan = ([('WSC', 1), ('WLC', 1)], [('WCF', 1, 1)], [('WLC', 2)], [('WCF', 1, 2)]
 
 
 def get_day(month, day):
-    day_of_year = (dt.datetime(2004, int(month), int(day)) - dt.datetime(2004, 1, 1)).days
+    try:
+        day_of_year = (dt.datetime(2004, int(month), int(day)) - dt.datetime(2004, 1, 1)).days
+    except:
+        raise DataException("Error parsing date (month: {} day: {}).".format(month, day))
     refs = plan[day_of_year]
     # return refs
     return [get(*ref) for ref in refs]
