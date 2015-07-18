@@ -172,17 +172,20 @@ def test():
 @task
 def build_images():
     ''' '''
-    for date in (dt.datetime(2004, 01, 01) + dt.timedelta(n) for n in range(365)):
-        sh.python('runserver.py', _bg=True)
-        print date.strftime("%b %d")
-        sh.sleep(1)
+    server = sh.python('runserver.py', _bg=True)
+    print "starting server with pid {}".format(server.pid)
+    for date in (dt.datetime(2004, 07, 28) + dt.timedelta(n) for n in range(60)):
         webkit2png = sh.Command("/usr/local/bin/webkit2png")
-        print webkit2png(date.strftime('http://0.0.0.0:8080/i/%m/%d'),
+        p = webkit2png(date.strftime('http://0.0.0.0:8080/i/%m/%d'),
                    selector="#content",
                    filename=date.strftime('%m%d'),
                    fullsize=True,
                    dir="flask_application/static/images/docs/",
                    )
+        print p.ran
+        print "stdout: ", p.stdout
+        print "stderr: ", p.stderr
+    sh.kill(server.pid)
 
 
 
