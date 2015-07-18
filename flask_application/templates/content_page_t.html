@@ -14,5 +14,16 @@
 {% endblock %}
 
 {% block body %}
+    <div class="row">
+        <div class="eight columns offset-by-four" style="text-align:center;">
+            <p class='remove-bottom'>
+            <strong>
+            {{ date.strftime('%b %-d') | yesterday }} —
+            {{ date.strftime('%b %-d') | today }} —
+            {{ date.strftime('%b %-d') | tomorrow }}
+            </strong>
+            </p>
+        </div>
+    </div>
     {% include 'content_body_t.html' %}
 {% endblock %}
