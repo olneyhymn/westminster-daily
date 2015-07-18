@@ -85,7 +85,7 @@ def recent_feed():
         day = date.strftime('%d')
         content = data.get_day(str(date.month), str(date.day))
         page_title = ", ".join(c['citation'] for c in content)
-        url = "{}/{}/{}".format(request.host, month, day)
+        url = "http://{}/{}/{}".format(request.host, month, day)
         feed.add(page_title,
                  render_content(month, day, content, url=url, template='content_body_t.html'),
                  content_type='html',
