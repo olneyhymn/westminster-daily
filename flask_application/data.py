@@ -59,7 +59,7 @@ def get_catechism(name, question):
             "name": catechisms[name],
             "section_title": "",
             "citation": "{} {}".format(name.upper(), question),
-            "long_citation": "{} {}".format(catechism[name], question),
+            "long_citation": "{} {}".format(catechisms[name], question),
             "number": question,
             "question": catechism[question]["question"],
             "answer": catechism[question]["answer"],
