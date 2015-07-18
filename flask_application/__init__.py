@@ -105,6 +105,7 @@ def render_today():
 
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
+@app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>/')
 def render_day(month, day):
     content = data.get_day(month, day)
     return render_content(month, day, content)
