@@ -281,4 +281,23 @@
 		color: rgba(0,0,0,.6);
 	}
 
+	/* This gets Google to fall into place */
+	.social {
+		font-size: 1px;
+	}
+
+	/* This gets Facebook to fall into place */
+	.social iframe {
+		vertical-align: middle;
+	}
+
+	/* Set an optional width for your button wrappers */
+	.social span {
+	}
+
+	/* Adjust the widths individually if you like */
+	.social .google {
+		width: 75px;
+	}
+
 
