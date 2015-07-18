@@ -1,10 +1,8 @@
 import datetime as dt
-import os
 
 from dateutil import parser
-from flask import Flask, session, render_template, request_started
-from flask import Markup, abort, request
-from werkzeug import SharedDataMiddleware
+from flask import Flask, render_template
+from flask import Markup, request
 from werkzeug.routing import BaseConverter
 
 import data
