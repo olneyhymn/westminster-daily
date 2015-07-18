@@ -72,13 +72,13 @@ def format_datetime(date, pre=None, post=None):
     pre = "" if pre is None else pre
     post = "" if post is None else post
     return Markup("<a href=\"/{month}/{day}\">{pre}{Month} {Day}{post}</a>".format(
-            month=date.strftime('%m'),
-            day=date.strftime('%d'),
-            Month=date.strftime("%-b"),
-            Day=date.strftime("%-d"),
-            pre=pre,
-            post=post,
-        ))
+        month=date.strftime('%m'),
+        day=date.strftime('%d'),
+        Month=date.strftime("%-b"),
+        Day=date.strftime("%-d"),
+        pre=pre,
+        post=post,
+    ))
 
 app.jinja_env.filters['today'] = today_datetime
 app.jinja_env.filters['tomorrow'] = next_datetime
@@ -119,6 +119,7 @@ def render_content(month, day, content, page_title=None):
                            content=content,
                            date=get_date(month, day),
                            page_title=page_title)
+
 
 def get_date(month, day):
     now = dt.datetime.now()
