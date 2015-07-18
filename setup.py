@@ -15,7 +15,7 @@ requires = [
     'Flask-SQLAlchemy',
     'flask-markdown',
     'blinker',
-    ]
+]
 
 if __name__ == '__main__':
     setup(name='template',
@@ -39,4 +39,4 @@ if __name__ == '__main__':
           ],
           test_suite='template',
           install_requires=requires,
-      )
+          )

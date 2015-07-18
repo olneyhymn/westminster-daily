@@ -53,7 +53,9 @@ def after_request(response):
 
 @app.context_processor
 def inject_site_defaults():
-    return dict(site_title="Westminster Standards")
+    return dict(site_title="Westminster Standards",
+                tagline="Read through the Westminster Standards in a year.",
+                )
 
 
 def next_datetime(date):
@@ -124,9 +126,9 @@ def render_content(month, day, content, page_title=None, template='content_page_
         page_title = ", ".join(c['citation'] for c in content)
     description = ", ".join(c['long_citation'] for c in content)
     url = "http://{host}/{month:0>2}/{day:0>2}".format(host=request.host,
-                                               path=request.path,
-                                               month=month,
-                                               day=day)
+                                                       path=request.path,
+                                                       month=month,
+                                                       day=day)
     return render_template(template,
                            content=content,
                            date=get_date(month, day),
