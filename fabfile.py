@@ -173,6 +173,7 @@ def test():
 def build_images():
     ''' '''
     for date in (dt.datetime(2004, 01, 01) + dt.timedelta(n) for n in range(365)):
+        sh.python('runserver.py', _bg=True)
         print date.strftime("%b %d")
         sh.sleep(1)
         webkit2png = sh.Command("/usr/local/bin/webkit2png")
