@@ -15,6 +15,7 @@ assert ('2', '6') <= platform.python_version_tuple() < ('3', '0')
 import os
 import sh
 import sys
+import datetime as dt
 
 from fabric.api import env, local, run, task
 from fabric.api import cd
@@ -171,7 +172,19 @@ def test():
 @task
 def build_images():
     ''' '''
-    pass
+    for date in (dt.datetime(2004, 01, 01) + dt.timedelta(n) for n in range(365)):
+        print date.strftime("%b %d")
+        sh.sleep(1)
+        webkit2png = sh.Command("/usr/local/bin/webkit2png")
+        print webkit2png(date.strftime('http://0.0.0.0:8080/i/%m/%d'),
+                   selector="#content",
+                   filename=date.strftime('%m%d'),
+                   fullsize=True,
+                   dir="flask_application/static/images/docs/",
+                   )
+
+
+
     #webkit2png http://0.0.0.0:8080/06/01 --selector=#content -z 1 --filename 0000 -F -W800 -H800 -D flask_application/static/images/docs/
 
 

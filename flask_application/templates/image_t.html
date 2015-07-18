@@ -25,8 +25,10 @@
 <body>
 <div class="container">
     <div class="row">
-    <div class="eight columns offset-by-four">
+    <div style="width:600px;height:320px;overflow: hidden;padding:20px;" id="content">
+        <h4>Westminster Daily</h4>
         {% for c in content %}
+            <h5 class="half-bottom">{{ c['name'] }} </h5>
             {% include c['type'] + '_t.html' %}
         {% endfor %}
     </div>
