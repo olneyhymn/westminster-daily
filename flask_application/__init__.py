@@ -1,15 +1,33 @@
 import datetime as dt
 
 from dateutil import parser
+from functools import wraps
 from flask import Flask, render_template
 from flask import Markup, request
 from werkzeug.routing import BaseConverter
 from werkzeug.contrib.atom import AtomFeed
+from werkzeug.contrib.cache import SimpleCache
 
 import data
 
 # create our application
 app = Flask(__name__)
+cache = SimpleCache()
+
+
+def cached(timeout=60 * 60, key='view/%s'):
+    def decorator(f):
+        @wraps(f)
+        def decorated_function(*args, **kwargs):
+            cache_key = key % request.path
+            rv = cache.get(cache_key)
+            if rv is not None:
+                return rv
+            rv = f(*args, **kwargs)
+            cache.set(cache_key, rv, timeout=timeout)
+            return rv
+        return decorated_function
+    return decorator
 
 
 class RegexConverter(BaseConverter):
@@ -74,6 +92,7 @@ def page_not_found(e):
 
 
 @app.route('/feed.rss')
+@cached()
 def recent_feed():
     feed = AtomFeed(SITE_TITLE,
                     author=SITE_TITLE,
@@ -96,6 +115,7 @@ def recent_feed():
 
 
 @app.route('/')
+@cached()
 def render_today():
     page_title = "A Daily Reading"
     content = get_today_content()
@@ -105,6 +125,7 @@ def render_today():
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>/')
+@cached()
 def render_day(month, day):
     content = data.get_day(month, day)
     url = "http://{host}/{month:0>2}/{day:0>2}".format(host=request.host,
