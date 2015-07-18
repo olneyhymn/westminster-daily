@@ -15,6 +15,7 @@
     <div class="row remove-bottom">
         <div class="eight columns offset-by-four remove-bottom">
             {% for c in content %}
+                <h5>{{ c['name'] }} </h5>
                 {% include c['type'] + '_t.html' %}
             {% endfor %}
         </div>
