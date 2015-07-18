@@ -121,10 +121,15 @@ def render_image_page(month, day):
 def render_content(month, day, content, page_title=None, template='content_page_t.html'):
     if page_title is None:
         page_title = ", ".join(c['citation'] for c in content)
+    url = "http://{host}/{month}/{day}".format(host=request.host,
+                                               path=request.path,
+                                               month=month,
+                                               day=day)
     return render_template(template,
                            content=content,
                            date=get_date(month, day),
-                           page_title=page_title)
+                           page_title=page_title,
+                           url=url)
 
 
 def get_date(month, day):
