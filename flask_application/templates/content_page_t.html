@@ -1,4 +1,13 @@
 
+{% block header %}
+<meta property="og:site_title" content="{{ site_title }}" />
+<meta property="og:title" content="{{ page_title }}" />
+<meta property="og:url" content="{{ request.host }}{{ request.path }}" />
+<meta property="og:image" content="{{ request.host }}/images/docs/{{ date.strftime('%m%d') }}-full.png" />
+<meta property="og:description" content="" />
+<meta property="fb:app_id" content="westminster-daily" />
+{% endblock %}
+
 {% extends "base_t.html" %}
 {% block body %}
     <div class="row">
