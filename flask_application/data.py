@@ -7,8 +7,8 @@ from collections import OrderedDict
 
 catechisms = {
     "wcf": "Confession of Faith",
-    "wlc": "Larger Catechsim",
-    "wsc": "Shorter Catechsim",
+    "wlc": "Larger Catechism",
+    "wsc": "Shorter Catechism",
 }
 
 
