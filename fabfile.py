@@ -169,6 +169,13 @@ def test():
 
 
 @task
+def build_images():
+    ''' '''
+    pass
+    #webkit2png http://0.0.0.0:8080/06/01 --selector=#content -z 1 --filename 0000 -F -W800 -H800 -D flask_application/static/images/docs/
+
+
+@task
 def clean():
     '''Clear the cached .pyc files.'''
     local("find . \( -iname '*.pyc' -o -name '*~' \) -exec rm -v {} \;", capture=False)
