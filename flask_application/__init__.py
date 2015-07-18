@@ -113,29 +113,12 @@ def render_day(month, day):
 
 
 def render_content(month, day, content, page_title=None):
-    get_date(month, day)
-    if content[0].abbv == "wcf":
-        assert len(content) == 1
-        content = content[0]
-        chapter = content.data.keys()[0]
-        section = content.data.values()[0].keys()[0]
-        body = content.data[chapter][section]
-        if page_title is None:
-            page_title = "{} {}.{}".format(content.doc_title, chapter, section)
-        return render_template('confession_t.html',
-                               title=content.doc_title,
-                               chapter=chapter,
-                               section=section,
-                               content=body,
-                               date=get_date(month, day),
-                               page_title=page_title)
-    else:
-        if page_title is None:
-            page_title = ', '.join(["{} Q. {}".format(c.abbv.upper(), c.data.keys()[0]) for c in content])
-        return render_template('catechism_t.html',
-                               content=content,
-                               date=get_date(month, day),
-                               page_title=page_title)
+    if page_title is None:
+        page_title = ", ".join(c['citation'] for c in content)
+    return render_template('base_t2.html',
+                           content=content,
+                           date=get_date(month, day),
+                           page_title=page_title)
 
 def get_date(month, day):
     now = dt.datetime.now()

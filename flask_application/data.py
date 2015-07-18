@@ -30,9 +30,16 @@ def get_confession(name, chapter, section):
     with open(json_path, "r") as f:
         wcf = json.load(f, object_pairs_hook=OrderedDict)
     try:
-        return Excerpt("wcf",
-                       "Westminster Confession of Faith",
-                       {chapter: {section: wcf[chapter]['body'][section]}})
+        return {
+            "type": "confession",
+            "abbv": name,
+            "name": catechisms[name],
+            "section_title": "",
+            "chapter": chapter,
+            "paragraph": section,
+            "citation": "{} {}.{}".format(name.upper(), chapter, section),
+            "body": wcf[chapter]['body'][section],
+        }
     except:
         print "error!", chapter, section
         raise Exception("Cannot find confession.")
@@ -45,9 +52,16 @@ def get_catechism(name, question):
     with open(json_path, "r") as f:
         catechism = json.load(f, object_pairs_hook=OrderedDict)
     try:
-        return Excerpt(name,
-                       catechisms[name],
-                       {question: catechism[question]})
+        return {
+            "type": "catechism",
+            "abbv": name,
+            "name": catechisms[name],
+            "section_title": "",
+            "citation": "{} {}".format(name.upper(), question),
+            "number": question,
+            "question": catechism[question]["question"],
+            "answer": catechism[question]["answer"],
+        }
     except:
         raise Exception("Cannot find catechism.")
 
@@ -149,6 +163,7 @@ plan = ([('WSC', 1), ('WLC', 1)], [('WCF', 1, 1)], [('WLC', 2)], [('WCF', 1, 2)]
         [('WCF', 32, 1)], [('WSC', 37), ('WLC', 85)], [('WCF', 32, 2), ('WLC', 87)],
         [('WCF', 32, 3)], [('WCF', 33, 1), ('WLC', 88)], [('WCF', 33, 2), ('WLC', 89)],
         [('WSC', 38), ('WLC', 90)], [('WCF', 33, 3)])
+
 
 def get_day(month, day):
     day_of_year = (dt.datetime(2004, int(month), int(day)) - dt.datetime(2004, 1, 1)).days

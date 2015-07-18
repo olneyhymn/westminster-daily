@@ -14,8 +14,9 @@
     </div>
     <div class="row remove-bottom">
         <div class="eight columns offset-by-four remove-bottom">
-            {% block content %}
-            {% endblock %}
+            {% for c in content %}
+                {% include c['type'] + '_t.html' %}
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

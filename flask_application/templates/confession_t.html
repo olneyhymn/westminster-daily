@@ -1,5 +1,2 @@
-{% extends "base_t2.html" %}
-{% block content %}
-    <h5>{{ title }}</h5>
-    <p><span class='q'>{{ chapter }}.{{ section }}</span> {{ content | safe }}</p>
-{% endblock %}
+<h5>{{ c['name'] }}</h5>
+<p><span class='q'>{{ c['chapter'] }}.{{ c['paragraph'] }}</span> {{ c['body'] | safe }}</p>
