@@ -129,5 +129,6 @@ def render_content(month, day, content, page_title=None, template='content_page_
 
 def get_date(month, day):
     now = dt.datetime.now()
-    date = dt.date(now.year, int(month), int(day))
+    leap_year = 2008
+    date = dt.date(leap_year, int(month), int(day))
     return date
