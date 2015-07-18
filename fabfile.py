@@ -170,11 +170,11 @@ def test():
 
 
 @task
-def build_images():
+def build_images(month):
     ''' '''
     server = sh.python('runserver.py', _bg=True)
     print "starting server with pid {}".format(server.pid)
-    for date in (dt.datetime(2004, 07, 28) + dt.timedelta(n) for n in range(60)):
+    for date in (dt.datetime(2004, int(month), 01) + dt.timedelta(n) for n in range(31)):
         webkit2png = sh.Command("/usr/local/bin/webkit2png")
         p = webkit2png(date.strftime('http://0.0.0.0:8080/i/%m/%d'),
                    selector="#content",
@@ -185,11 +185,6 @@ def build_images():
         print p.ran
         print "stdout: ", p.stdout
         print "stderr: ", p.stderr
-    sh.kill(server.pid)
-
-
-
-    #webkit2png http://0.0.0.0:8080/06/01 --selector=#content -z 1 --filename 0000 -F -W800 -H800 -D flask_application/static/images/docs/
 
 
 @task
