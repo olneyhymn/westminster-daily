@@ -2,10 +2,16 @@
 {% block header %}
 <meta property="og:site_title" content="{{ site_title }}" />
 <meta property="og:title" content="{{ site_title }} | {{ page_title }}" />
-<meta property="og:url" content="http://{{ request.host }}{{ request.path }}" />
+<meta property="og:url" content="{{ url }}" />
 <meta property="og:image" content="http://{{ request.host }}/images/docs/{{ date.strftime('%m%d') }}-full.png" />
 <meta property="og:description" content="" />
 <meta property="fb:app_id" content="westminster-daily" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@reformedconfessions">
+<meta name="twitter:creator" content="@tdhopper">
+<meta name="twitter:title" content="{{ site_title }} | {{ page_title }}">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://{{ request.host }}/images/docs/{{ date.strftime('%m%d') }}-full.png">
 {% endblock %}
 
 {% block body %}
