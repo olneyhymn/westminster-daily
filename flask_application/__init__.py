@@ -112,10 +112,21 @@ def render_day(month, day):
     return render_content(month, day, content)
 
 
-def render_content(month, day, content, page_title=None):
+# Render page for generating facebook/twitter images
+@app.route('/i/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
+def render_image_page(month, day):
+    try:
+        content = data.get_day(month, day)
+    except:
+        content = get_today_content()
+    return render_content(month, day, content, template='image_t.html')
+
+
+# Render main page
+def render_content(month, day, content, page_title=None, template='content_page_t.html'):
     if page_title is None:
         page_title = ", ".join(c['citation'] for c in content)
-    return render_template('content_page_t.html',
+    return render_template(template,
                            content=content,
                            date=get_date(month, day),
                            page_title=page_title)
