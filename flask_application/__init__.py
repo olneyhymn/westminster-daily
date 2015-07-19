@@ -20,11 +20,14 @@ class RegexConverter(BaseConverter):
 
 app.url_map.converters['regex'] = RegexConverter
 
+SITE_TITLE = "Westminster Standards"
+SITE_TAGLINE = "Read through the Westminster Standards in a year."
+
 
 @app.context_processor
 def inject_site_defaults():
-    return dict(site_title="Westminster Standards",
-                tagline="Read through the Westminster Standards in a year.",
+    return dict(site_title=SITE_TITLE,
+                tagline=SITE_TAGLINE,
                 )
 
 
