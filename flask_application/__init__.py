@@ -4,6 +4,7 @@ from dateutil import parser
 from flask import Flask, render_template
 from flask import Markup, request
 from werkzeug.routing import BaseConverter
+from werkzeug.contrib.atom import AtomFeed
 
 import data
 
@@ -70,6 +71,28 @@ def get_today_content():
 @app.errorhandler(data.DataException)
 def page_not_found(e):
     return render_template('404_t.html', message=e.message), 404
+
+
+@app.route('/feed.rss')
+def recent_feed():
+    feed = AtomFeed(SITE_TITLE,
+                    author=SITE_TITLE,
+                    feed_url=request.url,
+                    url=request.url_root)
+    for date in (dt.datetime.now() - dt.timedelta(n) for n in range(365)):
+        date = date.date()
+        month = date.strftime('%m')
+        day = date.strftime('%d')
+        content = data.get_day(str(date.month), str(date.day))
+        page_title = ", ".join(c['citation'] for c in content)
+        url = "{}/{}/{}".format(request.host, month, day)
+        feed.add(page_title,
+                 render_content(month, day, content, url=url, template='content_body_t.html'),
+                 content_type='html',
+                 url=url,
+                 updated=date,
+                 )
+    return feed.get_response()
 
 
 @app.route('/')
