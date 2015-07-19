@@ -109,6 +109,7 @@ def recent_feed():
                  render_content(month, day, content, url=url, template='content_body_t.html'),
                  content_type='html',
                  url=url,
+                 published=date,
                  updated=date,
                  )
     return feed.get_response()
