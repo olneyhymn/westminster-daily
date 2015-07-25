@@ -18,9 +18,7 @@ import sh
 import sys
 import datetime as dt
 
-from fabric.api import local, run, task
-from fabric.api import cd
-from fabric.colors import red, green, blue
+from fabric.api import local, task
 
 from flask_application.data import get_today_content
 
