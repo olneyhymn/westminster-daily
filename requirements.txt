@@ -22,3 +22,4 @@ python-memcached==1.48
 paramiko
 sh
 pytest
+twitter==1.17.0
