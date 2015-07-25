@@ -18,7 +18,7 @@ import sh
 import sys
 import datetime as dt
 
-from fabric.api import env, local, run, task
+from fabric.api import local, run, task
 from fabric.api import cd
 from fabric.colors import red, green, blue
 
@@ -144,6 +144,6 @@ def tweet():
             description = ", ".join(c['citation'] for c in content)
             t.statuses.update(status="Westminster Daily: {} {}".format(description, url))
         else:
-            print "Unhandled exception", e
+            log.error("%s %s", "Unhandled exception", str(e))
         return
-    print "Tweeted", description
+    log.info("%s %s", "Tweeted", str(description))
