@@ -118,6 +118,8 @@ def configure_tweet():
 
 @task
 def tweet():
+    '''Send tweet with todays content
+    '''
     import twitter as tw
     base_url = "http://reformedconfessions.com/"
     cred = {
