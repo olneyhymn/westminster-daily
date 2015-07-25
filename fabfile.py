@@ -214,6 +214,7 @@ def get_heroku_config():
     print "heroku config:set", "{}={}".format("TW_TOKEN", os.environ['TW_TOKEN'])
     print "heroku config:set", "{}={}".format("TW_TOKEN_SECRET", os.environ['TW_TOKEN_SECRET'])
 
+
 @task
 def configure_tweet():
     '''Tweet today's confession post
@@ -246,10 +247,16 @@ def tweet():
     month, day, content = get_today_content()
     description = ", ".join(c['long_citation'] for c in content)
     url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
+
     try:
+        # Attempt tweet
         t.statuses.update(status="Westminster Daily: {} {}".format(description, url))
     except tw.api.TwitterHTTPError as e:
         if any(error['code'] == 186 for error in e.response_data['errors']):
             # Tweet too long. Try a shorter tweet.
             description = ", ".join(c['citation'] for c in content)
             t.statuses.update(status="Westminster Daily: {} {}".format(description, url))
+        else:
+            print "Unhandled exception", e
+        return
+    print "Tweeted", description
