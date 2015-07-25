@@ -21,6 +21,8 @@ from fabric.api import env, local, run, task
 from fabric.api import cd
 from fabric.colors import red, green, blue
 
+from flask_application.data import get_today_content
+
 APP_NAME = "flask_application"
 PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
 SITE_NAME = "example.com"
@@ -203,3 +205,51 @@ def server_setup():
     _transfer_files(local_dir, env.host + ':' + remote_dir, ssh_port=env.port)
     run('cd {0} && bash setup/server_setup.bash {1}'.format(remote_dir, SITE_NAME))
 """
+
+
+@task
+def get_heroku_config():
+    print "heroku config:set", "{}={}".format("TW_CONSUMER_KEY", os.environ['TW_CONSUMER_KEY'])
+    print "heroku config:set", "{}={}".format("TW_CONSUMER_SECRET", os.environ['TW_CONSUMER_SECRET'])
+    print "heroku config:set", "{}={}".format("TW_TOKEN", os.environ['TW_TOKEN'])
+    print "heroku config:set", "{}={}".format("TW_TOKEN_SECRET", os.environ['TW_TOKEN_SECRET'])
+
+@task
+def configure_tweet():
+    '''Tweet today's confession post
+    '''
+    import twitter as tw
+
+    cred = {
+        "consumer_key": os.environ['TW_CONSUMER_KEY'],
+        "consumer_secret": os.environ['TW_CONSUMER_SECRET'],
+        "app_name": "Reformed Confessions"
+    }
+    oauth_token, oauth_token_secret = tw.oauth_dance(**cred)
+    print "oauth_token", oauth_token
+    print "oauth_token_secret", oauth_token_secret
+
+
+@task
+def tweet():
+    import twitter as tw
+    base_url = "http://reformedconfessions.com/"
+    cred = {
+        "consumer_key": os.environ['TW_CONSUMER_KEY'],
+        "consumer_secret": os.environ['TW_CONSUMER_SECRET'],
+        "token": os.environ['TW_TOKEN'],
+        "token_secret": os.environ['TW_TOKEN_SECRET'],
+    }
+    auth = tw.OAuth(**cred)
+    t = tw.Twitter(auth=auth)
+
+    month, day, content = get_today_content()
+    description = ", ".join(c['long_citation'] for c in content)
+    url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
+    try:
+        t.statuses.update(status="Westminster Daily: {} {}".format(description, url))
+    except tw.api.TwitterHTTPError as e:
+        if any(error['code'] == 186 for error in e.response_data['errors']):
+            # Tweet too long. Try a shorter tweet.
+            description = ", ".join(c['citation'] for c in content)
+            t.statuses.update(status="Westminster Daily: {} {}".format(description, url))
