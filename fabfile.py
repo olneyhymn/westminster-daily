@@ -12,6 +12,7 @@ from __future__ import with_statement
 import platform
 assert ('2', '6') <= platform.python_version_tuple() < ('3', '0')
 
+import logging
 import os
 import sh
 import sys
@@ -23,9 +24,9 @@ from fabric.colors import red, green, blue
 
 from flask_application.data import get_today_content
 
-APP_NAME = "flask_application"
+APP_NAME = "Westminster Daily"
 PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
-SITE_NAME = "example.com"
+SITE_NAME = "reformedconfessions.com"
 
 env.hosts = ['user@remotehost']
 code_dir = '/path/to/repos/destination'
@@ -250,7 +251,7 @@ def tweet():
 
     try:
         # Attempt tweet
-        t.statuses.update(status="Westminster Daily: {} {}".format(description, url))
+        t.statuses.update(status="{}: {} {}".format(APP_NAME, description, url))
     except tw.api.TwitterHTTPError as e:
         if any(error['code'] == 186 for error in e.response_data['errors']):
             # Tweet too long. Try a shorter tweet.
