@@ -79,13 +79,6 @@ app.jinja_env.filters['tomorrow'] = next_datetime
 app.jinja_env.filters['yesterday'] = prev_datetime
 
 
-
-def get_today_content():
-    month = dt.datetime.today().month
-    day = dt.datetime.today().day
-    return month, day, data.get_day(month, day)
-
-
 @app.errorhandler(data.DataException)
 def page_not_found(e):
     return render_template('404_t.html', message=e.message), 404
@@ -119,7 +112,7 @@ def recent_feed():
 @cached()
 def render_today():
     page_title = "A Daily Reading"
-    content = get_today_content()
+    content = data.get_today_content()
     url = "http://{host}/".format(host=request.host)
     return render_content(*content, page_title=page_title, url=url)
 

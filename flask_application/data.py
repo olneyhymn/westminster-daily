@@ -175,3 +175,9 @@ def get_day(month, day):
     refs = plan[day_of_year]
     # return refs
     return [get(*ref) for ref in refs]
+
+
+def get_today_content():
+    month = dt.datetime.today().month
+    day = dt.datetime.today().day
+    return month, day, get_day(month, day)
