@@ -178,8 +178,8 @@ def get_day(month, day):
     return [get(*ref) for ref in refs]
 
 
-def get_today_content():
-    tz = pytz.timezone('US/Eastern')
+def get_today_content(tz='UTC'):
+    tz = pytz.timezone(tz)
     month = dt.datetime.now(tz=tz).month
     day = dt.datetime.now(tz=tz).day
     return month, day, get_day(month, day)

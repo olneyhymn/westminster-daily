@@ -4,6 +4,9 @@
 
 
 class Config(object):
+    SITE_TITLE = "Westminster Standards"
+    SITE_TAGLINE = "Read through the Westminster Standards in a year."
+    TZ = 'US/Eastern'
     SECRET_KEY = ''
     SITE_NAME = 'reformedconfessions.com'
     MEMCACHED_SERVERS = ['localhost:11211']

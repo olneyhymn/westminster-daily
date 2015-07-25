@@ -9,11 +9,14 @@ from werkzeug.routing import BaseConverter
 from werkzeug.contrib.atom import AtomFeed
 from werkzeug.contrib.cache import SimpleCache
 
+import config
 import data
+
 
 # create our application
 app = Flask(__name__)
 cache = SimpleCache()
+app.config.from_object(config.Config)
 
 
 def cached(timeout=60 * 60, key='view/%s'):
@@ -40,14 +43,11 @@ class RegexConverter(BaseConverter):
 
 app.url_map.converters['regex'] = RegexConverter
 
-SITE_TITLE = "Westminster Standards"
-SITE_TAGLINE = "Read through the Westminster Standards in a year."
-
 
 @app.context_processor
 def inject_site_defaults():
-    return dict(site_title=SITE_TITLE,
-                tagline=SITE_TAGLINE,
+    return dict(site_title=app.config['SITE_TITLE'],
+                tagline=app.config['SITE_TAGLINE'],
                 )
 
 
@@ -88,11 +88,11 @@ def page_not_found(e):
 @app.route('/feed.rss')
 @cached()
 def recent_feed():
-    feed = AtomFeed(SITE_TITLE,
-                    author=SITE_TITLE,
+    feed = AtomFeed(app.config['SITE_TITLE'],
+                    author=app.config['SITE_TITLE'],
                     feed_url=request.url,
                     url=request.url_root)
-    now = dt.datetime.now(tz=pytz.timezone('US/Eastern'))
+    now = dt.datetime.now(tz=pytz.timezone(app.config['TZ']))
     for date in (now - dt.timedelta(n) for n in range(365)):
         date = date.date()
         month = date.strftime('%m')
@@ -114,7 +114,7 @@ def recent_feed():
 @cached()
 def render_today():
     page_title = "A Daily Reading"
-    content = data.get_today_content()
+    content = data.get_today_content(tz=app.config['TZ'])
     url = "http://{host}/".format(host=request.host)
     return render_content(*content, page_title=page_title, url=url)
 
