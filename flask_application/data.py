@@ -1,6 +1,7 @@
 import datetime as dt
 import simplejson as json
 import os
+import pytz
 
 from collections import OrderedDict
 
@@ -178,6 +179,7 @@ def get_day(month, day):
 
 
 def get_today_content():
-    month = dt.datetime.today().month
-    day = dt.datetime.today().day
+    tz = pytz.timezone('US/Eastern')
+    month = dt.datetime.now(tz=tz).month
+    day = dt.datetime.now(tz=tz).day
     return month, day, get_day(month, day)

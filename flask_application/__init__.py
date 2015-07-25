@@ -1,4 +1,5 @@
 import datetime as dt
+import pytz
 
 from dateutil import parser
 from functools import wraps
@@ -91,7 +92,8 @@ def recent_feed():
                     author=SITE_TITLE,
                     feed_url=request.url,
                     url=request.url_root)
-    for date in (dt.datetime.now() - dt.timedelta(n) for n in range(365)):
+    now = dt.datetime.now(tz=pytz.timezone('US/Eastern'))
+    for date in (now - dt.timedelta(n) for n in range(365)):
         date = date.date()
         month = date.strftime('%m')
         day = date.strftime('%d')
