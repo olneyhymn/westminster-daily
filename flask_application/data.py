@@ -69,7 +69,7 @@ def get_catechism(name, question):
         raise DataException("Cannot find data for {} {}.".format(name.upper(), question))
 
 
-plan = ([('WSC', 1), ('WLC', 1)], [('WCF', 1, 1)], [('WLC', 2)], [('WCF', 1, 2)],
+_plan = ([('WSC', 1), ('WLC', 1)], [('WCF', 1, 1)], [('WLC', 2)], [('WCF', 1, 2)],
         [('WSC', 2), ('WLC', 3)], [('WCF', 1, 3)], [('WCF', 1, 4)], [('WCF', 1, 5)],
         [('WLC', 4)], [('WCF', 1, 6)], [('WCF', 1, 7)], [('WCF', 1, 8)], [('WCF', 1, 9)],
         [('WCF', 1, 10)], [('WSC', 3), ('WLC', 5)], [('WLC', 6)], [('WCF', 2, 1)],
@@ -173,7 +173,7 @@ def get_day(month, day):
         day_of_year = (dt.datetime(2004, int(month), int(day)) - dt.datetime(2004, 1, 1)).days
     except:
         raise DataException("Error parsing date (month: {} day: {}).".format(month, day))
-    refs = plan[day_of_year]
+    refs = _plan[day_of_year]
     # return refs
     return [get(*ref) for ref in refs]
 
