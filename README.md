@@ -1,31 +1,13 @@
-[![Code Climate](https://codeclimate.com/github/tdhopper/westminster-daily/badges/gpa.svg)](https://codeclimate.com/github/tdhopper/westminster-daily) [![Test Coverage](https://codeclimate.com/github/tdhopper/westminster-daily/badges/coverage.svg)](https://codeclimate.com/github/tdhopper/westminster-daily/coverage)
+[![Code Climate](https://codeclimate.com/github/tdhopper/westminster-daily/badges/gpa.svg)](https://codeclimate.com/github/tdhopper/westminster-daily) [![Build Status](https://travis-ci.org/tdhopper/westminster-daily.svg)](https://travis-ci.org/tdhopper/westminster-daily)
 
-Flask-Boilerplate
-======================
+# Westminster Daily
 
-This is a bootstrap site for [Flask](http://flask.pocoo.org/) that utilizes [Fabric](http://fabfile.org) and [Skeleton](http://www.getskeleton.com/) to get you up-and-running with a responsive Flask web app.
+Read through the [Westminster Standards](https://en.wikipedia.org/wiki/Westminster_Standards) in a year at [reformedconfessions.com](http://www.reformedconfessions.com). Based on [https://www.gpts.edu/resources/documents/Calendar%20Readings%20in%20WestminsterNumbered.pdf](Calendar of Readings in the Westminster Standards) by Dr. Joseph Pipa Jr.
 
-Getting Started
------------------
+## Setup and Deploy
 
-It is suggested that you use
-[virtualenvwrapper](http://pypi.python.org/pypi/virtualenvwrapper) when
-developing this website. This will allow you to isolate your organization's 
-development environment from the rest of your system, ensuring that you
-are developing with the proper software.
+Clone with `git clone https://github.com/tdhopper/westminster-daily.git`.
 
-To do development work on a new website, run the following commands from
-the root directory of your cloned site to get started:
+Setup a virtualenv or Conda environment and run `pip install -r requirements.txt`.
 
--   `fab init:site_name=<sitename>`
-    - Where "`<sitename>`" is replaced with the hostname of your new site      
--   `fab skeletonize`
-    - Installs Skeleton and JQuery, patching the base templates along the way.
--   `fab server`
-    - Will run a local dev server on `http://localhost:8080`
-
-You will then be able to access the website at http://localhost:8080.
-Changes in the code will automatically reload the web server when necessary.
-
-In production, the server uses WSGI, so please don't rename or move
-`__init__.py` in the root of the repository.
+Site automatically deploys from `master` branch if [Travis](https://travis-ci.org/tdhopper/westminster-daily) tests pass.
