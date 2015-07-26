@@ -1,6 +1,6 @@
-python-dateutil
-gunicorn
-simplejson
+python-dateutil==2.4.2
+gunicorn==19.3.0
+simplejson==3.7.3
 unittest2==0.5.1
 Flask==0.9
 Werkzeug==0.8.3
@@ -19,8 +19,9 @@ Fabric==1.4.3
 ssh==1.7.14
 pycrypto==2.6
 python-memcached==1.48
-paramiko
-sh
+paramiko==1.15.2
+sh==1.11
 pytest
 twitter==1.17.0
-pytz
+pytz==2015.4
+Flask-Testing==0.4.2
