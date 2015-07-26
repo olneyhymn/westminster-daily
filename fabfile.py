@@ -53,7 +53,7 @@ def server():
 @task
 def test():
     '''Run the test suite'''
-    local('env TEST=yes python tests.py', capture=False)
+    local('py.test', capture=False)
 
 
 @task
