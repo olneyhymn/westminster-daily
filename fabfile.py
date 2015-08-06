@@ -131,7 +131,7 @@ def tweet():
     auth = tw.OAuth(**cred)
     t = tw.Twitter(auth=auth)
 
-    month, day, content = get_today_content()
+    month, day, content = get_today_content(tz="US/Eastern")
     description = ", ".join(c['long_citation'] for c in content)
     url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
 
