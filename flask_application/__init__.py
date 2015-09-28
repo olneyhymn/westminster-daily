@@ -19,7 +19,7 @@ cache = SimpleCache()
 app.config.from_object(config.Config)
 
 
-def cached(timeout=60 * 60, key='view/%s'):
+def cached(timeout=0 if app.config['DEBUG'] else 60 * 60, key='view/%s'):
     def decorator(f):
         @wraps(f)
         def decorated_function(*args, **kwargs):
