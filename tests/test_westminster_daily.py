@@ -2,11 +2,20 @@ import datetime as dt
 
 from flask_application import app
 
+def test_rss():
+    with app.test_client() as c:
+        response = c.get('/feed.rss')
+        assert response.status_code == 200
+        assert response.mimetype == 'application/atom+xml'
+        assert response.content_length > 100000
 
 def test_daily_westminster_pages_exist():
     start_date = dt.date(2015, 01, 01)
 
     with app.test_client() as c:
+        response = c.get('/')
+        assert response.status_code == 200
+
         for days in range(365):
             date = start_date + dt.timedelta(days=days)
             month, day = date.month, date.day
