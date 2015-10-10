@@ -30,11 +30,19 @@ def test_daily_westminster_bad_days():
     with app.test_client() as c:
         response = c.get('/1/1/')
         assert response.status_code == 404
+        response = c.get('/1/1', follow_redirects=True)
+        assert response.status_code == 404
         response = c.get('/01/32/')
+        assert response.status_code == 404
+        response = c.get('/01/32', follow_redirects=True)
         assert response.status_code == 404
         response = c.get('/02/30/')
         assert response.status_code == 404
+        response = c.get('/02/30', follow_redirects=True)
+        assert response.status_code == 404
         response = c.get('/04/31/')
+        assert response.status_code == 404
+        response = c.get('/04/31', follow_redirects=True)
         assert response.status_code == 404
 
 
