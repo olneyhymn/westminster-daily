@@ -38,5 +38,14 @@ def test_confession():
                             "will unto his people being now ceased."
 
 
-def test_catechism():
-    pass
+def test_larger_catechism():
+    wlc11 = data.get_catechism('wlc', '1')
+    assert wlc11['type'] == 'catechism'
+    assert wlc11['abbv'] == 'wlc'
+    assert wlc11['name'] == 'Larger Catechism'
+    assert wlc11['section_title'] == ''
+    assert wlc11['number'] == '1'
+    assert wlc11['citation'] == 'WLC 1'
+    assert wlc11['long_citation'] == 'Larger Catechism 1'
+    assert wlc11['answer'] == 'Man\'s chief and highest end is to glorify God, and fully to enjoy him forever.'
+    assert wlc11['question'] == 'What is the chief and highest end of man?'
