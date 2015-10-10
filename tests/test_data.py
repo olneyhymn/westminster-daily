@@ -90,4 +90,13 @@ def test_westminster_confession_all_exists():
                  (29, 2), (29, 3), (29, 4), (29, 5), (29, 6), (29, 7), (29, 8), (30, 1), (30, 2), (30, 3),
                  (30, 4), (31, 1), (31, 2), (31, 3), (31, 4), (32, 1), (32, 2), (32, 3), (33, 1), (33, 2),
                  (33, 3)]:
-        assert data.get_confession("wcf", str(c), s)
+        assert data.get_confession('wcf', c, s)
+
+    with pytest.raises(data.DataException):
+        data.get_confession('wcf', 0, 0)
+    with pytest.raises(data.DataException):
+        data.get_confession('wcf', 1, 11)
+    with pytest.raises(data.DataException):
+        data.get_confession('wcf', 33, 4)
+    with pytest.raises(data.DataException):
+        data.get_confession('wcf', 34, 1)
