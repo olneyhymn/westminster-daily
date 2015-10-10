@@ -53,7 +53,7 @@ def server():
 @task
 def test():
     '''Run the test suite'''
-    local('py.test', capture=False)
+    local('py.test --verbose   --full-trace', capture=False)
 
 
 @task
