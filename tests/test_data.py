@@ -13,8 +13,24 @@ def test_today_content():
 
 
 def test_get_day():
-    pass
+    jan1 = data.get_day(1, 1)
+    assert len(jan1) == 2
+    assert {d['citation'] for d in jan1} == {"WLC 1", "WSC 1"}
 
+    jan2 = data.get_day(1, 2)
+    assert len(jan2) == 1
+    assert {d['citation'] for d in jan2} == {"WCF 1.1"}
+
+    oct19 = data.get_day(10, 19)
+    assert len(oct19) == 2
+    assert {d['citation'] for d in oct19} == {"WCF 25.1", "WLC 64"}
+
+    with pytest.raises(data.DataException):
+        data.get_day(4, 31)
+
+
+def test_leap_get_day():
+    assert data.get_day(2, 29) == data.get_day(2, 28)
 
 def test_confession():
     wcf11 = data.get_confession("wcf", "1", "1")
