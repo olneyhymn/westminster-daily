@@ -78,18 +78,8 @@ def build_images(month):
 def clean():
     '''Clear the cached .pyc files.'''
     local("find . \( -iname '*.pyc' -o -name '*~' \) -exec rm -v {} \;", capture=False)
-"""
-@task
-def server_setup():
-    '''Setup the server environment.'''
-    global SITE_NAME
+    local("rm -rf htmlcov", capture=False)
 
-    local_dir = os.getcwd()
-    remote_dir = os.path.join('/home', os.getlogin(), 'web', SITE_NAME, 'private', SITE_NAME)
-    run('mkdir -p {0}'.format(remote_dir))
-    _transfer_files(local_dir, env.host + ':' + remote_dir, ssh_port=env.port)
-    run('cd {0} && bash setup/server_setup.bash {1}'.format(remote_dir, SITE_NAME))
-"""
 
 
 @task
