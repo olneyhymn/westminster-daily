@@ -56,9 +56,9 @@ def test_larger_catechism_all_exists():
     for question in range(1, 197):
         assert data.get_catechism('wlc', str(question))
     with pytest.raises(data.DataException):
-        data.get_catechism('wlc', "198")
+        data.get_catechism('wlc', '198')
     with pytest.raises(data.DataException):
-        data.get_catechism('wlc', "0")
+        data.get_catechism('wlc', '0')
 
 
 
@@ -66,9 +66,9 @@ def test_shorter_catechism_all_exists():
     for question in range(1, 107):
         assert data.get_catechism('wsc', str(question))
     with pytest.raises(data.DataException):
-        data.get_catechism('wsc', "108")
+        data.get_catechism('wsc', '108')
     with pytest.raises(data.DataException):
-        data.get_catechism('wsc', "0")
+        data.get_catechism('wsc', '0')
 
 
 def test_westminster_confession_all_exists():
