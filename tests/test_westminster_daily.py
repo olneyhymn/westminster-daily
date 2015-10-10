@@ -13,6 +13,18 @@ def test_daily_westminster_pages_exist():
             response = c.get('/{month:02d}/{day:02d}/'.format(month=month, day=day))
             assert response.status_code == 200
 
+            response = c.get('/{month:02d}/{day:02d}'.format(month=month, day=day),
+                             follow_redirects=True)
+            assert response.status_code == 200
+
+
+def test_chief_end_of_man():
+    with app.test_client() as c:
+        response = c.get('/01/01/')
+        assert "chief end of man" in response.data
+        response = c.get('/01/02/')
+        assert "better preserving and propagating" in response.data
+
 
 def test_daily_westminster_bad_days():
     with app.test_client() as c:
