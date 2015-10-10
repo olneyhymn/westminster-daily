@@ -44,6 +44,7 @@ def test_get_day():
 def test_leap_get_day():
     assert data.get_day(2, 29) == data.get_day(2, 28)
 
+
 def test_confession():
     wcf11 = data.get_confession("wcf", "1", "1")
     assert wcf11['type'] == 'confession'
