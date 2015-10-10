@@ -27,9 +27,9 @@
         <div class="eight columns offset-by-four" style="text-align:center;">
             <p class='remove-bottom'>
             <strong>
-            {{ date.strftime('%b %-d') | yesterday }} —
-            {{ date.strftime('%b %-d') | today }} —
-            {{ date.strftime('%b %-d') | tomorrow }}
+            {{ date | yesterday }} —
+            {{ date | today }} —
+            {{ date | tomorrow }}
             </strong>
             </p>
         </div>

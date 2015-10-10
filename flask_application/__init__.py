@@ -12,6 +12,8 @@ from werkzeug.contrib.cache import SimpleCache
 import config
 import data
 
+LEAP_YEAR = 2008
+
 
 # create our application
 app = Flask(__name__)
@@ -49,15 +51,15 @@ def inject_site_defaults():
 
 
 def next_datetime(date):
-    return format_datetime(parser.parse(date) + dt.timedelta(days=1), post=" > ")
+    return format_datetime(date + dt.timedelta(days=1), post=" > ")
 
 
 def prev_datetime(date):
-    return format_datetime(parser.parse(date) - dt.timedelta(days=1), pre=" < ")
+    return format_datetime(date - dt.timedelta(days=1), pre=" < ")
 
 
 def today_datetime(date):
-    return format_datetime(parser.parse(date))
+    return format_datetime(date)
 
 
 def format_datetime(date, pre=None, post=None):
@@ -151,6 +153,5 @@ def render_content(month, day, content, page_title=None,
 
 
 def get_date(month, day):
-    leap_year = 2008
-    date = dt.date(leap_year, int(month), int(day))
+    date = dt.date(LEAP_YEAR, int(month), int(day))
     return date
