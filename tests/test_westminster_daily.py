@@ -28,6 +28,8 @@ def test_chief_end_of_man():
 
 def test_daily_westminster_bad_days():
     with app.test_client() as c:
+        response = c.get('/1/1/')
+        assert response.status_code == 404
         response = c.get('/01/32/')
         assert response.status_code == 404
         response = c.get('/02/30/')
