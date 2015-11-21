@@ -114,7 +114,7 @@ def update_facebook():
     api = facebook.GraphAPI(os.environ['FB_ACCESS_TOKEN'])
 
     month, day, content = get_today_content(tz="US/Eastern")
-    base_url = "http://reformedconfessions.com/"
+    base_url = "http://reformedconfessions.com/westminster-daily/"
     url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
     attachment = {'link': url}
 
@@ -130,7 +130,7 @@ def tweet():
     '''Send tweet with todays content
     '''
     import twitter as tw
-    base_url = "http://reformedconfessions.com/"
+    base_url = "http://reformedconfessions.com/westminster-daily/"
     cred = {
         "consumer_key": os.environ['TW_CONSUMER_KEY'],
         "consumer_secret": os.environ['TW_CONSUMER_SECRET'],

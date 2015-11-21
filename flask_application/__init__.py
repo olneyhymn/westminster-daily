@@ -4,7 +4,7 @@ import pytz
 from dateutil import parser
 from functools import wraps
 from flask import Flask, render_template
-from flask import Markup, request
+from flask import Markup, request, redirect
 from werkzeug.routing import BaseConverter
 from werkzeug.contrib.atom import AtomFeed
 from werkzeug.contrib.cache import SimpleCache
@@ -65,7 +65,7 @@ def today_datetime(date):
 def format_datetime(date, pre=None, post=None):
     pre = "" if pre is None else pre
     post = "" if post is None else post
-    return Markup("<a href=\"/{month}/{day}\">{pre}{Month} {Day}{post}</a>".format(
+    return Markup("<a href=\"/westminster-daily/{month}/{day}\">{pre}{Month} {Day}{post}</a>".format(
         month=date.strftime('%m'),
         day=date.strftime('%d'),
         Month=date.strftime("%-b"),
@@ -98,7 +98,7 @@ def recent_feed():
         day = date.strftime('%d')
         content = data.get_day(str(date.month), str(date.day))
         page_title = ", ".join(c['long_citation'] for c in content)
-        url = "http://{}/{}/{}".format(request.host, month, day)
+        url = "http://{}/westminster-daily/{}/{}".format(request.host, month, day)
         feed.add(page_title,
                  render_daily_page(month, day, content, url=url, template='content_body_t.html'),
                  content_type='html',
@@ -111,6 +111,12 @@ def recent_feed():
 
 @app.route('/')
 @cached()
+def render_today_legacy():
+    return redirect('/westminster-daily', code=301)
+
+
+@app.route('/westminster-daily')
+@cached()
 def render_today():
     page_title = "A Daily Reading"
     content = data.get_today_content(tz=app.config['TZ'])
@@ -120,12 +126,22 @@ def render_today():
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
+def render_fixed_day_legacy(month, day):
+    url = "http://{host}/westminster-daily/{month:0>2}/{day:0>2}".format(host=request.host,
+                                                                         path=request.path,
+                                                                         month=month,
+                                                                         day=day)
+    return redirect(url, code=301)
+
+
+
+
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
 @cached()
 def render_fixed_day(month, day):
     content = data.get_day(month, day)
-    url = "http://{host}/{month:0>2}/{day:0>2}".format(host=request.host,
+    url = "http://{host}/westminster-daily/{month:0>2}/{day:0>2}".format(host=request.host,
                                                        path=request.path,
                                                        month=month,
                                                        day=day)
