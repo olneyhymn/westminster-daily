@@ -107,6 +107,23 @@ def configure_tweet():
 
 
 @task
+def update_facebook():
+    import facebook
+    api = facebook.GraphAPI(os.environ['FB_ACCESS_TOKEN'])
+
+    month, day, content = get_today_content(tz="US/Eastern")
+    base_url = "http://reformedconfessions.com/"
+    url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
+    attachment = {'link': url}
+
+    try:
+        status = api.put_wall_post('', attachment=attachment)
+        log.info(status)
+    except facebook.GraphAPIError as e:
+        print e
+
+
+@task
 def tweet():
     '''Send tweet with todays content
     '''
