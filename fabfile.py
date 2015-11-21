@@ -81,7 +81,6 @@ def clean():
     local("rm -rf htmlcov", capture=False)
 
 
-
 @task
 def get_heroku_config():
     print "heroku config:set", "{}={}".format("TW_CONSUMER_KEY", os.environ['TW_CONSUMER_KEY'])
