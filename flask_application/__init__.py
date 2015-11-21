@@ -100,7 +100,7 @@ def recent_feed():
         page_title = ", ".join(c['long_citation'] for c in content)
         url = "http://{}/{}/{}".format(request.host, month, day)
         feed.add(page_title,
-                 render_content(month, day, content, url=url, template='content_body_t.html'),
+                 render_daily_page(month, day, content, url=url, template='content_body_t.html'),
                  content_type='html',
                  url=url,
                  published=date,
@@ -115,42 +115,42 @@ def render_today():
     page_title = "A Daily Reading"
     content = data.get_today_content(tz=app.config['TZ'])
     url = "http://{host}/".format(host=request.host)
-    return render_content(*content, page_title=page_title, url=url)
+    return render_daily_page(*content, page_title=page_title, url=url)
 
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
 @cached()
-def render_day(month, day):
+def render_fixed_day(month, day):
     content = data.get_day(month, day)
     url = "http://{host}/{month:0>2}/{day:0>2}".format(host=request.host,
                                                        path=request.path,
                                                        month=month,
                                                        day=day)
-    return render_content(month, day, content, url=url, static=True)
+    return render_daily_page(month, day, content, url=url, static=True)
 
 
 @app.route('/c/<regex("(wsc|wlc)"):document>/<regex("[0-9]{1,3}"):number>')
 def render_catechism_section(document, number):
     content = [data.get_catechism(document, int(number))]
-    return render_content(1, 1, content, url="", static=True)
+    return render_daily_page(1, 1, content, url="", static=True)
 
 
 @app.route('/c/wcf/<regex("[0-9]{1,2}"):chapter>/<regex("[0-9]{1,2}"):paragraph>')
 def render_confession_section(chapter, paragraph):
     content = [data.get_confession('wcf', int(chapter), int(paragraph))]
-    return render_content(1, 1, content, url="", static=True)
+    return render_daily_page(1, 1, content, url="", static=True)
 
 
 # Render page for generating facebook/twitter images
 @app.route('/i/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
 def render_image_page(month, day):
     content = data.get_day(month, day)
-    return render_content(month, day, content, template='image_t.html')
+    return render_daily_page(month, day, content, template='image_t.html')
 
 
 # Render main page
-def render_content(month, day, content, page_title=None,
+def render_daily_page(month, day, content, page_title=None,
                    template='content_page_t.html', url=None, static=False):
     if page_title is None:
         page_title = ", ".join(c['citation'] for c in content)
