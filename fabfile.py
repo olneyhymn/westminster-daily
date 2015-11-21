@@ -83,6 +83,9 @@ def clean():
 
 @task
 def get_heroku_config():
+    """Get commands for updating heroku environmental variables
+    """
+    print "heroku config:set", "{}={}".format("FB_ACCESS_TOKEN", os.environ['FB_ACCESS_TOKEN'])
     print "heroku config:set", "{}={}".format("TW_CONSUMER_KEY", os.environ['TW_CONSUMER_KEY'])
     print "heroku config:set", "{}={}".format("TW_CONSUMER_SECRET", os.environ['TW_CONSUMER_SECRET'])
     print "heroku config:set", "{}={}".format("TW_TOKEN", os.environ['TW_TOKEN'])
