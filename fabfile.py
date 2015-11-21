@@ -146,7 +146,12 @@ def tweet():
 
     try:
         # Attempt tweet
-        t.statuses.update(status="{}: {} {}".format(APP_NAME, description, url))
+        with open("flask_application/static/images/docs/{:0>2}{:0>2}-full.png".format(month, day), "rb") as imagefile:
+            imagedata = imagefile.read()
+        t_up = tw.Twitter(domain='upload.twitter.com', auth=auth)
+        id_img1 = t_up.media.upload(media=imagedata)["media_id_string"]
+        t.statuses.update(status="{}: {} {}".format(APP_NAME, description, url),
+                          media_ids=id_img1)
     except tw.api.TwitterHTTPError as e:
         if any(error['code'] == 186 for error in e.response_data['errors']):
             # Tweet too long. Try a shorter tweet.
