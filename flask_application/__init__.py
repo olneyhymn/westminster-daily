@@ -120,6 +120,8 @@ def render_today():
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
+@app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
+@app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
 @cached()
 def render_fixed_day(month, day):
     content = data.get_day(month, day)
