@@ -130,6 +130,12 @@ def render_day(month, day):
     return render_content(month, day, content, url=url, static=True)
 
 
+@app.route('/c/<regex("(wsc|wlc)"):document>/<regex("[0-9]{1,3}"):number>')
+def render_catechism_section(document, number):
+    content = [data.get_catechism(document, int(number))]
+    return render_content(1, 1, content, url="", static=True)
+
+
 # Render page for generating facebook/twitter images
 @app.route('/i/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
 def render_image_page(month, day):
