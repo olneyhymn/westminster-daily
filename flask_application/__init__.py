@@ -85,8 +85,13 @@ def page_not_found(e):
 
 
 @app.route('/feed.rss')
+def recent_westminster_daily_feed_legacy():
+    return redirect('/westminster-daily/feed.rss', code=301)
+
+
+@app.route('/westminster-daily/feed.rss')
 @cached()
-def recent_feed():
+def recent_westminster_daily_feed():
     feed = AtomFeed(app.config['SITE_TITLE'],
                     author=app.config['SITE_TITLE'],
                     feed_url=request.url,

@@ -4,7 +4,9 @@ from flask_application import app
 
 def test_rss():
     with app.test_client() as c:
-        response = c.get('/feed.rss')
+        response = c.get('/feed.rss', follow_redirects=False)
+        assert response.status_code == 301
+        response = c.get('/westminster-daily/feed.rss', follow_redirects=False)
         assert response.status_code == 200
         assert response.mimetype == 'application/atom+xml'
         assert response.content_length > 100000
