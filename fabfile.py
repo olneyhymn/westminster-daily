@@ -108,6 +108,24 @@ def configure_tweet():
     print "oauth_token_secret", oauth_token_secret
 
 
+def make_facebook_string(content):
+    c_strings = []
+    for c in content:
+        if c['type'] == 'confession':
+            c_strings.append("""{}
+
+{}
+
+""".format(c['long_citation'], c['body']))
+        elif c['type'] == 'catechism':
+            c_strings.append("""{}
+
+Q. {}
+A. {}
+
+""".format(c['long_citation'], c['question'], c['answer']))
+    return ''.join(c_strings)
+
 @task
 def update_facebook():
     import facebook
@@ -119,7 +137,7 @@ def update_facebook():
     attachment = {'link': url}
 
     try:
-        status = api.put_wall_post('', attachment=attachment)
+        status = api.put_wall_post(make_facebook_string(content), attachment=attachment)
         log.info(status)
     except facebook.GraphAPIError as e:
         print e
