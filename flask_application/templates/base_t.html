@@ -63,7 +63,7 @@
 
     <!-- RSS Metas
     ================================================== -->
-    <link rel="alternate" type="application/rss+xml" href="/westminster-daily/feed.rss" title="{{ site_title }} RSS Feed">
+    <link rel="alternate" type="application/rss+xml" href="http://feedpress.me/westminster-daily" title="{{ site_title }} RSS Feed">
 
 
     <!-- Mobile Specific Metas
@@ -159,11 +159,17 @@
 
         <div class="ten columns offset-by-three remove-bottom"><hr class="half-bottom"/></div>
         <div class="eight columns offset-by-four" style="text-align:center;">
-            <small>Based on <a href="https://www.gpts.edu/resources/documents/Calendar%20Readings%20in%20WestminsterNumbered.pdf">Calendar of Readings in the Westminster Standards</a> by Dr. Joey Pipa. By <a href="https://twitter.com/tdhopper">Tim Hopper</a>.</small>
+            <small>
+                By <a href="https://twitter.com/tdhopper">Tim Hopper</a>.
+                Based on <a href="https://www.gpts.edu/resources/documents/Calendar%20Readings%20in%20WestminsterNumbered.pdf">Calendar of Readings in the Westminster Standards</a> by Dr. Joey Pipa.
+            </small>
 
-            <br />
-            <a href="/westminster-daily/feed.rss">
-            <img src="{{ url_for('static', filename = 'images/feed-icon-14x14.png')}}">
+            <br /><small>
+            <a href="http://feedpress.me/westminster-daily">
+            <small>subscribe by rss</small>
+            </a>&middot;
+            <a href="https://feed.press/e/mailverify?feed_id=westminster-daily">
+            <small>subscribe by e-mail</small>
             </a>
         </div>
     </div><!-- container -->
