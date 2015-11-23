@@ -1,7 +1,6 @@
 import datetime as dt
 import pytz
 
-from dateutil import parser
 from functools import wraps
 from flask import Flask, render_template
 from flask import Markup, request, redirect
@@ -115,7 +114,6 @@ def recent_westminster_daily_feed():
 
 
 @app.route('/')
-@cached()
 def render_today_legacy():
     return redirect('/westminster-daily', code=301)
 
