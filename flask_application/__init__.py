@@ -97,14 +97,13 @@ def recent_westminster_daily_feed():
                     url=request.url_root)
     now = dt.datetime.now(tz=pytz.timezone(app.config['TZ']))
     for date in (now - dt.timedelta(n) for n in range(365)):
-        date = date.date()
         month = date.strftime('%m')
         day = date.strftime('%d')
         content = data.get_day(str(date.month), str(date.day))
         page_title = ", ".join(c['long_citation'] for c in content)
         url = "http://{}/westminster-daily/{}/{}".format(request.host, month, day)
         feed.add(page_title,
-                 render_daily_page(month, day, content, url=url, template='content_body_t.html'),
+                 render_daily_page(month, day, content, template='content_body_t.html'),
                  content_type='html',
                  url=url,
                  published=date,
@@ -123,8 +122,7 @@ def render_today_legacy():
 def render_today():
     page_title = "A Daily Reading"
     content = data.get_today_content(tz=app.config['TZ'])
-    url = "http://{host}/".format(host=request.host)
-    return render_daily_page(*content, page_title=page_title, url=url)
+    return render_daily_page(*content, page_title=page_title)
 
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
@@ -144,23 +142,19 @@ def render_fixed_day_legacy(month, day):
 @cached()
 def render_fixed_day(month, day):
     content = data.get_day(month, day)
-    url = "http://{host}/westminster-daily/{month:0>2}/{day:0>2}".format(host=request.host,
-                                                       path=request.path,
-                                                       month=month,
-                                                       day=day)
-    return render_daily_page(month, day, content, url=url, static=True)
+    return render_daily_page(month, day, content, static=True)
 
 
 @app.route('/c/<regex("(wsc|wlc)"):document>/<regex("[0-9]{1,3}"):number>')
 def render_catechism_section(document, number):
     content = [data.get_catechism(document, int(number))]
-    return render_daily_page(1, 1, content, url="", static=True)
+    return render_daily_page(1, 1, content, static=True)
 
 
 @app.route('/c/wcf/<regex("[0-9]{1,2}"):chapter>/<regex("[0-9]{1,2}"):paragraph>')
 def render_confession_section(chapter, paragraph):
     content = [data.get_confession('wcf', int(chapter), int(paragraph))]
-    return render_daily_page(1, 1, content, url="", static=True)
+    return render_daily_page(1, 1, content,  static=True)
 
 
 # Render page for generating facebook/twitter images
@@ -172,7 +166,7 @@ def render_image_page(month, day):
 
 # Render main page
 def render_daily_page(month, day, content, page_title=None,
-                   template='content_page_t.html', url=None, static=False):
+                   template='content_page_t.html', static=False):
     if page_title is None:
         page_title = ", ".join(c['citation'] for c in content)
     description = ", ".join(c['long_citation'] for c in content)
@@ -181,7 +175,6 @@ def render_daily_page(month, day, content, page_title=None,
                            date=get_date(month, day),
                            page_title=page_title,
                            description=description,
-                           url=url,
                            static=static)
 
 

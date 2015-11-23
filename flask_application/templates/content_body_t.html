@@ -6,9 +6,9 @@
         {% endfor %}
         {% if static %}
         <div id="sharing" class="social">
-            <div class="Facebook fb-share-button" data-href="{{ url }}/" data-layout="button"></div>
+            <div class="Facebook fb-share-button" data-href="{{ request.url }}/" data-layout="button"></div>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="twitter twitter-share-button" href="{{ url }}" data-count=none>
+            <a class="twitter twitter-share-button" href="{{ request.url }}" data-count=none>
 Tweet</a>
         </div>
         {% endif %}
