@@ -281,6 +281,16 @@
 		color: rgba(0,0,0,.6);
 	}
 
+	.image {
+		width:600px;
+		height:320px;
+		overflow: hidden;
+		padding:20px;
+		font-size:125%;
+
+	}
+
+
 	/* This gets Google to fall into place */
 	.social {
 		font-size: 1px;
