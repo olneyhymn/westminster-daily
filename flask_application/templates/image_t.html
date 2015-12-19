@@ -26,9 +26,8 @@
 <div class="container">
     <div class="row">
     <div class="image" id="content">
-        <h2>Westminster Daily</h2>
         {% for c in content %}
-            <h4 class="half-bottom">{{ c['name'] }} </h4>
+            <h3 class="half-bottom">{{ c['name'] }} </h3>
             {% include c['type'] + '_t.html' %}
         {% endfor %}
     </div>
