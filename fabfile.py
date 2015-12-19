@@ -126,6 +126,7 @@ A. {}
 """.format(c['long_citation'], c['question'], c['answer']))
     return ''.join(c_strings)
 
+
 @task
 def update_facebook():
     import facebook
