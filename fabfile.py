@@ -68,6 +68,7 @@ def build_images(month):
                        filename=date.strftime('%m%d'),
                        fullsize=True,
                        dir="flask_application/static/images/docs/",
+                       **{"ignore-ssl-check": True}
                        )
         print p.ran
         print "stdout: ", p.stdout
