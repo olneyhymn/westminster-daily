@@ -59,6 +59,7 @@ def test():
 @task
 def build_images(month):
     ''' '''
+    image_path = 'flask_application/static/images/docs/'
     server = sh.python('runserver.py', _bg=True)
     print "starting server with pid {}".format(server.pid)
     for date in (dt.datetime(2004, int(month), 01) + dt.timedelta(n) for n in range(31)):
@@ -67,12 +68,15 @@ def build_images(month):
                        selector="#content",
                        filename=date.strftime('%m%d'),
                        fullsize=True,
-                       dir="flask_application/static/images/docs/",
+                       dir=image_path,
                        **{"ignore-ssl-check": True}
                        )
         print p.ran
-        print "stdout: ", p.stdout
-        print "stderr: ", p.stderr
+        pngquant = sh.Command('/usr/local/bin/pngquant')
+        pngquant("--force",
+                 "--ext", ".png",
+                 "--quality", "65-80",
+                 "{}{}-full.png".format(image_path, date.strftime('%m%d')))
 
 
 @task
