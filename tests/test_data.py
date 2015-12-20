@@ -4,6 +4,20 @@ import pytest
 
 import flask_application.data as data
 
+
+def strip_html_tags(text):
+    finished = 0
+    while not finished:
+        finished = 1
+        start = text.find("<")
+        if start >= 0:
+            stop = text[start:].find(">")
+            if stop >= 0:
+                text = text[:start] + text[start+stop+1:]
+                finished = 0
+    return text
+
+
 WCF11 = "Although the light of nature, and the works " \
         "of creation and providence do so far manifest the goodness, wisdom, and power of " \
         "God, as to leave men unexcusable; yet are they not sufficient to give that " \
@@ -55,7 +69,21 @@ def test_confession():
     assert wcf11['paragraph'] == "1"
     assert wcf11['citation'] == "WCF 1.1"
     assert wcf11['long_citation'] == "Confession of Faith 1.1"
-    assert wcf11['body'] == WCF11
+    assert strip_html_tags(wcf11['body']) == WCF11
+
+
+def test_confession_foonotes():
+    footnote_one = ["Romans 2:14-15",
+                    "Romans 1:19-20",
+                    "Psalm 19:1-3",
+                    "Romans 1:32",
+                    "Romans 2:1"]
+    data.get_confession_footnotes("1") == footnote_one
+    for number in range(1, 580):
+        data.get_confession_footnotes(number)
+    with pytest.raises(KeyError):
+        data.get_confession_footnotes(580)
+
 
 
 def test_larger_catechism_q1():

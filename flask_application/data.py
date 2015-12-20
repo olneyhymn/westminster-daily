@@ -179,3 +179,11 @@ def get_today_content(tz='UTC'):
     month = dt.datetime.now(tz=tz).month
     day = dt.datetime.now(tz=tz).day
     return month, day, get_day(month, day)
+
+
+def get_confession_footnotes(number):
+    root_path = os.path.dirname(os.path.realpath(__file__))
+    json_path = os.path.join(root_path, "static/confessions/wcf-footnotes.json")
+
+    with open(json_path, "r") as f:
+        json.load(f)[str(number)]
