@@ -72,20 +72,6 @@ def test_confession():
     assert strip_html_tags(wcf11['body']) == WCF11
 
 
-def test_confession_foonotes():
-    footnote_one = ["Romans 2:14-15",
-                    "Romans 1:19-20",
-                    "Psalm 19:1-3",
-                    "Romans 1:32",
-                    "Romans 2:1"]
-    data.get_confession_footnotes("1") == footnote_one
-    for number in range(1, 580):
-        data.get_confession_footnotes(number)
-    with pytest.raises(KeyError):
-        data.get_confession_footnotes(580)
-
-
-
 def test_larger_catechism_q1():
     wlc11 = data.get_catechism('wlc', '1')
     assert wlc11['type'] == 'catechism'
