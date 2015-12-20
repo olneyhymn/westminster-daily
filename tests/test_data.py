@@ -37,7 +37,7 @@ def test_get_day():
     assert len(oct19) == 2
     assert {d['citation'] for d in oct19} == {"WCF 25.1", "WLC 64"}
 
-    with pytest.raises(data.DataException):
+    with pytest.raises(KeyError):
         data.get_day(4, 31)
 
 
@@ -74,19 +74,18 @@ def test_larger_catechism_q1():
 def test_larger_catechism_all_exists():
     for question in range(1, 197):
         assert data.get_catechism('wlc', str(question))
-    with pytest.raises(data.DataException):
+    with pytest.raises(KeyError):
         data.get_catechism('wlc', '198')
-    with pytest.raises(data.DataException):
+    with pytest.raises(KeyError):
         data.get_catechism('wlc', '0')
-
 
 
 def test_shorter_catechism_all_exists():
     for question in range(1, 107):
         assert data.get_catechism('wsc', str(question))
-    with pytest.raises(data.DataException):
+    with pytest.raises(KeyError):
         data.get_catechism('wsc', '108')
-    with pytest.raises(data.DataException):
+    with pytest.raises(KeyError):
         data.get_catechism('wsc', '0')
 
 
@@ -111,11 +110,11 @@ def test_westminster_confession_all_exists():
                  (33, 3)]:
         assert data.get_confession('wcf', c, s)
 
-    with pytest.raises(data.DataException):
+    with pytest.raises(KeyError):
         data.get_confession('wcf', 0, 0)
-    with pytest.raises(data.DataException):
+    with pytest.raises(KeyError):
         data.get_confession('wcf', 1, 11)
-    with pytest.raises(data.DataException):
+    with pytest.raises(KeyError):
         data.get_confession('wcf', 33, 4)
-    with pytest.raises(data.DataException):
+    with pytest.raises(KeyError):
         data.get_confession('wcf', 34, 1)

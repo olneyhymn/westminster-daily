@@ -78,7 +78,7 @@ app.jinja_env.filters['tomorrow'] = next_datetime
 app.jinja_env.filters['yesterday'] = prev_datetime
 
 
-@app.errorhandler(data.DataException)
+@app.errorhandler(KeyError)
 def page_not_found(e):
     return render_template('404_t.html', message=e.message), 404
 

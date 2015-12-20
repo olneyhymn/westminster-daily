@@ -13,10 +13,6 @@ catechisms = {
 }
 
 
-class DataException(Exception):
-    pass
-
-
 def get(name, *args):
     if name.lower() == "wcf":
         return get_confession(name.lower(), *args)
@@ -44,7 +40,7 @@ def get_confession(name, chapter, section):
             "body": wcf[chapter]['body'][section],
         }
     except:
-        raise DataException("Cannot find data for {} {}.{}.".format(name.upper(), chapter, section))
+        raise KeyError("Cannot find data for {} {}.{}.".format(name.upper(), chapter, section))
 
 
 def get_catechism(name, question):
@@ -66,7 +62,7 @@ def get_catechism(name, question):
             "answer": catechism[question]["answer"],
         }
     except:
-        raise DataException("Cannot find data for {} {}.".format(name.upper(), question))
+        raise KeyError("Cannot find data for {} {}.".format(name.upper(), question))
 
 
 _plan = ([('WSC', 1), ('WLC', 1)], [('WCF', 1, 1)], [('WLC', 2)], [('WCF', 1, 2)],
@@ -172,7 +168,7 @@ def get_day(month, day):
     try:
         day_of_year = (dt.datetime(2004, int(month), int(day)) - dt.datetime(2004, 1, 1)).days
     except:
-        raise DataException("Error parsing date (month: {} day: {}).".format(month, day))
+        raise KeyError("Error parsing date (month: {} day: {}).".format(month, day))
     refs = _plan[day_of_year]
     # return refs
     return [get(*ref) for ref in refs]
