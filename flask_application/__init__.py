@@ -179,17 +179,16 @@ def render_daily_page(month, day, content, page_title=None,
                            description=description,
                            static=static)
 
+
 def prooftexts(content):
     pts = dict()
     for c in content:
         pts.update(c.get('prooftexts', {}))
     for k, v in pts.items():
         urls = []
-        for text in v.split(";"):
-            text = text.strip()
-            s = urllib.quote(text)
-            url = "http://www.esvbible.org/{}".format(s)
-            urls.append("<a href='{}' target='_blank'>{}</a>".format(url, text))
+        s = urllib.quote(v.strip())
+        url = "http://www.esvbible.org/{}".format(s)
+        urls.append("<a href='{}' target='_blank'>{}</a>".format(url, v))
         pts[k] = ", ".join(urls)
     return pts
 
