@@ -2,6 +2,7 @@ import datetime as dt
 import simplejson as json
 import os
 import pytz
+import re
 
 from collections import OrderedDict
 
@@ -18,6 +19,17 @@ def get(name, *args):
         return get_confession(name.lower(), *args)
     else:
         return get_catechism(name.lower(), *args)
+
+
+def _convert_footnotes(body):
+    return re.sub(r"<span data-prooftexts='.*?' data-prooftexts-index='([0-9]+)'>(.*?)</span>",
+                  r"\2<sup id='fnref:\1'><a href='#fn:\1' rel='footnote'>\1</a></sup>",
+                  body, count=1000)
+
+
+def _get_prooftexts(body):
+    return re.findall(r"<span data-prooftexts='.*?' data-prooftexts-index='([0-9]+)'>",
+                      body)
 
 
 def get_confession(name, chapter, section):
@@ -37,9 +49,11 @@ def get_confession(name, chapter, section):
             "paragraph": section,
             "citation": "{} {}.{}".format(name.upper(), chapter, section),
             "long_citation": "{} {}.{}".format(catechisms[name], chapter, section),
-            "body": wcf[chapter]['body'][section],
+            "body": _convert_footnotes(wcf[chapter]['body'][section]),
+            "prooftexts": {pt: wcf[chapter]['prooftexts'][pt]
+                           for pt in _get_prooftexts(wcf[chapter]['body'][section])}
         }
-    except:
+    except KeyError:
         raise KeyError("Cannot find data for {} {}.{}.".format(name.upper(), chapter, section))
 
 

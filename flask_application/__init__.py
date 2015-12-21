@@ -1,5 +1,6 @@
 import datetime as dt
 import pytz
+import urllib
 
 from functools import wraps
 from flask import Flask, render_template
@@ -172,10 +173,25 @@ def render_daily_page(month, day, content, page_title=None,
     description = ", ".join(c['long_citation'] for c in content)
     return render_template(template,
                            content=content,
+                           prooftexts=prooftexts(content),
                            date=get_date(month, day),
                            page_title=page_title,
                            description=description,
                            static=static)
+
+def prooftexts(content):
+    pts = dict()
+    for c in content:
+        pts.update(c.get('prooftexts', {}))
+    for k, v in pts.items():
+        urls = []
+        for text in v.split(";"):
+            text = text.strip()
+            s = urllib.quote(text)
+            url = "http://www.esvbible.org/{}".format(s)
+            urls.append("<a href='{}' target='_blank'>{}</a>".format(url, text))
+        pts[k] = ", ".join(urls)
+    return pts
 
 
 def get_date(month, day):

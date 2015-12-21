@@ -1,8 +1,5 @@
 <div class="row remove-bottom">
     <div class="eight columns offset-by-four remove-bottom">
-        abcd<sup id="fnref:1">
-            <a href="#fn:1" rel="footnote">1</a>
-        </sup>
 
         {% for c in content %}
             <h5 class="half-bottom">{{ c['name'] }} </h5>
@@ -10,9 +7,11 @@
         {% endfor %}
 
         <div class="footnotes"><ol>
-            <li class="footnote" id="fn:1">
-                <p>footnote.<a href="#fnref:1" title="return to article"> ↩</a><p>
-            </li>
+            {% for k, v in prooftexts.items() %}
+                <li class="footnote" id="fn:{{ k }}">
+                    <p>{{ v | safe}}<a href="#fnref:{{ k }}" title="return to article"> ↩</a><p>
+                </li>
+            {% endfor %}
         </ol></div>
 
         {% if static %}
