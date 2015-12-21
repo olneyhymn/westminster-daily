@@ -5,6 +5,7 @@ import urllib
 from functools import wraps
 from flask import Flask, render_template
 from flask import Markup, request, redirect
+from flask import send_from_directory
 from werkzeug.routing import BaseConverter
 from werkzeug.contrib.atom import AtomFeed
 from werkzeug.contrib.cache import SimpleCache
@@ -116,6 +117,11 @@ def recent_westminster_daily_feed():
 @app.route('/')
 def render_today_legacy():
     return redirect('/westminster-daily', code=301)
+
+
+@app.route('/robots.txt')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
 
 
 @app.route('/westminster-daily')
