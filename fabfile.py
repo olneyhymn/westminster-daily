@@ -43,7 +43,7 @@ def console():
     local('env DEV=yes python -i runserver.py', capture=False)
 
 
-@task
+@task(alias='preview')
 def server():
     '''Run the dev server'''
     os.chdir(PROJ_DIR)
