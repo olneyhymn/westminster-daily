@@ -14,17 +14,21 @@ catechisms = {
 }
 
 
-def get(name, *args):
+def get(name, *args, **kwargs):
     if name.lower() == "wcf":
-        return get_confession(name.lower(), *args)
+        return get_confession(name.lower(), *args, **kwargs)
     else:
         return get_catechism(name.lower(), *args)
 
 
-def _convert_footnotes(body):
-    return re.sub(r"<span data-prooftexts='.*?' data-prooftexts-index='([0-9]+)'>(.*?)</span>",
-                  r"\2<sup id='fnref:\1'><a href='#fn:\1' rel='footnote'>\1</a></sup>",
-                  body, count=1000)
+def _convert_footnotes(body, prooftexts=True):
+    pattern = r"<span data-prooftexts='.*?' data-prooftexts-index='([0-9]+)'>(.*?)</span>"
+    if prooftexts:
+        return re.sub(pattern,
+                      r"\2<sup id='fnref:\1'><a href='#fn:\1' rel='footnote'>\1</a></sup>",
+                      body, count=1000)
+    else:
+        return re.sub(pattern, r"\2", body, count=1000)
 
 
 def _get_prooftexts(body):
@@ -32,7 +36,7 @@ def _get_prooftexts(body):
                       body)
 
 
-def get_confession(name, chapter, section):
+def get_confession(name, chapter, section, prooftexts=True):
     chapter = str(chapter)
     section = str(section)
     root_path = os.path.dirname(os.path.realpath(__file__))
@@ -49,7 +53,7 @@ def get_confession(name, chapter, section):
             "paragraph": section,
             "citation": "{} {}.{}".format(name.upper(), chapter, section),
             "long_citation": "{} {}.{}".format(catechisms[name], chapter, section),
-            "body": _convert_footnotes(wcf[chapter]['body'][section]),
+            "body": _convert_footnotes(wcf[chapter]['body'][section], prooftexts),
             "prooftexts": {pt: wcf[chapter]['prooftexts'][pt]
                            for pt in _get_prooftexts(wcf[chapter]['body'][section])}
         }
@@ -178,18 +182,18 @@ _plan = ([('WSC', 1), ('WLC', 1)], [('WCF', 1, 1)], [('WLC', 2)], [('WCF', 1, 2)
          [('WSC', 38), ('WLC', 90)], [('WCF', 33, 3)])
 
 
-def get_day(month, day):
+def get_day(month, day, prooftexts=True):
     try:
         day_of_year = (dt.datetime(2004, int(month), int(day)) - dt.datetime(2004, 1, 1)).days
     except:
         raise KeyError("Error parsing date (month: {} day: {}).".format(month, day))
     refs = _plan[day_of_year]
     # return refs
-    return [get(*ref) for ref in refs]
+    return [get(*ref, prooftexts=prooftexts) for ref in refs]
 
 
-def get_today_content(tz='UTC'):
+def get_today_content(tz='UTC', prooftexts=True):
     tz = pytz.timezone(tz)
     month = dt.datetime.now(tz=tz).month
     day = dt.datetime.now(tz=tz).day
-    return month, day, get_day(month, day)
+    return month, day, get_day(month, day, prooftexts)

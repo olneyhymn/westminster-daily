@@ -137,7 +137,7 @@ def update_facebook():
     import facebook
     api = facebook.GraphAPI(os.environ['FB_ACCESS_TOKEN'])
 
-    month, day, content = get_today_content(tz="US/Eastern")
+    month, day, content = get_today_content(tz="US/Eastern", prooftexts=False)
     base_url = "http://reformedconfessions.com/westminster-daily/"
     url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
     attachment = {'link': url}
