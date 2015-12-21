@@ -311,4 +311,8 @@
 		width: 75px;
 	}
 
+	sup {
+    	vertical-align: super;
+    	font-size: smaller;
+	}
 
