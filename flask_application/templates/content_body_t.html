@@ -1,9 +1,20 @@
 <div class="row remove-bottom">
     <div class="eight columns offset-by-four remove-bottom">
+        abcd<sup id="fnref:1">
+            <a href="#fn:1" rel="footnote">1</a>
+        </sup>
+
         {% for c in content %}
             <h5 class="half-bottom">{{ c['name'] }} </h5>
             {% include c['type'] + '_t.html' %}
         {% endfor %}
+
+        <div class="footnotes"><ol>
+            <li class="footnote" id="fn:1">
+                <p>footnote.<a href="#fnref:1" title="return to article"> ↩</a><p>
+            </li>
+        </ol></div>
+
         {% if static %}
         <div id="sharing" class="social">
             <div class="Facebook fb-share-button" data-href="{{ request.url }}" data-layout="button"></div>
