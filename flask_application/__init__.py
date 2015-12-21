@@ -182,6 +182,7 @@ def render_daily_page(month, day, content, page_title=None,
 
 def prooftexts(content):
     pts = dict()
+    new_pts = dict()
     for c in content:
         pts.update(c.get('prooftexts', {}))
     for k, v in pts.items():
@@ -189,8 +190,8 @@ def prooftexts(content):
         s = urllib.quote(v.strip())
         url = "http://www.esvbible.org/{}".format(s)
         urls.append("<a href='{}' target='_blank'>{}</a>".format(url, v))
-        pts[k] = ", ".join(urls)
-    return pts
+        new_pts[int(k)] = ", ".join(urls)
+    return new_pts
 
 
 def get_date(month, day):

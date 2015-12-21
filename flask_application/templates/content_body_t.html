@@ -6,7 +6,7 @@
             {% include c['type'] + '_t.html' %}
         {% endfor %}
 
-        <div class="footnotes"><ol start="{{ prooftexts.keys() | map('int') |  sort | first }}">
+        <div class="footnotes"><ol start="{{ prooftexts.keys() | sort | first }}">
             {% for k, v in prooftexts.items() %}
                 <li class="footnote" id="fn:{{ k }}">
                     <p>{{ v | safe}} &nbsp;<a href="#fnref:{{ k }}" title="return to article">↩</a><p>
@@ -15,7 +15,7 @@
         </ol></div>
 
         {% if static %}
-        <share-button></share-button>
+        <div id="sharing" class="social"><share-button></share-button></div>
         {% endif %}
     </div>
 </div>
