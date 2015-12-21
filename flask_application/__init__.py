@@ -161,7 +161,7 @@ def render_confession_section(chapter, paragraph):
 # Render page for generating facebook/twitter images
 @app.route('/i/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>')
 def render_image_page(month, day):
-    content = data.get_day(month, day)
+    content = data.get_day(month, day, prooftexts=False)
     return render_daily_page(month, day, content, template='image_t.html')
 
 
