@@ -15,12 +15,7 @@
         </ol></div>
 
         {% if static %}
-        <div id="sharing" class="social">
-            <div class="Facebook fb-share-button" data-href="{{ request.url }}" data-layout="button"></div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://twitter.com/share" class="twitter-share-button"{count} data-via="refconfessions" data-dnt="true">Tweet</a>
-Tweet</a>
-        </div>
+        <share-button></share-button>
         {% endif %}
     </div>
 </div>

@@ -76,6 +76,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/skeleton.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/layout.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/bigfoot-default.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/share-button.min.css')}}">
 
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -95,10 +96,7 @@
     ================================================== -->
     <script src="{{ url_for('static', filename='js/jquery-1.9.0.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/bigfoot.min.js') }}"></script>
-    <script type="text/javascript">
-        $.bigfoot({
-        });
-    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/share-button.min.js') }}"></script>
     <!-- Twitter Javascript -->
     <script>window.twttr = (function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0],
@@ -196,6 +194,18 @@
     </div><!-- container -->
 
 
+
+<script type="text/javascript">
+    $.bigfoot({
+    });
+    var shareButton = new ShareButton({
+      ui: {
+        collision: true
+      }
+    });
+    window.setTimeout(function() { shareButton.toggle(); }, 1000);
+    shareButton.toggleListen();
+</script>
 <!-- End Document
 ================================================== -->
 </body>
