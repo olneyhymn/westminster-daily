@@ -31,7 +31,9 @@ def _convert_footnotes(body, prooftexts=True):
         return re.sub(pattern, r"\2", body, count=1000)
 
 
-def _get_prooftexts(body):
+def _get_prooftexts(body, prooftexts=True):
+    if not prooftexts:
+        return []
     return re.findall(r"<span data-prooftexts='.*?' data-prooftexts-index='([0-9]+)'>",
                       body)
 
@@ -55,7 +57,7 @@ def get_confession(name, chapter, section, prooftexts=True):
             "long_citation": "{} {}.{}".format(catechisms[name], chapter, section),
             "body": _convert_footnotes(wcf[chapter]['body'][section], prooftexts),
             "prooftexts": {pt: wcf[chapter]['prooftexts'][pt]
-                           for pt in _get_prooftexts(wcf[chapter]['body'][section])}
+                           for pt in _get_prooftexts(wcf[chapter]['body'][section], prooftexts)}
         }
     except KeyError:
         raise KeyError("Cannot find data for {} {}.{}.".format(name.upper(), chapter, section))

@@ -101,7 +101,7 @@ def recent_westminster_daily_feed():
     for date in (now - dt.timedelta(n) for n in range(365)):
         month = date.strftime('%m')
         day = date.strftime('%d')
-        content = data.get_day(str(date.month), str(date.day), prooftexts=False)
+        content = data.get_day(str(date.month), str(date.day), prooftexts=True)
         page_title = ", ".join(c['long_citation'] for c in content)
         url = "http://{}/westminster-daily/{}/{}".format(request.host, month, day)
         feed.add(page_title,
