@@ -20,7 +20,7 @@ import datetime as dt
 
 from fabric.api import local, task
 
-from flask_application.data import get_today_content
+from flask_application.data import get_today_content, get_day_title
 
 APP_NAME = "Westminster Daily"
 PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -58,7 +58,7 @@ def test():
 
 @task
 def build_images(month):
-    ''' '''
+
     image_path = 'flask_application/static/images/docs/'
     server = sh.python('runserver.py', _bg=True)
     print "starting server with pid {}".format(server.pid)
@@ -165,7 +165,7 @@ def tweet():
     t = tw.Twitter(auth=auth)
 
     month, day, content = get_today_content(tz="US/Eastern")
-    description = ", ".join(c['long_citation'] for c in content)
+    description = get_day_title(month, day)
     url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
 
     try:
@@ -174,13 +174,13 @@ def tweet():
             imagedata = imagefile.read()
         t_up = tw.Twitter(domain='upload.twitter.com', auth=auth)
         id_img1 = t_up.media.upload(media=imagedata)["media_id_string"]
-        t.statuses.update(status="{}: {} {}".format(APP_NAME, description, url),
+        t.statuses.update(status="{} {}".format(description, url),
                           media_ids=id_img1)
     except tw.api.TwitterHTTPError as e:
         if any(error['code'] == 186 for error in e.response_data['errors']):
             # Tweet too long. Try a shorter tweet.
             description = ", ".join(c['citation'] for c in content)
-            t.statuses.update(status="Westminster Daily: {} {}".format(description, url))
+            t.statuses.update(status="{} {}".format(description, url))
         else:
             log.error("%s %s", "Unhandled exception", str(e))
         return

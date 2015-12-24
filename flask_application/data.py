@@ -352,9 +352,17 @@ _plan_titles = ["What is the chief and highest end of man?", "Of the Holy Script
                 "Of the Last Judgment, part 3"]
 
 
+def get_day_title(month, day):
+    return _plan_titles[_get_day_of_year(month, day)]
+
+
+def _get_day_of_year(month, day):
+    return (dt.datetime(2004, int(month), int(day)) - dt.datetime(2004, 1, 1)).days
+
+
 def get_day(month, day, prooftexts=True):
     try:
-        day_of_year = (dt.datetime(2004, int(month), int(day)) - dt.datetime(2004, 1, 1)).days
+        day_of_year = _get_day_of_year(month, day)
     except:
         raise KeyError("Error parsing date (month: {} day: {}).".format(month, day))
     refs = _plan[day_of_year]
