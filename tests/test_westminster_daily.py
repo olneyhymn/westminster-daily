@@ -2,6 +2,7 @@ import datetime as dt
 
 from flask_application import app
 
+
 def test_rss():
     with app.test_client() as c:
         response = c.get('/feed.rss', follow_redirects=False)
@@ -13,7 +14,7 @@ def test_rss():
 
 
 def test_daily_westminster_legacy_pages_exist():
-    start_date = dt.date(2015, 01, 01)
+    start_date = dt.date(2015, 1, 1)
 
     with app.test_client() as c:
         response = c.get('/')
@@ -32,7 +33,7 @@ def test_daily_westminster_legacy_pages_exist():
 
 
 def test_daily_westminster_pages_exist():
-    start_date = dt.date(2015, 01, 01)
+    start_date = dt.date(2015, 1, 1)
 
     with app.test_client() as c:
         response = c.get('/westminster-daily')
