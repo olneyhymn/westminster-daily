@@ -142,7 +142,7 @@ def reading_plan():
 def about_page():
     page_title = "A Daily Reading"
     content = Markup(markdown("""
-Since the 17th century, the Westminster Confession of Faith and Catechisms have served as a doctrinal standard for Presbyterian churches. In the Orthodox Presbyterian Church, "Ministers, elders, and deacons... are required to believe the Bible as the only infallible rule of faith and practice, to sincerely receive and adopt the Confession of Faith and Catechisms as containing the system of doctrine taught in Scripture" (Preface to the Book of Church Order, 2014).
+Since the 17th century, the Westminster Confession of Faith and Catechisms have served as a doctrinal standard for Presbyterian churches. In the [Orthodox Presbyterian Church (OPC)](http://www.opc.org), "Ministers, elders, and deacons... are required to believe the Bible as the only infallible rule of faith and practice, to sincerely receive and adopt the Confession of Faith and Catechisms as containing the system of doctrine taught in Scripture" (Preface to the Book of Church Order, 2014).
 
 The Westminster Confession organizes the core teaching of Scripture in thirty three, topically-arranged chapters. The Shorter Catechism outlines the theology of Scripture in the form of 107 questions and answers. The Larger Catechism expands on the Shorter with 196 questions and (typically longer) answers.
 
@@ -165,6 +165,8 @@ review on the Lord's Day as well.
 Some catechism questions are out of numerical order for thematic
 purposes. The format coordinates with that used in the "Harmony of the
 Westminster Confession and Catechism" by Dr. Morton Smith.
+
+The proof texts here are taken from [The Confession of Faith and Catechisms](http://www.opc.org/confessions.html) by the OPC. Currently, we only provide proof texts for the Confession; we are working on adding those for the Catechisms.
 
 May the Lord bless you as you "press on" to know Him ([Hosea 6](http://www.esvbible.org/Hosea6:3/)).
 """))
