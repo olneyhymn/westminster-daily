@@ -16,3 +16,4 @@ twitter==1.17.0
 pytz==2015.4
 Flask-Testing==0.4.2
 facebook-sdk
+markdown
