@@ -138,6 +138,7 @@ def reading_plan():
 
 
 @app.route('/about')
+@app.route('/about/')
 @cached()
 def about_page():
     page_title = "A Daily Reading"

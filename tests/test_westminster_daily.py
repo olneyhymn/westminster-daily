@@ -89,3 +89,5 @@ def test_about_page():
     with app.test_client() as c:
         response = c.get('about/')
         assert response.status_code == 200
+        response = c.get('about')
+        assert response.status_code == 301
