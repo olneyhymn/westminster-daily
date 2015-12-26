@@ -82,3 +82,9 @@ def test_daily_leap_day():
     with app.test_client() as c:
         response = c.get('westminster-daily/02/29/')
         assert response.status_code == 200
+
+
+def test_about_page():
+    with app.test_client() as c:
+        response = c.get('about/')
+        assert response.status_code == 200
