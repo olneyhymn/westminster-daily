@@ -124,6 +124,18 @@ def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
 
 
+@app.route('/westminster-daily/reading-plan')
+@cached()
+def reading_plan():
+    page_title = "A Daily Reading"
+    start = dt.datetime(2004, 1, 1)
+    dates = [start + dt.timedelta(days=i) for i in range(365)]
+    content = [(d, data.get_day_title(d.month, d.day)) for d in dates]
+    return render_template('reading_plan_t.html',
+                           page_title=page_title,
+                           content=content)
+
+
 @app.route('/westminster-daily')
 @cached()
 def render_today():
