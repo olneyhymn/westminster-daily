@@ -25,7 +25,7 @@ def _convert_footnotes(body, prooftexts=True):
     pattern = r"<span data-prooftexts='.*?' data-prooftexts-index='([0-9]+)'>(.*?)</span>"
     if prooftexts:
         return re.sub(pattern,
-                      r"\2<sup id='fnref:\1'><a href='#fn:\1' rel='footnote'>\1</a></sup>",
+                      r"\2<sup id='fnref:\1'><a href='#fn:\1' rel='footnote' style='text-decoration: none;'>&bull;</a></sup>",
                       body, count=1000)
     else:
         return re.sub(pattern, r"\2", body, count=1000)

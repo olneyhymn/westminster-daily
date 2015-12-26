@@ -6,12 +6,14 @@
             {% include c['type'] + '_t.html' %}
         {% endfor %}
 
-        <div class="footnotes"><ol start="{{ prooftexts.keys() | sort | first }}">
+        <div class="footnotes">
+            <ul start="{{ prooftexts.keys() | sort | first }}" class="disc">
             {% for k, v in prooftexts.items() %}
                 <li class="footnote" id="fn:{{ k }}">
                     <p>{{ v | safe}} &nbsp;<a href="#fnref:{{ k }}" title="return to article">↩</a><p>
                 </li>
             {% endfor %}
-        </ol></div>
+            </ul>
+        </div>
     </div>
 </div>
