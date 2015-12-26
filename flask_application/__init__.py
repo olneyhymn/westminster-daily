@@ -175,7 +175,7 @@ def render_image_page(month, day):
 def render_daily_page(month, day, content, page_title=None,
                    template='content_page_t.html', static=False):
     if page_title is None:
-        page_title = ", ".join(c['citation'] for c in content)
+        page_title = data.get_day_title(month, day)
     description = ", ".join(c['long_citation'] for c in content)
     return render_template(template,
                            content=content,
