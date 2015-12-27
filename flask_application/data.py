@@ -53,6 +53,7 @@ def get_confession(name, chapter, section, prooftexts=True):
             "section_title": "",
             "chapter": chapter,
             "paragraph": section,
+            "title": wcf[chapter]['title'],
             "citation": "{} {}.{}".format(name.upper(), chapter, section),
             "long_citation": "{} {}.{}".format(catechisms[name], chapter, section),
             "body": _convert_footnotes(wcf[chapter]['body'][section], prooftexts),

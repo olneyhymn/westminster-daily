@@ -2,14 +2,13 @@
     <div class="eight columns offset-by-four remove-bottom">
 
         {% for c in content %}
-            <h5 class="half-bottom">{{ c['name'] }} </h5>
             {% include c['type'] + '_t.html' %}
         {% endfor %}
 
         <div class="footnotes">
             <ul start="{{ prooftexts.keys() | sort | first }}" class="disc">
             {% for k, v in prooftexts.items() %}
-                <li class="footnote" id="fn:{{ k }}">
+                <li class="footnote remove-bottom" id="fn:{{ k }}">
                     <p>{{ v | safe}} &nbsp;<a href="{{ url }}#fnref:{{ k }}" title="return to article">↩</a><p>
                 </li>
             {% endfor %}

@@ -81,6 +81,7 @@ def test_confession():
     assert wcf11['chapter'] == "1"
     assert wcf11['paragraph'] == "1"
     assert wcf11['citation'] == "WCF 1.1"
+    assert wcf11['title'] == "Chapter 1: Of the Holy Scripture"
     assert wcf11['long_citation'] == "Confession of Faith 1.1"
     assert strip_html_tags(wcf11['body']) == WCF11_pt
     assert wcf11.get('prooftexts') is not None

@@ -67,13 +67,15 @@ def today_datetime(date):
 def format_datetime(date, pre=None, post=None):
     pre = "" if pre is None else pre
     post = "" if post is None else post
-    return Markup("<a href=\"/westminster-daily/{month}/{day}\">{pre}{Month} {Day}{post}</a>".format(
+    title = data.get_day_title(date.strftime('%m'), date.strftime('%d'))
+    return Markup("<a href=\"/westminster-daily/{month}/{day}\" title=\"{title}\">{pre}{Month} {Day}{post}</a>".format(
         month=date.strftime('%m'),
         day=date.strftime('%d'),
         Month=date.strftime("%-b"),
         Day=date.strftime("%-d"),
         pre=pre,
         post=post,
+        title=title
     ))
 
 app.jinja_env.filters['today'] = today_datetime
