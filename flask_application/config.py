@@ -5,7 +5,7 @@
 
 class Config(object):
     SITE_TITLE = "Westminster Standards"
-    SITE_TAGLINE = "Read through the Westminster Standards in a year."
+    SITE_TAGLINE = "Read the Westminster Standards in a year."
     TZ = 'US/Eastern'
     SECRET_KEY = ''
     SITE_NAME = 'reformedconfessions.com'

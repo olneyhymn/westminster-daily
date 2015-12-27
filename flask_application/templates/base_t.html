@@ -125,21 +125,32 @@
 
     <div class="container">
         <div class="row">
-        <div class="eight columns offset-by-four" style="text-align:center;">
-            <a href="/about">
-                <small>about</small>
-            </a>
-            &middot;
-            <a href="/westminster-daily/reading-plan">
-                <small>full plan</small>
-            </a>
+            <div class="ten columns offset-by-three remove-bottom"><hr class="remove-bottom"/></div>
+        </div>
+        <div class="row half-bottom">
+            <div class="three columns offset-by-four" style="text-align:center;">
+                <h5><a href="/">Westminster Daily</a></h5>
+            </div>
+            <div class="five columns" style="text-align:center;">
+                <h6 class='remove-bottom subheader'>{{ tagline }}</h6>
+            </div>
+        </div>
+        <div class="row">
 
-            <hr class="half-bottom"/>
-        </div>
-        <div class="eight columns offset-by-four" style="text-align:center;">
-            <h4 class='add-bottom'><a href="/">Westminster Daily</a></h4>
-            <p class='remove-bottom subheader'>{{ tagline }}</p>
-        </div>
+            <div class="three columns offset-by-four" style="text-align:center;">
+                <a href="/about">
+                    <small>about</small>
+                </a>
+                &middot;
+                <a href="/westminster-daily/reading-plan">
+                    <small>full plan</small>
+                </a>
+            </div>
+
+            <div class="five columns" style="text-align:center;">
+                {% block datenav %}
+                {% endblock %}
+            </div>
         </div>
 
         {% block body %}
