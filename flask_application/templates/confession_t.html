@@ -1,1 +1,1 @@
-<p><span class='q'>{{ c['chapter'] }}.{{ c['paragraph'] }}</span> {{ c['body'] | safe }}</p>
+<p><span class='q'>{{ c['chapter'] }}.{{ c['paragraph'] }}</span> {{ c['body'] | safe | replace("@URL@", url) }}</p>

@@ -10,7 +10,7 @@
             <ul start="{{ prooftexts.keys() | sort | first }}" class="disc">
             {% for k, v in prooftexts.items() %}
                 <li class="footnote" id="fn:{{ k }}">
-                    <p>{{ v | safe}} &nbsp;<a href="#fnref:{{ k }}" title="return to article">↩</a><p>
+                    <p>{{ v | safe}} &nbsp;<a href="{{ url }}#fnref:{{ k }}" title="return to article">↩</a><p>
                 </li>
             {% endfor %}
             </ul>

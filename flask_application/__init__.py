@@ -106,7 +106,9 @@ def recent_westminster_daily_feed():
         page_title = ", ".join(c['long_citation'] for c in content)
         url = "http://{}/westminster-daily/{}/{}".format(request.host, month, day)
         feed.add(page_title,
-                 render_daily_page(month, day, content, template='content_body_t.html'),
+                 render_daily_page(month, day, content,
+                                   template='content_body_t.html',
+                                   url=url),
                  content_type='html',
                  url=url,
                  published=date,
@@ -181,7 +183,8 @@ May the Lord bless you as you "press on" to know Him ([Hosea 6](http://www.esvbi
 def render_today():
     page_title = "A Daily Reading"
     content = data.get_today_content(tz=app.config['TZ'])
-    return render_daily_page(*content, page_title=page_title)
+    return render_daily_page(*content, page_title=page_title,
+                             url="http://{}/westminster-daily".format(request.host))
 
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
@@ -225,9 +228,12 @@ def render_image_page(month, day):
 
 # Render main page
 def render_daily_page(month, day, content, page_title=None,
-                   template='content_page_t.html', static=False):
+                   template='content_page_t.html', static=False, url=None):
     if page_title is None:
         page_title = data.get_day_title(month, day)
+    if url is None:
+        url = request.url
+        # url = "http://{}{}".format(request.host, request.path)
     description = ", ".join(c['long_citation'] for c in content)
     return render_template(template,
                            content=content,
@@ -235,7 +241,8 @@ def render_daily_page(month, day, content, page_title=None,
                            date=get_date(month, day),
                            page_title=page_title,
                            description=description,
-                           static=static)
+                           static=static,
+                           url=url)
 
 
 def prooftexts(content):
