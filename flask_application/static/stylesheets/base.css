@@ -407,7 +407,8 @@ object.audio {
 	}
 
 .esv>h2 {
-	font-size: 95%;
+	font-size: 19px;
+	line-height: 24px;
 	margin-bottom: 0.1em;
 }
 
