@@ -57,7 +57,7 @@ def get_confession(name, chapter, section, prooftexts=True):
             "citation": "{} {}.{}".format(name.upper(), chapter, section),
             "long_citation": "{} {}.{}".format(catechisms[name], chapter, section),
             "body": _convert_footnotes(wcf[chapter]['body'][section], prooftexts),
-            "prooftexts": {pt: wcf[chapter]['prooftexts'][pt]
+            "prooftexts": {pt: wcf[chapter]['prooftext_verses'][pt]
                            for pt in _get_prooftexts(wcf[chapter]['body'][section], prooftexts)}
         }
     except KeyError:

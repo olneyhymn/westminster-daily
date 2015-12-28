@@ -5,7 +5,7 @@
             {% include c['type'] + '_t.html' %}
         {% endfor %}
 
-        <div class="footnotes">
+        <div class="prooftexts">
             <ul start="{{ prooftexts.keys() | sort | first }}" class="disc">
             {% for k, v in prooftexts.items() %}
                 <li class="footnote remove-bottom" id="fn:{{ k }}">

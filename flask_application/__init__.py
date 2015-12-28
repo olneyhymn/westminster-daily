@@ -253,11 +253,7 @@ def prooftexts(content):
     for c in content:
         pts.update(c.get('prooftexts', {}))
     for k, v in pts.items():
-        urls = []
-        s = urllib.quote(v.strip())
-        url = "http://www.esvbible.org/{}".format(s)
-        urls.append("<a href='{}' target='_blank'>{}</a>".format(url, v))
-        new_pts[int(k)] = ", ".join(urls)
+        new_pts[int(k)] = v
     return new_pts
 
 
