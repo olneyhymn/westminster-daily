@@ -114,7 +114,7 @@ def _feed(prooftexts):
         month = date.strftime('%m')
         day = date.strftime('%d')
         content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
-        page_title = ", ".join(c['long_citation'] for c in content)
+        page_title = data.get_day_title(month, day)
         url = "http://{}/westminster-daily/{}/{}".format(request.host, month, day)
 
         feed.add(page_title,
