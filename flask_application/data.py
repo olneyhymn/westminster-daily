@@ -18,7 +18,7 @@ def get(name, *args, **kwargs):
     if name.lower() == "wcf":
         return get_confession(name.lower(), *args, **kwargs)
     else:
-        return get_catechism(name.lower(), *args)
+        return get_catechism(name.lower(), *args, **kwargs)
 
 
 def _convert_footnotes(body, prooftexts=True):
@@ -64,7 +64,7 @@ def get_confession(name, chapter, section, prooftexts=True):
         raise KeyError("Cannot find data for {} {}.{}.".format(name.upper(), chapter, section))
 
 
-def get_catechism(name, question):
+def get_catechism(name, question, prooftexts=True):
     question = str(question)
     root_path = os.path.dirname(os.path.realpath(__file__))
     json_path = os.path.join(root_path, "static/confessions/{}.json".format(name))
@@ -80,7 +80,9 @@ def get_catechism(name, question):
             "long_citation": "{} {}".format(catechisms[name], question),
             "number": question,
             "question": catechism[question]["question"],
-            "answer": catechism[question]["answer"],
+            "answer": _convert_footnotes(catechism[question]["answer"], prooftexts),
+            "prooftexts": {pt: catechism[question]['prooftext_verses'][pt]
+                           for pt in _get_prooftexts(catechism[question]['answer'], prooftexts)}
         }
     except:
         raise KeyError("Cannot find data for {} {}.".format(name.upper(), question))
