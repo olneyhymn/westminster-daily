@@ -96,6 +96,16 @@ def recent_westminster_daily_feed_legacy():
 @app.route('/westminster-daily/feed.rss')
 @cached()
 def recent_westminster_daily_feed():
+    return _feed(prooftexts=True).get_response()
+
+
+@app.route('/westminster-daily/feed_no_prooftexts.rss')
+@cached()
+def recent_westminster_daily_feed_without_prooftexts():
+    return _feed(prooftexts=False).get_response()
+
+
+def _feed(prooftexts):
     feed = AtomFeed(app.config['SITE_TITLE'],
                     author=app.config['SITE_TITLE'],
                     feed_url=request.url,
@@ -104,19 +114,19 @@ def recent_westminster_daily_feed():
     for date in (now - dt.timedelta(n) for n in range(365)):
         month = date.strftime('%m')
         day = date.strftime('%d')
-        content = data.get_day(str(date.month), str(date.day), prooftexts=True)
+        content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
         page_title = ", ".join(c['long_citation'] for c in content)
         url = "http://{}/westminster-daily/{}/{}".format(request.host, month, day)
+
         feed.add(page_title,
                  render_daily_page(month, day, content,
-                                   template='content_body_t.html',
-                                   url=url),
-                 content_type='html',
-                 url=url,
-                 published=date,
-                 updated=date,
-                 )
-    return feed.get_response()
+                              template='content_body_t.html',
+                              url=url),
+            content_type='html',
+            url=url,
+            published=date,
+            updated=date)
+    return feed
 
 
 @app.route('/')
