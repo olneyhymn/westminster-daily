@@ -1,6 +1,5 @@
 import datetime as dt
 import pytz
-import urllib
 
 from functools import wraps
 from flask import Flask, render_template
@@ -122,10 +121,10 @@ def _feed(prooftexts):
                  render_daily_page(month, day, content,
                               template='content_body_t.html',
                               url=url),
-            content_type='html',
-            url=url,
-            published=date,
-            updated=date)
+                content_type='html',
+                url=url,
+                published=date,
+                updated=date)
     return feed
 
 
