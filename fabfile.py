@@ -142,8 +142,13 @@ def update_facebook():
     url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
     attachment = {'link': url}
 
+    content = make_facebook_string(content)
+
+    if (month, day) in [(1, 4), (7, 5)]:
+        content = "" # Days have html formatting
+
     try:
-        status = api.put_wall_post(make_facebook_string(content), attachment=attachment)
+        status = api.put_wall_post(content, attachment=attachment)
         log.info(status)
     except facebook.GraphAPIError as e:
         print e
