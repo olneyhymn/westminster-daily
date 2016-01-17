@@ -243,7 +243,6 @@ def render_daily_page(month, day, content, page_title=None,
         page_title = data.get_day_title(month, day)
     if url is None:
         url = request.url
-        # url = "http://{}{}".format(request.host, request.path)
     description = ", ".join(c['long_citation'] for c in content)
     return render_template(template,
                            content=content,
