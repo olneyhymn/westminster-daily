@@ -26,7 +26,7 @@ def cached(timeout=0 if app.config['DEBUG'] else 60 * 60, key='view/%s'):
     def decorator(f):
         @wraps(f)
         def decorated_function(*args, **kwargs):
-            cache_key = key % request.path
+            cache_key = key % request.url
             rv = cache.get(cache_key)
             if rv is not None:
                 return rv
