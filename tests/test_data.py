@@ -99,6 +99,7 @@ def test_larger_catechism_q1():
     assert wlc11['citation'] == 'WLC 1'
     assert wlc11['long_citation'] == 'Larger Catechism 1'
     assert wlc11['answer'] == 'Man\'s chief and highest end is to glorify God, and fully to enjoy him forever.'
+    # assert strip_html_tags(wlc11['answer']) == """Man's chief and highest end is to glorify God,&bull; and fully to enjoy him forever.&bull;"""
     assert wlc11['question'] == 'What is the chief and highest end of man?'
 
 
