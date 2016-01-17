@@ -68,24 +68,21 @@ def get_catechism(name, question, prooftexts=True):
     question = str(question)
     root_path = os.path.dirname(os.path.realpath(__file__))
     json_path = os.path.join(root_path, "static/confessions/{}.json".format(name))
-    try:
-        with open(json_path, "r") as f:
-            catechism = json.load(f, object_pairs_hook=OrderedDict)
-        return {
-            "type": "catechism",
-            "abbv": name,
-            "name": catechisms[name],
-            "section_title": "",
-            "citation": "{} {}".format(name.upper(), question),
-            "long_citation": "{} {}".format(catechisms[name], question),
-            "number": question,
-            "question": catechism[question]["question"],
-            "answer": _convert_footnotes(catechism[question]["answer"], prooftexts),
-            "prooftexts": {pt: catechism[question]['prooftext_verses'][pt]
-                           for pt in _get_prooftexts(catechism[question]['answer'], prooftexts)}
-        }
-    except:
-        raise KeyError("Cannot find data for {} {}.".format(name.upper(), question))
+    with open(json_path, "r") as f:
+        catechism = json.load(f, object_pairs_hook=OrderedDict)
+    return {
+        "type": "catechism",
+        "abbv": name,
+        "name": catechisms[name],
+        "section_title": "",
+        "citation": "{} {}".format(name.upper(), question),
+        "long_citation": "{} {}".format(catechisms[name], question),
+        "number": question,
+        "question": catechism[question]["question"],
+        "answer": _convert_footnotes(catechism[question]["answer"], prooftexts),
+        "prooftexts": {pt: catechism[question]['prooftext_verses'][pt]
+                       for pt in _get_prooftexts(catechism[question]['answer'], prooftexts)}
+    }
 
 
 _plan = ([('WSC', 1), ('WLC', 1)], [('WCF', 1, 1)], [('WLC', 2)], [('WCF', 1, 2)],
