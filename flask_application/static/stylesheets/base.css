@@ -261,6 +261,15 @@
 
 /* Custom
 ================================================== */
+
+
+	a.hideproofs, a.hideproofs:visited {
+		color: 	rgb(130, 130, 130);
+		text-decoration: underline;
+		outline: 0;
+		font-size:65%;
+	}
+
 	.answer {
 		border-left: 1px solid rgba(0,0,0,.2);
 		padding-left: 7px;

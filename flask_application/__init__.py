@@ -194,7 +194,7 @@ May the Lord bless you as you "press on" to know Him ([Hosea 6](http://www.esvbi
 @cached()
 def render_today():
     page_title = "A Daily Reading"
-    content = data.get_today_content(tz=app.config['TZ'])
+    content = data.get_today_content(tz=app.config['TZ'], prooftexts=show_prooftexts())
     return render_daily_page(*content, page_title=page_title,
                              url="http://{}/westminster-daily".format(request.host))
 
@@ -213,7 +213,7 @@ def render_fixed_day_legacy(month, day):
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
 @cached()
 def render_fixed_day(month, day):
-    content = data.get_day(month, day)
+    content = data.get_day(month, day, prooftexts=show_prooftexts())
     return render_daily_page(month, day, content, static=True)
 
 
@@ -243,6 +243,7 @@ def render_daily_page(month, day, content, page_title=None,
         page_title = data.get_day_title(month, day)
     if url is None:
         url = request.url
+
     description = ", ".join(c['long_citation'] for c in content)
     return render_template(template,
                            content=content,
@@ -252,6 +253,10 @@ def render_daily_page(month, day, content, page_title=None,
                            description=description,
                            static=static,
                            url=url)
+
+
+def show_prooftexts():
+    return 'hide-prooftexts' not in request.args
 
 
 def prooftexts(content):

@@ -156,6 +156,15 @@
         {% block body %}
         {% endblock %}
 
+
+
+        <div class="eight columns offset-by-four remove-bottom" style="text-align:right;">
+            {% if prooftexts %}
+                <a href="?hide-prooftexts" class="hideproofs">hide proof texts</a>
+            {% else %}
+                <a href="?" class="hideproofs">show proof texts</a>
+            {% endif %}
+        </div>
         <div class="ten columns offset-by-three remove-bottom"><hr class="half-bottom"/></div>
         <div class="eight columns offset-by-four" style="text-align:center;">
 
