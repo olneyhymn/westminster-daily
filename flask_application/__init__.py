@@ -38,6 +38,7 @@ def cached(timeout=0 if app.config['DEBUG'] else 60 * 60, key='view/%s'):
 
 
 class RegexConverter(BaseConverter):
+
     def __init__(self, url_map, *items):
         super(RegexConverter, self).__init__(url_map)
         self.regex = items[0]
@@ -119,12 +120,12 @@ def _feed(prooftexts):
 
         feed.add(page_title,
                  render_daily_page(month, day, content,
-                              template='content_body_t.html',
-                              url=url),
-                content_type='html',
-                url=url,
-                published=date,
-                updated=date)
+                                   template='content_body_t.html',
+                                   url=url),
+                 content_type='html',
+                 url=url,
+                 published=date,
+                 updated=date)
     return feed
 
 
@@ -208,8 +209,6 @@ def render_fixed_day_legacy(month, day):
     return redirect(url, code=301)
 
 
-
-
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
 @cached()
@@ -239,7 +238,7 @@ def render_image_page(month, day):
 
 # Render main page
 def render_daily_page(month, day, content, page_title=None,
-                   template='content_page_t.html', static=False, url=None):
+                      template='content_page_t.html', static=False, url=None):
     if page_title is None:
         page_title = data.get_day_title(month, day)
     if url is None:
