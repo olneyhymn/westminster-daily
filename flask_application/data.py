@@ -188,7 +188,7 @@ _plan_titles = ["What is the chief and highest end of man?", "Of the holy Script
                 "Of the holy Scripture, part 3", "Of the holy Scripture, part 4", "Of the holy Scripture, part 5",
                 "How doth it appear that the Scriptures are the Word of God?", "Of the holy Scripture, part 6",
                 "Of the holy Scripture, part 7", "Of the holy Scripture, part 8", "Of the holy Scripture, part 9",
-                "Of the holy Scripture, part 10", "What do the scriptures principally teach?", "What do the Scriptures make known of God?",
+                "Of the holy Scripture, part 10", "What do the Scriptures principally teach?", "What do the Scriptures make known of God?",
                 "Of God, and of the holy Trinity, part 1", "What is God?", "Are there more Gods than one?",
                 "Of God, and of the holy Trinity, part 2", "Of God, and of the holy Trinity, part 3",
                 "How many persons are there in the Godhead?", "What are the personal properties of the three persons in the Godhead?",
