@@ -1,5 +1,6 @@
 import datetime as dt
 import pytz
+import premailer
 
 from functools import wraps
 from flask import Flask, render_template
@@ -81,6 +82,11 @@ def format_datetime(date, pre=None, post=None):
 app.jinja_env.filters['today'] = today_datetime
 app.jinja_env.filters['tomorrow'] = next_datetime
 app.jinja_env.filters['yesterday'] = prev_datetime
+
+
+@app.template_filter('inline_styles')
+def inline_styles(s):
+    return premailer.transform(s)
 
 
 @app.errorhandler(KeyError)
