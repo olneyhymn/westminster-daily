@@ -135,6 +135,36 @@ def _feed(prooftexts):
     return feed
 
 
+@app.route('/westminster-daily/feed_test.rss')
+@cached()
+def recent_westminster_daily_feed_test():
+    return _feed_test(prooftexts=True).get_response()
+
+
+def _feed_test(prooftexts):
+    feed = AtomFeed(app.config['SITE_TITLE'],
+                    author=app.config['SITE_TITLE'],
+                    feed_url=request.url,
+                    url=request.url_root)
+    now = dt.datetime.now(tz=pytz.timezone(app.config['TZ']))
+    for date in (now - dt.timedelta(n) for n in range(30)):
+        month = date.strftime('%m')
+        day = date.strftime('%d')
+        content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
+        page_title = data.get_day_title(month, day)
+        url = "http://{}/westminster-daily/{}/{}".format(request.host, month, day)
+
+        feed.add(page_title,
+                 render_daily_page(month, day, content,
+                                   template='feed_item_t.html',
+                                   url=url),
+                 content_type='html',
+                 url=url,
+                 published=date,
+                 updated=date)
+    return feed
+
+
 @app.route('/')
 def render_today_legacy():
     return redirect('/westminster-daily', code=301)
