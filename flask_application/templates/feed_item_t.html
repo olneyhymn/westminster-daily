@@ -1,0 +1,20 @@
+<!-- {% filter inline_styles %} -->
+<head>
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="./flask_application/static/stylesheets/base.css">
+    <link rel="stylesheet" href="./flask_application/static/stylesheets/skeleton.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+    <div class="image" id="content">
+        {% for c in content %}
+            <h3 class="half-bottom">{{ c['name'] }} </h3>
+            {% include c['type'] + '_t.html' %}
+        {% endfor %}
+    </div>
+    </div>
+</div>
+</body>
+<!-- {% endfilter %} -->
