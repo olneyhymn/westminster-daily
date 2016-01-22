@@ -59,11 +59,11 @@ def inject_site_defaults():
 
 
 def next_datetime(date):
-    return format_datetime(date + dt.timedelta(days=1), post=" > ")
+    return format_datetime(date + dt.timedelta(days=1), post=" &gt; ")
 
 
 def prev_datetime(date):
-    return format_datetime(date - dt.timedelta(days=1), pre=" < ")
+    return format_datetime(date - dt.timedelta(days=1), pre=" &lt; ")
 
 
 def today_datetime(date):
