@@ -261,15 +261,6 @@
 
 /* Custom
 ================================================== */
-	div.prooftexts{
-		background-color: rgba(110, 110, 110, 0.1);
-  		border-radius: 0.5em;
-	}
-
-	div.prooftexts ul {
-		display: block;
-	}
-
 	a.hideproofs, a.hideproofs:visited {
 		color: 	rgb(130, 130, 130);
 		text-decoration: underline;
@@ -333,6 +324,14 @@
 /* ESV Bible Footnotes
 ================================================== */
 
+div.prooftexts{
+	background-color: rgba(110, 110, 110, 0.1);
+		border-radius: 0.5em;
+}
+
+div.prooftexts ul {
+	display: block;
+}
 span.verse-num {
 	font-size: 80%;
 	font-weight: bold;
@@ -351,7 +350,6 @@ div.esv-text {
 	display: inline;
 	}
 div.esv-text p {
-	display: inline;
 	font-size: 85%;
 	text-indent: .2em;
 	}
