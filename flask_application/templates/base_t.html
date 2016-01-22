@@ -95,9 +95,12 @@
     ================================================== -->
     <script src="{{ url_for('static', filename='js/jquery-1.9.0.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/bigfoot.min.js') }}"></script>
+    {% raw %}
     <script type="text/javascript">
         $.bigfoot({
+                    "buttonMarkup": "<div class='bigfoot-footnote__container'> <button class='bigfoot-footnote__button' id='{{SUP:data-footnote-backlink-ref}}' data-footnote-number='{{FOOTNOTENUM}}' data-footnote-identifier='{{FOOTNOTEID}}' alt='See Footnote {{FOOTNOTENUM}}' rel='footnote' data-bigfoot-footnote='{{FOOTNOTECONTENT}}'> <svg class='bigfoot-footnote__button__circle' viewbox='0 0 6 6' preserveAspectRatio='xMinYMin'><circle r='3' cx='3' cy='3' fill='white'></circle></svg> <svg class='bigfoot-footnote__button__circle' viewbox='0 0 6 6' preserveAspectRatio='xMinYMin'><circle r='3' cx='3' cy='3' fill='white'></circle></svg> </button></div>"
         });
+    {% endraw %}
     </script>
 
     <script>
