@@ -1,5 +1,6 @@
 import datetime as dt
 import pytz
+import os
 import premailer
 
 from functools import wraps
@@ -20,8 +21,12 @@ LEAP_YEAR = 2008
 # create our application
 app = Flask(__name__)
 cache = SimpleCache()
-app.config.from_object(config.Config)
 
+if os.environ.get("DEV", "no") == "yes":
+    app.config.from_object(config.DevelopmentConfig)
+else:
+    app.config.from_object(config.ProductionConfig)
+import ipdb; ipdb.set_trace()
 
 def cached(timeout=0 if app.config['DEBUG'] else 60 * 60, key='view/%s'):
     def decorator(f):
