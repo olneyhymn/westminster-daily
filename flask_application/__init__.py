@@ -90,8 +90,9 @@ app.jinja_env.filters['yesterday'] = prev_datetime
 
 
 @app.template_filter('inline_styles')
-def inline_styles(s):
-    return premailer.transform(s)
+def inline_styles(s, *args, **kwargs):
+    pm = premailer.Premailer(s, *args, **kwargs)
+    return pm.transform()
 
 
 @app.errorhandler(KeyError)
