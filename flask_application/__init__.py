@@ -26,9 +26,9 @@ if os.environ.get("DEV", "no") == "yes":
     app.config.from_object(config.DevelopmentConfig)
 else:
     app.config.from_object(config.ProductionConfig)
-import ipdb; ipdb.set_trace()
 
-def cached(timeout=0 if app.config['DEBUG'] else 60 * 60, key='view/%s'):
+
+def cached(timeout=0 if app.debug else 60 * 60, key='view/%s'):
     def decorator(f):
         @wraps(f)
         def decorated_function(*args, **kwargs):
