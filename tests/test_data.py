@@ -20,15 +20,15 @@ def strip_html_tags(text):
 
 WCF11_pt = ("Although the light of nature, and the works of creation and providence"
     " do so far manifest the goodness, wisdom, and power of God, as to leave men"
-    " unexcusable;&bull; yet are they not sufficient to give that knowledge of God, and of"
-    " his will, which is necessary unto salvation.&bull; Therefore it pleased the Lord, at"
+    " unexcusable;1 yet are they not sufficient to give that knowledge of God, and of"
+    " his will, which is necessary unto salvation.2 Therefore it pleased the Lord, at"
     " sundry times, and in divers manners, to reveal himself, and to declare that his"
-    " will unto his church;&bull; and afterwards, for the better preserving and propagating"
+    " will unto his church;3 and afterwards, for the better preserving and propagating"
     " of the truth, and for the more sure establishment and comfort of the church"
     " against the corruption of the flesh, and the malice of Satan and of the world,"
-    " to commit the same wholly unto writing:&bull; which maketh the Holy Scripture to be"
-    " most necessary;&bull; those former ways of God's revealing his will unto his people"
-    " being now ceased.&bull;")
+    " to commit the same wholly unto writing:4 which maketh the Holy Scripture to be"
+    " most necessary;5 those former ways of God's revealing his will unto his people"
+    " being now ceased.6")
 
 
 WCF11_no_pt = ("Although the light of nature, and the works of creation and providence"
@@ -98,8 +98,7 @@ def test_larger_catechism_q1():
     assert wlc11['number'] == '1'
     assert wlc11['citation'] == 'WLC 1'
     assert wlc11['long_citation'] == 'Larger Catechism 1'
-    assert wlc11['answer'] == 'Man\'s chief and highest end is to glorify God, and fully to enjoy him forever.'
-    # assert strip_html_tags(wlc11['answer']) == """Man's chief and highest end is to glorify God,&bull; and fully to enjoy him forever.&bull;"""
+    assert strip_html_tags(wlc11['answer']) == """Man's chief and highest end is to glorify God,1 and fully to enjoy him forever.2"""
     assert wlc11['question'] == 'What is the chief and highest end of man?'
 
 
