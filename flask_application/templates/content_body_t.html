@@ -1,18 +1,18 @@
 <div class="row remove-bottom">
     <div class="eight columns offset-by-four remove-bottom">
-
         {% for c in content %}
             {% include c['type'] + '_t.html' %}
+            <div class="prooftexts">
+                <ol class="disc">
+                {% for k, v in c.prooftexts.items() %}
+                    <li class="footnote remove-bottom" id="fn:{{ k }}">
+                        {{ v | safe}}
+                    </li>
+                {% endfor %}
+                </ol>
+            </div>
         {% endfor %}
 
-        <div class="prooftexts">
-            <ul start="{{ prooftexts.keys() | sort | first }}" class="disc">
-            {% for k, v in prooftexts.items() %}
-                <li class="footnote remove-bottom" id="fn:{{ k }}">
-                    <p>{{ v | safe}} &nbsp;<a href="{{ url }}#fnref:{{ k }}" title="return to article">↩</a><p>
-                </li>
-            {% endfor %}
-            </ul>
-        </div>
+
     </div>
 </div>
