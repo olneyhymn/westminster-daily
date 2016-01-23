@@ -31,7 +31,7 @@ def _convert_footnotes(name, body, prooftexts=True):
     def sub(m):
         global match_index
         match_index += 1
-        return "{two}<sup id='fnref:{name}{one}'><a href='@URL@#fn:{one}' rel='footnote' style='text-decoration: none;'>{one}</a></sup>".format(name=name, one=match_index, two=m.group(2))
+        return "{two}<sup id='fnref:{name}{one}'><a href='#fn:{one}' rel='footnote' style='text-decoration: none;'>{one}</a></sup>".format(name=name, one=match_index, two=m.group(2))
     if prooftexts:
         return re.sub(pattern,
                       sub,
