@@ -141,6 +141,14 @@ def _feed(prooftexts):
     return feed
 
 
+@app.route('/westminster-daily/test/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
+@app.route('/westminster-daily/test/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
+@cached()
+def render_test(month, day):
+    content = data.get_day(month, day, prooftexts=True)
+    return render_daily_page(month, day, content, template='feed_item_t.html')
+
+
 @app.route('/westminster-daily/feed_test.rss')
 @cached()
 def recent_westminster_daily_feed_test():
