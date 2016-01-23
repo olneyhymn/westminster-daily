@@ -190,3 +190,12 @@ def tweet():
             log.error("%s %s", "Unhandled exception", str(e))
         return
     log.info("%s %s", "Tweeted", str(description))
+
+@task
+def testpages():
+    """Open test pages to check out.
+    """
+    local('open http://127.0.0.1:8080/westminster-daily/01/01/')
+    local('open http://127.0.0.1:8080/westminster-daily/01/02/')
+    local('open http://127.0.0.1:8080/westminster-daily/12/28/')
+

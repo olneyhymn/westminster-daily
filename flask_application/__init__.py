@@ -285,11 +285,11 @@ def render_daily_page(month, day, content, page_title=None,
         page_title = data.get_day_title(month, day)
     if url is None:
         url = request.url
-
+    prooftexts = any(len(c["prooftexts"]) for c in content)
     description = ", ".join(c['long_citation'] for c in content)
     return render_template(template,
+                           prooftexts = prooftexts,
                            content=content,
-                           prooftexts=prooftexts(content),
                            date=get_date(month, day),
                            page_title=page_title,
                            description=description,
@@ -299,16 +299,6 @@ def render_daily_page(month, day, content, page_title=None,
 
 def show_prooftexts():
     return 'hide-prooftexts' not in request.args
-
-
-def prooftexts(content):
-    pts = dict()
-    new_pts = dict()
-    for c in content:
-        pts.update(c.get('prooftexts', {}))
-    for k, v in pts.items():
-        new_pts[int(k)] = v
-    return new_pts
 
 
 def get_date(month, day):

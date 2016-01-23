@@ -21,11 +21,20 @@ def get(name, *args, **kwargs):
         return get_catechism(name.lower(), *args, **kwargs)
 
 
-def _convert_footnotes(body, prooftexts=True):
+
+
+def _convert_footnotes(name, body, prooftexts=True):
     pattern = r"<span data-prooftexts='.*?' data-prooftexts-index='([0-9]+)'>(.*?)</span>"
+    global match_index
+    match_index = 0
+
+    def sub(m):
+        global match_index
+        match_index += 1
+        return "{two}<sup id='fnref:{name}{one}'><a href='@URL@#fn:{one}' rel='footnote' style='text-decoration: none;'>{one}</a></sup>".format(name=name, one=match_index, two=m.group(2))
     if prooftexts:
         return re.sub(pattern,
-                      r"\2<sup id='fnref:\1'><a href='#fn:\1' rel='footnote' style='text-decoration: none;'>&bull;</a></sup>",
+                      sub,
                       body)
     else:
         return re.sub(pattern, r"\2", body, count=1000)
@@ -56,9 +65,9 @@ def get_confession(name, chapter, section, prooftexts=True):
             "title": wcf[chapter]['title'],
             "citation": "{} {}.{}".format(name.upper(), chapter, section),
             "long_citation": "{} {}.{}".format(catechisms[name], chapter, section),
-            "body": _convert_footnotes(wcf[chapter]['body'][section], prooftexts),
-            "prooftexts": {pt: wcf[chapter]['prooftext_verses'][pt]
-                           for pt in _get_prooftexts(wcf[chapter]['body'][section], prooftexts)}
+            "body": _convert_footnotes(name, wcf[chapter]['body'][section], prooftexts),
+            "prooftexts": {i: wcf[chapter]['prooftext_verses'][pt]
+                           for i, pt in enumerate(_get_prooftexts(wcf[chapter]['body'][section], prooftexts), 1)}
         }
     except KeyError:
         raise KeyError("Cannot find data for {} {}.{}.".format(name.upper(), chapter, section))
@@ -79,9 +88,9 @@ def get_catechism(name, question, prooftexts=True):
         "long_citation": "{} {}".format(catechisms[name], question),
         "number": question,
         "question": catechism[question]["question"],
-        "answer": _convert_footnotes(catechism[question]["answer"], prooftexts),
-        "prooftexts": {pt: catechism[question]['prooftext_verses'][pt]
-                       for pt in _get_prooftexts(catechism[question]['answer'], prooftexts)}
+        "answer": _convert_footnotes(name, catechism[question]["answer"], prooftexts),
+        "prooftexts": {i: catechism[question]['prooftext_verses'][pt]
+                       for i, pt in enumerate(_get_prooftexts(catechism[question]['answer'], prooftexts), 1)}
     }
 
 
