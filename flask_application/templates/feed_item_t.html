@@ -1,24 +1,30 @@
 {% filter inline_styles(base_url=url) %}
 
-{% for c in content %}
-    {% include c['type'] + '_t.html' %}
-{% endfor %}
+
 <style type="text/css">
-    p {
+
+    p, h5, div {
         display: inline;
         padding: 0px;
         margin: 0px;
     }
-    h5 {
-        padding: 0px;
-        margin: 0px;
+    .header, .subheader, .answer, .question, .paragraph {
+        display: block;
+    }
+    .prooftexts {
+        font-size: 95%;
     }
 </style>
-<ul start="{{ prooftexts.keys() | sort | first }}" class="disc">
-    {% for k, v in prooftexts.items() %}
-        <li class="footnote remove-bottom" id="fn:{{ k }}">
-            {{ v | replace("<br />", "") | safe }}
-        </li>
-    {% endfor %}
-</ul>
+{% for c in content %}
+    {% include c['type'] + '_t.html' %}
+    <div class="prooftexts">
+        <ol class="disc">
+        {% for k, v in c.prooftexts.items() %}
+            <li class="footnote remove-bottom" id="fn:{{ k }}">
+                {{ v | replace("<br />", "") | safe}}
+            </li>
+        {% endfor %}
+        </ol>
+    </div>
+{% endfor %}
 {% endfilter %}
