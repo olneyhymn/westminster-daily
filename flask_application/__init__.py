@@ -132,7 +132,7 @@ def _feed(prooftexts):
 
         feed.add(page_title,
                  render_daily_page(month, day, content,
-                                   template='content_body_t.html',
+                                   template='feed_item_t.html',
                                    url=url),
                  content_type='html',
                  url=url,
