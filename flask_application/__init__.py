@@ -123,7 +123,7 @@ def _feed(prooftexts):
                     feed_url=request.url,
                     url=request.url_root)
     now = dt.datetime.now(tz=pytz.timezone(app.config['TZ']))
-    for date in (now - dt.timedelta(n) for n in range(365)):
+    for date in (now - dt.timedelta(n) for n in range(62)):
         month = date.strftime('%m')
         day = date.strftime('%d')
         content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
