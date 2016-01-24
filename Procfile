@@ -1,1 +1,1 @@
-web: gunicorn flask_application.wsgi --log-file --timeout 60 -
+web: gunicorn flask_application.wsgi --log-file - --timeout 60
