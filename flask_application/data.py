@@ -7,11 +7,22 @@ import re
 from collections import OrderedDict
 
 
-catechisms = {
+catechism_names = {
     "wcf": "Confession of Faith",
     "wlc": "Larger Catechism",
     "wsc": "Shorter Catechism",
 }
+
+
+docs = {}
+root_path = os.path.dirname(os.path.realpath(__file__))
+doc_path = "static/confessions/{}.json"
+with open(os.path.join(root_path, doc_path.format("wcf")), "r") as f:
+    docs["wcf"] = json.load(f, object_pairs_hook=OrderedDict)
+with open(os.path.join(root_path, doc_path.format("wsc")), "r") as f:
+    docs["wsc"] = json.load(f, object_pairs_hook=OrderedDict)
+with open(os.path.join(root_path, doc_path.format("wlc")), "r") as f:
+    docs["wlc"] = json.load(f, object_pairs_hook=OrderedDict)
 
 
 def get(name, *args, **kwargs):
@@ -50,24 +61,20 @@ def _get_prooftexts(body, prooftexts=True):
 def get_confession(name, chapter, section, prooftexts=True):
     chapter = str(chapter)
     section = str(section)
-    root_path = os.path.dirname(os.path.realpath(__file__))
-    json_path = os.path.join(root_path, "static/confessions/{}.json".format("wcf"))
     try:
-        with open(json_path, "r") as f:
-            wcf = json.load(f, object_pairs_hook=OrderedDict)
         return {
             "type": "confession",
             "abbv": name,
-            "name": catechisms[name],
+            "name": catechism_names[name],
             "section_title": "",
             "chapter": chapter,
             "paragraph": section,
-            "title": wcf[chapter]['title'],
+            "title": docs["wcf"][chapter]['title'],
             "citation": "{} {}.{}".format(name.upper(), chapter, section),
-            "long_citation": "{} {}.{}".format(catechisms[name], chapter, section),
-            "body": _convert_footnotes(name, wcf[chapter]['body'][section], prooftexts),
-            "prooftexts": {i: wcf[chapter]['prooftext_verses'][pt]
-                           for i, pt in enumerate(_get_prooftexts(wcf[chapter]['body'][section], prooftexts), 1)}
+            "long_citation": "{} {}.{}".format(catechism_names[name], chapter, section),
+            "body": _convert_footnotes(name, docs["wcf"][chapter]['body'][section], prooftexts),
+            "prooftexts": {i: docs['wcf'][chapter]['prooftext_verses'][pt]
+                           for i, pt in enumerate(_get_prooftexts(docs['wcf'][chapter]['body'][section], prooftexts), 1)}
         }
     except KeyError:
         raise KeyError("Cannot find data for {} {}.{}.".format(name.upper(), chapter, section))
@@ -75,17 +82,14 @@ def get_confession(name, chapter, section, prooftexts=True):
 
 def get_catechism(name, question, prooftexts=True):
     question = str(question)
-    root_path = os.path.dirname(os.path.realpath(__file__))
-    json_path = os.path.join(root_path, "static/confessions/{}.json".format(name))
-    with open(json_path, "r") as f:
-        catechism = json.load(f, object_pairs_hook=OrderedDict)
+    catechism = docs[name]
     return {
         "type": "catechism",
         "abbv": name,
-        "name": catechisms[name],
+        "name": catechism_names[name],
         "section_title": "",
         "citation": "{} {}".format(name.upper(), question),
-        "long_citation": "{} {}".format(catechisms[name], question),
+        "long_citation": "{} {}".format(catechism_names[name], question),
         "number": question,
         "question": catechism[question]["question"],
         "answer": _convert_footnotes(name, catechism[question]["answer"], prooftexts),
