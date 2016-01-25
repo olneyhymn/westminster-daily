@@ -5,7 +5,7 @@
             <div class="prooftexts">
                 <ol class="disc">
                 {% for k, v in c.prooftexts.items() %}
-                    <li class="footnote remove-bottom" id="fn:{{ k }}">
+                    <li class="footnote remove-bottom" id="fn:{{ c.abbv }}{{ k }}">
                         {{ v | safe}}
                     </li>
                 {% endfor %}
