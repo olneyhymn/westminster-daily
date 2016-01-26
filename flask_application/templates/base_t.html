@@ -103,7 +103,7 @@
         $( document ).ready(function() {
 
             var hash = window.location.hash;
-            hash = hash.replace(":", "\\:");
+            hash = hash.replace("fn:", "fnref:").replace(":", "\\:");
             console.log(hash)
             bf.activate(hash);
 
