@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-'''
+"""
 Run 'fab --list' to see list of available commands.
 
 References:
 # http://docs.fabfile.org/en/1.0.1/usage/execution.html#how-host-lists-are-constructed
-'''
+"""
 
 from __future__ import with_statement
 import platform
@@ -39,20 +39,21 @@ log.addHandler(ch)
 
 @task
 def console():
-    '''Load the application in an interactive console.'''
+    """Load the application in an interactive console.
+    """
     local('env DEV=yes python -i runserver.py', capture=False)
 
 
 @task(alias='preview')
 def server():
-    '''Run the dev server'''
+    """Run the dev server"""
     os.chdir(PROJ_DIR)
     local('env DEV=yes python runserver.py', capture=False)
 
 
 @task
 def test():
-    '''Run the test suite'''
+    """Run the test suite"""
     local('py.test --verbose   --full-trace', capture=False)
 
 
@@ -81,7 +82,7 @@ def build_images(month):
 
 @task
 def clean():
-    '''Clear the cached .pyc files.'''
+    """Clear the cached .pyc files."""
     local("find . \( -iname '*.pyc' -o -name '*~' \) -exec rm -v {} \;", capture=False)
     local("rm -rf htmlcov", capture=False)
 
@@ -99,8 +100,8 @@ def get_heroku_config():
 
 @task
 def configure_tweet():
-    '''Tweet today's confession post
-    '''
+    """Tweet today's confession post
+    """
     import twitter as tw
 
     cred = {
@@ -151,13 +152,13 @@ def update_facebook():
         status = api.put_wall_post(content, attachment=attachment)
         log.info(status)
     except facebook.GraphAPIError as e:
-        print e
+        log.error(e)
 
 
 @task
 def tweet():
-    '''Send tweet with todays content
-    '''
+    """Send tweet with todays content
+    """
     import twitter as tw
     base_url = "http://reformedconfessions.com/westminster-daily/"
     cred = {
