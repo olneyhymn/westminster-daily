@@ -8,13 +8,7 @@ from collections import OrderedDict
 
 from metadata import plan as _plan
 from metadata import plan_titles as _plan_titles
-
-
-catechism_names = {
-    "wcf": "Confession of Faith",
-    "wlc": "Larger Catechism",
-    "wsc": "Shorter Catechism",
-}
+from metadata import catechism_names as catechism_names
 
 
 docs = {}
