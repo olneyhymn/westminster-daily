@@ -7,7 +7,7 @@ import re
 from collections import OrderedDict
 
 from metadata import plan as _plan
-from metadata import plan as _plan_titles
+from metadata import plan_titles as _plan_titles
 
 
 catechism_names = {
