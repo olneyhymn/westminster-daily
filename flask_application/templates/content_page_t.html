@@ -23,10 +23,10 @@
 {% endblock %}
 
 {% block datenav %}
-    <p>
+    <p style="font-size:87%">
     <strong>
-    {{ date | yesterday }} —
-    {{ date | today }} —
+    {{ date | yesterday }} <span style="color:gray">—</span>
+    {{ date | today }} <span style="color:gray">—</span>
     {{ date | tomorrow }}
     </strong>
     </p>
