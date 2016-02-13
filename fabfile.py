@@ -96,6 +96,7 @@ def get_heroku_config():
     print "heroku config:set", "{}={}".format("TW_CONSUMER_SECRET", os.environ['TW_CONSUMER_SECRET'])
     print "heroku config:set", "{}={}".format("TW_TOKEN", os.environ['TW_TOKEN'])
     print "heroku config:set", "{}={}".format("TW_TOKEN_SECRET", os.environ['TW_TOKEN_SECRET'])
+    print "heroku config:set", "{}={}".format("MAILGUN_KEY", os.environ['MAILGUN_KEY'])
 
 
 @task
@@ -133,9 +134,22 @@ A. {}
     return ''.join(c_strings)
 
 
+def _send_mail(body):
+    import requests
+    import json
+    return requests.post(
+    "https://api.mailgun.net/v3/mg.reformedconfessions.com/messages",
+    auth=("api", os.environ['MAILGUN_KEY']),
+    data={"from": "tdhopper@gmail.com",
+          "to": ["tdhopper@gmail.com"],
+          "subject": "Westminster Daily Facebook Post Status",
+          "text": str(body)})
+
 @task
 def update_facebook():
     import facebook
+    import json
+
     api = facebook.GraphAPI(os.environ['FB_ACCESS_TOKEN'])
 
     month, day, content = get_today_content(tz="US/Eastern", prooftexts=False)
@@ -151,8 +165,11 @@ def update_facebook():
     try:
         status = api.put_wall_post(content, attachment=attachment)
         log.info(status)
+        result = json.dumps(api.get_object(**status))
+        _send_mail(result)
     except facebook.GraphAPIError as e:
         log.error(e)
+        _send_mail(e)
 
 
 @task

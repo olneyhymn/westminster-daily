@@ -18,3 +18,4 @@ Flask-Testing==0.4.2
 facebook-sdk
 markdown
 premailer
+requests
