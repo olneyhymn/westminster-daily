@@ -17,10 +17,12 @@ import os
 import sh
 import sys
 import datetime as dt
+import facebook
+import json
 
 from fabric.api import local, task
-
 from flask_application.data import get_today_content, get_day_title
+from retrying import retry
 
 APP_NAME = "Westminster Daily"
 PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -147,9 +149,6 @@ def _send_mail(body):
 
 @task
 def update_facebook():
-    import facebook
-    import json
-
     api = facebook.GraphAPI(os.environ['FB_ACCESS_TOKEN'])
 
     month, day, content = get_today_content(tz="US/Eastern", prooftexts=False)
@@ -162,14 +161,14 @@ def update_facebook():
     if (month, day) in [(1, 4), (7, 5)]:
         content = "" # Days have html formatting
 
-    try:
-        status = api.put_wall_post(content, attachment=attachment)
-        log.info(status)
-        result = json.dumps(api.get_object(**status))
-        _send_mail(result)
-    except facebook.GraphAPIError as e:
-        log.error(e)
-        _send_mail(e)
+    _post_facebook(api, content, attachment)
+
+
+@retry(wait_exponential_multiplier=1000,
+       stop_max_attempt_number=10,
+       retry_on_exception=facebook.GraphAPIError)
+def _post_facebook(api, content, attachment):
+    status = api.put_wall_post(content, attachment=attachment)
 
 
 @task
