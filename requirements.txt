@@ -20,3 +20,4 @@ markdown
 premailer
 requests
 retrying
+pyyaml
