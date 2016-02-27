@@ -111,12 +111,6 @@ def recent_westminster_daily_feed():
     return _feed(prooftexts=True).get_response()
 
 
-@app.route('/westminster-daily/feed_no_prooftexts.rss')
-@cached()
-def recent_westminster_daily_feed_without_prooftexts():
-    return _feed(prooftexts=False).get_response()
-
-
 def _feed(prooftexts):
     feed = AtomFeed(app.config['SITE_TITLE'],
                     author=app.config['SITE_TITLE'],
