@@ -83,6 +83,11 @@ def build_images(month):
 
 
 @task
+def images_to_s3():
+    local('s3cmd put --acl-public images/* s3://reformedconfessions')
+
+
+@task
 def clean():
     """Clear the cached .pyc files."""
     local("find . \( -iname '*.pyc' -o -name '*~' \) -exec rm -v {} \;", capture=False)
