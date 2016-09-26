@@ -53,7 +53,6 @@
 	body {
 		background: #fff;
 		font: 16px/21px "Georgia", "Times New Roman", serif;
-		color: #0000;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
  }
