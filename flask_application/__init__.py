@@ -217,6 +217,7 @@ May the Lord bless you as you "press on" to know Him ([Hosea 6](http://www.esvbi
                            content=content)
 
 
+@app.route('/westminster-daily')
 @app.route('/westminster-daily/')
 @cached()
 def render_today():
