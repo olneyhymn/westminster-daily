@@ -37,6 +37,8 @@ def test_daily_westminster_pages_exist():
 
     with app.test_client() as c:
         response = c.get('/westminster-daily')
+        assert response.status_code == 301
+        response = c.get('/westminster-daily/')
         assert response.status_code == 200
 
         for days in range(365):
