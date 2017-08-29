@@ -94,12 +94,21 @@ def recent_westminster_daily_feed():
     return _feed(prooftexts=True).get_response()
 
 
-def _feed(prooftexts):
+@app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/feed.rss')
+def feed_by_day(month, day):
+    start_date = dt.datetime(year=2016, day=int(day), month=int(month))
+    return _feed(prooftexts=True, start_date=start_date).get_response()
+
+
+def _feed(prooftexts, start_date=None):
     feed = AtomFeed(app.config['SITE_TITLE'],
                     author=app.config['SITE_TITLE'],
                     feed_url=request.url,
                     url=request.url_root)
-    now = dt.datetime.now(tz=pytz.timezone(app.config['TZ']))
+    if start_date is None:
+        now = dt.datetime.now(tz=pytz.timezone(app.config['TZ']))
+    else:
+        now = start_date
     for date in (now - dt.timedelta(n) for n in range(62)):
         month = date.strftime('%m')
         day = date.strftime('%d')
