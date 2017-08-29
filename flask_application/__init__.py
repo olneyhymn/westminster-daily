@@ -58,35 +58,18 @@ def inject_site_defaults():
                 )
 
 
-def next_datetime(date):
-    return format_datetime(date + dt.timedelta(days=1), post=" &gt; ")
+def get_date(date, which='today', field='m'):
+    if which == "today":
+        pass
+    elif which == "yesterday":
+        date = date - dt.timedelta(days=1)
+    elif which == "tomorrow":
+        date = date + dt.timedelta(days=1)
+    else:
+        raise NotImplemented()
+    return date.strftime('%{}'.format(field))
 
-
-def prev_datetime(date):
-    return format_datetime(date - dt.timedelta(days=1), pre=" &lt; ")
-
-
-def today_datetime(date):
-    return format_datetime(date)
-
-
-def format_datetime(date, pre=None, post=None):
-    pre = "" if pre is None else pre
-    post = "" if post is None else post
-    title = data.get_day_title(date.strftime('%m'), date.strftime('%d'))
-    return Markup("<a href=\"/westminster-daily/{month}/{day}\" title=\"{title}\">{pre}{Month} {Day}{post}</a>".format(
-        month=date.strftime('%m'),
-        day=date.strftime('%d'),
-        Month=date.strftime("%-b"),
-        Day=date.strftime("%-d"),
-        pre=pre,
-        post=post,
-        title=title
-    ))
-
-app.jinja_env.filters['today'] = today_datetime
-app.jinja_env.filters['tomorrow'] = next_datetime
-app.jinja_env.filters['yesterday'] = prev_datetime
+app.jinja_env.filters['get_date'] = get_date
 
 
 @app.template_filter('inline_styles')
@@ -175,7 +158,7 @@ def _feed_test(prooftexts):
 
 @app.route('/')
 def render_today_legacy():
-    return redirect('/westminster-daily', code=301)
+    return redirect('/westminster-daily/', code=301)
 
 
 @app.route('/robots.txt')
@@ -183,7 +166,7 @@ def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
 
 
-@app.route('/westminster-daily/reading-plan')
+@app.route('/westminster-daily/reading-plan/')
 @cached()
 def reading_plan():
     page_title = "A Daily Reading"
@@ -234,7 +217,7 @@ May the Lord bless you as you "press on" to know Him ([Hosea 6](http://www.esvbi
                            content=content)
 
 
-@app.route('/westminster-daily')
+@app.route('/westminster-daily/')
 @cached()
 def render_today():
     page_title = "A Daily Reading"
@@ -270,7 +253,7 @@ def render_catechism_section(document, number):
 @app.route('/c/wcf/<regex("[0-9]{1,2}"):chapter>/<regex("[0-9]{1,2}"):paragraph>')
 def render_confession_section(chapter, paragraph):
     content = [data.get_confession('wcf', int(chapter), int(paragraph))]
-    return render_daily_page(1, 1, content,  static=True)
+    return render_daily_page(1, 1, content, static=True)
 
 
 # Render page for generating facebook/twitter images

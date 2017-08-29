@@ -25,9 +25,18 @@
 {% block datenav %}
     <p style="font-size:87%">
     <strong>
-    {{ date | yesterday }} &middot;
-    {{ date | today }} &middot;
-    {{ date | tomorrow }}
+        <a href="{{ url_for("render_fixed_day", month=date|get_date('yesterday','m'), day=date|get_date('yesterday','d')) }}">
+            < {{ date|get_date('yesterday','-b') }} {{ date|get_date('yesterday','-d') }}
+        </a>
+        &middot;
+
+        <a href="{{ url_for("render_fixed_day", month=date|get_date('today','m'), day=date|get_date('today','d')) }}">
+            {{ date|get_date('today','-b') }} {{ date|get_date('today','-d') }}
+        </a>
+        &middot;
+        <a href="{{ url_for("render_fixed_day", month=date|get_date('tomorrow','m'), day=date|get_date('tomorrow','d')) }}">
+            {{ date|get_date('tomorrow','-b') }} {{ date|get_date('tomorrow','-d') }} >
+        </a>
     </strong>
     </p>
 
