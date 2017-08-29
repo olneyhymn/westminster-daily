@@ -3,6 +3,7 @@ from flask_application import app
 import datetime as dt
 
 freezer = Freezer(app)
+app.config['SERVER_NAME'] = 'reformedconfessions.com.s3-website-us-east-1.amazonaws.com'
 
 
 @freezer.register_generator

@@ -6,7 +6,7 @@ import premailer
 from functools import wraps
 from flask import Flask, render_template
 from flask import Markup, request, redirect
-from flask import send_from_directory
+from flask import send_from_directory, url_for
 from markdown import markdown
 from werkzeug.routing import BaseConverter
 from werkzeug.contrib.atom import AtomFeed
@@ -97,10 +97,10 @@ def recent_westminster_daily_feed():
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/feed.rss')
 def feed_by_day(month, day):
     start_date = dt.datetime(year=2016, day=int(day), month=int(month))
-    return _feed(prooftexts=True, start_date=start_date).get_response()
+    return _feed(prooftexts=True, start_date=start_date, count=10).get_response()
 
 
-def _feed(prooftexts, start_date=None):
+def _feed(prooftexts, start_date=None, count=62):
     feed = AtomFeed(app.config['SITE_TITLE'],
                     author=app.config['SITE_TITLE'],
                     feed_url=request.url,
@@ -109,12 +109,12 @@ def _feed(prooftexts, start_date=None):
         now = dt.datetime.now(tz=pytz.timezone(app.config['TZ']))
     else:
         now = start_date
-    for date in (now - dt.timedelta(n) for n in range(62)):
+    for date in (now - dt.timedelta(n) for n in range(count)):
         month = date.strftime('%m')
         day = date.strftime('%d')
         content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
         page_title = data.get_day_title(month, day)
-        url = "http://{}/westminster-daily/{}/{}".format(request.host, month, day)
+        url = url_for('render_fixed_day', month=month, day=day, _external=True)
 
         feed.add(page_title,
                  render_daily_page(month, day, content,
@@ -152,7 +152,7 @@ def _feed_test(prooftexts):
         day = date.strftime('%d')
         content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
         page_title = data.get_day_title(month, day)
-        url = "http://{}/westminster-daily/{}/{}".format(request.host, month, day)
+        url = url_for('render_fixed_day', month=month, day=day, _external=True)
 
         feed.add(page_title,
                  render_daily_page(month, day, content,
@@ -233,16 +233,14 @@ def render_today():
     page_title = "A Daily Reading"
     content = data.get_today_content(tz=app.config['TZ'], prooftexts=show_prooftexts())
     return render_daily_page(*content, page_title=page_title,
-                             url="http://{}/westminster-daily".format(request.host))
+                             url="/westminster-daily")
 
 
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
 @app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
 def render_fixed_day_legacy(month, day):
-    url = "http://{host}/westminster-daily/{month:0>2}/{day:0>2}".format(host=request.host,
-                                                                         path=request.path,
-                                                                         month=month,
-                                                                         day=day)
+
+    url = url_for('render_fixed_day', month=month, day=day, _external=True)
     return redirect(url, code=301)
 
 
