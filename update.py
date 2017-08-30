@@ -11,6 +11,7 @@ bucket = 'reformedconfessions.com'
 index = 'westminster-daily/index.html'
 feed = 'westminster-daily/feed.rss'
 base_url = 'http://reformedconfessions.com/'
+file_url = 'http://reformedconfessions.com.s3-website-us-east-1.amazonaws.com/'
 
 
 def update_feed_and_homepage(a, b):
@@ -96,7 +97,7 @@ def tweet(a, b):
 
     try:
         # Attempt tweet
-        image_url = "{}static/images/docs/{:0>2}{:0>2}-full.png".format(base_url, month, day)
+        image_url = "{base_url}static/images/docs/{:0>2}{:0>2}-full.png".format(file_url, month, day)
         imagedata = urlopen(image_url).read()
         t_up = tw.Twitter(domain='upload.twitter.com', auth=auth)
         id_img1 = t_up.media.upload(media=imagedata)["media_id_string"]
@@ -123,7 +124,7 @@ def get_today_content(tz="US/Eastern", prooftexts=False):
 
 def get_day(month, day, prooftexts=False):
 
-    url = "{base_url}{month}/{day}.json".format(base_url=base_url, month=month, day=day)
+    url = "{base_url}westminster-daily/{month}/{day}.json".format(base_url=file_url, month=month, day=day)
     print(url)
     return requests.get(url).json()
 
