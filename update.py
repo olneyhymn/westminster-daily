@@ -42,7 +42,7 @@ def update_facebook(a, b):
     api = facebook.GraphAPI(os.environ['FB_ACCESS_TOKEN'])
 
     month, day, content = get_today_content(tz="US/Eastern", prooftexts=False)
-    url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
+    url = "{base}westminster-daily/{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
     attachment = {'link': url}
 
     content = make_facebook_string(content)
@@ -93,7 +93,7 @@ def tweet(a, b):
 
     month, day, content = get_today_content(tz="US/Eastern")
     description = get_day_title(month, day)
-    url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
+    url = "{base}westminster-daily/{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
 
     try:
         # Attempt tweet
