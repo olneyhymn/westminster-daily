@@ -10,7 +10,7 @@ from urllib.request import urlopen
 bucket = 'reformedconfessions.com'
 index = 'westminster-daily/index.html'
 feed = 'westminster-daily/feed.rss'
-base_url = 'http://reformedconfessions.com.s3-website-us-east-1.amazonaws.com/westminster-daily/'
+base_url = 'http://reformedconfessions.com/'
 
 
 def update_feed_and_homepage(a, b):
@@ -81,7 +81,6 @@ A. {}
 def tweet(a, b):
     """Send tweet with todays content"""
     import twitter as tw
-    base_url = "http://reformedconfessions.com/westminster-daily/"
     cred = {
         "consumer_key": os.environ['TW_CONSUMER_KEY'],
         "consumer_secret": os.environ['TW_CONSUMER_SECRET'],
@@ -97,7 +96,7 @@ def tweet(a, b):
 
     try:
         # Attempt tweet
-        image_url = "http://www.reformedconfessions.com/static/images/docs/{:0>2}{:0>2}-full.png".format(month, day)
+        image_url = "{}static/images/docs/{:0>2}{:0>2}-full.png".format(base_url, month, day)
         imagedata = urlopen(image_url).read()
         t_up = tw.Twitter(domain='upload.twitter.com', auth=auth)
         id_img1 = t_up.media.upload(media=imagedata)["media_id_string"]
