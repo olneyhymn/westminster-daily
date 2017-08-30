@@ -6,6 +6,7 @@ import premailer
 from functools import wraps
 from flask import Flask, render_template
 from flask import Markup, request, redirect
+from flask import jsonify
 from flask import send_from_directory, url_for
 from markdown import markdown
 from werkzeug.routing import BaseConverter
@@ -248,7 +249,7 @@ def render_fixed_day_legacy(month, day):
 def render_fixed_day_json(month, day):
     content = data.get_day(month, day, prooftexts=False)
     title = data.get_day_title(month, day)
-    return {'content': content, 'title': title}
+    return jsonify({'content': content, 'title': title})
 
 
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
