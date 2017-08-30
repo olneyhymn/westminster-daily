@@ -31,7 +31,7 @@ def update_feed_and_homepage(a, b):
     }
     s3.copy(copy_source,
             bucket,
-            index,
+            feed,
             )
     s3.put_object_acl(ACL='public-read', Bucket=bucket, Key=feed)
     s3.put_object_acl(ACL='public-read', Bucket=bucket, Key=index)
