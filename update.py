@@ -97,7 +97,7 @@ def tweet(a, b):
 
     try:
         # Attempt tweet
-        image_url = "{base_url}static/images/docs/{:0>2}{:0>2}-full.png".format(file_url, month, day)
+        image_url = "{}static/images/docs/{:0>2}{:0>2}-full.png".format(file_url, month, day)
         imagedata = urlopen(image_url).read()
         t_up = tw.Twitter(domain='upload.twitter.com', auth=auth)
         id_img1 = t_up.media.upload(media=imagedata)["media_id_string"]
