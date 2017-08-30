@@ -9,7 +9,7 @@
             <ul class="disc">
             {% for d, title in content %}
                 <li class="half-bottom">
-                    <a href="/westminster-daily/{{ d.strftime('%m') }}/{{ d.strftime('%d') }}" style="text-decoration: none;">
+                    <a href="{{ url_for('render_fixed_day', month={{ d.strftime('%m') }} day={{ d.strftime('%d')) }}" style="text-decoration: none;">
                     {{ d.strftime('%b %d') }}:
                     {{ title }}
                     </a>
