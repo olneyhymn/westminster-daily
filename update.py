@@ -97,8 +97,8 @@ def tweet(a, b):
 
     try:
         # Attempt tweet
-        url = "http://www.reformedconfessions.com/static/images/docs/{:0>2}{:0>2}-full.png".format(month, day)
-        imagedata = urlopen(url).read()
+        image_url = "http://www.reformedconfessions.com/static/images/docs/{:0>2}{:0>2}-full.png".format(month, day)
+        imagedata = urlopen(image_url).read()
         t_up = tw.Twitter(domain='upload.twitter.com', auth=auth)
         id_img1 = t_up.media.upload(media=imagedata)["media_id_string"]
         t.statuses.update(status="{} {}".format(description, url),
