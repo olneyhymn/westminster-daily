@@ -1,6 +1,20 @@
 
-clean:
+clean: clean_lambda
 	rm -rf flask_application/build
+
+clean_lambda:
+	rm -f lambda_bundle.zip
+	rm -rf lambda
+
+update_lambda_functions: update_tweet update_facebook update_daily
+
+update_tweet: lambda_bundle
+	aws lambda update-function-code --function-name westminster-daily-tweet --zip-file fileb://lambda_bundle.zip
+
+update_facebook: lambda_bundle
+	aws lambda update-function-code --function-name westminster-daily-facebook --zip-file fileb://lambda_bundle.zip
+
+update_daily: lambda_bundle
 
 lambda_bundle: lambda lambda_bundle.zip
 
@@ -28,4 +42,4 @@ s3_upload: build
 	s3cmd sync --acl-public --delete-removed flask_application/build/ s3://reformedconfessions.com/
 
 
-.PHONY: s3_upload clean build lambda_bundle
+.PHONY: s3_upload clean clean_lambda build lambda_bundle update_daily update_facebook update_tweet update_lambda_functions
