@@ -248,8 +248,11 @@ def render_fixed_day_legacy(month, day):
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/data.json')
 def render_fixed_day_json(month, day):
     content = data.get_day(month, day, prooftexts=False)
+    content_with_prooftexts = data.get_day(month, day, prooftexts=True)
     title = data.get_day_title(month, day)
-    return jsonify({'content': content, 'title': title})
+    return jsonify({'content': content,
+                    'content_with_prooftexts': content_with_prooftexts,
+                    'title': title})
 
 
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
