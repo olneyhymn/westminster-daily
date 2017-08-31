@@ -97,7 +97,7 @@ def recent_westminster_daily_feed():
 
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/feed.rss')
 def feed_by_day(month, day):
-    start_date = dt.datetime(year=2016, day=int(day), month=int(month))
+    start_date = dt.datetime(year=2017, day=int(day), month=int(month))
     return _feed(prooftexts=True, start_date=start_date, count=10).get_response()
 
 
