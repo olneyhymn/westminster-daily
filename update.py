@@ -12,6 +12,12 @@ index = 'westminster-daily/index.html'
 feed = 'westminster-daily/feed.rss'
 base_url = 'http://reformedconfessions.com/'
 file_url = 'http://reformedconfessions.com.s3-website-us-east-1.amazonaws.com/'
+api_url = '{file_url}westminster-daily/'.format(file_url=file_url)
+
+
+tz = pytz.timezone("US/Eastern")
+month = dt.datetime.now(tz=tz).strftime('%m')
+day = dt.datetime.now(tz=tz).strftime('%d')
 
 
 def update_feed_and_homepage(a, b):
@@ -40,8 +46,7 @@ def update_feed_and_homepage(a, b):
 
 def update_facebook(a, b):
     api = facebook.GraphAPI(os.environ['FB_ACCESS_TOKEN'])
-
-    month, day, content = get_today_content(tz="US/Eastern", prooftexts=False)
+    content = get_day_api(month, day, False, api_url=api_url)['content']
     url = "{base}westminster-daily/{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
     attachment = {'link': url}
 
@@ -91,8 +96,9 @@ def tweet(a, b):
     auth = tw.OAuth(**cred)
     t = tw.Twitter(auth=auth)
 
-    month, day, content = get_today_content(tz="US/Eastern")
-    description = get_day_title(month, day)
+    day_data = get_day_api(month, day, api_url=api_url)
+    content = day_data['content']
+    description = day_data['title']
     url = "{base}westminster-daily/{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
 
     try:
@@ -113,21 +119,3 @@ def tweet(a, b):
             # log.error("%s %s", "Unhandled exception", str(e))
         return
     # log.info("%s %s", "Tweeted", str(description))
-
-
-def get_today_content(tz="US/Eastern", prooftexts=False):
-    tz = pytz.timezone(tz)
-    month = dt.datetime.now(tz=tz).strftime('%m')
-    day = dt.datetime.now(tz=tz).strftime('%d')
-    return month, day, get_day(month, day, prooftexts)['content']
-
-
-def get_day(month, day, prooftexts=False):
-
-    url = "{base_url}westminster-daily/{month}/{day}/data.json".format(base_url=file_url, month=month, day=day)
-    print(url)
-    return requests.get(url).json()
-
-
-def get_day_title(month, day):
-    return get_day(month, day)['title']
