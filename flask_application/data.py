@@ -1,5 +1,5 @@
 import datetime as dt
-import simplejson as json
+import json
 import os
 import pytz
 import re
