@@ -37,16 +37,18 @@ def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, 
         day = date.strftime('%d')
         if api is False:
             content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
+            rendered_content = render_feed_page(content)
             page_title = data.get_day_title(month, day)
         else:
             day_data = data.get_day_api(month, day, prooftexts, api_url=API_URL)
             content = day_data['content']
             page_title = day_data['title']
+            rendered_content = day_data['rendered_content']
 
         url = 'http://reformedconfessions.com/westminster-daily/{date:%m}/{date:%d}/'.format(date=date)
 
         feed.add(page_title,
-                 render_feed_page(content),
+                 rendered_content,
                  content_type='html',
                  url=url,
                  published=date,
