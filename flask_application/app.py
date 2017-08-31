@@ -2,6 +2,7 @@ from __future__ import absolute_import
 import datetime as dt
 import pytz
 import os
+import premailer
 
 from functools import wraps
 from flask import Flask, render_template
@@ -24,6 +25,13 @@ LEAP_YEAR = 2008
 # create our application
 app = Flask(__name__)
 cache = SimpleCache()
+
+
+def _inline_styles(s, *args, **kwargs):
+    pm = premailer.Premailer(s, *args, **kwargs)
+    return pm.transform()
+
+app.jinja_env.filters['inline_styles'] = _inline_styles
 
 if os.environ.get("DEV", "no") == "yes":
     app.config.from_object(config.DevelopmentConfig)
