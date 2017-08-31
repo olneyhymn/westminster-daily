@@ -1,7 +1,6 @@
 import datetime as dt
 import pytz
 import os
-import premailer
 
 from functools import wraps
 from flask import Flask, render_template
@@ -15,6 +14,8 @@ from werkzeug.contrib.cache import SimpleCache
 
 import config
 import data
+
+from feed import make_feed
 
 LEAP_YEAR = 2008
 
@@ -73,12 +74,6 @@ def get_date(date, which='today', field='m'):
 app.jinja_env.filters['get_date'] = get_date
 
 
-@app.template_filter('inline_styles')
-def inline_styles(s, *args, **kwargs):
-    pm = premailer.Premailer(s, *args, **kwargs)
-    return pm.transform()
-
-
 @app.errorhandler(KeyError)
 def page_not_found(e):
     return render_template('404_t.html', message=e.message), 404
@@ -102,30 +97,9 @@ def feed_by_day(month, day):
 
 
 def _feed(prooftexts, start_date=None, count=62):
-    feed = AtomFeed(app.config['SITE_TITLE'],
-                    author=app.config['SITE_TITLE'],
-                    feed_url=request.url,
-                    url=request.url_root)
-    if start_date is None:
-        now = dt.datetime.now(tz=pytz.timezone(app.config['TZ']))
-    else:
-        now = start_date
-    for date in (now - dt.timedelta(n) for n in range(count)):
-        month = date.strftime('%m')
-        day = date.strftime('%d')
-        content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
-        page_title = data.get_day_title(month, day)
-        url = url_for('render_fixed_day', month=month, day=day, _external=True)
-
-        feed.add(page_title,
-                 render_daily_page(month, day, content,
-                                   template='feed_item_t.html',
-                                   url=url),
-                 content_type='html',
-                 url=url,
-                 published=date,
-                 updated=date)
-    return feed
+    return make_feed(app.config['SITE_TITLE'], request.url,
+                     request.url_root, app.config['TZ'],
+                     prooftexts, start_date, count)
 
 
 @app.route('/westminster-daily/test/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
