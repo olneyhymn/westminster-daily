@@ -245,7 +245,7 @@ def render_fixed_day_legacy(month, day):
     return redirect(url, code=301)
 
 
-@app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>.json')
+@app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/data.json')
 def render_fixed_day_json(month, day):
     content = data.get_day(month, day, prooftexts=False)
     title = data.get_day_title(month, day)

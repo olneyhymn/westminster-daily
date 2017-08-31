@@ -124,7 +124,7 @@ def get_today_content(tz="US/Eastern", prooftexts=False):
 
 def get_day(month, day, prooftexts=False):
 
-    url = "{base_url}westminster-daily/{month}/{day}.json".format(base_url=file_url, month=month, day=day)
+    url = "{base_url}westminster-daily/{month}/{day}/data.json".format(base_url=file_url, month=month, day=day)
     print(url)
     return requests.get(url).json()
 
