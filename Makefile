@@ -15,6 +15,8 @@ update_facebook: lambda_bundle
 	aws lambda update-function-code --function-name westminster-daily-facebook --zip-file fileb://lambda_bundle.zip
 
 update_daily: lambda_bundle
+	aws lambda update-function-code --function-name Update-Westminster-Daily --zip-file fileb://lambda_bundle.zip
+	aws lambda invoke --function Update-Westminster-Daily  --payload \{\} --invocation-type RequestResponse --region us-east-1 /tmp/ooutput
 
 lambda_bundle: lambda lambda_bundle.zip
 
