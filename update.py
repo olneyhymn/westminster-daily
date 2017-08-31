@@ -3,9 +3,9 @@ import datetime as dt
 import os
 import facebook
 import pytz
-import requests
 from retrying import retry
 from urllib.request import urlopen
+from flask_application.data import get_day_api
 
 bucket = 'reformedconfessions.com'
 index = 'westminster-daily/index.html'

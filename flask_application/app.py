@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 import datetime as dt
 import pytz
 import os
@@ -12,10 +13,10 @@ from werkzeug.routing import BaseConverter
 from werkzeug.contrib.atom import AtomFeed
 from werkzeug.contrib.cache import SimpleCache
 
-import config
-import data
+from . import config
+from . import data
+from . import feed
 
-from feed import make_feed
 
 LEAP_YEAR = 2008
 
@@ -97,7 +98,7 @@ def feed_by_day(month, day):
 
 
 def _feed(prooftexts, start_date=None, count=62):
-    return make_feed(app.config['SITE_TITLE'], request.url,
+    return feed.make_feed(app.config['SITE_TITLE'], request.url,
                      request.url_root, app.config['TZ'],
                      prooftexts, start_date, count)
 

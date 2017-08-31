@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 import datetime as dt
 import json
 import os
@@ -6,9 +7,7 @@ import re
 
 from collections import OrderedDict
 
-from metadata import plan as _plan
-from metadata import plan_titles as _plan_titles
-from metadata import catechism_names as catechism_names
+from . import metadata
 
 
 docs = {}
@@ -60,13 +59,13 @@ def get_confession(name, chapter, section, prooftexts=True):
         return {
             "type": "confession",
             "abbv": name,
-            "name": catechism_names[name],
+            "name": metadata.catechism_names[name],
             "section_title": "",
             "chapter": chapter,
             "paragraph": section,
             "title": docs["wcf"][chapter]['title'],
             "citation": "{} {}.{}".format(name.upper(), chapter, section),
-            "long_citation": "{} {}.{}".format(catechism_names[name], chapter, section),
+            "long_citation": "{} {}.{}".format(metadata.catechism_names[name], chapter, section),
             "body": _convert_footnotes(name, docs["wcf"][chapter]['body'][section], prooftexts),
             "prooftexts": {i: docs['wcf'][chapter]['prooftext_verses'][pt]
                            for i, pt in enumerate(_get_prooftexts(docs['wcf'][chapter]['body'][section], prooftexts), 1)}
@@ -81,10 +80,10 @@ def get_catechism(name, question, prooftexts=True):
     return {
         "type": "catechism",
         "abbv": name,
-        "name": catechism_names[name],
+        "name": metadata.catechism_names[name],
         "section_title": "",
         "citation": "{} {}".format(name.upper(), question),
-        "long_citation": "{} {}".format(catechism_names[name], question),
+        "long_citation": "{} {}".format(metadata.catechism_names[name], question),
         "number": question,
         "question": catechism[question]["question"],
         "answer": _convert_footnotes(name, catechism[question]["answer"], prooftexts),
@@ -94,7 +93,7 @@ def get_catechism(name, question, prooftexts=True):
 
 
 def get_day_title(month, day):
-    return _plan_titles[_get_day_of_year(month, day)]
+    return metadata.plan_titles[_get_day_of_year(month, day)]
 
 
 def _get_day_of_year(month, day):
@@ -106,7 +105,7 @@ def get_day(month, day, prooftexts=True):
         day_of_year = _get_day_of_year(month, day)
     except:
         raise KeyError("Error parsing date (month: {} day: {}).".format(month, day))
-    refs = _plan[day_of_year]
+    refs = metadata.plan[day_of_year]
     return [get(*ref, prooftexts=prooftexts) for ref in refs]
 
 

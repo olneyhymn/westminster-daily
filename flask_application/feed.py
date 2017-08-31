@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 import datetime as dt
 import pytz
 import premailer
@@ -5,7 +6,7 @@ import premailer
 from werkzeug.contrib.atom import AtomFeed
 from jinja2 import Environment, PackageLoader
 
-import data
+from . import data
 
 
 API_URL = 'http://reformedconfessions.com.s3-website-us-east-1.amazonaws.com/westminster-daily/'

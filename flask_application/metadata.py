@@ -1,3 +1,5 @@
+from __future__ import absolute_import
+
 catechism_names = {
     "wcf": "Confession of Faith",
     "wlc": "Larger Catechism",

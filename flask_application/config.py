@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # http://flask.pocoo.org/docs/config/#development-production
-
+from __future__ import absolute_import
 
 class Config(object):
     SITE_TITLE = "Westminster Daily"
