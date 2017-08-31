@@ -115,3 +115,10 @@ def get_today_content(tz='UTC', prooftexts=True):
     month = dt.datetime.now(tz=tz).month
     day = dt.datetime.now(tz=tz).day
     return month, day, get_day(month, day, prooftexts)
+
+
+def get_day_api(month, day, prooftexts=False,
+                api_url="http://reformedconfessions.com/westminster-daily/"):
+    import requests
+    url = "{base_url}{month}/{day}/data.json".format(base_url=api_url, month=month, day=day)
+    return requests.get(url).json()

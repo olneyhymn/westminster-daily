@@ -8,6 +8,8 @@ from jinja2 import Environment, PackageLoader
 import data
 
 
+API_URL = 'http://reformedconfessions.com.s3-website-us-east-1.amazonaws.com/westminster-daily/'
+
 jinja = Environment(
     loader=PackageLoader('flask_application', 'templates')
 )
@@ -20,7 +22,7 @@ def _inline_styles(s, *args, **kwargs):
 jinja.filters['inline_styles'] = _inline_styles
 
 
-def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, count=62):
+def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, count=62, api=False):
     feed = AtomFeed(site_title,
                     author=site_title,
                     feed_url=feed_url,
@@ -32,12 +34,19 @@ def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, 
     for date in (now - dt.timedelta(n) for n in range(count)):
         month = date.strftime('%m')
         day = date.strftime('%d')
-        content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
-        page_title = data.get_day_title(month, day)
+        if api is False:
+            content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
+            page_title = data.get_day_title(month, day)
+        else:
+            day_data = data.get_day_api(month, day, prooftexts, api_url=API_URL)
+            content = day_data['content']
+            page_title = day_data['title']
+
         url = 'http://reformedconfessions.com/westminster-daily/{date:%m}/{date:%d}/'.format(date=date)
 
         feed.add(page_title,
                  render_feed_page(month, day, content,
+                                  page_title=page_title,
                                   url=url),
                  content_type='html',
                  url=url,
@@ -49,7 +58,7 @@ def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, 
 def render_feed_page(month, day, content, page_title=None,
                      static=False, url=None):
     if page_title is None:
-        page_title = data.get_day_title(month, day)
+        raise ValueError("page title must be provided")
     if url is None:
         raise ValueError("url must be provided")
     prooftexts = any(len(c["prooftexts"]) for c in content)
