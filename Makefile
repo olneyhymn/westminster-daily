@@ -6,7 +6,7 @@ clean_lambda:
 	rm -f lambda_bundle.zip
 	rm -rf lambda
 
-update_lambda_functions: update_tweet update_facebook update_daily
+update_lambda_functions: clean update_tweet update_facebook update_daily
 
 update_tweet: lambda_bundle
 	aws lambda update-function-code --function-name westminster-daily-tweet --zip-file fileb://lambda_bundle.zip
