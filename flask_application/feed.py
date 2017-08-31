@@ -46,9 +46,7 @@ def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, 
         url = 'http://reformedconfessions.com/westminster-daily/{date:%m}/{date:%d}/'.format(date=date)
 
         feed.add(page_title,
-                 render_feed_page(month, day, content,
-                                  page_title=page_title,
-                                  url=url),
+                 render_feed_page(content),
                  content_type='html',
                  url=url,
                  published=date,
@@ -56,22 +54,9 @@ def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, 
     return feed
 
 
-def render_feed_page(month, day, content, page_title=None,
-                     static=False, url=None):
-    if page_title is None:
-        raise ValueError("page title must be provided")
-    if url is None:
-        raise ValueError("url must be provided")
-    prooftexts = any(len(c["prooftexts"]) for c in content)
-    description = ", ".join(c['long_citation'] for c in content)
+def render_feed_page(content):
     template = jinja.get_template('feed_item_t.html')
-    return template.render(prooftexts = prooftexts,
-                           content=content,
-                           date=get_date(month, day),
-                           page_title=page_title,
-                           description=description,
-                           static=static,
-                           url=url)
+    return template.render(content=content)
 
 
 def get_date(month, day):
