@@ -1,6 +1,6 @@
 import datetime as dt
 
-from flask_application import app
+from flask_application.app import app
 
 
 def test_rss():

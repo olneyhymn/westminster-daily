@@ -9,8 +9,8 @@ def show(obj):
 
 
 if sys.flags.interactive:
-    from flask_application import *
+    from flask_application.app import *
     print 'Loading Flask App in console mode. Use show(<obj)> to introspect.'
 elif __name__ == '__main__':
-    from flask_application import app
+    from flask_application.app import app
     app.run(host = "127.0.0.1", port = 8080)
