@@ -107,8 +107,8 @@ def feed_by_day(month, day):
 
 def _feed(prooftexts, start_date=None, count=62):
     return feed.make_feed(app.config['SITE_TITLE'], request.url,
-                     request.url_root, app.config['TZ'],
-                     prooftexts, start_date, count)
+                          request.url_root, app.config['TZ'],
+                          prooftexts, start_date, count)
 
 
 @app.route('/westminster-daily/test/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')

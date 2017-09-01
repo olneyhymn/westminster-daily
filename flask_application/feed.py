@@ -34,7 +34,6 @@ def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, 
             page_title = data.get_day_title(month, day)
         else:
             day_data = data.get_day_api(month, day, prooftexts, api_url=API_URL)
-            content = day_data['content']
             page_title = day_data['title']
             rendered_content = day_data['feed']
 
