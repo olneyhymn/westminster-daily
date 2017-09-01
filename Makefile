@@ -34,6 +34,14 @@ lambda:
 
 build: flask_application/build
 
+dig:
+	dig A reformedconfessions.com +trace
+	dig A www.reformedconfessions.com +trace
+
+curl:
+	curl -IL reformedconfessions.com
+	curl -IL www.reformedconfessions.com
+
 flask_application/build:
 	python frozen.py
 
@@ -44,4 +52,4 @@ s3_upload: build
 	s3cmd sync --acl-public --delete-removed flask_application/build/ s3://reformedconfessions.com/
 
 
-.PHONY: s3_upload clean clean_lambda build lambda_bundle update_daily update_facebook update_tweet update_lambda_functions
+.PHONY: s3_upload clean clean_lambda build lambda_bundle update_daily update_facebook update_tweet update_lambda_functions dig
