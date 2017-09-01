@@ -10,7 +10,6 @@ deploy:
       access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
       secret_access_key: $AWS_SECRET_KEY
       bucket: reformedconfessions.com
-      endpoint: reformedconfessions.com.s3-website-us-east-1.amazonaws.com
       region: us-east-1
       skip_cleanup: true
       local-dir: flask_application/build
