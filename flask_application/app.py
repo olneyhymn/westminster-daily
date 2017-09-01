@@ -233,8 +233,7 @@ def render_fixed_day_json(month, day):
     content = data.get_day(month, day, prooftexts=False)
     content_with_prooftexts = data.get_day(month, day, prooftexts=True)
     title = data.get_day_title(month, day)
-    url = 'http://reformedconfessions.com/westminster-daily/{}/{}/'.format(month, day)
-    feed_data = feed.render_feed_page(content)
+    feed_data = feed.render_feed_page(content_with_prooftexts)
     return jsonify({'content': content,
                     'content_with_prooftexts': content_with_prooftexts,
                     'title': title,
