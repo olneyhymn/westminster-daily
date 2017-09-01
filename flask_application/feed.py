@@ -1,26 +1,18 @@
 from __future__ import absolute_import
 import datetime as dt
 import pytz
-import premailer
+
+try:
+    import premailer
+except:
+    pass
 
 from werkzeug.contrib.atom import AtomFeed
-from jinja2 import Environment, PackageLoader
 
 from . import data
 
 
 API_URL = 'http://reformedconfessions.com.s3-website-us-east-1.amazonaws.com/westminster-daily/'
-
-jinja = Environment(
-    loader=PackageLoader('flask_application', 'templates')
-)
-
-
-def _inline_styles(s, *args, **kwargs):
-    pm = premailer.Premailer(s, *args, **kwargs)
-    return pm.transform()
-
-jinja.filters['inline_styles'] = _inline_styles
 
 
 def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, count=62, api=False):
@@ -33,6 +25,7 @@ def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, 
     else:
         now = start_date
     for date in (now - dt.timedelta(n) for n in range(count)):
+        date = date.replace(hour=0, minute=0, second=0, microsecond=0)
         month = date.strftime('%m')
         day = date.strftime('%d')
         if api is False:
@@ -43,7 +36,7 @@ def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, 
             day_data = data.get_day_api(month, day, prooftexts, api_url=API_URL)
             content = day_data['content']
             page_title = day_data['title']
-            rendered_content = day_data['rendered_content']
+            rendered_content = day_data['feed']
 
         url = 'http://reformedconfessions.com/westminster-daily/{date:%m}/{date:%d}/'.format(date=date)
 
@@ -57,6 +50,17 @@ def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, 
 
 
 def render_feed_page(content):
+    from jinja2 import Environment, PackageLoader
+    jinja = Environment(
+        loader=PackageLoader('flask_application', 'templates')
+    )
+
+
+    def _inline_styles(s, *args, **kwargs):
+        pm = premailer.Premailer(s, *args, **kwargs)
+        return pm.transform()
+
+    jinja.filters['inline_styles'] = _inline_styles
     template = jinja.get_template('feed_item_t.html')
     return template.render(content=content)
 

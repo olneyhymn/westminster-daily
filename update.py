@@ -3,9 +3,11 @@ import datetime as dt
 import os
 import facebook
 import pytz
+
 from retrying import retry
 from urllib.request import urlopen
 from flask_application.data import get_day_api
+from flask_application.feed import make_feed
 
 bucket = 'reformedconfessions.com'
 index = 'westminster-daily/index.html'
@@ -23,6 +25,13 @@ day = dt.datetime.now(tz=tz).strftime('%d')
 def update_feed_and_homepage(a, b):
     s3 = boto3.client('s3')
     date = dt.datetime.now()
+    feed_contents = make_feed("Westminster Daily",
+                              "http://feedpress.me/westminster-daily",
+                              "http://www.reformedconfessions.com/westminster-daily/",
+                              "US/Eastern",
+                              prooftexts=True,
+                              count=10,
+                              api=True).to_string()
 
     copy_source = {
         'Bucket': bucket,
@@ -32,14 +41,13 @@ def update_feed_and_homepage(a, b):
             bucket,
             index,
             )
-    copy_source = {
-        'Bucket': bucket,
-        'Key': 'westminster-daily/{date:%m}/{date:%d}/feed.rss'.format(date=date)
-    }
-    s3.copy(copy_source,
-            bucket,
-            feed,
-            )
+
+    s3.put_object(Body=feed_contents,
+                  Bucket=bucket,
+                  Key='westminster-daily/feed.rss'.format(date=date),
+                  ContentType="text/xml"
+                  )
+
     s3.put_object_acl(ACL='public-read', Bucket=bucket, Key=feed)
     s3.put_object_acl(ACL='public-read', Bucket=bucket, Key=index)
 
