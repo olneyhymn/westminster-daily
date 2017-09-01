@@ -21,3 +21,4 @@ premailer
 requests
 retrying
 pyyaml
+Frozen-Flask
