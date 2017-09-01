@@ -30,7 +30,7 @@ lambda:
 	rm -rf lambda/flask_application/build
 	cp update.py lambda/
 	cp requirements.txt lambda/
-	cd lambda && STATIC_DEPS=true pip3 install -U retrying facebook-sdk twitter pytz -t .
+	cd lambda && STATIC_DEPS=true pip3 install -U retrying facebook-sdk werkzeug twitter pytz -t .
 
 build: flask_application/build
 
