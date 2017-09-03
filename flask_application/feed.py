@@ -12,7 +12,7 @@ from werkzeug.contrib.atom import AtomFeed
 from . import data
 
 
-API_URL = 'http://reformedconfessions.com.s3-website-us-east-1.amazonaws.com/westminster-daily/'
+API_URL = 'http://reformedconfessions.com/'
 
 
 def make_feed(site_title, feed_url, url, timezone, prooftexts, start_date=None, count=62, api=False):

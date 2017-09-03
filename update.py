@@ -13,7 +13,7 @@ bucket = 'reformedconfessions.com'
 index = 'westminster-daily/index.html'
 feed = 'westminster-daily/feed.rss'
 base_url = 'http://reformedconfessions.com/'
-file_url = 'http://reformedconfessions.com.s3-website-us-east-1.amazonaws.com/'
+file_url = 'http://reformedconfessions.com/'
 api_url = '{file_url}westminster-daily/'.format(file_url=file_url)
 
 
