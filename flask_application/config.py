@@ -11,6 +11,7 @@ class Config(object):
     SITE_NAME = 'reformedconfessions.com'
     MEMCACHED_SERVERS = ['localhost:11211']
     SYS_ADMINS = ['feedback@reformedconfessions.com']
+    FLATPAGES_EXTENSION = ".md"
 
 
 class ProductionConfig(Config):
