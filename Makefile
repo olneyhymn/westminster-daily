@@ -35,8 +35,8 @@ lambda:
 build: flask_application/build
 
 dig:
-	dig A reformedconfessions.com +trace
-	dig A www.reformedconfessions.com +trace
+	dig CNAME reformedconfessions.com
+	dig CNAME www.reformedconfessions.com
 
 curl:
 	curl -IL reformedconfessions.com
