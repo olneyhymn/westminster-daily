@@ -17,12 +17,9 @@ import os
 import sh
 import sys
 import datetime as dt
-import facebook
-import json
+
 
 from fabric.api import local, task
-from flask_application.data import get_today_content, get_day_title
-from retrying import retry
 
 APP_NAME = "Westminster Daily"
 PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -95,18 +92,6 @@ def clean():
 
 
 @task
-def get_heroku_config():
-    """Get commands for updating heroku environmental variables
-    """
-    print "heroku config:set", "{}={}".format("FB_ACCESS_TOKEN", os.environ['FB_ACCESS_TOKEN'])
-    print "heroku config:set", "{}={}".format("TW_CONSUMER_KEY", os.environ['TW_CONSUMER_KEY'])
-    print "heroku config:set", "{}={}".format("TW_CONSUMER_SECRET", os.environ['TW_CONSUMER_SECRET'])
-    print "heroku config:set", "{}={}".format("TW_TOKEN", os.environ['TW_TOKEN'])
-    print "heroku config:set", "{}={}".format("TW_TOKEN_SECRET", os.environ['TW_TOKEN_SECRET'])
-    print "heroku config:set", "{}={}".format("MAILGUN_KEY", os.environ['MAILGUN_KEY'])
-
-
-@task
 def configure_tweet():
     """Tweet today's confession post
     """
@@ -139,88 +124,6 @@ A. {}
 
 """.format(c['long_citation'], c['question'], c['answer']))
     return ''.join(c_strings)
-
-
-def _send_mail(body):
-    import requests
-    import json
-    return requests.post(
-    "https://api.mailgun.net/v3/mg.reformedconfessions.com/messages",
-    auth=("api", os.environ['MAILGUN_KEY']),
-    data={"from": "tdhopper@gmail.com",
-          "to": ["tdhopper@gmail.com"],
-          "subject": "Westminster Daily Facebook Post Status",
-          "text": str(body)})
-
-@task
-def update_facebook():
-    api = facebook.GraphAPI(os.environ['FB_ACCESS_TOKEN'])
-
-    month, day, content = get_today_content(tz="US/Eastern", prooftexts=False)
-    base_url = "http://reformedconfessions.com/westminster-daily/"
-    url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
-    attachment = {'link': url}
-
-    content = make_facebook_string(content)
-
-    if (month, day) in [(1, 4), (7, 5)]:
-        content = "" # Days have html formatting
-
-    _post_facebook(api, content, attachment)
-
-
-@retry(wait_exponential_multiplier=1000,
-       stop_max_attempt_number=10,
-       retry_on_exception=facebook.GraphAPIError)
-def _post_facebook(api, content, attachment):
-    status = api.put_wall_post(content, attachment=attachment)
-
-
-@task
-def tweet():
-    """Send tweet with todays content
-    """
-    import twitter as tw
-    base_url = "http://reformedconfessions.com/westminster-daily/"
-    cred = {
-        "consumer_key": os.environ['TW_CONSUMER_KEY'],
-        "consumer_secret": os.environ['TW_CONSUMER_SECRET'],
-        "token": os.environ['TW_TOKEN'],
-        "token_secret": os.environ['TW_TOKEN_SECRET'],
-    }
-    auth = tw.OAuth(**cred)
-    t = tw.Twitter(auth=auth)
-
-    month, day, content = get_today_content(tz="US/Eastern")
-    description = get_day_title(month, day)
-    url = "{base}{month:0>2}/{day:0>2}".format(base=base_url, month=month, day=day)
-
-    try:
-        # Attempt tweet
-        with open("flask_application/static/images/docs/{:0>2}{:0>2}-full.png".format(month, day), "rb") as imagefile:
-            imagedata = imagefile.read()
-        t_up = tw.Twitter(domain='upload.twitter.com', auth=auth)
-        id_img1 = t_up.media.upload(media=imagedata)["media_id_string"]
-        t.statuses.update(status="{} {}".format(description, url),
-                          media_ids=id_img1)
-    except tw.api.TwitterHTTPError as e:
-        if any(error['code'] == 186 for error in e.response_data['errors']):
-            # Tweet too long. Try a shorter tweet.
-            description = ", ".join(c['citation'] for c in content)
-            t.statuses.update(status="{} {}".format(description, url))
-        else:
-            log.error("%s %s", "Unhandled exception", str(e))
-        return
-    log.info("%s %s", "Tweeted", str(description))
-
-
-@task
-def testpages():
-    """Open test pages to check out.
-    """
-    local('open http://127.0.0.1:8080/westminster-daily/01/01/')
-    local('open http://127.0.0.1:8080/westminster-daily/01/02/')
-    local('open http://127.0.0.1:8080/westminster-daily/12/28/')
 
 
 def ascii_encode_dict(data):
