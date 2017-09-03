@@ -1,18 +1,13 @@
 from __future__ import absolute_import
 import datetime as dt
-import pytz
 import os
 import premailer
 
-from functools import wraps
 from flask import Flask, render_template
 from flask import Markup, request, redirect
 from flask import jsonify
-from flask import send_from_directory, url_for
 from markdown import markdown
 from werkzeug.routing import BaseConverter
-from werkzeug.contrib.atom import AtomFeed
-from werkzeug.contrib.cache import SimpleCache
 
 from . import config
 from . import data
@@ -24,7 +19,6 @@ LEAP_YEAR = 2008
 
 # create our application
 app = Flask(__name__)
-cache = SimpleCache()
 
 
 def _inline_styles(s, *args, **kwargs):
@@ -37,21 +31,6 @@ if os.environ.get("DEV", "no") == "yes":
     app.config.from_object(config.DevelopmentConfig)
 else:
     app.config.from_object(config.ProductionConfig)
-
-
-def cached(timeout=0 if app.debug else 60 * 60, key='view/%s'):
-    def decorator(f):
-        @wraps(f)
-        def decorated_function(*args, **kwargs):
-            cache_key = key % request.url
-            rv = cache.get(cache_key)
-            if rv is not None:
-                return rv
-            rv = f(*args, **kwargs)
-            cache.set(cache_key, rv, timeout=timeout)
-            return rv
-        return decorated_function
-    return decorator
 
 
 class RegexConverter(BaseConverter):
@@ -88,13 +67,7 @@ def page_not_found(e):
     return render_template('404_t.html', message=e.message), 404
 
 
-@app.route('/feed.rss')
-def recent_westminster_daily_feed_legacy():
-    return redirect('/westminster-daily/feed.rss', code=301)
-
-
 @app.route('/westminster-daily/feed.rss')
-@cached()
 def recent_westminster_daily_feed():
     return _feed(prooftexts=True).get_response()
 
@@ -113,40 +86,9 @@ def _feed(prooftexts, start_date=None, count=62):
 
 @app.route('/westminster-daily/test/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
 @app.route('/westminster-daily/test/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
-@cached()
 def render_test(month, day):
     content = data.get_day(month, day, prooftexts=True)
     return render_daily_page(month, day, content, template='feed_item_t.html')
-
-
-@app.route('/westminster-daily/feed_test.rss')
-@cached()
-def recent_westminster_daily_feed_test():
-    return _feed_test(prooftexts=True).get_response()
-
-
-def _feed_test(prooftexts):
-    feed = AtomFeed(app.config['SITE_TITLE'],
-                    author=app.config['SITE_TITLE'],
-                    feed_url=request.url,
-                    url=request.url_root)
-    now = dt.datetime.now(tz=pytz.timezone(app.config['TZ']))
-    for date in (now - dt.timedelta(n) for n in range(30)):
-        month = date.strftime('%m')
-        day = date.strftime('%d')
-        content = data.get_day(str(date.month), str(date.day), prooftexts=prooftexts)
-        page_title = data.get_day_title(month, day)
-        url = url_for('render_fixed_day', month=month, day=day, _external=True)
-
-        feed.add(page_title,
-                 render_daily_page(month, day, content,
-                                   template='feed_item_t.html',
-                                   url=url),
-                 content_type='html',
-                 url=url,
-                 published=date,
-                 updated=date)
-    return feed
 
 
 @app.route('/')
@@ -154,13 +96,7 @@ def render_today_legacy():
     return redirect('/westminster-daily/', code=301)
 
 
-@app.route('/robots.txt')
-def static_from_root():
-    return send_from_directory(app.static_folder, request.path[1:])
-
-
 @app.route('/westminster-daily/reading-plan/')
-@cached()
 def reading_plan():
     page_title = "A Daily Reading"
     start = dt.datetime(2004, 1, 1)
@@ -173,7 +109,6 @@ def reading_plan():
 
 @app.route('/about')
 @app.route('/about/')
-@cached()
 def about_page():
     page_title = "A Daily Reading"
     content = Markup(markdown("""
@@ -212,20 +147,11 @@ May the Lord bless you as you "press on" to know Him ([Hosea 6](http://www.esvbi
 
 @app.route('/westminster-daily')
 @app.route('/westminster-daily/')
-@cached()
 def render_today():
     page_title = "A Daily Reading"
     content = data.get_today_content(tz=app.config['TZ'], prooftexts=show_prooftexts())
     return render_daily_page(*content, page_title=page_title,
                              url="/westminster-daily")
-
-
-@app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
-@app.route('/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
-def render_fixed_day_legacy(month, day):
-
-    url = url_for('render_fixed_day', month=month, day=day, _external=True)
-    return redirect(url, code=301)
 
 
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/data.json')
@@ -242,22 +168,9 @@ def render_fixed_day_json(month, day):
 
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>')
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/')
-@cached()
 def render_fixed_day(month, day):
     content = data.get_day(month, day, prooftexts=show_prooftexts())
     return render_daily_page(month, day, content, static=True)
-
-
-@app.route('/c/<regex("(wsc|wlc)"):document>/<regex("[0-9]{1,3}"):number>')
-def render_catechism_section(document, number):
-    content = [data.get_catechism(document, int(number))]
-    return render_daily_page(1, 1, content, static=True)
-
-
-@app.route('/c/wcf/<regex("[0-9]{1,2}"):chapter>/<regex("[0-9]{1,2}"):paragraph>')
-def render_confession_section(chapter, paragraph):
-    content = [data.get_confession('wcf', int(chapter), int(paragraph))]
-    return render_daily_page(1, 1, content, static=True)
 
 
 # Render page for generating facebook/twitter images

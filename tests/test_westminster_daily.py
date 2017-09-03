@@ -5,31 +5,10 @@ from flask_application.app import app
 
 def test_rss():
     with app.test_client() as c:
-        response = c.get('/feed.rss', follow_redirects=False)
-        assert response.status_code == 301
         response = c.get('/westminster-daily/feed.rss', follow_redirects=False)
         assert response.status_code == 200
         assert response.mimetype == 'application/atom+xml'
         assert response.content_length > 100000
-
-
-def test_daily_westminster_legacy_pages_exist():
-    start_date = dt.date(2015, 1, 1)
-
-    with app.test_client() as c:
-        response = c.get('/')
-        assert response.status_code == 301
-
-        for days in range(365):
-            date = start_date + dt.timedelta(days=days)
-            month, day = date.month, date.day
-            response = c.get('/{month:02d}/{day:02d}/'.format(month=month, day=day),
-                             follow_redirects=False)
-            assert response.status_code == 301
-
-            response = c.get('/{month:02d}/{day:02d}'.format(month=month, day=day),
-                             follow_redirects=False)
-            assert response.status_code == 301
 
 
 def test_daily_westminster_pages_exist():
