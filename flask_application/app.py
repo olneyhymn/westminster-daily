@@ -7,6 +7,8 @@ from flask import Flask, render_template
 from flask import request
 from flask import jsonify
 from flask_flatpages import FlatPages
+from flask_bower import Bower
+
 
 from werkzeug.routing import BaseConverter
 
@@ -21,7 +23,7 @@ LEAP_YEAR = 2008
 # create our application
 app = Flask(__name__)
 pages = FlatPages(app)
-
+Bower(app)
 
 
 def _inline_styles(s, *args, **kwargs):

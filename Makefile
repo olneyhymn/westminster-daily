@@ -1,5 +1,7 @@
 
-clean: clean_lambda
+clean: clean_lambda clean build
+
+clean_build:
 	rm -rf flask_application/build
 
 clean_lambda:
@@ -32,7 +34,12 @@ lambda:
 	cp requirements.txt lambda/
 	cd lambda && STATIC_DEPS=true pip3 install -U retrying facebook-sdk werkzeug twitter pytz -t .
 
-build: flask_application/build
+build: clean_build flask_application/bower_components flask_application/build
+
+flask_application/bower_components:
+	cd flask_application && bower install bootstrap#v4.0.0-beta
+	cd flask_application && bower install bigfoot
+
 
 dig:
 	dig CNAME reformedconfessions.com
@@ -52,4 +59,4 @@ s3_upload: build
 	s3cmd sync --acl-public --delete-removed flask_application/build/ s3://reformedconfessions.com/
 
 
-.PHONY: s3_upload clean clean_lambda build lambda_bundle update_daily update_facebook update_tweet update_lambda_functions dig
+.PHONY: s3_upload clean clean_lambda build lambda_bundle update_daily update_facebook update_tweet update_lambda_functions dig clean_build

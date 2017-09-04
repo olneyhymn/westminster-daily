@@ -4,6 +4,7 @@ python:
 install: "pip install -r requirements.txt"
 script:
   - py.test --verbose --full-trace
+  - npm install -g bower
   - make build
 deploy:
     - provider: s3

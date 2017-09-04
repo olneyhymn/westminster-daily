@@ -75,7 +75,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/base.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/skeleton.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/layout.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/bigfoot-default.css')}}">
+    <link rel="stylesheet" href="{{ url_for('bower.static', filename = 'bigfoot/dist/bigfoot-default.css')}}">
 
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -93,8 +93,8 @@
 
     <!-- Javascript
     ================================================== -->
-    <script src="{{ url_for('static', filename='js/jquery-1.9.0.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/bigfoot.min.js') }}"></script>
+    <script src="{{ url_for('bower.static', filename='jquery/dist/jquery.js') }}"></script>
+    <script src="{{ url_for('bower.static', filename='bigfoot/dist/bigfoot.js') }}"></script>
     {% raw %}
     <script type="text/javascript">
             var bf = $.bigfoot({
