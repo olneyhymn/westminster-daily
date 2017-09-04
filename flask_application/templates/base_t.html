@@ -139,19 +139,19 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-10 m-auto remove-bottom"><hr class="remove-bottom"/></div>
+            <div class="col-md-8 m-auto remove-bottom"><hr class="remove-bottom"/></div>
         </div>
         <div class="row half-bottom">
-            <div class="col-sm col-md-3 ml-auto" style="text-align:center;">
+            <div class="col-sm col-md-3 col-lg-3 ml-auto" style="text-align:center;">
                 <h5><a href="{{ url_for('render_today') }}">Westminster Daily</a></h5>
             </div>
-            <div class="col-sm col-md-5 mr-auto" style="text-align:center;">
+            <div class="col-sm col-md-5 col-lg-3 mr-auto" style="text-align:center;">
                 <h6 class='remove-bottom subheader'>{{ tagline }}</h6>
             </div>
         </div>
-        <div class="row">
+        <div class="row pb-3">
 
-            <div class="col-sm col-md-3 ml-auto" style="text-align:center;">
+            <div class="col-sm col-md-3 col-lg-3 ml-auto" style="text-align:center;">
                 <a href="/about">
                     <small>about</small>
                 </a>
@@ -161,7 +161,7 @@
                 </a>
             </div>
 
-            <div class="col-sm col-md-5 mr-auto" style="text-align:center;">
+            <div class="col-sm col-md-5 col-lg-3 mr-auto" style="text-align:center;">
                 {% block datenav %}
                 {% endblock %}
             </div>
@@ -173,10 +173,10 @@
 
 
         <div class="col-sm col-md-8 col-lg-6 m-auto remove-bottom" style="text-align:right;">
-            <a class="hideproofs" id="toggle" onclick="return false;" style="cursor: pointer;">toggle proof texts</a>
+            <button type="button" id="toggle" class="btn btn-secondary  btn-sm">toggle proof texts</button>
         </div>
-        <div class="col-10 m-auto remove-bottom"><hr class="half-bottom"/></div>
-        <div class="col-sm col-md-8 m-auto" style="text-align:center;">
+        <div class="col-sm col-md-8 m-auto remove-bottom"><hr class="half-bottom"/></div>
+        <div class="col-sm col-md-8 col-lg-6 m-auto" style="text-align:center;">
 
             <a href="https://www.facebook.com/westminsterdaily/">
                 <small>follow on facebook</small>

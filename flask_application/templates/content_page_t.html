@@ -23,7 +23,6 @@
 {% endblock %}
 
 {% block datenav %}
-    <p style="font-size:87%">
     <strong>
         <a href="{{ url_for("render_fixed_day", month=date|get_date('yesterday','m'), day=date|get_date('yesterday','d')) }}">
             < {{ date|get_date('yesterday','-b') }} {{ date|get_date('yesterday','-d') }}
@@ -38,7 +37,6 @@
             {{ date|get_date('tomorrow','-b') }} {{ date|get_date('tomorrow','-d') }} >
         </a>
     </strong>
-    </p>
 
 {% endblock %}
 {% block body %}
