@@ -75,7 +75,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/base.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/skeleton.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'stylesheets/layout.css')}}">
-    <link rel="stylesheet" href="{{ url_for('bower.static', filename = 'bigfoot/dist/bigfoot-default.css')}}">
+    <link rel="stylesheet" href="{{ url_for('bower.static', filename = 'bootstrap/dist/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('bower.static', filename = 'bootstrap/dist/css/bootstrap-reboot.css')}}">
+    <link rel="stylesheet" href="{{ url_for('bower.static', filename = 'bootstrap/dist/css/bootstrap-grid.css')}}">
 
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -95,6 +97,8 @@
     ================================================== -->
     <script src="{{ url_for('bower.static', filename='jquery/dist/jquery.js') }}"></script>
     <script src="{{ url_for('bower.static', filename='bigfoot/dist/bigfoot.js') }}"></script>
+    <script src="{{ url_for('bower.static', filename='popper.js/dist/popper.js') }}"></script>
+    <script src="{{ url_for('bower.static', filename='bootstrap/dist/js/bootstrap.js') }}"></script>
     {% raw %}
     <script type="text/javascript">
             var bf = $.bigfoot({
@@ -137,19 +141,19 @@
 
     <div class="container">
         <div class="row">
-            <div class="ten columns offset-by-three remove-bottom"><hr class="remove-bottom"/></div>
+            <div class="col-md-10 m-auto remove-bottom"><hr class="remove-bottom"/></div>
         </div>
         <div class="row half-bottom">
-            <div class="three columns offset-by-four" style="text-align:center;">
+            <div class="col-sm col-md-3 ml-auto" style="text-align:center;">
                 <h5><a href="{{ url_for('render_today') }}">Westminster Daily</a></h5>
             </div>
-            <div class="five columns" style="text-align:center;">
+            <div class="col-sm col-md-5 mr-auto" style="text-align:center;">
                 <h6 class='remove-bottom subheader'>{{ tagline }}</h6>
             </div>
         </div>
         <div class="row">
 
-            <div class="three columns offset-by-four" style="text-align:center;">
+            <div class="col-sm col-md-3 ml-auto" style="text-align:center;">
                 <a href="/about">
                     <small>about</small>
                 </a>
@@ -159,7 +163,7 @@
                 </a>
             </div>
 
-            <div class="five columns" style="text-align:center;">
+            <div class="col-sm col-md-5 mr-auto" style="text-align:center;">
                 {% block datenav %}
                 {% endblock %}
             </div>
@@ -170,11 +174,11 @@
 
 
 
-        <div class="eight columns offset-by-four remove-bottom" style="text-align:right;">
+        <div class="col-sm col-md-8 col-lg-6 m-auto remove-bottom" style="text-align:right;">
             <a class="hideproofs" id="toggle" onclick="return false;" style="cursor: pointer;">toggle proof texts</a>
         </div>
-        <div class="ten columns offset-by-three remove-bottom"><hr class="half-bottom"/></div>
-        <div class="eight columns offset-by-four" style="text-align:center;">
+        <div class="col-10 m-auto remove-bottom"><hr class="half-bottom"/></div>
+        <div class="col-sm col-md-8 m-auto" style="text-align:center;">
 
             <a href="https://www.facebook.com/westminsterdaily/">
                 <small>follow on facebook</small>
