@@ -1,0 +1,63 @@
+{
+  "name": "bootstrap",
+  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "version": "4.0.0-beta",
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "https://getbootstrap.com",
+  "author": "The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+  "contributors": [
+    "Twitter, Inc."
+  ],
+  "scripts": {
+    "css": "npm-run-all css-compile css-prefix css-minify",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 flask_application/bower_components/bootstrap/scss/bootstrap.scss flask_application/static/css/bootstrap.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 flask_application/bower_components/bootstrap/scss/bootstrap-grid.scss flask_application/static/css/bootstrap-grid.css && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 flask_application/bower_components/bootstrap/scss/bootstrap-reboot.scss flask_application/static/css/bootstrap-reboot.css",
+    "css-prefix": "postcss --config flask_application/bower_components/bootstrap/build/postcss.config.js --replace flask_application/static/css/*.css",
+    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output flask_application/static/css/bootstrap.min.css flask_application/static/css/bootstrap.css && cleancss --level 1 --source-map --source-map-inline-sources --output flask_application/static/css/bootstrap-grid.min.css flask_application/static/css/bootstrap-grid.css && cleancss --level 1 --source-map --source-map-inline-sources --output flask_application/static/css/bootstrap-reboot.min.css flask_application/static/css/bootstrap-reboot.css",
+    "watch-css": "nodemon --ignore flask_application/static/css -e scss -x \"npm run css\""
+  },
+  "style": "dist/css/bootstrap.css",
+  "sass": "scss/bootstrap.scss",
+  "main": "dist/js/bootstrap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twbs/bootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twbs/bootstrap/issues"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "clean-css-cli": "^4.1.6",
+    "eslint": "^4.2.0",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.12.0",
+    "npm-run-all": "^4.0.2",
+    "postcss-cli": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    ".babelrc",
+    ".eslintignore",
+    "Gruntfile.js",
+    "Gemfile",
+    "dist",
+    "build",
+    "js/.eslintrc.json",
+    "js/**/*.js",
+    ".scss-lint.yml",
+    "flask_application/bower_components/bootstrap/scss/**/*.scss",
+    "LICENSE"
+  ]
+}

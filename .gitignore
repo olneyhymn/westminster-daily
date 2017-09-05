@@ -2,3 +2,6 @@ bower_components
 images/
 lambda_bundle.zip
 lambda/
+package-lock.json
+node_modules/
+flask_application/static/css/

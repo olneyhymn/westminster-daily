@@ -1,6 +1,9 @@
 
 clean: clean_lambda clean build
 
+server:
+	FLASK_APP=flask_application/app.py flask run
+
 clean_build:
 	rm -rf flask_application/build
 
@@ -34,7 +37,10 @@ lambda:
 	cp requirements.txt lambda/
 	cd lambda && STATIC_DEPS=true pip3 install -U retrying facebook-sdk werkzeug twitter pytz -t .
 
-build: clean_build flask_application/bower_components flask_application/build
+build: sass clean_build flask_application/bower_components flask_application/build
+
+sass:
+	npm run css
 
 flask_application/bower_components:
 	cd flask_application && bower install bootstrap#v4.0.0-beta
@@ -59,4 +65,4 @@ s3_upload: build
 	s3cmd sync --acl-public --delete-removed flask_application/build/ s3://reformedconfessions.com/
 
 
-.PHONY: s3_upload clean clean_lambda build lambda_bundle update_daily update_facebook update_tweet update_lambda_functions dig clean_build
+.PHONY: s3_upload clean clean_lambda build lambda_bundle update_daily update_facebook update_tweet update_lambda_functions dig clean_build css server
