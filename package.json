@@ -17,7 +17,7 @@
     "Twitter, Inc."
   ],
   "scripts": {
-      "css": "node-sass --output-style expanded --precision 6 flask_application/static/scss/main.scss flask_application/static/css/main.css.tmp && cleancss --level 1 flask_application/static/css/main.css.tmp -o flask_application/static/css/main.css"
+    "css": "node-sass --output-style expanded --precision 6 flask_application/static/scss/bootstrap.scss flask_application/static/css/main.css.tmp && cleancss --level 1 flask_application/static/css/main.css.tmp -o flask_application/static/css/main.css"
   },
   "style": "dist/css/bootstrap.css",
   "sass": "scss/bootstrap.scss",
@@ -30,7 +30,9 @@
     "url": "https://github.com/twbs/bootstrap/issues"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "bower": "^1.8.0"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "clean-css-cli": "^4.1.9",
