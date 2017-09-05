@@ -5,7 +5,7 @@ install: "pip install -r requirements.txt"
 script:
   - npm install
   - make flask_application/bower_components
-  - py.test --verbose --full-trace
+  - py.test --verbose --full-trace --ignore=node_modules
   - make build
 deploy:
     - provider: s3
