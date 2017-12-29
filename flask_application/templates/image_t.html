@@ -20,11 +20,11 @@
             width:600px;
             height:320px;
             overflow: hidden;
-            padding:20px;
-            font-size:125%;
+            background-color: white;
+            border-left: 20px solid darkgray;
         }
-        p {
-        line-height: 110%;
+        #row {
+            height: 320px;
         }
         .question {
             margin-bottom: .2em;
@@ -36,10 +36,10 @@
 
 </head>
 <body style="background-color: black;">
-<div class="image" id="content">
-<div class="container">
-    <div class="row">
-        <div class="col">
+<div class="image py-0 px-2" id="content">
+<div class="container-fluid">
+    <div class="row" id="row">
+        <div class="col my-auto">
         {% for c in content %}
             {% include c['type'] + '_t.html' %}
         {% endfor %}
