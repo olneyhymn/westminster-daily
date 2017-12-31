@@ -1,6 +1,12 @@
+$font-family-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:       $font-family-sans-serif ;
+$headings-font-family:  'Alegreya', "Times New Roman", serif;
+
 .q {
     font-size: 120%;
     color: rgba(0,0,0,.6);
+    font-family: $headings-font-family;
 }
 
 .image {

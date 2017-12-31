@@ -72,6 +72,7 @@
 
     <!-- CSS
     ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css')}}">
     <link rel="stylesheet" href="{{ url_for('bower.static', filename = 'bigfoot/dist/bigfoot-default.css')}}">
 
@@ -141,7 +142,7 @@
         </div>
         <div class="row half-bottom">
             <div class="col-sm col-md-3 col-lg-3 ml-auto" style="text-align:center;">
-                <h5><a href="{{ url_for('render_today') }}">Westminster Daily</a></h5>
+                <h3><a href="{{ url_for('render_today') }}">Westminster Daily</a></h3>
             </div>
             <div class="col-sm col-md-5 col-lg-3 mr-auto" style="text-align:center;">
                 <h6 class='remove-bottom text-muted'>{{ tagline }}</h6>
