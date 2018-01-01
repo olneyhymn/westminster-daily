@@ -1,5 +1,5 @@
-<h5 class="remove-bottom header">{{ c['name'] }}</h5>
-<p class='question half-bottom'><span class="q">Q. {{ c['number'] }}</span>
+<h5 class="header mb-1">{{ c['name'] }}</h5>
+<p class='question mb-0'><span class="q">&#119980; <em>{{ c['number'] }}.</em></span>
 {{ c['question'] | safe}}</p>
-<div class='answer'><p>{{ c['answer'] | safe }}</p></div>
+<div class='answer'><p><span class="q">&#119964;. </span> {{ c['answer'] | safe }}</p></div>
 

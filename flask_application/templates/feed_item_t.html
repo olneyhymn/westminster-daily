@@ -31,7 +31,7 @@
     <div class="prooftexts">
         <ol class="disc">
         {% for k, v in c.prooftexts.items() %}
-            <li class="footnote remove-bottom" id="fn:{{ k }}">
+            <li class="footnote" id="fn:{{ k }}">
                 {{ v | replace("<br />", "") | safe}}
             </li>
         {% endfor %}
