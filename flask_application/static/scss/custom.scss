@@ -3,6 +3,40 @@ $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier Ne
 $font-family-base:       $font-family-sans-serif ;
 $headings-font-family:  'Alegreya', "Times New Roman", serif;
 
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #F8F5F0;
+$gray-300: #DFD7CA;
+$gray-400: #ced4da;
+$gray-500: #98978B;
+$gray-600: #8E8C84;
+$gray-700: #495057;
+$gray-800: #3E3F3A;
+$gray-900: #212529;
+$black:    #000;
+
+$blue:    #325D88;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #d9534f;
+$orange:  #F47C3C;
+$yellow:  #ffc107;
+$green:   #93C54B;
+$teal:    #20c997;
+$cyan:    #29ABE0;
+
+$theme-colors: (
+    primary:       $blue,
+    secondary:     $gray-600,
+    success:       $green,
+    info:          $cyan,
+    warning:       $orange,
+    danger:        $red,
+    light:         $gray-200,
+    dark:          $gray-800
+) !default;
+
 .q {
     font-size: 120%;
     color: rgba(0,0,0,.6);
