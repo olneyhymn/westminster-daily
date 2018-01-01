@@ -5,13 +5,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@reformedconfessions">
 <meta name="twitter:creator" content="@reformedconfessions">
+<!-- static? {{ static }} -->
 {% if static %}
 <meta property="og:image" content="http://{{ request.host }}/static/images/docs/{{ date.strftime('%m%d') }}-full.png" />
 <meta property="og:description" content="{{ tagline }} | {{ description }}" />
 <meta property="og:title" content="{{ site_title }} | {{ page_title }}" />
 <meta name="twitter:title" content="{{ site_title }} | {{ page_title }}">
 <meta name="twitter:description" content="{{ tagline }} | {{ description }} ">
-<meta name="twitter:image" content="http://{{ request.host }}/images/docs/{{ date.strftime('%m%d') }}-full.png">
+<meta name="twitter:image" content="http://{{ request.host }}/static/images/docs/{{ date.strftime('%m%d') }}-full.png">
 {% else %}
 <meta property="og:image" content="http://{{ request.host }}/static/images/docs/0101-full.png" />
 <meta property="og:description" content="{{ tagline }}" />

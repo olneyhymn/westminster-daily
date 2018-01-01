@@ -129,7 +129,7 @@ def render_today():
     page_title = "A Daily Reading"
     content = data.get_today_content(tz=app.config['TZ'], prooftexts=show_prooftexts())
     return render_daily_page(*content, page_title=page_title,
-                             url="/westminster-daily")
+                             url="/westminster-daily", static=False)
 
 
 @app.route('/westminster-daily/<regex("[0-1][0-9]"):month>/<regex("[0-3][0-9]"):day>/data.json')
