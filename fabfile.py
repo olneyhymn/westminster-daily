@@ -12,6 +12,7 @@ from __future__ import with_statement
 import platform
 assert ('2', '6') <= platform.python_version_tuple() < ('3', '0')
 
+import time
 import logging
 import os
 import sh
@@ -62,7 +63,8 @@ def build_images(month):
     image_path = 'flask_application/static/images/docs/'
     server = sh.python('runserver.py', _bg=True)
     print "starting server with pid {}".format(server.pid)
-    for date in (dt.datetime(2004, int(month), 01) + dt.timedelta(n) for n in range(31)):
+    time.sleep(5)
+    for date in (dt.datetime(2004, int(month), 01) + dt.timedelta(n) for n in range(1)):
         webkit2png = sh.Command("/usr/local/bin/webkit2png")
         p = webkit2png(date.strftime('http://0.0.0.0:8080/i/%m/%d'),
                        selector="#content",
