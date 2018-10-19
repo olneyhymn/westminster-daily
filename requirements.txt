@@ -2,7 +2,7 @@ python-dateutil==2.4.2
 gunicorn==19.3.0
 simplejson==3.7.3
 unittest2==0.5.1
-Flask>=0.9
+Flask<1
 Werkzeug==0.8.3
 Jinja2==2.6
 webassets==0.7
@@ -14,9 +14,9 @@ sh==1.11
 pytest
 twitter==1.17.0
 pytz==2015.4
-Flask-Testing==0.4.2
+Flask-Testing
 facebook-sdk
-markdown
+markdown==2.6.11
 premailer
 requests
 retrying
