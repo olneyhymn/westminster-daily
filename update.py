@@ -14,7 +14,7 @@ index = 'westminster-daily/index.html'
 feed = 'westminster-daily/feed.rss'
 base_url = 'http://reformedconfessions.com/'
 file_url = 'http://reformedconfessions.com/'
-api_url = '{file_url}westminster-daily/'.format(file_url=file_url)
+api_url = '{file_url}westminster-daily/'.format(file_url=file_url)m
 
 
 tz = pytz.timezone("US/Eastern")

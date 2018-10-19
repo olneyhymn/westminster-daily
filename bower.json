@@ -1,0 +1,25 @@
+{
+  "name": "flask_application",
+  "homepage": "https://github.com/olneyhymn/westminster-daily",
+  "authors": [
+    "Tim Hopper <tdhopper@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "directory" : "flask_application/bower_components",
+  "dependencies": {
+    "bigfoot": "^2.1.4",
+    "bootstrap": "v4.0.0-beta",
+    "popper.js": "1.11.1",
+    "jquery": "2"
+  }
+}
