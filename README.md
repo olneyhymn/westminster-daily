@@ -11,3 +11,8 @@ Clone with `git clone https://github.com/olneyhymn/westminster-daily.git`.
 Setup a virtualenv or Conda environment and run `pip install -r requirements.txt`.
 
 Site automatically deploys from `master` branch if [Travis](https://travis-ci.org/olneyhymn/westminster-daily) tests pass.
+
+## Things to do:
+
+* `tox -e build`: Build static site
+* `tox`: Run tests against static site
