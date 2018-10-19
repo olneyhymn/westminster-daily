@@ -1,3 +1,7 @@
+*.pyc
+.vscode
+venv/
+build/
 bower_components
 images/
 lambda_bundle.zip
