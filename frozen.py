@@ -3,6 +3,7 @@ from flask_application.app import app
 import datetime as dt
 
 freezer = Freezer(app)
+app.testing = True
 app.config['SERVER_NAME'] = 'reformedconfessions.com'
 
 
