@@ -61,8 +61,8 @@ curl:
 	curl -IL reformedconfessions.com
 	curl -IL www.reformedconfessions.com
 
-flask_application/build:
-	python frozen.py
+flask_application/build: venv
+	venv/bin/python frozen.py
 
 test:
 	py.test --verbose   --full-trace
@@ -71,5 +71,10 @@ s3_upload: build
 	s3cmd sync --acl-public --delete-removed flask_application/build/ s3://reformedconfessions.com/
 	aws --profile=pythonplot.com  cloudfront create-invalidation --distribution-id E2EQLK7CSPOT0E --paths="/*"
 
+venv: venv/bin/activate
+venv/bin/activate: requirements.txt
+	test -d venv || virtualenv venv
+	venv/bin/pip install -Ur requirements.txt
+	touch venv/bin/activate
 
 .PHONY: s3_upload clean clean_lambda build lambda_bundle update_daily update_facebook update_tweet update_lambda_functions dig clean_build css server clean_css
