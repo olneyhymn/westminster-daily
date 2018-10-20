@@ -22,11 +22,6 @@ deploy:
       detect_encoding: true
       on:
         branch: master
-    - provider: script
-      skip_cleanup: true
-      script: tox -e build && netlify deploy --prod --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir ./flask_application/build/
-      on:
-        netlify
 notifications:
   email:
     recipients:
