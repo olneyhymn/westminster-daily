@@ -1,13 +1,10 @@
 language: python
 python:
   - "2.7"
-install: "pip install -r requirements.txt"
+install: 
+  - pip tox
 script:
-  - npm install
-  - npm install -g bower
-  - make flask_application/bower_components
-  - py.test --verbose --full-trace --ignore=node_modules
-  - make build
+  - tox
 before_deploy:
   - npm install netlify-cli -g
 deploy:
@@ -25,7 +22,9 @@ deploy:
         branch: master
     - provider: script
       skip_cleanup: true
-      script: netlify deploy --prod --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir ./flask_application/build/
+      script: 
+        - tox build
+        - netlify deploy --prod --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir ./flask_application/build/
       on:
         netlify
 notifications:
