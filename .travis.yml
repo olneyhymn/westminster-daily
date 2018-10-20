@@ -8,6 +8,8 @@ script:
   - make flask_application/bower_components
   - py.test --verbose --full-trace --ignore=node_modules
   - make build
+before_deploy:
+  - npm install netlify-cli -g
 deploy:
     - provider: s3
       access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
@@ -21,6 +23,11 @@ deploy:
       detect_encoding: true
       on:
         branch: master
+    - provider: script
+      skip_cleanup: true
+      script: netlify deploy --prod --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir ./flask_application/build/
+      on:
+        netlify
 notifications:
   email:
     recipients:
