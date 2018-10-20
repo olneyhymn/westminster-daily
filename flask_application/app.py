@@ -69,7 +69,7 @@ app.jinja_env.filters['get_date'] = get_date
 
 @app.errorhandler(KeyError)
 def page_not_found(e):
-    return render_template('404_t.html', message=e.message), 404
+    return render_template('404_t.html', message=e), 404
 
 
 @app.route('/westminster-daily/feed.rss')
