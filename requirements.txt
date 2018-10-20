@@ -7,4 +7,3 @@ requests
 retrying
 pyyaml
 werkzeug
-premailer
