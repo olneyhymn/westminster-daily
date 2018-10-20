@@ -7,3 +7,4 @@ requests
 retrying
 pyyaml
 werkzeug
+tox
