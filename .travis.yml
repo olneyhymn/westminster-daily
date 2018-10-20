@@ -4,6 +4,7 @@ python:
 install: 
   - pip install tox
   - npm install bower -g
+  - npm install -g node-sass
 script:
   - tox
 before_deploy:
