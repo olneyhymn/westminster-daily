@@ -38,26 +38,6 @@ log.addHandler(ch)
 
 
 @task
-def console():
-    """Load the application in an interactive console.
-    """
-    local('env DEV=yes python -i runserver.py', capture=False)
-
-
-@task(alias='preview')
-def server():
-    """Run the dev server"""
-    os.chdir(PROJ_DIR)
-    local('env DEV=yes python runserver.py', capture=False)
-
-
-@task
-def test():
-    """Run the test suite"""
-    local('py.test --verbose   --full-trace -ff', capture=False)
-
-
-@task
 def build_images(month):
 
     image_path = 'flask_application/static/images/docs/'
@@ -84,53 +64,6 @@ def build_images(month):
 @task
 def images_to_s3():
     local('s3cmd put --acl-public images/* s3://reformedconfessions')
-
-
-@task
-def clean():
-    """Clear the cached .pyc files."""
-    local("find . \( -iname '*.pyc' -o -name '*~' \) -exec rm -v {} \;", capture=False)
-    local("rm -rf htmlcov", capture=False)
-
-
-@task
-def configure_tweet():
-    """Tweet today's confession post
-    """
-    import twitter as tw
-
-    cred = {
-        "consumer_key": os.environ['TW_CONSUMER_KEY'],
-        "consumer_secret": os.environ['TW_CONSUMER_SECRET'],
-        "app_name": "Reformed Confessions"
-    }
-    oauth_token, oauth_token_secret = tw.oauth_dance(**cred)
-    print "oauth_token", oauth_token
-    print "oauth_token_secret", oauth_token_secret
-
-
-def make_facebook_string(content):
-    c_strings = []
-    for c in content:
-        if c['type'] == 'confession':
-            c_strings.append("""{}
-
-{}
-
-""".format(c['long_citation'], c['body']))
-        elif c['type'] == 'catechism':
-            c_strings.append("""{}
-
-Q. {}
-A. {}
-
-""".format(c['long_citation'], c['question'], c['answer']))
-    return ''.join(c_strings)
-
-
-def ascii_encode_dict(data):
-    ascii_encode = lambda x: x.encode('ascii') if isinstance(x, unicode) else x
-    return dict(map(ascii_encode, pair) for pair in data.items())
 
 
 @task
