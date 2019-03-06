@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": "venv/bin/python",
+		"python.pythonPath": "dev/bin/python",
 		"files.exclude": {
 			"**/.pytest_cache": true,
 			"**/.tox": true,
@@ -14,6 +14,9 @@
 			"**/bower_components": true,
 			"**/node_modules": true,
 			"**/template.egg-info": true
-		}
+		},
+		"python.formatting.autopep8Path": "black",
+		"python.formatting.provider": "black",
+		"python.linting.flake8Enabled": true
 	}
 }
