@@ -1,0 +1,19 @@
+sudo: false
+language: python
+python:
+  - "2.7"
+install: pip install tox-travis
+before_script:
+  - npm install -g bower
+  - bower install
+script:
+  - tox -e py27,lambda
+deploy:
+  provider: lambda
+  function_name: "westminster-daily-tweet"
+  region: "us-east-1"
+  runtime: "python3.6"
+  handler_name: "tweet"
+  module_name: "update"
+  role: "arn:aws:iam::212595366334:role/lambda_basic_execution"
+  zip: lambda
