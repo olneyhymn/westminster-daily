@@ -7,7 +7,9 @@ before_script:
   - npm install -g bower
   - bower install
 script:
-  - tox -e py27,lambda
+  - tox -e py27
+after_script:
+  - tox -e lambda
 deploy:
   provider: lambda
   function_name: "westminster-daily-tweet"
