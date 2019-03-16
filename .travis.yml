@@ -19,3 +19,5 @@ deploy:
   module_name: "update"
   role: "arn:aws:iam::212595366334:role/lambda_basic_execution"
   zip: lambda
+  on:
+    branch: master
