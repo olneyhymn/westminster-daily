@@ -3,6 +3,7 @@
 # http://flask.pocoo.org/docs/config/#development-production
 from __future__ import absolute_import
 
+from builtins import object
 class Config(object):
     SITE_TITLE = "Westminster Daily"
     SITE_TAGLINE = "Read the Westminster Standards in a year."
