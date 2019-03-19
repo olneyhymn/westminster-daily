@@ -5,7 +5,6 @@ build/
 .tox/
 *.egg-info
 bower_components
-images/
 lambda_bundle.zip
 lambda/
 package-lock.json
