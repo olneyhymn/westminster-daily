@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css')}}">
 
     <style type="text/css">
-        body {
+        html {
             font-size: 200%;
         }
         .image {
@@ -51,7 +51,7 @@
 <div class="image py-0 px-2" id="content">
 <div class="container-fluid">
     <div class="row" id="row">
-        <div class="col my-auto">
+        <div class="col mt-3">
         {% for c in content %}
             {% include c['type'] + '_t.html' %}
         {% endfor %}
