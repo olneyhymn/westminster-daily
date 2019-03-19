@@ -6,5 +6,5 @@ facebook-sdk
 requests
 retrying
 pyyaml
-werkzeug
+werkzeug<0.15.0
 tox

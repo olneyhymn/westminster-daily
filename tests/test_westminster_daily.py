@@ -16,7 +16,7 @@ def test_daily_westminster_pages_exist():
 
     with app.test_client() as c:
         response = c.get('/westminster-daily')
-        assert response.status_code == 301
+        assert response.status_code in (301, 308)
         response = c.get('/westminster-daily/')
         assert response.status_code == 200
 
@@ -29,7 +29,7 @@ def test_daily_westminster_pages_exist():
 
             response = c.get('/westminster-daily/{month:02d}/{day:02d}'.format(month=month, day=day),
                              follow_redirects=False)
-            assert response.status_code == 301
+            assert response.status_code in (301, 308)
 
 
 def test_chief_end_of_man():
@@ -71,4 +71,4 @@ def test_about_page():
         response = c.get('about/')
         assert response.status_code == 200
         response = c.get('about')
-        assert response.status_code == 301
+        assert response.status_code in (301, 308)
