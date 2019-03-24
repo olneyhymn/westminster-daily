@@ -2,3 +2,9 @@
   base    = "."
   publish = "./flask_application/build/"
   command = "npm install bower -g && npm install -g node-sass && tox -e build"
+
+[[redirects]]
+  from = "/static/images/docs"
+  to = "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/:splat"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
