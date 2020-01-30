@@ -3,9 +3,6 @@ language: python
 python:
   - "3.6"
 install: pip install tox-travis
-before_script:
-  - npm install -g bower
-  - bower install
 script:
   - echo 1
 before_deploy:
