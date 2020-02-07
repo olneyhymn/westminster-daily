@@ -15,7 +15,7 @@ requires = [
     'Flask-SQLAlchemy',
     'flask-markdown',
     'blinker',
-    'Werkzeug==0.16.1",
+    'Werkzeug==0.16.1',
 ]
 
 if __name__ == '__main__':
