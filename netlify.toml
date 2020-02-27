@@ -1,7 +1,7 @@
 [build]
   base    = "."
   publish = "./flask_application/build/"
-  command = "npm install bower -g && npm install -g node-sass && pip install tox && tox -e build"
+  command = "pip install tox && tox -e build"
 
 [[redirects]]
   from = "/static/images/docs/*"

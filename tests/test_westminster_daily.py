@@ -1,7 +1,8 @@
 import datetime as dt
 
 from flask_application.app import app
-
+app.config['DEBUG'] = True
+app.config['TESTING'] = True
 
 def test_rss():
     with app.test_client() as c:
