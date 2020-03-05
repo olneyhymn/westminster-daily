@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from builtins import range
 import datetime as dt
 import os
+import re
 import premailer
 
 from flask import Flask, render_template
@@ -30,6 +31,12 @@ def _inline_styles(s, *args, **kwargs):
     return pm.transform()
 
 app.jinja_env.filters['inline_styles'] = _inline_styles
+
+@app.template_filter('regex_replace')
+def regex_replace(s, find, replace):
+    """A non-optimal implementation of a regex filter"""
+    return re.sub(find, replace, s)
+
 
 if os.environ.get("DEV", "no") == "yes":
     app.config.from_object(config.DevelopmentConfig)
@@ -155,6 +162,12 @@ def render_fixed_day(month, day):
 def render_image_page(month, day):
     content = data.get_day(month, day, prooftexts=False)
     return render_daily_page(month, day, content, template='image_t.html')
+
+# Render page for generating facebook/twitter images
+@app.route('/md/<regex("[0-1][0-9]"):month>/<regex("[0-9][0-9]"):day>.md')
+def render_markdown_page(month, day):
+    content = data.get_day(month, day, prooftexts=True)
+    return render_daily_page(month, day, content, template='markdown_t.md')
 
 
 # Render main page

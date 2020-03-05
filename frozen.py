@@ -21,5 +21,12 @@ def render_image_page():
         yield {'month': date.strftime('%m'), 'day': date.strftime('%d')}
 
 
+@freezer.register_generator
+def render_markdown_page():
+    for i in range(366):
+        date = dt.datetime(2016, 1, 1) + dt.timedelta(days=i)
+        yield {'month': date.strftime('%m'), 'day': date.strftime('%d')}
+
+
 if __name__ == '__main__':
     freezer.freeze()
