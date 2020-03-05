@@ -11,6 +11,6 @@ next_date: {{ date|get_date('tomorrow','-b') }} {{ date|get_date('tomorrow','-d'
 {% for c in content %}
 {% include c['type'] + '_t.md' %}
 {% for k, v in c.prooftexts.items() %}
-[fn:{{ c.abbv }}{{ k }}]: {{ v | safe | replace("\n", " ")}}
+[^fnref:{{ c.abbv }}{{ k }}]: {{ v | safe | replace("\n", " ")}}
 {% endfor %}
 {% endfor %}
