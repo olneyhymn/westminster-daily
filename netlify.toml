@@ -1,7 +1,7 @@
 [build]
   base    = "."
-  publish = "./flask_application/build/"
-  command = "pip install tox && tox -e build"
+  publish = "./build"
+  command = "make all"
 
 [[redirects]]
   from = "/static/images/docs/*"
