@@ -1,4 +1,4 @@
-SOURCES :=$(shell find content -name "*.md" | xargs echo | sed 's/\.md/\.html/g' | sed 's/\content/\build/g' )
+SOURCES :=$(shell find content -name "*.md" | tr '\n' ' ' | sed 's/\.md/\.html/g; s/\content/\build/g' )
 
 all: ${SOURCES}
 	echo "Sources" ${SOURCES}
