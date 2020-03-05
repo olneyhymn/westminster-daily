@@ -1,5 +1,6 @@
 #!/bin/bash
 set +x
+set +e
 input=${1/build/content}
 input=${input%.html}.md
 mkdir -p "$(dirname $1)"
