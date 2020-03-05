@@ -58,10 +58,10 @@
         src='https://d33wubrfki0l68.cloudfront.net/js/310047602b93b508a98b38b2cf450a482031029f/static/js/bootstrap.js'></script>
 
     <script type="text/javascript">
-        var bf = $.bigfoot({
+        var bf = jQuery.bigfoot({
             buttonMarkup: '<div class=\'bigfoot-footnote__container\'> <button class="bigfoot-footnote__button" id="{{SUP:data-footnote-backlink-ref}}" data-footnote-number="{{FOOTNOTENUM}}" data-footnote-identifier="{{FOOTNOTEID}}" alt="See Footnote {{FOOTNOTENUM}}" rel="footnote" data-bigfoot-footnote="{{FOOTNOTECONTENT}}"> <svg class="bigfoot-footnote__button__circle" viewbox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg> <svg class="bigfoot-footnote__button__circle" viewbox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg>  </button></div>'
         });
-        $(document).ready(function () {
+        jQuery(document).ready(function () {
 
             var hash = window.location.hash;
             hash = hash.replace("fn:", "fnref:").replace(":", "\\:");
@@ -225,7 +225,7 @@
 
         document.getElementById('toggle').onclick = toggle;
         function toggle() {
-            $(".bigfoot-footnote__container").toggle();
+            jQuery(".bigfoot-footnote__container").toggle();
         }
 
     </script>
