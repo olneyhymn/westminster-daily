@@ -5,6 +5,7 @@ all: build ${SOURCES} build/index.html build/westminster-daily/index.html
 
 build: build/westminster-daily build/css/main.css
 	cp -r static/ build
+	find build
 	rm -rf build/scss
 
 build/westminster-daily:
