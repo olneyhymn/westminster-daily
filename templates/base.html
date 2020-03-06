@@ -70,12 +70,17 @@
     <meta name="twitter:creator" content="@reformedconfessions">
     <!-- static? False -->
 
+    $if(short_date)$
     <meta property="og:image" content="http://reformedconfessions.com/static/images/docs/$short_date$-full.png" />
+    <meta name="twitter:image" content="http://reformedconfessions.com/static/images/docs/$short_date$-full.png">
+    $else$
+    <meta property="og:image" content="http://reformedconfessions.com/static/images/docs/0101-full.png" />
+    <meta name="twitter:image" content="http://reformedconfessions.com/static/images/docs/0101-full.png">
+    $endif$
     <meta property="og:description" content="Read the Westminster Standards in a year." />
     <meta property="og:title" content="Westminster Daily" />
     <meta name="twitter:title" content="Westminster Daily">
     <meta name="twitter:description" content="Read the Westminster Standards in a year.">
-    <meta name="twitter:image" content="http://reformedconfessions.com/static/images/docs/$short_date$-full.png">
 
 
 
@@ -107,7 +112,7 @@
                     <small>full plan</small>
                 </a>
             </div>
-
+            $if(this_url)$
             <div class="col-sm col-md-5 col-lg-3 mr-auto" style="text-align:center;">
 
                 <strong>
@@ -123,7 +128,7 @@
                                 $next_date$ >
                             </a>
                 </strong>
-
+            $endif$
 
             </div>
         </div>

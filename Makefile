@@ -4,7 +4,7 @@ CURRENT_FILE := $(shell date -u +"content/%m/%d.md")
 all: build ${SOURCES} build/index.html build/westminster-daily/index.html
 
 build: build/westminster-daily build/css/main.css
-	cp -r static/* build
+	open
 	find build
 	rm -rf build/scss
 
