@@ -5,7 +5,7 @@ all: build ${SOURCES} build/index.html build/westminster-daily/index.html
 
 build: build/westminster-daily build/css/main.css
 	cp -r static/ build
-	rm -r build/scss
+	rm -rf build/scss
 
 build/westminster-daily:
 	mkdir -p build/westminster-daily
