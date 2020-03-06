@@ -4,7 +4,7 @@ date: February 19, 2020
 prev_url: /westminster-daily/03/05/
 prev_date: Mar 5
 this_url: /westminster-daily/03/06/
-short_date: 0306
+short_date: "0306"
 this_date: Mar 6
 next_url: /westminster-daily/03/07/
 next_date: Mar 7
