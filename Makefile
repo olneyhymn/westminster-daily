@@ -3,10 +3,15 @@ CURRENT_FILE := $(shell date -u +"content/%m/%d.md")
 
 all: build ${SOURCES} build/index.html build/westminster-daily/index.html
 
-build: build/westminster-daily
+build: build/westminster-daily build/css/main.css
+	cp -r static/ build
+	rm -r build/scss
 
 build/westminster-daily:
 	mkdir -p build/westminster-daily
+
+build/css/main.css: static/scss/main.scss
+	sass static/scss/main.scss build/css/main.css
 
 build/index.html: build/westminster-daily/index.html
 	cp build/westminster-daily/index.html build/index.html
