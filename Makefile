@@ -11,6 +11,7 @@ build/westminster-daily:
 	mkdir -p build/westminster-daily
 
 build/css/main.css: static/scss/main.scss
+	mkdir -p build/css/
 	sass static/scss/main.scss build/css/main.css
 
 build/index.html: build/westminster-daily/index.html
