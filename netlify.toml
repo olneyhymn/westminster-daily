@@ -1,7 +1,7 @@
 [build]
   base    = "."
   publish = "./build"
-  command = "npm install -g sass && make all"
+  command = "npm install -g sass & pip install tox && make all"
 
 [[redirects]]
   from = "/static/images/docs/*"
