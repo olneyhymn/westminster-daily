@@ -3,6 +3,10 @@ CURRENT_FILE := $(shell date -u +"content/%m/%d.md")
 
 all: build ${SOURCES} build/index.html build/westminster-daily/index.html
 
+feed.xml: build
+	tox -e feed
+	mv feed.xml build/westminster-daily/
+
 build: build/westminster-daily build/css/main.css
 	cp -r static/* build
 	find build
