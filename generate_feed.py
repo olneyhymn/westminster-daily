@@ -6,7 +6,7 @@ import markdown
 from functools import lru_cache
 
 URL = "https://pandoc--westminster-daily.netlify.com/westminster-daily"
-FILENAME = "feed.xml"
+FILENAME = "feed.rss"
 NUMBER_OF_DAYS = 30
 
 
