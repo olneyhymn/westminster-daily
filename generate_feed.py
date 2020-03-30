@@ -29,7 +29,7 @@ def meta(month, day):
 def content(month, day):
     md_as_html = markdown_parser(month, day)[1]
     c = transform(md_as_html, preserve_internal_links=True)
-    return c
+    return c[(c.find("body") + len("body>")) : -len("</body></html>")]
 
 
 def main():
