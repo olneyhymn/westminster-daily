@@ -44,7 +44,7 @@ def main():
 
     now = dt.datetime.now(tz=pytz.timezone("US/Eastern"))
 
-    for date in (now - dt.timedelta(n) for n in range(NUMBER_OF_DAYS)):
+    for date in reversed(now - dt.timedelta(n) for n in range(NUMBER_OF_DAYS)):
         date = date.replace(hour=0, minute=0, second=0, microsecond=0)
         month = date.strftime("%m")
         day = date.strftime("%d")
