@@ -47,6 +47,7 @@ def main():
     fg.author({"name": "Westminster Daily"})
     fg.subtitle("Read through the Westminster Confession and Catechisms in a year.")
     fg.link(href=f"{URL}/")
+    fg.link(href=f"{URL}/{FILENAME}", rel="self")
     fg.language("en")
 
     now = dt.datetime.now(tz=pytz.timezone("US/Eastern"))
