@@ -37,7 +37,7 @@ def content(month, day):
     c = c[(c.find("body") + len("body>")) : -len("</body></html>")]
     c = c.replace("\n", "")
     c = c.replace("\xa0", " ")
-    return str(soup)
+    return c
 
 
 def main():
