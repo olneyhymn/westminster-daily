@@ -30,11 +30,13 @@ def meta(month, day):
 def content(month, day):
     md_as_html = markdown_parser(month, day)[1]
     c = transform(md_as_html, preserve_internal_links=True)
-    c = c[(c.find("body") + len("body>")) : -len("</body></html>")]
-    c = c.replace("&nbsp;", "")
     soup = BeautifulSoup(c)
     for a in soup.findAll("a"):
         a.replaceWithChildren()
+    c = str(soup)
+    c = c[(c.find("body") + len("body>")) : -len("</body></html>")]
+    c = c.replace("\n", "")
+    c = c.replace("\xa0", " ")
     return str(soup)
 
 
