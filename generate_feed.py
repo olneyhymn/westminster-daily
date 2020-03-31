@@ -4,6 +4,7 @@ import pytz
 from premailer import transform
 import markdown
 from functools import lru_cache
+from bs4 import BeautifulSoup
 
 URL = "https://pandoc--westminster-daily.netlify.com/westminster-daily"
 FILENAME = "feed.rss"
@@ -29,7 +30,11 @@ def meta(month, day):
 def content(month, day):
     md_as_html = markdown_parser(month, day)[1]
     c = transform(md_as_html, preserve_internal_links=True)
-    return c[(c.find("body") + len("body>")) : -len("</body></html>")]
+    c = c[(c.find("body") + len("body>")) : -len("</body></html>")]
+    soup = BeautifulSoup(c)
+    for a in soup.findAll('a'):
+        a.replaceWithChildren()
+    return str(soup)
 
 
 def main():
