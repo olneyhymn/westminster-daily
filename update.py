@@ -1,21 +1,26 @@
 import datetime as dt
+import json
 import os
 import pytz
 
 from urllib.request import urlopen
-from flask_application.data import get_day_api
 
 bucket = "reformedconfessions.com"
 index = "westminster-daily/index.html"
 feed = "westminster-daily/feed.rss"
 base_url = "http://reformedconfessions.com/"
 file_url = "http://reformedconfessions.com/"
-api_url = "{file_url}westminster-daily/".format(file_url=file_url)
 
 
 tz = pytz.timezone("US/Eastern")
 month = dt.datetime.now(tz=tz).strftime("%m")
 day = dt.datetime.now(tz=tz).strftime("%d")
+
+
+def get_day_api(month, day):
+    with open(f"{month}/{day}/data.json", "r") as f:
+        d = json.load(f)
+    return d
 
 
 def tweet(a, b):
@@ -31,7 +36,7 @@ def tweet(a, b):
     auth = tw.OAuth(**cred)
     t = tw.Twitter(auth=auth)
 
-    day_data = get_day_api(month, day, api_url=api_url)
+    day_data = get_day_api(month, day)
     content = day_data["content"]
     description = day_data["title"]
     url = "{base}westminster-daily/{month:0>2}/{day:0>2}".format(
@@ -54,6 +59,4 @@ def tweet(a, b):
             t.statuses.update(status="{} {}".format(description, url))
         else:
             pass
-            # log.error("%s %s", "Unhandled exception", str(e))
         return
-    # log.info("%s %s", "Tweeted", str(description))
