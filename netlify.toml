@@ -14,3 +14,9 @@
   to = "/westminster-daily/"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/westminster-daily/about"
+  status = 200
+  force = true
