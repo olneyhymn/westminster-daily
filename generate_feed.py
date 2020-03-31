@@ -6,7 +6,7 @@ import markdown
 from functools import lru_cache
 from bs4 import BeautifulSoup
 
-URL = "http://reformedconfessions.com/westminster-daily"
+URL = "https://reformedconfessions.com/westminster-daily"
 FILENAME = "feed.rss"
 NUMBER_OF_DAYS = 30
 
@@ -45,9 +45,8 @@ def main():
     fg.id(f"{URL}/{FILENAME}")
     fg.title("Westminster Daily")
     fg.author({"name": "Westminster Daily"})
-    fg.link(href=URL, rel="alternate")
     fg.subtitle("Read through the Westminster Confession and Catechisms in a year.")
-    fg.link(href=f"{URL}/{FILENAME}", rel="self")
+    fg.link(href=f"{URL}/")
     fg.language("en")
 
     now = dt.datetime.now(tz=pytz.timezone("US/Eastern"))
