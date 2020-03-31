@@ -6,7 +6,7 @@ import markdown
 from functools import lru_cache
 from bs4 import BeautifulSoup
 
-URL = "https://pandoc--westminster-daily.netlify.com/westminster-daily"
+URL = "http://reformedconfessions.com/westminster-daily"
 FILENAME = "feed.rss"
 NUMBER_OF_DAYS = 30
 
