@@ -5,8 +5,6 @@
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Westminster Daily | A Daily Reading</title>
-    <meta name="description" content="A daily reading from the Westminster Confession and Catechisms">
 
     <!-- RSS Metas
     ================================================== -->
@@ -73,14 +71,19 @@
     $if(short_date)$
     <meta property="og:image" content="http://reformedconfessions.com/static/images/docs/$short_date$-full.png" />
     <meta name="twitter:image" content="http://reformedconfessions.com/static/images/docs/$short_date$-full.png">
+    <meta property="og:title" content="$pagetitle$" />
+    <meta name="twitter:title" content="$pagetitle$">
+    <title>Westminster Daily | $pagetitle$</title>
     $else$
     <meta property="og:image" content="http://reformedconfessions.com/static/images/docs/0101-full.png" />
     <meta name="twitter:image" content="http://reformedconfessions.com/static/images/docs/0101-full.png">
-    $endif$
-    <meta property="og:description" content="Read the Westminster Standards in a year." />
     <meta property="og:title" content="Westminster Daily" />
     <meta name="twitter:title" content="Westminster Daily">
-    <meta name="twitter:description" content="Read the Westminster Standards in a year.">
+    <title>Westminster Daily | A Daily Reading</title>
+    $endif$
+    <meta name="description" content="A daily reading from the Westminster Confession and Catechisms">
+    <meta property="og:description" content="A daily reading from the Westminster Confession and Catechisms" />
+    <meta name="twitter:description" content="A daily reading from the Westminster Confession and Catechisms">
 
 
 
