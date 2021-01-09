@@ -162,12 +162,13 @@
                 <p>
                     Please submit corrections or feedback.
                 </p>
-                <form name='feedback' method='POST' class='pure-form pure-form-aligned'><input type='hidden' name='form-name' value='feedback' />
-                        <div class="pure-control-group"><input type="text" name="name" placeholder="Name" /></div>
-                        <div class="pure-control-group"><input type="email" name="email" placeholder="Email Address"/></div>
-                        <input type="hidden" name="page" value="https://www.readmachen.com/article/1924/dr-abbe-replies-to-to-mr-machen/">
-                        <div class="pure-control-group"><textarea name="message" class="pure-input-1" placeholder="Feedback"></textarea></div>
-                        <button type="submit" class="pure-button">Send</button>
+                <form name='feedback' method='POST'>
+                        <input type='hidden' name='form-name' value='feedback' />
+                        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name" /></div>
+                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email Address"/></div>
+                        <input type="hidden" name="page" value="http://reformedconfessions.com$this_url$">
+                        <div class="form-group"><textarea class="form-control" name="message" placeholder="Feedback" rows=5></textarea></div>
+                        <button type="submit" class="btn btn-primary">Send</button>
                 </form>
             </div>
 
