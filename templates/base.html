@@ -157,6 +157,20 @@
         </div>
         <div class="col-sm col-md-8 col-lg-6 m-auto" style="text-align:center;">
 
+            <button class="collapsible">▸ Submit feedback...</button>
+            <div class="collapsible-content">
+                <p>
+                    Please submit corrections or feedback.
+                </p>
+                <form name='feedback' method='POST' class='pure-form pure-form-aligned'><input type='hidden' name='form-name' value='feedback' />
+                        <div class="pure-control-group"><input type="text" name="name" placeholder="Name" /></div>
+                        <div class="pure-control-group"><input type="email" name="email" placeholder="Email Address"/></div>
+                        <input type="hidden" name="page" value="https://www.readmachen.com/article/1924/dr-abbe-replies-to-to-mr-machen/">
+                        <div class="pure-control-group"><textarea name="message" class="pure-input-1" placeholder="Feedback"></textarea></div>
+                        <button type="submit" class="pure-button">Send</button>
+                </form>
+            </div>
+
             <a href="https://www.facebook.com/westminsterdaily/">
                 <small>follow on facebook</small>
             </a>
