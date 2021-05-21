@@ -1,7 +1,7 @@
 [build]
   base    = "."
   publish = "./build"
-  command = "python -V && npm install --quiet -g sass & python -m pip install --quiet tox && make all"
+  command = "python -V && npm install --quiet -g node-sass@4.13.0 & python -m pip install --quiet tox && make all"
 
 [[redirects]]
   from = "/static/images/docs/*"

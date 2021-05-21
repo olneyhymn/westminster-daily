@@ -17,7 +17,7 @@ build/westminster-daily:
 
 build/css/main.css: static/scss/main.scss
 	mkdir -p build/css/
-	sass static/scss/main.scss build/css/main.css
+	node-sass --output-style compressed --source-map false static/scss/ -o build/css/
 
 build/index.html: build/westminster-daily/index.html
 	cp build/westminster-daily/index.html build/index.html
