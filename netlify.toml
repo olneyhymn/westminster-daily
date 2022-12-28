@@ -8,6 +8,13 @@
   to = "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/:splat"
   status = 200
   force = true # COMMENT: ensure that we always redirect
+  
+
+[[redirects]]
+  from = "/static/audio/*"
+  to = "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/:splat"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
 
 [[redirects]]
   from = "/"
