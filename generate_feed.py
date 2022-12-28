@@ -42,16 +42,12 @@ def content(month, day):
 
 def main():
     fg = FeedGenerator()
-    fg.load_extension("podcast")
-    fg.podcast.itunes_category("Religion & Spirituality", "Christianity")
-    fg.podcast.itunes_explicit("clean")
-    fg.podcast.itunes_image("https://reformedconfessions.com/images/pulpit_full.png")
-    fg.id("https://feedpress.me/westminster-daily-audio")
+    fg.id(f"{URL}/{FILENAME}")
     fg.title("Westminster Daily")
     fg.author({"name": "Westminster Daily"})
     fg.subtitle("Read through the Westminster Confession and Catechisms in a year.")
     fg.link(href=f"{URL}/")
-    fg.link(href="https://feedpress.me/westminster-daily-audio", rel="self")
+    fg.link(href=f"{URL}/{FILENAME}", rel="self")
     fg.language("en")
 
     now = dt.datetime.now(tz=pytz.timezone("US/Eastern"))
@@ -66,7 +62,6 @@ def main():
         fe.id(url)
         fe.title(meta(month, day)["pagetitle"][0])
         fe.link(href=url)
-        fe.itunes_duration("60")
         fe.guid(url, permalink=True)
         fe.content(content(month, day), type="CDATA")
         fe.updated(date)
