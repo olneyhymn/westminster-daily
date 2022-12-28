@@ -1,7 +1,7 @@
 SOURCES :=$(shell find content -name "*.md" | tr '\n' ' ' | sed 's/\.md/\.html/g; s/content/build\/westminster-daily/g' )
 CURRENT_FILE := $(shell date -u +"content/%m/%d.md")
 
-all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss
+all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss podcast.rss
 
 feed.rss: build
 	tox -e feed
