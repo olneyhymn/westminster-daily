@@ -42,6 +42,8 @@ def content(month, day):
 
 def main():
     fg = FeedGenerator()
+    fg.load_extension("podcast")
+    fg.podcast.itunes_category("Religion & Spirituality", "Christianity")
     fg.id(f"{URL}/{FILENAME}")
     fg.title("Westminster Daily")
     fg.author({"name": "Westminster Daily"})
