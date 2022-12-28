@@ -66,6 +66,7 @@ def main():
         fe.id(url)
         fe.title(meta(month, day)["pagetitle"][0])
         fe.link(href=url)
+        fe.itunes_duration("60")
         fe.guid(url, permalink=True)
         fe.content(content(month, day), type="CDATA")
         fe.updated(date)
