@@ -7,6 +7,10 @@ feed.rss: build
 	tox -e feed
 	mv feed.rss build/westminster-daily/
 
+podcast.rss: build
+	tox -e podcastfeed
+	mv podcast.rss build/westminster-daily/
+
 build: build/westminster-daily build/css/main.css
 	cp -r static/* build
 	find build
