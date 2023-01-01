@@ -53,6 +53,7 @@ def main():
     )
     fg.podcast.itunes_owner("Westminster Daily", "tim@waiting-tables.com")
     fg.podcast.itunes_image("https://reformedconfessions.com/images/pulpit_full.png")
+    fg.podcast.itunes_author("Westminster Daily")
     fg.id("https://feedpress.me/westminster-daily-audio")
     fg.title("Westminster Daily")
     fg.author({"name": "Westminster Daily"})
