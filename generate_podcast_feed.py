@@ -49,7 +49,7 @@ def main():
         "Listen to the Westminster Confession and Catechisms in a year."
     )
     fg.podcast.itunes_summary(
-        "Listen to the Westminster Confession and Catechisms in a year.  Based on Calendar of Readings in the Westminster Standards by Dr. Joey Pipa Based on Calendar of Readings in the Westminster Standards by Dr. Joey Pipa."
+        "Listen to the Westminster Confession and Catechisms in a year.  Based on Calendar of Readings in the Westminster Standards by Dr. Joey Pipa."
     )
     fg.podcast.itunes_owner("Westminster Daily", "tim@waiting-tables.com")
     fg.podcast.itunes_image("https://reformedconfessions.com/images/pulpit_full.png")
