@@ -6,7 +6,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.md')).read()
 
 requires = [
-    'flask==1.1.1',
+    'flask==2.3.2',
     'wtforms',
     'sqlalchemy',
     'nose',
