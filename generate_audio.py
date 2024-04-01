@@ -1,22 +1,44 @@
 #!/usr/bin/env python3
 
 import json
-from pprint import pprint
-from pathlib import Path
-import boto3
 from contextlib import redirect_stdout
 import io
-from slugify import slugify
+from elevenlabs import save
+from elevenlabs.client import ElevenLabs
+import inflect
+import os
 
 import re
 
 # as per recommendation from @freylis, compile once only
 CLEANR = re.compile("<.*?>")
 
+client = ElevenLabs(
+    api_key=os.environ["API_KEY"],  # Defaults to ELEVEN_API_KEY
+)
+
 
 def cleanhtml(raw_html):
     cleantext = re.sub(CLEANR, " ", raw_html)
     return cleantext.replace("&nbsp;", " ")
+
+
+def convert_numbers_to_words(text):
+    # Initialize inflect engine
+    p = inflect.engine()
+
+    # Regular expression to find numbers in the text
+    pattern = r"\b\d+\b"
+
+    # Find all numbers in the text
+    numbers = re.findall(pattern, text)
+
+    # Convert each number to words and replace in the text
+    for num in numbers:
+        num_word = p.number_to_words(num)
+        text = text.replace(num, num_word)
+
+    return text
 
 
 def get_ssml(data):
@@ -25,11 +47,13 @@ def get_ssml(data):
         print("<speak>")
         for section in data["content"]:
             print(
-                f" {section['long_citation'].replace('.', ', paragraph ')} <break time='1000ms'/>"
+                f" {convert_numbers_to_words(section['long_citation'].replace('.', ', paragraph '))} <break time='1000ms'/>"
             )
             if "question" in section:
-                print(f" {section['question'].replace('?', '')} ")
-                print(f"<break time='500ms'/>")
+                print(
+                    f" {convert_numbers_to_words(section['question'].replace('?', ''))} "
+                )
+                print("<break time='500ms'/>")
                 print(f" {section['answer']} <break time='1000ms'/>")
             else:
                 print(f" {cleanhtml(section['body'])} <break time='1000ms'/>")
@@ -40,31 +64,41 @@ def get_ssml(data):
 
 # Takes ssml text as input, use AWS Polly to generate speech, and saves it to a file
 def ssml_to_mp3(text, output_file):
-    polly = boto3.client("polly")
-    response = polly.synthesize_speech(
-        OutputFormat="mp3",
-        Text=text,
-        TextType="ssml",
-        Engine="neural",
-        VoiceId="Matthew",
+    try:
+        with open(output_file, "rb"):
+            print(f"{output_file} already exists")
+            return
+    except FileNotFoundError:
+        pass
+    print(f"Generating {output_file}")
+    audio = client.generate(
+        text=text,
+        voice="ZMZpwpXkV4GaVyJJXtJ3",
+        model="eleven_multilingual_v2",
     )
-
-    with open(output_file, "wb") as f:
-        f.write(response["AudioStream"].read())
+    save(audio, output_file)
+    with open(output_file.replace(".mp3", ".txt"), "w") as f:
+        f.write(text)
 
 
 for month in (
-    "12",
+    "04",
+    "05",
+    "06",
+    "03",
 ):  # , "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"):
     for day in range(1, 32):
         day = str(day).zfill(2)
-
+        try:
+            with open(f"content/{month}/{day}/data.json") as f:
+                d = json.load(f)
+        except FileNotFoundError:
+            print(f"content/{month}/{day}/data.json not found")
+            continue
         with open(f"content/{month}/{day}/data.json") as f:
             d = json.load(f)
         if (month, day) == ("07", "05"):
-            d["content"][0][
-                "answer"
-            ] = """
+            d["content"][0]["answer"] = """
     For the right understanding of the Ten Commandments, these rules are to be observed:
 
     That the law is perfect, and bindeth every one to full conformity in the whole man unto the righteousness thereof, and unto entire obedience forever; so as to require the utmost perfection of every duty, and to forbid the least degree of every sin.
@@ -84,9 +118,7 @@ for month in (
     That in what is commanded to others, we are bound, according to our places and callings, to be helpful to them; and to take heed of partaking with others in what is forbidden them.
     """
         if (month, day) == ("01", "04"):
-            d["content"][0][
-                "body"
-            ] = """
+            d["content"][0]["body"] = """
     Under the name of Holy Scripture, or the Word of God written, are now contained all the books of the Old and New Testaments, which are these:
 
     OF THE OLD TESTAMENT
@@ -161,12 +193,9 @@ for month in (
 
     All which are given by inspiration of God to be the rule of faith and life.
     """
-
         ssml = get_ssml(d)
-        print(ssml)
         file = f"{month}{day}.mp3"
         ssml_to_mp3(
             ssml,
             f"output/{file}",
         )
-        # question_number += len(d)
