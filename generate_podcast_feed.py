@@ -69,7 +69,7 @@ def main():
         month = date.strftime("%m")
         day = date.strftime("%d")
         url = f"{URL}/{month}/{day}/"
-        mp3_url = f"https://reformedconfessions.com/static/audio/{month}{day}.mp3"
+        mp3_url = f"https://d2pmxb5xfppxte.cloudfront.net/static/audio/{month}{day}.mp3"
         fe = fg.add_entry()
         fe.id(url)
         fe.enclosure(mp3_url, 0, "audio/mpeg")
