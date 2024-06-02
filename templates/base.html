@@ -162,24 +162,6 @@
         <br>
         <div class="col-sm col-md-8 col-lg-6 m-auto" style="text-align:center;">
 
-            <button class="collapsible">▸ Submit Feedback...</button>
-            <div class="collapsible-content">
-                <p>
-                    Please submit corrections or feedback.
-                </p>
-                <form name='feedback' method='POST' data-netlify="true">
-                    <input type='hidden' name='form-name' value='feedback' />
-                    <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name" />
-                    </div>
-                    <div class="form-group"><input class="form-control" type="email" name="email"
-                            placeholder="Email Address" /></div>
-                    <input type="hidden" name="page" value="http://reformedconfessions.com$this_url$">
-                    <div class="form-group"><textarea class="form-control" name="message" placeholder="Feedback"
-                            rows=5></textarea></div>
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </form>
-            </div>
-
             <a href="http://feedpress.me/westminster-daily">
                 <small>subscribe by rss</small></a>
 
@@ -204,7 +186,6 @@
                     href="http://www.crosswaybibles.org">Crossway Bibles</a>, a publishing ministry of Good News
                 Publishers. Used by permission. All rights reserved.
             </p>
-            <br />
 
             <a href="https://readmachen.com">
                 <small>readmachen.com</small></a>
@@ -215,6 +196,23 @@
             <a href="https://ulsterworldly.com">
                 <small>ulsterworldly.com</small></a>
 
+            <button class="collapsible">▸ Submit Feedback...</button>
+            <div class="collapsible-content">
+                <p>
+                    Please submit corrections or feedback.
+                </p>
+                <form name='feedback' method='POST' data-netlify="true">
+                    <input type='hidden' name='form-name' value='feedback' />
+                    <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name" />
+                    </div>
+                    <div class="form-group"><input class="form-control" type="email" name="email"
+                            placeholder="Email Address" /></div>
+                    <input type="hidden" name="page" value="http://reformedconfessions.com$this_url$">
+                    <div class="form-group"><textarea class="form-control" name="message" placeholder="Feedback"
+                            rows=5></textarea></div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
         </div>
     </div><!-- container -->
 
