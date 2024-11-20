@@ -2,6 +2,7 @@
   base    = "."
   publish = "./build"
   command = "python -V && npm install --quiet -g node-sass@4.13.0 && python -m pip install tox==4.22.0 && tox --version && make all"
+  environment = { PYTHON_VERSION = "3.8" }
 
 [[redirects]]
   from = "/static/images/docs/*"
