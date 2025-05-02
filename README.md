@@ -8,27 +8,29 @@ Read through the [Westminster Standards](https://en.wikipedia.org/wiki/Westminst
 
 Clone with `git clone https://github.com/olneyhymn/westminster-daily.git`.
 
-Setup a virtualenv or Conda environment and run `pip install -r requirements.txt`.
-
 ### Building the Site
 
 The site is built using Pandoc and a Makefile. The main commands are:
 
-* `make all`: Build the entire site including HTML pages, RSS feeds, and assets
+* `make all`: Build the entire site including HTML, RSS feeds and assets
 * `make build`: Build the site structure and compile CSS
 * `make feed.rss`: Generate the main RSS feed
 * `make podcast.rss`: Generate the podcast RSS feed
 
 ### RSS Feed Generation
 
-The site uses tox to generate RSS feeds:
+The site uses python to generate RSS feeds:
 
-* `tox -e feed`: Generate the main RSS feed
-* `tox -e podcastfeed`: Generate the podcast RSS feed
+* `uv run generate_feed.py`: Generate the main RSS feed
+* `uv run generate_podcast_feed.py`: Generate the podcast RSS feed
 
 ## Deployment
 
 The site is automatically deployed to Netlify when changes are pushed to the main branch.
+
+## Automated Builds
+
+The site is automatically rebuilt every day at 05:00 UTC using a GitHub Actions workflow. This ensures that the daily readings are always up to date. The workflow can also be triggered manually through the GitHub Actions interface.
 
 ## Project Structure
 
