@@ -1,3 +1,14 @@
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#     "feedgen==1.0.0",
+#     "pytz==2025.2",
+#     "premailer==3.10.0",
+#     "markdown==3.5.1",
+#     "beautifulsoup4==4.12.2",
+# ]
+# ///
+
 from feedgen.feed import FeedGenerator
 import datetime as dt
 import pytz
@@ -13,7 +24,6 @@ NUMBER_OF_DAYS = 30
 
 @lru_cache()
 def markdown_parser(month, day):
-
     with open(f"content/{month}/{day}.md", "r") as f:
         md = f.read()
     markdown_parser = markdown.Markdown(

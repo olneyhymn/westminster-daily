@@ -11,11 +11,13 @@ help: ## Show this help message
 all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss podcast.rss ## Build entire site including HTML, RSS feeds and assets
 
 feed.rss: build ## Generate main RSS feed
-	tox -e feed
+	python -m pip install uv
+	uv run generate_feed.py
 	mv feed.rss build/westminster-daily/
 
 podcast.rss: build ## Generate podcast RSS feed
-	tox -e podcastfeed
+	python -m pip install uv
+	uv run generate_podcast_feed.py
 	mv podcast.rss build/westminster-daily/
 
 build: build/westminster-daily build/css/main.css ## Build site structure and compile CSS

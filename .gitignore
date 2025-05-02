@@ -2,11 +2,9 @@
 .vscode
 venv/
 build/
-.tox/
 *.egg-info
 bower_components
-lambda_bundle.zip
-lambda/
 package-lock.json
 node_modules/
 flask_application/static/css/
+*.rss
