@@ -12,12 +12,12 @@ all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.r
 
 feed.rss: build ## Generate main RSS feed
 	python -m pip install uv
-	uv run generate_feed.py
+	python -m uv run generate_feed.py
 	mv feed.rss build/westminster-daily/
 
 podcast.rss: build ## Generate podcast RSS feed
 	python -m pip install uv
-	uv run generate_podcast_feed.py
+	python -m uv run generate_podcast_feed.py
 	mv podcast.rss build/westminster-daily/
 
 build: build/westminster-daily build/css/main.css ## Build site structure and compile CSS
