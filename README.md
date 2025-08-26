@@ -30,7 +30,7 @@ The site is automatically deployed to Netlify when changes are pushed to the mai
 
 ## Automated Builds
 
-The site is automatically rebuilt every day at 05:00 UTC using a GitHub Actions workflow. This ensures that the daily readings are always up to date. The workflow can also be triggered manually through the GitHub Actions interface.
+The site is automatically rebuilt every day at 05:00 EST using cron-jobs.org. This ensures that the daily readings are always up to date. The workflow can also be triggered manually through the GitHub Actions interface.
 
 ## Project Structure
 
