@@ -23,7 +23,7 @@ Why is he called "Christ", that is anointed?
 
 ##### Answer
 
-Because he is ordained of God the Father, and anointed with the Holy Ghost, [^fna] to be our chief Prophet and Teacher, [^fnb] who has fully revealed to us the secret counsel and will of God concerning our redemption; [^fnc] and to be our only High Priest, [^fnd] who by the one sacrifice of his body, has redeemed us, [^fne] and makes continual intercession with the Father for us; [^fnf] and also to be our eternal King, who governs us by his word and Spirit, and who defends and preserves us in that salvation, he has purchased for us. [^fng]
+Because he is ordained of God the Father, and anointed with the Holy Ghost, [^fn31a] to be our chief Prophet and Teacher, [^fn31b] who has fully revealed to us the secret counsel and will of God concerning our redemption; [^fn31c] and to be our only High Priest, [^fn31d] who by the one sacrifice of his body, has redeemed us, [^fn31e] and makes continual intercession with the Father for us; [^fn31f] and also to be our eternal King, who governs us by his word and Spirit, and who defends and preserves us in that salvation, he has purchased for us. [^fn31g]
 
 #### Question 32
 
@@ -130,7 +130,7 @@ But why art thou called a Christian? (a)
 
 ### Scripture References
 
-[^fna]: Psalm 45:8 All thy garments smell of myrrh, and aloes, and cassia, out of the ivory palaces, whereby they have made thee glad.
+[^fn31a]: Psalm 45:8 All thy garments smell of myrrh, and aloes, and cassia, out of the ivory palaces, whereby they have made thee glad.
 
 Hebrews 1:9 Thou hast loved righteousness, and hated iniquity; therefore God, even thy God, hath anointed thee with the oil of gladness above thy fellows.
 
@@ -138,7 +138,7 @@ Isaiah 61:1 The Spirit of the Lord GOD is upon me; because the LORD hath anointe
 
 Luke 4:18 The Spirit of the Lord is upon me, because he hath anointed me to preach the gospel to the poor; he hath sent me to heal the brokenhearted, to preach deliverance to the captives, and recovering of sight to the blind, to set at liberty them that are bruised,
 
-[^fnb]: Deuteronomy 18:15 The LORD thy God will raise up unto thee a Prophet from the midst of thee, of thy brethren, like unto me; unto him ye shall hearken;
+[^fn31b]: Deuteronomy 18:15 The LORD thy God will raise up unto thee a Prophet from the midst of thee, of thy brethren, like unto me; unto him ye shall hearken;
 
 Acts 3:22 For Moses truly said unto the fathers, A prophet shall the Lord your God raise up unto you of your brethren, like unto me; him shall ye hear in all things whatsoever he shall say unto you.
 
@@ -146,13 +146,13 @@ Acts 7:37 This is that Moses, which said unto the children of Israel, A prophet 
 
 Isaiah 55:4 Behold, I have given him for a witness to the people, a leader and commander to the people.
 
-[^fnc]: John 1:18 No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him.
+[^fn31c]: John 1:18 No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared him.
 
 John 15:15 Henceforth I call you not servants; for the servant knoweth not what his lord doeth: but I have called you friends; for all things that I have heard of my Father I have made known unto you.
 
-[^fnd]: Psalm 110:4 The LORD hath sworn, and will not repent, Thou art a priest for ever after the order of Melchizedek.
+[^fn31d]: Psalm 110:4 The LORD hath sworn, and will not repent, Thou art a priest for ever after the order of Melchizedek.
 
-[^fne]: Hebrews 10:12 But this man, after he had offered one sacrifice for sins for ever, sat down on the right hand of God;
+[^fn31e]: Hebrews 10:12 But this man, after he had offered one sacrifice for sins for ever, sat down on the right hand of God;
 
 Hebrews 10:14 For by one offering he hath perfected for ever them that are sanctified.
 
@@ -162,7 +162,7 @@ Hebrews 9:14 How much more shall the blood of Christ, who through the eternal Sp
 
 Hebrews 9:28 So Christ was once offered to bear the sins of many; and unto them that look for him shall he appear the second time without sin unto salvation.
 
-[^fnf]: Romans 8:34 Who is he that condemneth? It is Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us.
+[^fn31f]: Romans 8:34 Who is he that condemneth? It is Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us.
 
 Hebrews 9:24 For Christ is not entered into the holy places made with hands, which are the figures of the true; but into heaven itself, now to appear in the presence of God for us:
 
@@ -172,7 +172,7 @@ Romans 5:9 Much more then, being now justified by his blood, we shall be saved f
 
 Romans 5:10 For if, when we were enemies, we were reconciled to God by the death of his Son, much more, being reconciled, we shall be saved by his life.
 
-[^fng]: Psalm 2:6 Yet have I set my king upon my holy hill of Zion.
+[^fn31g]: Psalm 2:6 Yet have I set my king upon my holy hill of Zion.
 
 Zechariah 9:9 Rejoice greatly, O daughter of Zion; shout, O daughter of Jerusalem: behold, thy King cometh unto thee: he is just, and having salvation; lowly, and riding upon an ass, and upon a colt the foal of an ass.
 

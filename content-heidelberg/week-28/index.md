@@ -23,7 +23,7 @@ How art thou admonished and assured in the Lord's Supper, that thou art a partak
 
 ##### Answer
 
-Thus: That Christ has commanded me and all believers, to eat of this broken bread, and to drink of this cup, in remembrance of him, adding these promises: [^fna] first, that his body was offered and broken on the cross for me, and his blood shed for me, as certainly as I see with my eyes, the bread of the Lord broken for me, and the cup communicated to me; and further, that he feeds and nourishes my soul to everlasting life, with his crucified body and shed blood, as assuredly as I receive from the hands of the minister, and taste with my mouth the bread and cup of the Lord, as certain signs of the body and blood of Christ.
+Thus: That Christ has commanded me and all believers, to eat of this broken bread, and to drink of this cup, in remembrance of him, adding these promises: [^fn75a] first, that his body was offered and broken on the cross for me, and his blood shed for me, as certainly as I see with my eyes, the bread of the Lord broken for me, and the cup communicated to me; and further, that he feeds and nourishes my soul to everlasting life, with his crucified body and shed blood, as assuredly as I receive from the hands of the minister, and taste with my mouth the bread and cup of the Lord, as certain signs of the body and blood of Christ.
 
 #### Question 76
 
@@ -31,7 +31,7 @@ What is it then to eat the crucified body, and drink the shed blood of Christ?
 
 ##### Answer
 
-It is not only to embrace with believing heart all the sufferings and death of Christ and thereby to obtain the pardon of sin, and life eternal; [^fna] but also, besides that, to become more and more united to his sacred body, [^fnb] by the Holy Ghost, who dwells both in Christ and in us; so that we, though Christ is in heaven [^fnc] and we on earth, are notwithstanding "flesh of his flesh and bone of his bone" [^fnd] and that we live, and are governed forever by one spirit, [^fne] as members of the same body are by one soul.
+It is not only to embrace with believing heart all the sufferings and death of Christ and thereby to obtain the pardon of sin, and life eternal; [^fn76a] but also, besides that, to become more and more united to his sacred body, [^fn76b] by the Holy Ghost, who dwells both in Christ and in us; so that we, though Christ is in heaven [^fn76c] and we on earth, are notwithstanding "flesh of his flesh and bone of his bone" [^fn76d] and that we live, and are governed forever by one spirit, [^fn76e] as members of the same body are by one soul.
 
 #### Question 77
 
@@ -39,14 +39,14 @@ Where has Christ promised that he will as certainly feed and nourish believers w
 
 ##### Answer
 
-In the institution of the supper, which is thus expressed: [^fna] "The Lord Jesus, the same night in which he was betrayed, took bread, and when he had given thanks, he brake it, and: said: eat, this is my body, which is broken for you; this do in remembrance of me. After the same manner also he took the cup, when he had supped, saying: this cup is the new testament in my blood; this do ye, as often as ye drink it, in remembrance of me. For, as often as ye eat this bread, and drink this cup, ye do show the Lord's death till he come." 1 Corinthians 11:23-26. This promise is repeated by the holy apostle Paul, where he says "The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ? For we being many are one bread, and one body: for we are all partakers of that one bread." 1 Corinthians 10:16,17.
+In the institution of the supper, which is thus expressed: [^fn77a] "The Lord Jesus, the same night in which he was betrayed, took bread, and when he had given thanks, he brake it, and: said: eat, this is my body, which is broken for you; this do in remembrance of me. After the same manner also he took the cup, when he had supped, saying: this cup is the new testament in my blood; this do ye, as often as ye drink it, in remembrance of me. For, as often as ye eat this bread, and drink this cup, ye do show the Lord's death till he come." 1 Corinthians 11:23-26. This promise is repeated by the holy apostle Paul, where he says "The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ? For we being many are one bread, and one body: for we are all partakers of that one bread." 1 Corinthians 10:16,17.
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Matthew 26:26 And as they were eating, Jesus took bread, and blessed it, and brake it, and gave it to the disciples, and said, Take, eat; this is my body.
+[^fn75a]: Matthew 26:26 And as they were eating, Jesus took bread, and blessed it, and brake it, and gave it to the disciples, and said, Take, eat; this is my body.
 
 Matthew 26:27 And he took the cup, and gave thanks, and gave it to them, saying, Drink ye all of it;
 
@@ -68,7 +68,7 @@ Luke 22:20 Likewise also the cup after supper, saying, This cup is the new testa
 
 1 Corinthians 12:13 For by one Spirit are we all baptized into one body, whether we be Jews or Gentiles, whether we be bond or free; and have been all made to drink into one Spirit.
 
-[^fna]: John 6:35 And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.
+[^fn76a]: John 6:35 And Jesus said unto them, I am the bread of life: he that cometh to me shall never hunger; and he that believeth on me shall never thirst.
 
 John 6:40 And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day.
 
@@ -88,17 +88,17 @@ John 6:53 Then Jesus said unto them, Verily, verily, I say unto you, Except ye e
 
 John 6:54 Whoso eateth my flesh, and drinketh my blood, hath eternal life; and I will raise him up at the last day.
 
-[^fnb]: John 6:55 For my flesh is meat indeed, and my blood is drink indeed.
+[^fn76b]: John 6:55 For my flesh is meat indeed, and my blood is drink indeed.
 
 John 6:56 He that eateth my flesh, and drinketh my blood, dwelleth in me, and I in him.
 
-[^fnc]: Colossians 3:1 If ye then be risen with Christ, seek those things which are above, where Christ sitteth on the right hand of God.
+[^fn76c]: Colossians 3:1 If ye then be risen with Christ, seek those things which are above, where Christ sitteth on the right hand of God.
 
 Acts 3:21 Whom the heaven must receive until the times of restitution of all things, which God hath spoken by the mouth of all his holy prophets since the world began.
 
 1 Corinthians 11:26 For as often as ye eat this bread, and drink this cup, ye do shew the Lord's death till he come.
 
-[^fnd]: Ephesians 3:16 That he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man;
+[^fn76d]: Ephesians 3:16 That he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man;
 
 Ephesians 5:29 For no man ever yet hated his own flesh; but nourisheth and cherisheth it, even as the Lord the church:
 
@@ -118,7 +118,7 @@ Ephesians 5:32 This is a great mystery: but I speak concerning Christ and the ch
 
 John 14:23 Jesus answered and said unto him, If a man love me, he will keep my words: and my Father will love him, and we will come unto him, and make our abode with him.
 
-[^fne]: John 6:56 He that eateth my flesh, and drinketh my blood, dwelleth in me, and I in him.
+[^fn76e]: John 6:56 He that eateth my flesh, and drinketh my blood, dwelleth in me, and I in him.
 
 John 6:57 As the living Father hath sent me, and I live by the Father: so he that eateth me, even he shall live by me.
 
@@ -140,7 +140,7 @@ Ephesians 4:15 But speaking the truth in love, may grow up into him in all thing
 
 Ephesians 4:16 From whom the whole body fitly joined together and compacted by that which every joint supplieth, according to the effectual working in the measure of every part, maketh increase of the body unto the edifying of itself in love.
 
-[^fna]: 1 Corinthians 11:23 For I have received of the Lord that which also I delivered unto you, That the Lord Jesus the same night in which he was betrayed took bread:
+[^fn77a]: 1 Corinthians 11:23 For I have received of the Lord that which also I delivered unto you, That the Lord Jesus the same night in which he was betrayed took bread:
 
 1 Corinthians 11:24 And when he had given thanks, he brake it, and said, Take, eat: this is my body, which is broken for you: this do in remembrance of me.
 

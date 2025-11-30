@@ -23,7 +23,7 @@ Why is prayer necessary for christians?
 
 ##### Answer
 
-Because it is the chief part of thankfulness which God requires of us: [^fna] and also, because God will give his grace and Holy Spirit to those only, who with sincere desires continually ask them of him, and are thankful for them. [^fnb]
+Because it is the chief part of thankfulness which God requires of us: [^fn116a] and also, because God will give his grace and Holy Spirit to those only, who with sincere desires continually ask them of him, and are thankful for them. [^fn116b]
 
 #### Question 117
 
@@ -31,7 +31,7 @@ What are the requisites of that prayer, which is acceptable to God, and which he
 
 ##### Answer
 
-First, that we from the heart pray [^fna] to the one true God only, who has manifested himself in his word, [^fnb] for all things, he has commanded us to ask of him; [^fnc] secondly, that we rightly and thoroughly know our need and misery, [^fnd] that so we may deeply humble ourselves in the presence of his divine majesty; [^fne] thirdly, that we be fully persuaded that he, notwithstanding that we are unworthy of it, will, for the sake of Christ our Lord, certainly hear our prayer, [^fnf] as he has promised us in his word. [^fng]
+First, that we from the heart pray [^fn117a] to the one true God only, who has manifested himself in his word, [^fn117b] for all things, he has commanded us to ask of him; [^fn117c] secondly, that we rightly and thoroughly know our need and misery, [^fn117d] that so we may deeply humble ourselves in the presence of his divine majesty; [^fn117e] thirdly, that we be fully persuaded that he, notwithstanding that we are unworthy of it, will, for the sake of Christ our Lord, certainly hear our prayer, [^fn117f] as he has promised us in his word. [^fn117g]
 
 #### Question 118
 
@@ -80,11 +80,11 @@ What are the words of that prayer? (a)
 
 ### Scripture References
 
-[^fna]: Psalm 50:14 Offer unto God thanksgiving; and pay thy vows unto the most High:
+[^fn116a]: Psalm 50:14 Offer unto God thanksgiving; and pay thy vows unto the most High:
 
 Psalm 50:15 And call upon me in the day of trouble: I will deliver thee, and thou shalt glorify me.
 
-[^fnb]: Matthew 7:7 Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you:
+[^fn116b]: Matthew 7:7 Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you:
 
 Matthew 7:8 For every one that asketh receiveth; and he that seeketh findeth; and to him that knocketh it shall be opened.
 
@@ -96,11 +96,11 @@ Luke 11:13 If ye then, being evil, know how to give good gifts unto your childre
 
 1 Thessalonians 5:17 Pray without ceasing.
 
-[^fna]: John 4:24 God is a Spirit: and they that worship him must worship him in spirit and in truth.
+[^fn117a]: John 4:24 God is a Spirit: and they that worship him must worship him in spirit and in truth.
 
 Psalm 145:18 The LORD is nigh unto all them that call upon him, to all that call upon him in truth.
 
-[^fnb]: Revelation 19:10 And I fell at his feet to worship him. And he said unto me, See thou do it not: I am thy fellowservant, and of thy brethren that have the testimony of Jesus: worship God: for the testimony of Jesus is the spirit of prophecy.
+[^fn117b]: Revelation 19:10 And I fell at his feet to worship him. And he said unto me, See thou do it not: I am thy fellowservant, and of thy brethren that have the testimony of Jesus: worship God: for the testimony of Jesus is the spirit of prophecy.
 
 John 4:22 Ye worship ye know not what: we know what we worship: for salvation is of the Jews.
 
@@ -108,25 +108,25 @@ John 4:23 But the hour cometh, and now is, when the true worshippers shall worsh
 
 John 4:24 God is a Spirit: and they that worship him must worship him in spirit and in truth.
 
-[^fnc]: Romans 8:26 Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered.
+[^fn117c]: Romans 8:26 Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered.
 
 1 John 5:14 And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us:
 
 James 1:5 If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.
 
-[^fnd]: 2 Chronicles 20:12 O our God, wilt thou not judge them? for we have no might against this great company that cometh against us; neither know we what to do: but our eyes are upon thee.
+[^fn117d]: 2 Chronicles 20:12 O our God, wilt thou not judge them? for we have no might against this great company that cometh against us; neither know we what to do: but our eyes are upon thee.
 
-[^fne]: Psalm 2:11 Serve the LORD with fear, and rejoice with trembling.
+[^fn117e]: Psalm 2:11 Serve the LORD with fear, and rejoice with trembling.
 
 Psalm 34:19 Many are the afflictions of the righteous: but the LORD delivereth him out of them all.
 
 Isaiah 66:2 For all those things hath mine hand made, and all those things have been, saith the LORD: but to this man will I look, even to him that is poor and of a contrite spirit, and trembleth at my word.
 
-[^fnf]: Romans 10:14 How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?
+[^fn117f]: Romans 10:14 How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?
 
 James 1:6 But let him ask in faith, nothing wavering. For he that wavereth is like a wave of the sea driven with the wind and tossed.
 
-[^fng]: John 14:13 And whatsoever ye shall ask in my name, that will I do, that the Father may be glorified in the Son.
+[^fn117g]: John 14:13 And whatsoever ye shall ask in my name, that will I do, that the Father may be glorified in the Son.
 
 John 14:14 If ye shall ask any thing in my name, I will do it.
 
@@ -136,6 +136,6 @@ Daniel 9:17 Now therefore, O our God, hear the prayer of thy servant, and his su
 
 Daniel 9:18 O my God, incline thine ear, and hear; open thine eyes, and behold our desolations, and the city which is called by thy name: for we do not present our supplications before thee for our righteousnesses, but for thy great mercies.
 
-[^fnh]: Matthew 7:8 For every one that asketh receiveth; and he that seeketh findeth; and to him that knocketh it shall be opened.
+[^fn117h]: Matthew 7:8 For every one that asketh receiveth; and he that seeketh findeth; and to him that knocketh it shall be opened.
 
 Psalm 27:8 When thou saidst, Seek ye my face; my heart said unto thee, Thy face, LORD, will I seek.

@@ -23,7 +23,7 @@ Why must he be very man, and also perfectly righteous?
 
 ##### Answer
 
-Because the justice of God requires that the same human nature which has sinned, should likewise make satisfaction for sin; [^fna] and one, who is himself a sinner, cannot satisfy for others. [^fnb]
+Because the justice of God requires that the same human nature which has sinned, should likewise make satisfaction for sin; [^fn16a] and one, who is himself a sinner, cannot satisfy for others. [^fn16b]
 
 #### Question 17
 
@@ -31,7 +31,7 @@ Why must he in one person be also very God?
 
 ##### Answer
 
-That he might, by the power of his Godhead [^fna] sustain in his human nature, [^fnb] the burden of God's wrath; [^fnc] and might obtain for, and restore to us, righteousness and life. [^fnd]
+That he might, by the power of his Godhead [^fn17a] sustain in his human nature, [^fn17b] the burden of God's wrath; [^fn17c] and might obtain for, and restore to us, righteousness and life. [^fn17d]
 
 #### Question 18
 
@@ -162,14 +162,14 @@ Whence knowest thou this?
 
 ##### Answer
 
-From the holy gospel, which God himself first revealed in Paradise; [^fna] and afterwards published by the patriarchs [^fnb] and prophets, [^fnc] and represented by the sacrifices and other ceremonies of the law; [^fnd] and lastly, has fulfilled it by his only begotten Son. [^fne]
+From the holy gospel, which God himself first revealed in Paradise; [^fn19a] and afterwards published by the patriarchs [^fn19b] and prophets, [^fn19c] and represented by the sacrifices and other ceremonies of the law; [^fn19d] and lastly, has fulfilled it by his only begotten Son. [^fn19e]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Ezekiel 18:4 Behold, all souls are mine; as the soul of the father, so also the soul of the son is mine: the soul that sinneth, it shall die.
+[^fn16a]: Ezekiel 18:4 Behold, all souls are mine; as the soul of the father, so also the soul of the son is mine: the soul that sinneth, it shall die.
 
 Ezekiel 18:20 The soul that sinneth, it shall die. The son shall not bear the iniquity of the father, neither shall the father bear the iniquity of the son: the righteousness of the righteous shall be upon him, and the wickedness of the wicked shall be upon him.
 
@@ -199,7 +199,7 @@ Isaiah 53:10 Yet it pleased the LORD to bruise him; he hath put him to grief: wh
 
 Isaiah 53:11 He shall see of the travail of his soul, and shall be satisfied: by his knowledge shall my righteous servant justify many; for he shall bear their iniquities.
 
-[^fnb]: Hebrews 7:26 For such an high priest became us, who is holy, harmless, undefiled, separate from sinners, and made higher than the heavens;
+[^fn16b]: Hebrews 7:26 For such an high priest became us, who is holy, harmless, undefiled, separate from sinners, and made higher than the heavens;
 
 Hebrews 7:27 Who needeth not daily, as those high priests, to offer up sacrifice, first for his own sins, and then for the people's: for this he did once, when he offered up himself.
 
@@ -209,21 +209,21 @@ Psalm 49:8 (For the redemption of their soul is precious, and it ceaseth for eve
 
 1 Peter 3:18 For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit:
 
-[^fna]: Isaiah 9:6 For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.
+[^fn17a]: Isaiah 9:6 For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.
 
 Isaiah 63:3 I have trodden the winepress alone; and of the people there was none with me: for I will tread them in mine anger, and trample them in my fury; and their blood shall be sprinkled upon my garments, and I will stain all my raiment.
 
-[^fnb]: Isaiah 53:4 Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted.
+[^fn17b]: Isaiah 53:4 Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted.
 
 Isaiah 53:11 He shall see of the travail of his soul, and shall be satisfied: by his knowledge shall my righteous servant justify many; for he shall bear their iniquities.
 
-[^fnc]: Deuteronomy 4:24 For the LORD thy God is a consuming fire, even a jealous God.
+[^fn17c]: Deuteronomy 4:24 For the LORD thy God is a consuming fire, even a jealous God.
 
 Nahum 1:6 Who can stand before his indignation? and who can abide in the fierceness of his anger? his fury is poured out like fire, and the rocks are thrown down by him.
 
 Psalm 130:3 If thou, LORD, shouldest mark iniquities, O Lord, who shall stand?
 
-[^fnd]: Isaiah 53:5 But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed.
+[^fn17d]: Isaiah 53:5 But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed.
 
 Isaiah 53:11 He shall see of the travail of his soul, and shall be satisfied: by his knowledge shall my righteous servant justify many; for he shall bear their iniquities.
 
@@ -237,9 +237,9 @@ Acts 20:28 Take heed therefore unto yourselves, and to all the flock, over the w
 
 John 1:4 In him was life; and the life was the light of men.
 
-[^fna]: Genesis 3:15 And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.
+[^fn19a]: Genesis 3:15 And I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.
 
-[^fnb]: Genesis 22:18 And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice.
+[^fn19b]: Genesis 22:18 And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice.
 
 Genesis 12:3 And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed.
 
@@ -247,7 +247,7 @@ Genesis 49:10 The sceptre shall not depart from Judah, nor a lawgiver from betwe
 
 Genesis 49:11 Binding his foal unto the vine, and his ass's colt unto the choice vine; he washed his garments in wine, and his clothes in the blood of grapes:
 
-[^fnc]: Isaiah 53.
+[^fn19c]: Isaiah 53.
 
 Isaiah 42:1 Behold my servant, whom I uphold; mine elect, in whom my soul delighteth; I have put my spirit upon him: he shall bring forth judgment to the Gentiles.
 
@@ -303,7 +303,7 @@ Acts 10:43 To him give all the prophets witness, that through his name whosoever
 
 John 5:46 For had ye believed Moses, ye would have believed me: for he wrote of me.
 
-[^fnd]: Hebrews 10:1 For the law having a shadow of good things to come, and not the very image of the things, can never with those sacrifices which they offered year by year continually make the comers thereunto perfect.
+[^fn19d]: Hebrews 10:1 For the law having a shadow of good things to come, and not the very image of the things, can never with those sacrifices which they offered year by year continually make the comers thereunto perfect.
 
 Hebrews 10:7 Then said I, Lo, I come (in the volume of the book it is written of me,) to do thy will, O God.
 
@@ -311,7 +311,7 @@ Colossians 2:7 Rooted and built up in him, and stablished in the faith, as ye ha
 
 John 5:46 For had ye believed Moses, ye would have believed me: for he wrote of me.
 
-[^fne]: Romans 10:4 For Christ is the end of the law for righteousness to every one that believeth.
+[^fn19e]: Romans 10:4 For Christ is the end of the law for righteousness to every one that believeth.
 
 Galatians 4:4 But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law,
 

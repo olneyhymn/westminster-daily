@@ -23,7 +23,7 @@ What dost thou mean by the providence of God?
 
 ##### Answer
 
-The almighty and everywhere present power of God; [^fna] whereby, as it were by his hand, he upholds and governs [^fnb] heaven, earth, and all creatures; so that herbs and grass, rain and drought, [^fnc] fruitful and barren years, meat and drink, health and sickness, [^fnd] riches and poverty, [^fne] yea, and all things come, not by chance, but be his fatherly hand. [^fnf]
+The almighty and everywhere present power of God; [^fn27a] whereby, as it were by his hand, he upholds and governs [^fn27b] heaven, earth, and all creatures; so that herbs and grass, rain and drought, [^fn27c] fruitful and barren years, meat and drink, health and sickness, [^fn27d] riches and poverty, [^fn27e] yea, and all things come, not by chance, but be his fatherly hand. [^fn27f]
 
 #### Question 28
 
@@ -31,14 +31,14 @@ What advantage is it to us to know that God has created, and by his providence d
 
 ##### Answer
 
-That we may be patient in adversity; [^fna] thankful in prosperity; [^fnb] and that in all things, which may hereafter befall us, we place our firm trust in our faithful God and Father, [^fnc] that nothing shall separate us from his love; [^fnd] since all creatures are so in his hand, that without his will they cannot so much as move. [^fne]
+That we may be patient in adversity; [^fn28a] thankful in prosperity; [^fn28b] and that in all things, which may hereafter befall us, we place our firm trust in our faithful God and Father, [^fn28c] that nothing shall separate us from his love; [^fn28d] since all creatures are so in his hand, that without his will they cannot so much as move. [^fn28e]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Acts 17:25 Neither is worshipped with men's hands, as though he needed any thing, seeing he giveth to all life, and breath, and all things;
+[^fn27a]: Acts 17:25 Neither is worshipped with men's hands, as though he needed any thing, seeing he giveth to all life, and breath, and all things;
 
 Acts 17:26 And hath made of one blood all nations of men for to dwell on all the face of the earth, and hath determined the times before appointed, and the bounds of their habitation;
 
@@ -56,21 +56,21 @@ Isaiah 29:16 Surely your turning of things upside down shall be esteemed as the 
 
 Ezekiel 8:12 Then said he unto me, Son of man, hast thou seen what the ancients of the house of Israel do in the dark, every man in the chambers of his imagery? for they say, The LORD seeth us not; the LORD hath forsaken the earth.
 
-[^fnb]: Hebrews 1:3 Who being the brightness of his glory, and the express image of his person, and upholding all things by the word of his power, when he had by himself purged our sins, sat down on the right hand of the Majesty on high;
+[^fn27b]: Hebrews 1:3 Who being the brightness of his glory, and the express image of his person, and upholding all things by the word of his power, when he had by himself purged our sins, sat down on the right hand of the Majesty on high;
 
-[^fnc]: Jeremiah 5:24 Neither say they in their heart, Let us now fear the LORD our God, that giveth rain, both the former and the latter, in his season: he reserveth unto us the appointed weeks of the harvest.
+[^fn27c]: Jeremiah 5:24 Neither say they in their heart, Let us now fear the LORD our God, that giveth rain, both the former and the latter, in his season: he reserveth unto us the appointed weeks of the harvest.
 
 Acts 14:17 Nevertheless he left not himself without witness, in that he did good, and gave us rain from heaven, and fruitful seasons, filling our hearts with food and gladness.
 
-[^fnd]: John 9:3 Jesus answered, Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him.
+[^fn27d]: John 9:3 Jesus answered, Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him.
 
-[^fne]: Proverbs 22:2 The rich and poor meet together: the LORD is the maker of them all.
+[^fn27e]: Proverbs 22:2 The rich and poor meet together: the LORD is the maker of them all.
 
-[^fnf]: Matthew 10:20 For it is not ye that speak, but the Spirit of your Father which speaketh in you.
+[^fn27f]: Matthew 10:20 For it is not ye that speak, but the Spirit of your Father which speaketh in you.
 
 Proverbs 16:33 The lot is cast into the lap; but the whole disposing thereof is of the LORD.
 
-[^fna]: Romans 5:3 And not only so, but we glory in tribulations also: knowing that tribulation worketh patience;
+[^fn28a]: Romans 5:3 And not only so, but we glory in tribulations also: knowing that tribulation worketh patience;
 
 James 1:3 Knowing this, that the trying of your faith worketh patience.
 
@@ -80,19 +80,19 @@ Job 1:21 And said, Naked came I out of my mother's womb, and naked shall I retur
 
 Job 1:22 In all this Job sinned not, nor charged God foolishly.
 
-[^fnb]: Deuteronomy 8:10 When thou hast eaten and art full, then thou shalt bless the LORD thy God for the good land which he hath given thee.
+[^fn28b]: Deuteronomy 8:10 When thou hast eaten and art full, then thou shalt bless the LORD thy God for the good land which he hath given thee.
 
 1 Thessalonians 5:18 In every thing give thanks: for this is the will of God in Christ Jesus concerning you.
 
-[^fnc]: Psalm 55:22 Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.
+[^fn28c]: Psalm 55:22 Cast thy burden upon the LORD, and he shall sustain thee: he shall never suffer the righteous to be moved.
 
 Romans 5:4 And patience, experience; and experience, hope:
 
-[^fnd]: Romans 8:38 For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,
+[^fn28d]: Romans 8:38 For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,
 
 Romans 8:39 Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.
 
-[^fne]: Job 1:12 And the LORD said unto Satan, Behold, all that he hath is in thy power; only upon himself put not forth thine hand. So Satan went forth from the presence of the LORD.
+[^fn28e]: Job 1:12 And the LORD said unto Satan, Behold, all that he hath is in thy power; only upon himself put not forth thine hand. So Satan went forth from the presence of the LORD.
 
 Job 2:6 And the LORD said unto Satan, Behold, he is in thine hand; but save his life.
 

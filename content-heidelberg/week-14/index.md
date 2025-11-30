@@ -23,7 +23,7 @@ What is the meaning of these words "He was conceived by the Holy Ghost, born of 
 
 ##### Answer
 
-That God's eternal Son, who is, and continues [^fna] true and eternal God, [^fnb] took upon him the very nature of man, of the flesh and blood of the virgin Mary, [^fnc] by the operation of the Holy Ghost; [^fnd] that he might also be the true seed of David, [^fne] like unto his brethren in all things, [^fnf] sin excepted. [^fng]
+That God's eternal Son, who is, and continues [^fn35a] true and eternal God, [^fn35b] took upon him the very nature of man, of the flesh and blood of the virgin Mary, [^fn35c] by the operation of the Holy Ghost; [^fn35d] that he might also be the true seed of David, [^fn35e] like unto his brethren in all things, [^fn35f] sin excepted. [^fn35g]
 
 #### Question 36
 
@@ -31,18 +31,18 @@ What profit dost thou receive by Christ's holy conception and nativity?
 
 ##### Answer
 
-That he is our Mediator; [^fna] and with His innocence and perfect holiness, covers in the sight of God, my sins, wherein I was conceived and brought forth. [^fnb]
+That he is our Mediator; [^fn36a] and with His innocence and perfect holiness, covers in the sight of God, my sins, wherein I was conceived and brought forth. [^fn36b]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Romans 1:4 And declared to be the Son of God with power, according to the spirit of holiness, by the resurrection from the dead:
+[^fn35a]: Romans 1:4 And declared to be the Son of God with power, according to the spirit of holiness, by the resurrection from the dead:
 
 Romans 9:5 Whose are the fathers, and of whom as concerning the flesh Christ came, who is over all, God blessed for ever. Amen.
 
-[^fnb]: 1 John 5:20 And we know that the Son of God is come, and hath given us an understanding, that we may know him that is true, and we are in him that is true, even in his Son Jesus Christ. This is the true God, and eternal life.
+[^fn35b]: 1 John 5:20 And we know that the Son of God is come, and hath given us an understanding, that we may know him that is true, and we are in him that is true, even in his Son Jesus Christ. This is the true God, and eternal life.
 
 John 1:1 In the beginning was the Word, and the Word was with God, and the Word was God.
 
@@ -52,7 +52,7 @@ Romans 1:3 Concerning his Son Jesus Christ our Lord, which was made of the seed 
 
 Colossians 1:15 Who is the image of the invisible God, the firstborn of every creature:
 
-[^fnc]: Galatians 4:4 But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law,
+[^fn35c]: Galatians 4:4 But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law,
 
 Luke 1:31 And, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name JESUS.
 
@@ -60,7 +60,7 @@ Luke 1:42 And she spake out with a loud voice, and said, Blessed art thou among 
 
 Luke 1:43 And whence is this to me, that the mother of my Lord should come to me?
 
-[^fnd]: John 1:14 And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.
+[^fn35d]: John 1:14 And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.
 
 Matthew 1:18 Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost.
 
@@ -68,7 +68,7 @@ Matthew 1:20 But while he thought on these things, behold, the angel of the Lord
 
 Luke 1:35 And the angel answered and said unto her, The Holy Ghost shall come upon thee, and the power of the Highest shall overshadow thee: therefore also that holy thing which shall be born of thee shall be called the Son of God.
 
-[^fne]: Psalm 132:11 The LORD hath sworn in truth unto David; he will not turn from it; Of the fruit of thy body will I set upon thy throne.
+[^fn35e]: Psalm 132:11 The LORD hath sworn in truth unto David; he will not turn from it; Of the fruit of thy body will I set upon thy throne.
 
 Romans 1:3 Concerning his Son Jesus Christ our Lord, which was made of the seed of David according to the flesh;
 
@@ -78,21 +78,21 @@ Luke 1:32 He shall be great, and shall be called the Son of the Highest: and the
 
 Acts 2:30 Therefore being a prophet, and knowing that God had sworn with an oath to him, that of the fruit of his loins, according to the flesh, he would raise up Christ to sit on his throne;
 
-[^fnf]: Philippians 2:7 But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men:
+[^fn35f]: Philippians 2:7 But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men:
 
 Hebrews 2:14 Forasmuch then as the children are partakers of flesh and blood, he also himself likewise took part of the same; that through death he might destroy him that had the power of death, that is, the devil;
 
 Hebrews 2:17 Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people.
 
-[^fng]: Hebrews 4:15 For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin.
+[^fn35g]: Hebrews 4:15 For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin.
 
-[^fna]: Hebrews 7:26 For such an high priest became us, who is holy, harmless, undefiled, separate from sinners, and made higher than the heavens;
+[^fn36a]: Hebrews 7:26 For such an high priest became us, who is holy, harmless, undefiled, separate from sinners, and made higher than the heavens;
 
 Hebrews 7:27 Who needeth not daily, as those high priests, to offer up sacrifice, first for his own sins, and then for the people's: for this he did once, when he offered up himself.
 
 Hebrews 2:17 Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people.
 
-[^fnb]: 1 Peter 1:18 Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold, from your vain conversation received by tradition from your fathers;
+[^fn36b]: 1 Peter 1:18 Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold, from your vain conversation received by tradition from your fathers;
 
 1 Peter 1:19 But with the precious blood of Christ, as of a lamb without blemish and without spot:
 

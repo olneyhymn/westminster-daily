@@ -23,7 +23,7 @@ Why is it added, "and sitteth at the right hand of God"?
 
 ##### Answer
 
-Because Christ is ascended into heaven for this end, that he might appear as head of his church, [^fna] by whom the Father governs all things. [^fnb]
+Because Christ is ascended into heaven for this end, that he might appear as head of his church, [^fn50a] by whom the Father governs all things. [^fn50b]
 
 #### Question 51
 
@@ -31,7 +31,7 @@ What profit is this glory of Christ, our head, unto us?
 
 ##### Answer
 
-First, that by his Holy Spirit he pours out heavenly graces upon us his members; [^fna] and then that by his power he defends and preserves us against all enemies. [^fnb]
+First, that by his Holy Spirit he pours out heavenly graces upon us his members; [^fn51a] and then that by his power he defends and preserves us against all enemies. [^fn51b]
 
 #### Question 52
 
@@ -39,14 +39,14 @@ What comfort is it to thee that "Christ shall come again to judge the quick and 
 
 ##### Answer
 
-That in all my sorrows and persecutions, with uplifted head I look for the very same person, who before offered himself for my sake, to the tribunal of God, and has removed all curse from me, to come as judge from heaven: [^fna] who shall cast all his and my enemies into everlasting condemnation, [^fnb] but shall translate me with all his chosen ones to himself, into heavenly joys and glory. [^fnc]
+That in all my sorrows and persecutions, with uplifted head I look for the very same person, who before offered himself for my sake, to the tribunal of God, and has removed all curse from me, to come as judge from heaven: [^fn52a] who shall cast all his and my enemies into everlasting condemnation, [^fn52b] but shall translate me with all his chosen ones to himself, into heavenly joys and glory. [^fn52c]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Ephesians 1:20 Which he wrought in Christ, when he raised him from the dead, and set him at his own right hand in the heavenly places,
+[^fn50a]: Ephesians 1:20 Which he wrought in Christ, when he raised him from the dead, and set him at his own right hand in the heavenly places,
 
 Ephesians 1:21 Far above all principality, and power, and might, and dominion, and every name that is named, not only in this world, but also in that which is to come:
 
@@ -54,15 +54,15 @@ Ephesians 1:23 Which is his body, the fulness of him that filleth all in all.
 
 Colossians 1:18 And he is the head of the body, the church: who is the beginning, the firstborn from the dead; that in all things he might have the preeminence.
 
-[^fnb]: Matthew 28:18 And Jesus came and spake unto them, saying, All power is given unto me in heaven and in earth.
+[^fn50b]: Matthew 28:18 And Jesus came and spake unto them, saying, All power is given unto me in heaven and in earth.
 
 John 5:22 For the Father judgeth no man, but hath committed all judgment unto the Son:
 
-[^fna]: Acts 2:33 Therefore being by the right hand of God exalted, and having received of the Father the promise of the Holy Ghost, he hath shed forth this, which ye now see and hear.
+[^fn51a]: Acts 2:33 Therefore being by the right hand of God exalted, and having received of the Father the promise of the Holy Ghost, he hath shed forth this, which ye now see and hear.
 
 Ephesians 4:8 Wherefore he saith, When he ascended up on high, he led captivity captive, and gave gifts unto men.
 
-[^fnb]: Psalm 2:9 Thou shalt break them with a rod of iron; thou shalt dash them in pieces like a potter's vessel.
+[^fn51b]: Psalm 2:9 Thou shalt break them with a rod of iron; thou shalt dash them in pieces like a potter's vessel.
 
 Psalm 110:1 A Psalm of David. The LORD said unto my Lord, Sit thou at my right hand, until I make thine enemies thy footstool.
 
@@ -72,7 +72,7 @@ John 10:28 And I give unto them eternal life; and they shall never perish, neith
 
 Ephesians 4:8 Wherefore he saith, When he ascended up on high, he led captivity captive, and gave gifts unto men.
 
-[^fna]: Luke 21:28 And when these things begin to come to pass, then look up, and lift up your heads; for your redemption draweth nigh.
+[^fn52a]: Luke 21:28 And when these things begin to come to pass, then look up, and lift up your heads; for your redemption draweth nigh.
 
 Romans 8:23 And not only they, but ourselves also, which have the firstfruits of the Spirit, even we ourselves groan within ourselves, waiting for the adoption, to wit, the redemption of our body.
 
@@ -82,7 +82,7 @@ Titus 2:13 Looking for that blessed hope, and the glorious appearing of the grea
 
 1 Thessalonians 4:16 For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God: and the dead in Christ shall rise first:
 
-[^fnb]: 2 Thessalonians 1:6 Seeing it is a righteous thing with God to recompense tribulation to them that trouble you;
+[^fn52b]: 2 Thessalonians 1:6 Seeing it is a righteous thing with God to recompense tribulation to them that trouble you;
 
 2 Thessalonians 1:8 In flaming fire taking vengeance on them that know not God, and that obey not the gospel of our Lord Jesus Christ:
 
@@ -96,6 +96,6 @@ Matthew 25:42 For I was an hungred, and ye gave me no meat: I was thirsty, and y
 
 Matthew 25:43 I was a stranger, and ye took me not in: naked, and ye clothed me not: sick, and in prison, and ye visited me not.
 
-[^fnc]: Matthew 25:34 Then shall the King say unto them on his right hand, Come, ye blessed of my Father, inherit the kingdom prepared for you from the foundation of the world:
+[^fn52c]: Matthew 25:34 Then shall the King say unto them on his right hand, Come, ye blessed of my Father, inherit the kingdom prepared for you from the foundation of the world:
 
 2 Thessalonians 1:7 And to you who are troubled rest with us, when the Lord Jesus shall be revealed from heaven with his mighty angels,

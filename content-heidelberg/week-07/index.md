@@ -23,7 +23,7 @@ Are all men then, as they perished in Adam, saved by Christ?
 
 ##### Answer
 
-No; [^fna] only those who are ingrafted into him, and, receive all his benefits, by a true faith. [^fnb]
+No; [^fn20a] only those who are ingrafted into him, and, receive all his benefits, by a true faith. [^fn20b]
 
 #### Question 21
 
@@ -31,7 +31,7 @@ What is true faith?
 
 ##### Answer
 
-True faith is not only a certain knowledge, whereby I hold for truth all that God has revealed to us in his word, [^fna] but also an assured confidence, [^fnb] which the Holy Ghost [^fnc] works by the gospel in my heart; [^fnd] that not only to others, but to me also, remission of sin, everlasting righteousness and salvation, [^fne] are freely given by God, merely of grace, only for the sake of Christ's merits. [^fnf]
+True faith is not only a certain knowledge, whereby I hold for truth all that God has revealed to us in his word, [^fn21a] but also an assured confidence, [^fn21b] which the Holy Ghost [^fn21c] works by the gospel in my heart; [^fn21d] that not only to others, but to me also, remission of sin, everlasting righteousness and salvation, [^fn21e] are freely given by God, merely of grace, only for the sake of Christ's merits. [^fn21f]
 
 #### Question 22
 
@@ -39,7 +39,7 @@ What is then necessary for a christian to believe?
 
 ##### Answer
 
-All things promised us in the gospel, [^fna] which the articles of our catholic undoubted christian faith briefly teach us.
+All things promised us in the gospel, [^fn22a] which the articles of our catholic undoubted christian faith briefly teach us.
 
 #### Question 23
 
@@ -54,11 +54,11 @@ What are these articles?
 
 ### Scripture References
 
-[^fna]: Matthew 7:14 Because strait is the gate, and narrow is the way, which leadeth unto life, and few there be that find it.
+[^fn20a]: Matthew 7:14 Because strait is the gate, and narrow is the way, which leadeth unto life, and few there be that find it.
 
 Matthew 22:14 For many are called, but few are chosen.
 
-[^fnb]: Mark 16:16 He that believeth and is baptized shall be saved; but he that believeth not shall be damned.
+[^fn20b]: Mark 16:16 He that believeth and is baptized shall be saved; but he that believeth not shall be damned.
 
 John 1:12 But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:
 
@@ -90,9 +90,9 @@ Hebrews 10:39 But we are not of them who draw back unto perdition; but of them t
 
 Hebrews 11:6 But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him.
 
-[^fna]: James 2:19 Thou believest that there is one God; thou doest well: the devils also believe, and tremble.
+[^fn21a]: James 2:19 Thou believest that there is one God; thou doest well: the devils also believe, and tremble.
 
-[^fnb]: 2 Corinthians 4:13 We having the same spirit of faith, according as it is written, I believed, and therefore have I spoken; we also believe, and therefore speak;
+[^fn21b]: 2 Corinthians 4:13 We having the same spirit of faith, according as it is written, I believed, and therefore have I spoken; we also believe, and therefore speak;
 
 Ephesians 2:7 That in the ages to come he might shew the exceeding riches of his grace in his kindness toward us through Christ Jesus.
 
@@ -146,7 +146,7 @@ Romans 3:24 Being justified freely by his grace through the redemption that is i
 
 Romans 3:25 Whom God hath set forth to be a propitiation through faith in his blood, to declare his righteousness for the remission of sins that are past, through the forbearance of God;
 
-[^fnc]: Galatians 5:22 But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith,
+[^fn21c]: Galatians 5:22 But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith,
 
 Matthew 16:17 And Jesus answered and said unto him, Blessed art thou, Simon Barjona: for flesh and blood hath not revealed it unto thee, but my Father which is in heaven.
 
@@ -160,7 +160,7 @@ Philippians 1:19 For I know that this shall turn to my salvation through your pr
 
 Acts 16:14 And a certain woman named Lydia, a seller of purple, of the city of Thyatira, which worshipped God, heard us: whose heart the Lord opened, that she attended unto the things which were spoken of Paul.
 
-[^fnd]: Romans 1:16 For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and also to the Greek.
+[^fn21d]: Romans 1:16 For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and also to the Greek.
 
 Romans 10:17 So then faith cometh by hearing, and hearing by the word of God.
 
@@ -170,7 +170,7 @@ Acts 10:44 While Peter yet spake these words, the Holy Ghost fell on all them wh
 
 Acts 16:14 And a certain woman named Lydia, a seller of purple, of the city of Thyatira, which worshipped God, heard us: whose heart the Lord opened, that she attended unto the things which were spoken of Paul.
 
-[^fne]: Romans 1:17 For therein is the righteousness of God revealed from faith to faith: as it is written, The just shall live by faith.
+[^fn21e]: Romans 1:17 For therein is the righteousness of God revealed from faith to faith: as it is written, The just shall live by faith.
 
 Galatians 3:11 But that no man is justified by the law in the sight of God, it is evident: for, The just shall live by faith.
 
@@ -180,7 +180,7 @@ Hebrews 10:38 Now the just shall live by faith: but if any man draw back, my sou
 
 Galatians 2:16 Knowing that a man is not justified by the works of the law, but by the faith of Jesus Christ, even we have believed in Jesus Christ, that we might be justified by the faith of Christ, and not by the works of the law: for by the works of the law shall no flesh be justified.
 
-[^fnf]: Ephesians 2:8 For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:
+[^fn21f]: Ephesians 2:8 For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:
 
 Romans 3:24 Being justified freely by his grace through the redemption that is in Christ Jesus:
 
@@ -190,6 +190,6 @@ Luke 1:77 To give knowledge of salvation unto his people by the remission of the
 
 Luke 1:78 Through the tender mercy of our God; whereby the dayspring from on high hath visited us,
 
-[^fna]: John 20:31 But these are written, that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name.
+[^fn22a]: John 20:31 But these are written, that ye might believe that Jesus is the Christ, the Son of God; and that believing ye might have life through his name.
 
 Matthew 28:19 Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost: Mark 1:15 And saying, The time is fulfilled, and the kingdom of God is at hand: repent ye, and believe the gospel.

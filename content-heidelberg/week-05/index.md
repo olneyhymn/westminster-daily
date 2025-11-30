@@ -23,7 +23,7 @@ Since then, by the righteous judgment of God, we deserve temporal and eternal pu
 
 ##### Answer
 
-God will have his justice satisfied: [^fna] and therefore we must make this full satisfaction, either by ourselves, or by another. [^fnb]
+God will have his justice satisfied: [^fn12a] and therefore we must make this full satisfaction, either by ourselves, or by another. [^fn12b]
 
 #### Question 13
 
@@ -31,7 +31,7 @@ Can we ourselves then make this satisfaction?
 
 ##### Answer
 
-By no means; but on the contrary we daily increase our debt. [^fna]
+By no means; but on the contrary we daily increase our debt. [^fn13a]
 
 #### Question 14
 
@@ -39,7 +39,7 @@ Can there be found anywhere, one, who is a mere creature, able to satisfy for us
 
 ##### Answer
 
-None; for, first, God will not punish any other creature for the sin which man has committed; [^fna] and further, no mere creature can sustain the burden of God's eternal wrath against sin, so as to deliver others from it. [^fnb]
+None; for, first, God will not punish any other creature for the sin which man has committed; [^fn14a] and further, no mere creature can sustain the burden of God's eternal wrath against sin, so as to deliver others from it. [^fn14b]
 
 #### Question 15
 
@@ -47,14 +47,14 @@ What sort of a mediator and deliverer then must we seek for?
 
 ##### Answer
 
-For one who is very man, and perfectly [^fna] righteous; [^fnb] and yet more powerful than all creatures; that is, one who is also very God. [^fnc]
+For one who is very man, and perfectly [^fn15a] righteous; [^fn15b] and yet more powerful than all creatures; that is, one who is also very God. [^fn15c]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Genesis 2:17 But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.
+[^fn12a]: Genesis 2:17 But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.
 
 Exodus 20:5 Thou shalt not bow down thyself to them, nor serve them: for I the LORD thy God am a jealous God, visiting the iniquity of the fathers upon the children unto the third and fourth generation of them that hate me;
 
@@ -68,11 +68,11 @@ Matthew 5:26 Verily I say unto thee, Thou shalt by no means come out thence, til
 
 Luke 16:2 And he called him, and said unto him, How is it that I hear this of thee? give an account of thy stewardship; for thou mayest be no longer steward.
 
-[^fnb]: Romans 8:3 For what the law could not do, in that it was weak through the flesh, God sending his own Son in the likeness of sinful flesh, and for sin, condemned sin in the flesh:
+[^fn12b]: Romans 8:3 For what the law could not do, in that it was weak through the flesh, God sending his own Son in the likeness of sinful flesh, and for sin, condemned sin in the flesh:
 
 Romans 8:4 That the righteousness of the law might be fulfilled in us, who walk not after the flesh, but after the Spirit.
 
-[^fna]: Job 9:2 I know it is so of a truth: but how should man be just with God?
+[^fn13a]: Job 9:2 I know it is so of a truth: but how should man be just with God?
 
 Job 9:3 If he will contend with him, he cannot answer him one of a thousand.
 
@@ -92,7 +92,7 @@ Matthew 18:25 But forasmuch as he had not to pay, his lord commanded him to be s
 
 Matthew 16:26 For what is a man profited, if he shall gain the whole world, and lose his own soul? or what shall a man give in exchange for his soul?
 
-[^fna]: Ezekiel 18:4 Behold, all souls are mine; as the soul of the father, so also the soul of the son is mine: the soul that sinneth, it shall die.
+[^fn14a]: Ezekiel 18:4 Behold, all souls are mine; as the soul of the father, so also the soul of the son is mine: the soul that sinneth, it shall die.
 
 Genesis 3:17 And unto Adam he said, Because thou hast hearkened unto the voice of thy wife, and hast eaten of the tree, of which I commanded thee, saying, Thou shalt not eat of it: cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life;
 
@@ -104,11 +104,11 @@ Hebrews 2:16 For verily he took not on him the nature of angels; but he took on 
 
 Hebrews 2:17 Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people.
 
-[^fnb]: Nahum 1:6 Who can stand before his indignation? and who can abide in the fierceness of his anger? his fury is poured out like fire, and the rocks are thrown down by him.
+[^fn14b]: Nahum 1:6 Who can stand before his indignation? and who can abide in the fierceness of his anger? his fury is poured out like fire, and the rocks are thrown down by him.
 
 Psalm 130:3 If thou, LORD, shouldest mark iniquities, O Lord, who shall stand?
 
-[^fna]: 1 Corinthians 15:21 For since by man came death, by man came also the resurrection of the dead.
+[^fn15a]: 1 Corinthians 15:21 For since by man came death, by man came also the resurrection of the dead.
 
 Jeremiah 33:16 In those days shall Judah be saved, and Jerusalem shall dwell safely: and this is the name wherewith she shall be called, The LORD our righteousness.
 
@@ -116,11 +116,11 @@ Isaiah 53:9 And he made his grave with the wicked, and with the rich in his deat
 
 2 Corinthians 5:21 For he hath made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him.
 
-[^fnb]: Hebrews 7:26 For such an high priest became us, who is holy, harmless, undefiled, separate from sinners, and made higher than the heavens;
+[^fn15b]: Hebrews 7:26 For such an high priest became us, who is holy, harmless, undefiled, separate from sinners, and made higher than the heavens;
 
 Hebrews 7:16 Who is made, not after the law of a carnal commandment, but after the power of an endless life.
 
-[^fnc]: Isaiah 7:14 Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel.
+[^fn15c]: Isaiah 7:14 Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel.
 
 Isaiah 9:6 For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.
 

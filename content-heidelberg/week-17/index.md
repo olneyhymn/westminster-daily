@@ -23,20 +23,20 @@ What does the "resurrection" of Christ profit us?
 
 ##### Answer
 
-First, by his resurrection he has overcome death, that he might make us partakers of that righteousness which he had purchased for us by his death; [^fna] secondly, we are also by his power raised up to a new life; [^fnb] and lastly, the resurrection of Christ is a sure pledge of our blessed resurrection. [^fnc]
+First, by his resurrection he has overcome death, that he might make us partakers of that righteousness which he had purchased for us by his death; [^fn45a] secondly, we are also by his power raised up to a new life; [^fn45b] and lastly, the resurrection of Christ is a sure pledge of our blessed resurrection. [^fn45c]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: 1 Corinthians 15:16 For if the dead rise not, then is not Christ raised:
+[^fn45a]: 1 Corinthians 15:16 For if the dead rise not, then is not Christ raised:
 
 Romans 4:25 Who was delivered for our offences, and was raised again for our justification.
 
 1 Peter 1:3 Blessed be the God and Father of our Lord Jesus Christ, which according to his abundant mercy hath begotten us again unto a lively hope by the resurrection of Jesus Christ from the dead,
 
-[^fnb]: Romans 6:4 Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.
+[^fn45b]: Romans 6:4 Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.
 
 Colossians 3:1 If ye then be risen with Christ, seek those things which are above, where Christ sitteth on the right hand of God.
 
@@ -46,7 +46,7 @@ Ephesians 2:5 Even when we were dead in sins, hath quickened us together with Ch
 
 Ephesians 2:6 And hath raised us up together, and made us sit together in heavenly places in Christ Jesus:
 
-[^fnc]: 1 Corinthians 15:12 Now if Christ be preached that he rose from the dead, how say some among you that there is no resurrection of the dead?
+[^fn45c]: 1 Corinthians 15:12 Now if Christ be preached that he rose from the dead, how say some among you that there is no resurrection of the dead?
 
 1 Corinthians 15:20 But now is Christ risen from the dead, and become the firstfruits of them that slept.
 

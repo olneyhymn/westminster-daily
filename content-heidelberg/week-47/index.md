@@ -23,14 +23,14 @@ Which is the first petition?
 
 ##### Answer
 
-"Hallowed be thy name"; that is, grant us, first, rightly to know thee, [^fna] and to sanctify, glorify and praise thee, [^fnb] in all thy works, in which thy power, wisdom, goodness, justice, mercy and truth, are clearly displayed; and further also, that we may so order and direct our whole lives, our thoughts, words and actions, that thy name may never be blasphemed, but rather honoured and praised on our account. [^fnc]
+"Hallowed be thy name"; that is, grant us, first, rightly to know thee, [^fn122a] and to sanctify, glorify and praise thee, [^fn122b] in all thy works, in which thy power, wisdom, goodness, justice, mercy and truth, are clearly displayed; and further also, that we may so order and direct our whole lives, our thoughts, words and actions, that thy name may never be blasphemed, but rather honoured and praised on our account. [^fn122c]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: John 17:3 And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent.
+[^fn122a]: John 17:3 And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent.
 
 Jeremiah 9:24 But let him that glorieth glory in this, that he understandeth and knoweth me, that I am the LORD which exercise lovingkindness, judgment, and righteousness, in the earth: for in these things I delight, saith the LORD.
 
@@ -44,7 +44,7 @@ James 1:5 If any of you lack wisdom, let him ask of God, that giveth to all men 
 
 Psalm 119:105 Thy word is a lamp unto my feet, and a light unto my path.
 
-[^fnb]: Psalm 119:137 Righteous art thou, O LORD, and upright are thy judgments.
+[^fn122b]: Psalm 119:137 Righteous art thou, O LORD, and upright are thy judgments.
 
 Luke 1:46 And Mary said, My soul doth magnify the Lord,
 
@@ -62,6 +62,6 @@ Romans 11:35 Or who hath first given to him, and it shall be recompensed unto hi
 
 Romans 11:36 For of him, and through him, and to him, are all things: to whom be glory for ever. Amen.
 
-[^fnc]: Psalm 71:8 Let my mouth be filled with thy praise and with thy honour all the day.
+[^fn122c]: Psalm 71:8 Let my mouth be filled with thy praise and with thy honour all the day.
 
 Psalm 115:1 Not unto us, O LORD, not unto us, but unto thy name give glory, for thy mercy, and for thy truth's sake.

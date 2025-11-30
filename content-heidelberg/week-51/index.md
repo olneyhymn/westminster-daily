@@ -23,14 +23,14 @@ Which is the fifth petition?
 
 ##### Answer
 
-"And forgive us our debts as we forgive our debtors"; that is, be pleased for the sake of Christ's blood, not to impute to us poor sinners, our transgressions, nor that depravity, which always cleaves to us; [^fna] even as we feel this evidence of thy grace in us, that it is our firm resolution from the heart to forgive our neighbour. [^fnb]
+"And forgive us our debts as we forgive our debtors"; that is, be pleased for the sake of Christ's blood, not to impute to us poor sinners, our transgressions, nor that depravity, which always cleaves to us; [^fn126a] even as we feel this evidence of thy grace in us, that it is our firm resolution from the heart to forgive our neighbour. [^fn126b]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Psalm 51:1 To the chief Musician, A Psalm of David, when Nathan the prophet came unto him, after he had gone in to Bathsheba. Have mercy upon me, O God, according to thy lovingkindness: according unto the multitude of thy tender mercies blot out my transgressions.
+[^fn126a]: Psalm 51:1 To the chief Musician, A Psalm of David, when Nathan the prophet came unto him, after he had gone in to Bathsheba. Have mercy upon me, O God, according to thy lovingkindness: according unto the multitude of thy tender mercies blot out my transgressions.
 
 Psalm 51:2 Wash me throughly from mine iniquity, and cleanse me from my sin.
 
@@ -52,6 +52,6 @@ Psalm 143:2 And enter not into judgment with thy servant: for in thy sight shall
 
 Romans 8:1 There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.
 
-[^fnb]: Matthew 6:14 For if ye forgive men their trespasses, your heavenly Father will also forgive you:
+[^fn126b]: Matthew 6:14 For if ye forgive men their trespasses, your heavenly Father will also forgive you:
 
 Matthew 6:15 But if ye forgive not men their trespasses, neither will your Father forgive your trespasses.

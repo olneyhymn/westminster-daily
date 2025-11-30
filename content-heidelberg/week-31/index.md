@@ -31,7 +31,7 @@ How is the kingdom of heaven opened and shut by the preaching of the holy gospel
 
 ##### Answer
 
-Thus: when according to the command of Christ, it is declared and publicly testified to all and every believer, that, whenever they receive the promise of the gospel by a true faith, all their sins are really forgiven them of God, for the sake of Christ's merits; and on the contrary, when it is declared and testified to all unbelievers, and such as do not sincerely repent, that they stand exposed to the wrath of God, and eternal condemnation, so long as they are unconverted: [^fna] according to which testimony of the gospel, God will judge them, both in this, and in the life to come.
+Thus: when according to the command of Christ, it is declared and publicly testified to all and every believer, that, whenever they receive the promise of the gospel by a true faith, all their sins are really forgiven them of God, for the sake of Christ's merits; and on the contrary, when it is declared and testified to all unbelievers, and such as do not sincerely repent, that they stand exposed to the wrath of God, and eternal condemnation, so long as they are unconverted: [^fn84a] according to which testimony of the gospel, God will judge them, both in this, and in the life to come.
 
 #### Question 85
 
@@ -39,14 +39,14 @@ How is the kingdom of heaven shut and opened by christian discipline?
 
 ##### Answer
 
-Thus: when according to the command of Christ, those, who under the name of christians, maintain doctrines, or practices inconsistent therewith, and will not, after having been often brotherly admonished, renounce their errors and wicked course of life, are complained of to the church, or to those, who are thereunto appointed by the church; and if they despise their admonition, are by them forbidden the use of the sacraments; whereby they are excluded from the christian church, and by God himself from the kingdom of Christ; and when they promise and show real amendment, are again received as members of Christ and his church. [^fna]
+Thus: when according to the command of Christ, those, who under the name of christians, maintain doctrines, or practices inconsistent therewith, and will not, after having been often brotherly admonished, renounce their errors and wicked course of life, are complained of to the church, or to those, who are thereunto appointed by the church; and if they despise their admonition, are by them forbidden the use of the sacraments; whereby they are excluded from the christian church, and by God himself from the kingdom of Christ; and when they promise and show real amendment, are again received as members of Christ and his church. [^fn85a]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Matthew 16:18 And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it.
+[^fn84a]: Matthew 16:18 And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it.
 
 Matthew 16:19 And I will give unto thee the keys of the kingdom of heaven: and whatsoever thou shalt bind on earth shall be bound in heaven: and whatsoever thou shalt loose on earth shall be loosed in heaven.
 
@@ -66,7 +66,7 @@ John 20:22 And when he had said this, he breathed on them, and saith unto them, 
 
 John 20:23 Whose soever sins ye remit, they are remitted unto them; and whose soever sins ye retain, they are retained.
 
-[^fna]: Matthew 18:15 Moreover if thy brother shall trespass against thee, go and tell him his fault between thee and him alone: if he shall hear thee, thou hast gained thy brother.
+[^fn85a]: Matthew 18:15 Moreover if thy brother shall trespass against thee, go and tell him his fault between thee and him alone: if he shall hear thee, thou hast gained thy brother.
 
 Matthew 18:16 But if he will not hear thee, then take with thee one or two more, that in the mouth of two or three witnesses every word may be established.
 

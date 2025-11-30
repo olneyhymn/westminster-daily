@@ -23,7 +23,7 @@ Of how many parts does the true conversion of man consist?
 
 ##### Answer
 
-Of two parts; of the mortification of the old, and the quickening of the new man. [^fna]
+Of two parts; of the mortification of the old, and the quickening of the new man. [^fn88a]
 
 #### Question 89
 
@@ -31,7 +31,7 @@ What is the mortification of the old man?
 
 ##### Answer
 
-It is a sincere sorrow of heart, that we have provoked God by our sins; and more and more to hate and flee from them. [^fna]
+It is a sincere sorrow of heart, that we have provoked God by our sins; and more and more to hate and flee from them. [^fn89a]
 
 #### Question 90
 
@@ -39,7 +39,7 @@ What is the quickening of the new man?
 
 ##### Answer
 
-It is a sincere joy of heart in God, through Christ, [^fna] and with love and delight to live according to the will of God in all good works. [^fnb]
+It is a sincere joy of heart in God, through Christ, [^fn90a] and with love and delight to live according to the will of God in all good works. [^fn90b]
 
 #### Question 91
 
@@ -47,14 +47,14 @@ But what are good works?
 
 ##### Answer
 
-Only those which proceed from a true faith, [^fna] are performed according to the law of God, [^fnb] and to his glory; [^fnc] and not such as are founded on our imaginations, or the institutions of men. [^fnd]
+Only those which proceed from a true faith, [^fn91a] are performed according to the law of God, [^fn91b] and to his glory; [^fn91c] and not such as are founded on our imaginations, or the institutions of men. [^fn91d]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Romans 6:1 What shall we say then? Shall we continue in sin, that grace may abound?
+[^fn88a]: Romans 6:1 What shall we say then? Shall we continue in sin, that grace may abound?
 
 Romans 6:4 Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.
 
@@ -84,35 +84,35 @@ Colossians 3:10 And have put on the new man, which is renewed in knowledge after
 
 2 Corinthians 7:10 For godly sorrow worketh repentance to salvation not to be repented of: but the sorrow of the world worketh death.
 
-[^fna]: Romans 8:13 For if ye live after the flesh, ye shall die: but if ye through the Spirit do mortify the deeds of the body, ye shall live.
+[^fn89a]: Romans 8:13 For if ye live after the flesh, ye shall die: but if ye through the Spirit do mortify the deeds of the body, ye shall live.
 
 Joel 2:13 And rend your heart, and not your garments, and turn unto the LORD your God: for he is gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil.
 
 Hosea 6:1 Come, and let us return unto the LORD: for he hath torn, and he will heal us; he hath smitten, and he will bind us up.
 
-[^fna]: Romans 5:1 Therefore being justified by faith, we have peace with God through our Lord Jesus Christ:
+[^fn90a]: Romans 5:1 Therefore being justified by faith, we have peace with God through our Lord Jesus Christ:
 
 Romans 14:17 For the kingdom of God is not meat and drink; but righteousness, and peace, and joy in the Holy Ghost.
 
 Isaiah 57:15 For thus saith the high and lofty One that inhabiteth eternity, whose name is Holy; I dwell in the high and holy place, with him also that is of a contrite and humble spirit, to revive the spirit of the humble, and to revive the heart of the contrite ones.
 
-[^fnb]: Romans 6:10 For in that he died, he died unto sin once: but in that he liveth, he liveth unto God.
+[^fn90b]: Romans 6:10 For in that he died, he died unto sin once: but in that he liveth, he liveth unto God.
 
 Romans 6:11 Likewise reckon ye also yourselves to be dead indeed unto sin, but alive unto God through Jesus Christ our Lord.
 
 Galatians 2:20 I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me.
 
-[^fna]: Romans 14:23 And he that doubteth is damned if he eat, because he eateth not of faith: for whatsoever is not of faith is sin.
+[^fn91a]: Romans 14:23 And he that doubteth is damned if he eat, because he eateth not of faith: for whatsoever is not of faith is sin.
 
-[^fnb]: Leviticus 18:4 Ye shall do my judgments, and keep mine ordinances, to walk therein: I am the LORD your God.
+[^fn91b]: Leviticus 18:4 Ye shall do my judgments, and keep mine ordinances, to walk therein: I am the LORD your God.
 
 1 Samuel 15:22 And Samuel said, Hath the LORD as great delight in burnt offerings and sacrifices, as in obeying the voice of the LORD? Behold, to obey is better than sacrifice, and to hearken than the fat of rams.
 
 Ephesians 2:10 For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.
 
-[^fnc]: 1 Corinthians 10:31 Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.
+[^fn91c]: 1 Corinthians 10:31 Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.
 
-[^fnd]: Deuteronomy 12:32 What thing soever I command you, observe to do it: thou shalt not add thereto, nor diminish from it.
+[^fn91d]: Deuteronomy 12:32 What thing soever I command you, observe to do it: thou shalt not add thereto, nor diminish from it.
 
 Ezekiel 20:18 But I said unto their children in the wilderness, Walk ye not in the statutes of your fathers, neither observe their judgments, nor defile yourselves with their idols:
 

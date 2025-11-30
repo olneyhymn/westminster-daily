@@ -23,14 +23,14 @@ Which is the fourth petition?
 
 ##### Answer
 
-"Give us this day our daily bread"; that is, be pleased to provide us with all things necessary for the body, [^fna] that we may thereby acknowledge thee to be the only fountain of all good, [^fnb] and that neither our care nor industry, nor even thy gifts, can profit us without thy blessing; [^fnc] and therefore that we may withdraw our trust from all creatures, and place it alone in thee. [^fnd]
+"Give us this day our daily bread"; that is, be pleased to provide us with all things necessary for the body, [^fn125a] that we may thereby acknowledge thee to be the only fountain of all good, [^fn125b] and that neither our care nor industry, nor even thy gifts, can profit us without thy blessing; [^fn125c] and therefore that we may withdraw our trust from all creatures, and place it alone in thee. [^fn125d]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Psalm 104:27 These wait all upon thee; that thou mayest give them their meat in due season.
+[^fn125a]: Psalm 104:27 These wait all upon thee; that thou mayest give them their meat in due season.
 
 Psalm 104:28 That thou givest them they gather: thou openest thine hand, they are filled with good.
 
@@ -42,7 +42,7 @@ Matthew 6:25 Therefore I say unto you, Take no thought for your life, what ye sh
 
 Matthew 6:26 Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them. Are ye not much better than they?
 
-[^fnb]: James 1:17 Every good gift and every perfect gift is from above, and cometh down from the Father of lights, with whom is no variableness, neither shadow of turning.
+[^fn125b]: James 1:17 Every good gift and every perfect gift is from above, and cometh down from the Father of lights, with whom is no variableness, neither shadow of turning.
 
 Acts 14:17 Nevertheless he left not himself without witness, in that he did good, and gave us rain from heaven, and fruitful seasons, filling our hearts with food and gladness.
 
@@ -50,7 +50,7 @@ Acts 17:27 That they should seek the Lord, if haply they might feel after him, a
 
 Acts 17:28 For in him we live, and move, and have our being; as certain also of your own poets have said, For we are also his offspring.
 
-[^fnc]: 1 Corinthians 15:58 Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.
+[^fn125c]: 1 Corinthians 15:58 Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.
 
 Deuteronomy 8:3 And he humbled thee, and suffered thee to hunger, and fed thee with manna, which thou knewest not, neither did thy fathers know; that he might make thee know that man doth not live by bread only, but by every word that proceedeth out of the mouth of the LORD doth man live.
 
@@ -66,7 +66,7 @@ Psalm 127:1 A Song of degrees for Solomon. Except the LORD build the house, they
 
 Psalm 127:2 It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep.
 
-[^fnd]: Psalm 55:23 But thou, O God, shalt bring them down into the pit of destruction: bloody and deceitful men shall not live out half their days; but I will trust in thee.
+[^fn125d]: Psalm 55:23 But thou, O God, shalt bring them down into the pit of destruction: bloody and deceitful men shall not live out half their days; but I will trust in thee.
 
 Psalm 62:11 God hath spoken once; twice have I heard this; that power belongeth unto God.
 

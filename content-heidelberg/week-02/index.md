@@ -23,7 +23,7 @@ Whence knowest thou thy misery?
 
 ##### Answer
 
-Out of the law of God. [^fna]
+Out of the law of God. [^fn3a]
 
 #### Question 4
 
@@ -32,7 +32,7 @@ What does the law of God require of us?
 ##### Answer
 
 Christ teaches us that briefly,
-				Matthew  22:37-40, "Thou shalt love the Lord thy God with all thy heart, with all thy soul, and with all thy mind, and with all thy strength. This is the first and the great commandment; and the second is like unto it, Thou shalt love thy neighbour as thyself. On these two commandments hang all the law and the prophets." [^fna]
+				Matthew  22:37-40, "Thou shalt love the Lord thy God with all thy heart, with all thy soul, and with all thy mind, and with all thy strength. This is the first and the great commandment; and the second is like unto it, Thou shalt love thy neighbour as thyself. On these two commandments hang all the law and the prophets." [^fn4a]
 
 #### Question 5
 
@@ -40,22 +40,22 @@ Canst thou keep all these things perfectly?
 
 ##### Answer
 
-In no wise; [^fna] for I am prone by nature to hate God and my neighbour.[^fnb]
+In no wise; [^fn5a] for I am prone by nature to hate God and my neighbour.[^fn5b]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Romans 3:20 Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin.
+[^fn3a]: Romans 3:20 Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin.
 
-[^fna]: Deuteronomy 6:5 And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.
+[^fn4a]: Deuteronomy 6:5 And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.
 
 Leviticus 19:18 Thou shalt not avenge, nor bear any grudge against the children of thy people, but thou shalt love thy neighbour as thyself: I am the LORD. Mark 12:30 And thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind, and with all thy strength: this is the first commandment.
 
 Luke 10:27 And he answering said, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy strength, and with all thy mind; and thy neighbour as thyself.
 
-[^fna]: Romans 3:10 As it is written, There is none righteous, no, not one:
+[^fn5a]: Romans 3:10 As it is written, There is none righteous, no, not one:
 
 Romans 3:20 Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin.
 
@@ -65,7 +65,7 @@ Romans 3:23 For all have sinned, and come short of the glory of God;
 
 1 John 1:10 If we say that we have not sinned, we make him a liar, and his word is not in us.
 
-[^fnb]: Romans 8:7 Because the carnal mind is enmity against God: for it is not subject to the law of God, neither indeed can be.
+[^fn5b]: Romans 8:7 Because the carnal mind is enmity against God: for it is not subject to the law of God, neither indeed can be.
 
 Ephesians 2:3 Among whom also we all had our conversation in times past in the lusts of our flesh, fulfilling the desires of the flesh and of the mind; and were by nature the children of wrath, even as others.
 

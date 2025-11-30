@@ -23,7 +23,7 @@ May we then swear religiously by the name of God?
 
 ##### Answer
 
-Yes: either when the magistrates demand it of the subjects; or when necessity requires us thereby to confirm a fidelity and truth to the glory of God, and the safety of our neighbour: for such an oath is founded on God's word, [^fna] and therefore was justly used by the saints, both in the Old and New Testament. [^fnb]
+Yes: either when the magistrates demand it of the subjects; or when necessity requires us thereby to confirm a fidelity and truth to the glory of God, and the safety of our neighbour: for such an oath is founded on God's word, [^fn101a] and therefore was justly used by the saints, both in the Old and New Testament. [^fn101b]
 
 #### Question 102
 
@@ -31,14 +31,14 @@ May we also swear by saints or any other creatures?
 
 ##### Answer
 
-No; for a lawful oath is calling upon God, as the only one who knows the heart, that he will bear witness to the truth, and punish me if I swear falsely; [^fna] which honour is due to no creature. [^fnb]
+No; for a lawful oath is calling upon God, as the only one who knows the heart, that he will bear witness to the truth, and punish me if I swear falsely; [^fn102a] which honour is due to no creature. [^fn102b]
 
 
 ---
 
 ### Scripture References
 
-[^fna]: Deuteronomy 6:13 Thou shalt fear the LORD thy God, and serve him, and shalt swear by his name.
+[^fn101a]: Deuteronomy 6:13 Thou shalt fear the LORD thy God, and serve him, and shalt swear by his name.
 
 Deuteronomy 10:20 Thou shalt fear the LORD thy God; him shalt thou serve, and to him shalt thou cleave, and swear by his name.
 
@@ -46,7 +46,7 @@ Isaiah 48:1 Hear ye this, O house of Jacob, which are called by the name of Isra
 
 Hebrews 6:16 For men verily swear by the greater: and an oath for confirmation is to them an end of all strife.
 
-[^fnb]: Genesis 21:24 And Abraham said, I will swear.
+[^fn101b]: Genesis 21:24 And Abraham said, I will swear.
 
 Genesis 31:53 The God of Abraham, and the God of Nahor, the God of their father, judge betwixt us. And Jacob sware by the fear of his father Isaac.
 
@@ -70,11 +70,11 @@ Romans 1:9 For God is my witness, whom I serve with my spirit in the gospel of h
 
 2 Corinthians 1:23 Moreover I call God for a record upon my soul, that to spare you I came not as yet unto Corinth.
 
-[^fna]: 2 Corinthians 1:23 Moreover I call God for a record upon my soul, that to spare you I came not as yet unto Corinth.
+[^fn102a]: 2 Corinthians 1:23 Moreover I call God for a record upon my soul, that to spare you I came not as yet unto Corinth.
 
 Romans 9:1 I say the truth in Christ, I lie not, my conscience also bearing me witness in the Holy Ghost,
 
-[^fnb]: Matthew 5:34 But I say unto you, Swear not at all; neither by heaven; for it is God's throne:
+[^fn102b]: Matthew 5:34 But I say unto you, Swear not at all; neither by heaven; for it is God's throne:
 
 Matthew 5:35 Nor by the earth; for it is his footstool: neither by Jerusalem; for it is the city of the great King.
 
