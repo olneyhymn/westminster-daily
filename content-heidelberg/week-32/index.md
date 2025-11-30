@@ -23,7 +23,7 @@ Since then we are delivered from our misery, merely of grace, through Christ, wi
 
 ##### Answer
 
-Because Christ, having redeemed and delivered us by his blood, also renews us by his Holy Spirit, after his own image; that so we may testify, by the whole of our conduct, our gratitude to God for his blessings, [^fna] and that he may be praised by us; [^fnb] also, that every one may be assured in himself of his faith, [^fnc] by the fruits thereof; and that, by our godly conversation others may be gained to Christ. [^fnd]
+Because Christ, having redeemed and delivered us by his blood, also renews us by his Holy Spirit, after his own image; that so we may testify, by the whole of our conduct, our gratitude to God for his blessings, [^fn86a] and that he may be praised by us; [^fn86b] also, that every one may be assured in himself of his faith, [^fn86c] by the fruits thereof; and that, by our godly conversation others may be gained to Christ. [^fn86d]
 
 #### Question 87
 
@@ -31,14 +31,11 @@ Cannot they then be saved, who, continuing in their wicked and ungrateful lives,
 
 ##### Answer
 
-By no means; for the holy scripture declares that no unchaste person, idolater, adulterer, thief, covetous man, drunkard, slanderer, robber, or any such like, shall inherit the kingdom of God. [^fna]
+By no means; for the holy scripture declares that no unchaste person, idolater, adulterer, thief, covetous man, drunkard, slanderer, robber, or any such like, shall inherit the kingdom of God. [^fn87a]
 
 
----
 
-### Scripture References
-
-[^fna]: Romans 6:13 Neither yield ye your members as instruments of unrighteousness unto sin: but yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto God.
+[^fn86a]: Romans 6:13 Neither yield ye your members as instruments of unrighteousness unto sin: but yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto God.
 
 Romans 12:1 I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, which is your reasonable service.
 
@@ -52,7 +49,7 @@ Romans 12:2 And be not conformed to this world: but be ye transformed by the ren
 
 1 Corinthians 6:20 For ye are bought with a price: therefore glorify God in your body, and in your spirit, which are God's.
 
-[^fnb]: Matthew 5:16 Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.
+[^fn86b]: Matthew 5:16 Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.
 
 1 Peter 2:12 Having your conversation honest among the Gentiles: that, whereas they speak against you as evildoers, they may by your good works, which they shall behold, glorify God in the day of visitation.
 
@@ -60,7 +57,7 @@ Romans 12:2 And be not conformed to this world: but be ye transformed by the ren
 
 1 Peter 1:7 That the trial of your faith, being much more precious than of gold that perisheth, though it be tried with fire, might be found unto praise and honour and glory at the appearing of Jesus Christ:
 
-[^fnc]: 2 Peter 1:10 Wherefore the rather, brethren, give diligence to make your calling and election sure: for if ye do these things, ye shall never fall:
+[^fn86c]: 2 Peter 1:10 Wherefore the rather, brethren, give diligence to make your calling and election sure: for if ye do these things, ye shall never fall:
 
 Matthew 7:17 Even so every good tree bringeth forth good fruit; but a corrupt tree bringeth forth evil fruit.
 
@@ -70,13 +67,13 @@ Galatians 5:22 But the fruit of the Spirit is love, joy, peace, longsuffering, g
 
 Galatians 5:23 Meekness, temperance: against such there is no law.
 
-[^fnd]: 1 Peter 3:1 Likewise, ye wives, be in subjection to your own husbands; that, if any obey not the word, they also may without the word be won by the conversation of the wives;
+[^fn86d]: 1 Peter 3:1 Likewise, ye wives, be in subjection to your own husbands; that, if any obey not the word, they also may without the word be won by the conversation of the wives;
 
 1 Peter 3:2 While they behold your chaste conversation coupled with fear.
 
 Romans 14:19 Let us therefore follow after the things which make for peace, and things wherewith one may edify another.
 
-[^fna]: 1 Corinthians 6:9 Know ye not that the unrighteous shall not inherit the kingdom of God? Be not deceived: neither fornicators, nor idolaters, nor adulterers, nor effeminate, nor abusers of themselves with mankind,
+[^fn87a]: 1 Corinthians 6:9 Know ye not that the unrighteous shall not inherit the kingdom of God? Be not deceived: neither fornicators, nor idolaters, nor adulterers, nor effeminate, nor abusers of themselves with mankind,
 
 1 Corinthians 6:10 Nor thieves, nor covetous, nor drunkards, nor revilers, nor extortioners, shall inherit the kingdom of God.
 

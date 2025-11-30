@@ -23,7 +23,7 @@ Do then the bread and wine become the very body and blood of Christ?
 
 ##### Answer
 
-Not at all: [^fna] but as the water in baptism is not changed into the blood of Christ, neither is the washing away of sin itself, being only the sign and confirmation thereof appointed of God; [^fnb] so the bread in the Lord's supper is not changed into the very body of Christ; [^fnc] though agreeably to the nature and properties of sacraments, [^fnd] it is called the body of Christ Jesus.
+Not at all: [^fn78a] but as the water in baptism is not changed into the blood of Christ, neither is the washing away of sin itself, being only the sign and confirmation thereof appointed of God; [^fn78b] so the bread in the Lord's supper is not changed into the very body of Christ; [^fn78c] though agreeably to the nature and properties of sacraments, [^fn78d] it is called the body of Christ Jesus.
 
 #### Question 79
 
@@ -31,20 +31,17 @@ Why then doth Christ call the bread "his body", and the cup "his blood", or "the
 
 ##### Answer
 
-Christ speaks thus, not without great reason, namely, not only thereby to teach us, that as bread and wine support this temporal life, so his crucified body and shed blood are the true meat and drink, whereby our souls are fed to eternal life; [^fna] but more especially by these visible signs and pledges to assure us, that we are as really partakers of his true body and blood by the operation of the Holy Ghost as we receive by the mouths of our bodies these holy signs in remembrance of him; [^fnb] and that all his sufferings and obedience are as certainly ours, as if we had in our own persons suffered and made satisfaction for our sins to God.
+Christ speaks thus, not without great reason, namely, not only thereby to teach us, that as bread and wine support this temporal life, so his crucified body and shed blood are the true meat and drink, whereby our souls are fed to eternal life; [^fn79a] but more especially by these visible signs and pledges to assure us, that we are as really partakers of his true body and blood by the operation of the Holy Ghost as we receive by the mouths of our bodies these holy signs in remembrance of him; [^fn79b] and that all his sufferings and obedience are as certainly ours, as if we had in our own persons suffered and made satisfaction for our sins to God.
 
 
----
 
-### Scripture References
+[^fn78a]: Matthew 26:29 But I say unto you, I will not drink henceforth of this fruit of the vine, until that day when I drink it new with you in my Father's kingdom.
 
-[^fna]: Matthew 26:29 But I say unto you, I will not drink henceforth of this fruit of the vine, until that day when I drink it new with you in my Father's kingdom.
-
-[^fnb]: Ephesians 5:26 That he might sanctify and cleanse it with the washing of water by the word,
+[^fn78b]: Ephesians 5:26 That he might sanctify and cleanse it with the washing of water by the word,
 
 Titus 3:5 Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;
 
-[^fnc]: Mark 14:24 And he said unto them, This is my blood of the new testament, which is shed for many.
+[^fn78c]: Mark 14:24 And he said unto them, This is my blood of the new testament, which is shed for many.
 
 1 Corinthians 10:16 The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?
 
@@ -56,7 +53,7 @@ Titus 3:5 Not by works of righteousness which we have done, but according to his
 
 1 Corinthians 11:28 But let a man examine himself, and so let him eat of that bread, and drink of that cup.
 
-[^fnd]: Genesis 17:10 This is my covenant, which ye shall keep, between me and you and thy seed after thee; Every man child among you shall be circumcised.
+[^fn78d]: Genesis 17:10 This is my covenant, which ye shall keep, between me and you and thy seed after thee; Every man child among you shall be circumcised.
 
 Genesis 17:11 And ye shall circumcise the flesh of your foreskin; and it shall be a token of the covenant betwixt me and you.
 
@@ -86,10 +83,10 @@ Exodus 13:9 And it shall be for a sign unto thee upon thine hand, and for a memo
 
 1 Corinthians 10:4 And did all drink the same spiritual drink: for they drank of that spiritual Rock that followed them: and that Rock was Christ.
 
-[^fna]: John 6:51 I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world.
+[^fn79a]: John 6:51 I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world.
 
 John 6:55 For my flesh is meat indeed, and my blood is drink indeed.
 
-[^fnb]: 1 Corinthians 10:16 The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?
+[^fn79b]: 1 Corinthians 10:16 The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?
 
 1 Corinthians 10:17 For we being many are one bread, and one body: for we are all partakers of that one bread.

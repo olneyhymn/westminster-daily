@@ -23,14 +23,11 @@ What dost thou believe concerning the Holy Ghost?
 
 ##### Answer
 
-First, that he is true and coeternal God with the Father and the Son; [^fna] secondly, that he is also given me, [^fnb] to make me by a true faith, partaker of Christ and all his benefits, [^fnc] that he may comfort me [^fnd] and abide with me for ever. [^fne]
+First, that he is true and coeternal God with the Father and the Son; [^fn53a] secondly, that he is also given me, [^fn53b] to make me by a true faith, partaker of Christ and all his benefits, [^fn53c] that he may comfort me [^fn53d] and abide with me for ever. [^fn53e]
 
 
----
 
-### Scripture References
-
-[^fna]: 1 John 5:7 For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one.
+[^fn53a]: 1 John 5:7 For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one.
 
 Genesis 1:2 And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.
 
@@ -44,7 +41,7 @@ Acts 5:3 But Peter said, Ananias, why hath Satan filled thine heart to lie to th
 
 Acts 5:4 Whiles it remained, was it not thine own? and after it was sold, was it not in thine own power? why hast thou conceived this thing in thine heart? thou hast not lied unto men, but unto God.
 
-[^fnb]: Galatians 4:6 And because ye are sons, God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father.
+[^fn53b]: Galatians 4:6 And because ye are sons, God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father.
 
 Matthew 28:19 Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:
 
@@ -56,16 +53,16 @@ Matthew 28:20 Teaching them to observe all things whatsoever I have commanded yo
 
 Ephesians 1:13 In whom ye also trusted, after that ye heard the word of truth, the gospel of your salvation: in whom also after that ye believed, ye were sealed with that holy Spirit of promise,
 
-[^fnc]: Galatians 3:14 That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith.
+[^fn53c]: Galatians 3:14 That the blessing of Abraham might come on the Gentiles through Jesus Christ; that we might receive the promise of the Spirit through faith.
 
 1 Peter 1:2 Elect according to the foreknowledge of God the Father, through sanctification of the Spirit, unto obedience and sprinkling of the blood of Jesus Christ: Grace unto you, and peace, be multiplied.
 
 1 Corinthians 6:17 But he that is joined unto the Lord is one spirit.
 
-[^fnd]: Acts 9:31 Then had the churches rest throughout all Judaea and Galilee and Samaria, and were edified; and walking in the fear of the Lord, and in the comfort of the Holy Ghost, were multiplied.
+[^fn53d]: Acts 9:31 Then had the churches rest throughout all Judaea and Galilee and Samaria, and were edified; and walking in the fear of the Lord, and in the comfort of the Holy Ghost, were multiplied.
 
 John 15:26 But when the Comforter is come, whom I will send unto you from the Father, even the Spirit of truth, which proceedeth from the Father, he shall testify of me:
 
-[^fne]: John 14:16 And I will pray the Father, and he shall give you another Comforter, that he may abide with you for ever;
+[^fn53e]: John 14:16 And I will pray the Father, and he shall give you another Comforter, that he may abide with you for ever;
 
 1 Peter 4:14 If ye be reproached for the name of Christ, happy are ye; for the spirit of glory and of God resteth upon you: on their part he is evil spoken of, but on your part he is glorified.

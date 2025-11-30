@@ -23,7 +23,7 @@ How are these articles divided?
 
 ##### Answer
 
-Question 25: Since there is but one only divine essence, [^fna] why speakest thou of Father, Son, and Holy Ghost?
+Question 25: Since there is but one only divine essence, [^fn24a] why speakest thou of Father, Son, and Holy Ghost?
 
 #### Question 25
 
@@ -117,11 +117,8 @@ Since there is but one only divine essence, (a) why speakest thou of Father, Son
 								Titus 3:6 Which he shed on us abundantly through Jesus Christ our Saviour;
 
 
----
 
-### Scripture References
-
-[^fna]: Deuteronomy 6:4 Hear, O Israel: The LORD our God is one LORD:
+[^fn24a]: Deuteronomy 6:4 Hear, O Israel: The LORD our God is one LORD:
 
 Ephesians 4:6 One God and Father of all, who is above all, and through all, and in you all.
 
@@ -133,7 +130,7 @@ Isaiah 45:5 I am the LORD, and there is none else, there is no God beside me: I 
 
 1 Corinthians 8:6 But to us there is but one God, the Father, of whom are all things, and we in him; and one Lord Jesus Christ, by whom are all things, and we by him.
 
-[^fnb]: Isaiah 61:1 The Spirit of the Lord GOD is upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to them that are bound;
+[^fn24b]: Isaiah 61:1 The Spirit of the Lord GOD is upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to them that are bound;
 
 Luke 4:18 The Spirit of the Lord is upon me, because he hath anointed me to preach the gospel to the poor; he hath sent me to heal the brokenhearted, to preach deliverance to the captives, and recovering of sight to the blind, to set at liberty them that are bruised,
 

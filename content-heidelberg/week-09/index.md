@@ -23,14 +23,11 @@ What believest thou when thou sayest, "I believe in God the Father, Almighty, Ma
 
 ##### Answer
 
-That the eternal Father of our Lord Jesus Christ (who of nothing made heaven and earth, with all that is in them; [^fna] who likewise upholds and governs the same by his eternal counsel and providence) [^fnb] is for the sake of Christ his Son, my God and my Father; [^fnc] on whom I rely so entirely, that I have no doubt, but he will provide me with all things necessary for soul and body [^fnd] and further, that he will make whatever evils he sends upon me, in this valley of tears turn out to my advantage; [^fne] for he is able to do it, being Almighty God, [^fnf] and willing, being a faithful Father. [^fng]
+That the eternal Father of our Lord Jesus Christ (who of nothing made heaven and earth, with all that is in them; [^fn26a] who likewise upholds and governs the same by his eternal counsel and providence) [^fn26b] is for the sake of Christ his Son, my God and my Father; [^fn26c] on whom I rely so entirely, that I have no doubt, but he will provide me with all things necessary for soul and body [^fn26d] and further, that he will make whatever evils he sends upon me, in this valley of tears turn out to my advantage; [^fn26e] for he is able to do it, being Almighty God, [^fn26f] and willing, being a faithful Father. [^fn26g]
 
 
----
 
-### Scripture References
-
-[^fna]: Genesis 1 and 2.
+[^fn26a]: Genesis 1 and 2.
 
 Exodus 20:11 For in six days the LORD made heaven and earth, the sea, and all that in them is, and rested the seventh day: wherefore the LORD blessed the sabbath day, and hallowed it.
 
@@ -46,7 +43,7 @@ Acts 14:15 And saying, Sirs, why do ye these things? We also are men of like pas
 
 Isaiah 45:7 I form the light, and create darkness: I make peace, and create evil: I the LORD do all these things.
 
-[^fnb]: Matthew 10:29 Are not two sparrows sold for a farthing? and one of them shall not fall on the ground without your Father.
+[^fn26b]: Matthew 10:29 Are not two sparrows sold for a farthing? and one of them shall not fall on the ground without your Father.
 
 Hebrews 1:3 Who being the brightness of his glory, and the express image of his person, and upholding all things by the word of his power, when he had by himself purged our sins, sat down on the right hand of the Majesty on high;
 
@@ -64,7 +61,7 @@ Matthew 10:29 Are not two sparrows sold for a farthing? and one of them shall no
 
 Ephesians 1:11 In whom also we have obtained an inheritance, being predestinated according to the purpose of him who worketh all things after the counsel of his own will:
 
-[^fnc]: John 1:12 But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:
+[^fn26c]: John 1:12 But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:
 
 Romans 8:15 For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father.
 
@@ -76,7 +73,7 @@ Galatians 4:7 Wherefore thou art no more a servant, but a son; and if a son, the
 
 Ephesians 1:5 Having predestinated us unto the adoption of children by Jesus Christ to himself, according to the good pleasure of his will,
 
-[^fnd]: Psalm 55:23 But thou, O God, shalt bring them down into the pit of destruction: bloody and deceitful men shall not live out half their days; but I will trust in thee.
+[^fn26d]: Psalm 55:23 But thou, O God, shalt bring them down into the pit of destruction: bloody and deceitful men shall not live out half their days; but I will trust in thee.
 
 Matthew 6:25 Therefore I say unto you, Take no thought for your life, what ye shall eat, or what ye shall drink; nor yet for your body, what ye shall put on. Is not the life more than meat, and the body than raiment?
 
@@ -84,9 +81,9 @@ Matthew 6:26 Behold the fowls of the air: for they sow not, neither do they reap
 
 Luke 12:22 And he said unto his disciples, Therefore I say unto you, Take no thought for your life, what ye shall eat; neither for the body, what ye shall put on.
 
-[^fne]: Romans 8:28 And we know that all things work together for good to them that love God, to them who are the called according to his purpose.
+[^fn26e]: Romans 8:28 And we know that all things work together for good to them that love God, to them who are the called according to his purpose.
 
-[^fnf]: Romans 10:12 For there is no difference between the Jew and the Greek: for the same Lord over all is rich unto all that call upon him.
+[^fn26f]: Romans 10:12 For there is no difference between the Jew and the Greek: for the same Lord over all is rich unto all that call upon him.
 
 Luke 12:22 And he said unto his disciples, Therefore I say unto you, Take no thought for your life, what ye shall eat; neither for the body, what ye shall put on.
 
@@ -96,7 +93,7 @@ Isaiah 46:4 And even to your old age I am he; and even to hoar hairs will I carr
 
 Romans 10:12 For there is no difference between the Jew and the Greek: for the same Lord over all is rich unto all that call upon him.
 
-[^fng]: Matthew 6:25 Therefore I say unto you, Take no thought for your life, what ye shall eat, or what ye shall drink; nor yet for your body, what ye shall put on. Is not the life more than meat, and the body than raiment?
+[^fn26g]: Matthew 6:25 Therefore I say unto you, Take no thought for your life, what ye shall eat, or what ye shall drink; nor yet for your body, what ye shall put on. Is not the life more than meat, and the body than raiment?
 
 Matthew 6:26 Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them. Are ye not much better than they?
 

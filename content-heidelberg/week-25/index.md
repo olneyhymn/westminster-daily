@@ -23,7 +23,7 @@ Since then we are made partakers of Christ and all his benefits by faith only, w
 
 ##### Answer
 
-From the Holy Ghost, [^fna] who works faith in our hearts by the preaching of the gospel, and confirms it by the use of the sacraments. [^fnb]
+From the Holy Ghost, [^fn65a] who works faith in our hearts by the preaching of the gospel, and confirms it by the use of the sacraments. [^fn65b]
 
 #### Question 66
 
@@ -31,7 +31,7 @@ What are the sacraments?
 
 ##### Answer
 
-The sacraments are holy visible signs and seals, appointed of God for this end, that by the use thereof, he may the more fully declare and seal to us the promise of the gospel, viz., that he grants us freely the remission of sin, and life eternal, for the sake of that one sacrifice of Christ, accomplished on the cross. [^fna]
+The sacraments are holy visible signs and seals, appointed of God for this end, that by the use thereof, he may the more fully declare and seal to us the promise of the gospel, viz., that he grants us freely the remission of sin, and life eternal, for the sake of that one sacrifice of Christ, accomplished on the cross. [^fn66a]
 
 #### Question 67
 
@@ -56,11 +56,8 @@ How many sacraments has Christ instituted in the new covenant, or testament?
 Two: namely, holy baptism, and the holy supper.
 
 
----
 
-### Scripture References
-
-[^fna]: Ephesians 2:8 For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:
+[^fn65a]: Ephesians 2:8 For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:
 
 Ephesians 2:9 Not of works, lest any man should boast.
 
@@ -70,7 +67,7 @@ John 3:5 Jesus answered, Verily, verily, I say unto thee, Except a man be born o
 
 Philippians 1:29 For unto you it is given in the behalf of Christ, not only to believe on him, but also to suffer for his sake;
 
-[^fnb]: Matthew 28:19 Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:
+[^fn65b]: Matthew 28:19 Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:
 
 Matthew 28:20 Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen.
 
@@ -78,7 +75,7 @@ Matthew 28:20 Teaching them to observe all things whatsoever I have commanded yo
 
 1 Peter 1:23 Being born again, not of corruptible seed, but of incorruptible, by the word of God, which liveth and abideth for ever.
 
-[^fna]: Genesis 17:11 And ye shall circumcise the flesh of your foreskin; and it shall be a token of the covenant betwixt me and you.
+[^fn66a]: Genesis 17:11 And ye shall circumcise the flesh of your foreskin; and it shall be a token of the covenant betwixt me and you.
 
 Romans 4:11 And he received the sign of circumcision, a seal of the righteousness of the faith which he had yet being uncircumcised: that he might be the father of all them that believe, though they be not circumcised; that righteousness might be imputed unto them also:
 

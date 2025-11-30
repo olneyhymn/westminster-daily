@@ -23,14 +23,11 @@ What does God require in the fifth commandment?
 
 ##### Answer
 
-That I show all honour, love and fidelity, to my father and mother, and all in authority over me, and submit myself to their good instruction and correction, with due obedience; [^fna] and also patiently bear with their weaknesses and infirmities, [^fnb] since it pleases God to govern us by their hand. [^fnc]
+That I show all honour, love and fidelity, to my father and mother, and all in authority over me, and submit myself to their good instruction and correction, with due obedience; [^fn104a] and also patiently bear with their weaknesses and infirmities, [^fn104b] since it pleases God to govern us by their hand. [^fn104c]
 
 
----
 
-### Scripture References
-
-[^fna]: Ephesians 5:22 Wives, submit yourselves unto your own husbands, as unto the Lord.
+[^fn104a]: Ephesians 5:22 Wives, submit yourselves unto your own husbands, as unto the Lord.
 
 Ephesians 6:1 Children, obey your parents in the Lord: for this is right.
 
@@ -78,7 +75,7 @@ Romans 13:6 For for this cause pay ye tribute also: for they are God's ministers
 
 Romans 13:7 Render therefore to all their dues: tribute to whom tribute is due; custom to whom custom; fear to whom fear; honour to whom honour.
 
-[^fnb]: Proverbs 23:22 Hearken unto thy father that begat thee, and despise not thy mother when she is old.
+[^fn104b]: Proverbs 23:22 Hearken unto thy father that begat thee, and despise not thy mother when she is old.
 
 Genesis 9:24 And Noah awoke from his wine, and knew what his younger son had done unto him.
 
@@ -86,7 +83,7 @@ Genesis 9:25 And he said, Cursed be Canaan; a servant of servants shall he be un
 
 1 Peter 2:18 Servants, be subject to your masters with all fear; not only to the good and gentle, but also to the froward.
 
-[^fnc]: Ephesians 6:4 And, ye fathers, provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord.
+[^fn104c]: Ephesians 6:4 And, ye fathers, provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord.
 
 Ephesians 6:9 And, ye masters, do the same things unto them, forbearing threatening: knowing that your Master also is in heaven; neither is there respect of persons with him.
 

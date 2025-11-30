@@ -23,7 +23,7 @@ Why is Christ called the "only begotten Son" of God, since we are also the child
 
 ##### Answer
 
-Because Christ alone is the eternal and natural Son of God; [^fna] but we are children adopted of God, by grace, for his sake. [^fnb]
+Because Christ alone is the eternal and natural Son of God; [^fn33a] but we are children adopted of God, by grace, for his sake. [^fn33b]
 
 #### Question 34
 
@@ -31,14 +31,11 @@ Wherefore callest thou him "our Lord"?
 
 ##### Answer
 
-Because he hath redeemed us, both soul and body, from all our sins, not with silver or gold, but with his precious blood, and has delivered us from all the power of the devil; and thus has made us his own property. [^fna]
+Because he hath redeemed us, both soul and body, from all our sins, not with silver or gold, but with his precious blood, and has delivered us from all the power of the devil; and thus has made us his own property. [^fn34a]
 
 
----
 
-### Scripture References
-
-[^fna]: John 1:1 In the beginning was the Word, and the Word was with God, and the Word was God.
+[^fn33a]: John 1:1 In the beginning was the Word, and the Word was with God, and the Word was God.
 
 John 1:2 The same was in the beginning with God.
 
@@ -58,7 +55,7 @@ John 3:16 For God so loved the world, that he gave his only begotten Son, that w
 
 Romans 8:32 He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things?
 
-[^fnb]: Romans 8:15 For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father.
+[^fn33b]: Romans 8:15 For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father.
 
 Romans 8:16 The Spirit itself beareth witness with our spirit, that we are the children of God:
 
@@ -72,7 +69,7 @@ Ephesians 1:5 Having predestinated us unto the adoption of children by Jesus Chr
 
 Ephesians 1:6 To the praise of the glory of his grace, wherein he hath made us accepted in the beloved.
 
-[^fna]: 1 Peter 1:18 Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold, from your vain conversation received by tradition from your fathers;
+[^fn34a]: 1 Peter 1:18 Forasmuch as ye know that ye were not redeemed with corruptible things, as silver and gold, from your vain conversation received by tradition from your fathers;
 
 1 Peter 1:19 But with the precious blood of Christ, as of a lamb without blemish and without spot:
 

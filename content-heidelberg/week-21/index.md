@@ -23,7 +23,7 @@ What believest thou concerning the "holy catholic church" of Christ?
 
 ##### Answer
 
-That the Son of God [^fna] from the beginning to the end of the world, [^fnb] gathers, defends, and preserves [^fnc] to himself by his Spirit and word, [^fnd] out of the whole human race, [^fne] a church chosen to everlasting life, [^fnf] agreeing in true faith; [^fng] and that I am and forever shall remain, [^fnh] a living member thereof. [^fni]
+That the Son of God [^fn54a] from the beginning to the end of the world, [^fn54b] gathers, defends, and preserves [^fn54c] to himself by his Spirit and word, [^fn54d] out of the whole human race, [^fn54e] a church chosen to everlasting life, [^fn54f] agreeing in true faith; [^fn54g] and that I am and forever shall remain, [^fn54h] a living member thereof. [^fn54i]
 
 #### Question 55
 
@@ -31,7 +31,7 @@ What do you understand by "the communion of saints"?
 
 ##### Answer
 
-First, that all and every one, who believes, being members of Christ, are in common, partakers of him, and of all his riches and gifts; [^fna] secondly, that every one must know it to be his duty, readily and cheerfully to employ his gifts, for the advantage and salvation of other members. [^fnb]
+First, that all and every one, who believes, being members of Christ, are in common, partakers of him, and of all his riches and gifts; [^fn55a] secondly, that every one must know it to be his duty, readily and cheerfully to employ his gifts, for the advantage and salvation of other members. [^fn55b]
 
 #### Question 56
 
@@ -39,14 +39,11 @@ What believest thou concerning "the forgiveness of sins"?
 
 ##### Answer
 
-That God, for the sake of Christ's satisfaction, will no more remember my sins, neither my corrupt nature, against which I have to struggle all my life long; [^fna] but will graciously impute to me the righteousness of Christ, [^fnb] that I may never be condemned before the tribunal of God. [^fnc]
+That God, for the sake of Christ's satisfaction, will no more remember my sins, neither my corrupt nature, against which I have to struggle all my life long; [^fn56a] but will graciously impute to me the righteousness of Christ, [^fn56b] that I may never be condemned before the tribunal of God. [^fn56c]
 
 
----
 
-### Scripture References
-
-[^fna]: Ephesians 5:26 That he might sanctify and cleanse it with the washing of water by the word,
+[^fn54a]: Ephesians 5:26 That he might sanctify and cleanse it with the washing of water by the word,
 
 John 10:11 I am the good shepherd: the good shepherd giveth his life for the sheep.
 
@@ -58,7 +55,7 @@ Ephesians 4:12 For the perfecting of the saints, for the work of the ministry, f
 
 Ephesians 4:13 Till we all come in the unity of the faith, and of the knowledge of the Son of God, unto a perfect man, unto the measure of the stature of the fulness of Christ:
 
-[^fnb]: Psalm 71:17 O God, thou hast taught me from my youth: and hitherto have I declared thy wondrous works.
+[^fn54b]: Psalm 71:17 O God, thou hast taught me from my youth: and hitherto have I declared thy wondrous works.
 
 Psalm 71:18 Now also when I am old and grayheaded, O God, forsake me not; until I have shewed thy strength unto this generation, and thy power to every one that is to come.
 
@@ -66,7 +63,7 @@ Isaiah 59:21 As for me, this is my covenant with them, saith the LORD; My spirit
 
 1 Corinthians 11:26 For as often as ye eat this bread, and drink this cup, ye do shew the Lord's death till he come.
 
-[^fnc]: Matthew 16:18 And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it.
+[^fn54c]: Matthew 16:18 And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it.
 
 John 10:28 And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.
 
@@ -84,7 +81,7 @@ Psalm 129:4 The LORD is righteous: he hath cut asunder the cords of the wicked.
 
 Psalm 129:5 Let them all be confounded and turned back that hate Zion.
 
-[^fnd]: Isaiah 59:21 As for me, this is my covenant with them, saith the LORD; My spirit that is upon thee, and my words which I have put in thy mouth, shall not depart out of thy mouth, nor out of the mouth of thy seed, nor out of the mouth of thy seed's seed, saith the LORD, from henceforth and for ever.
+[^fn54d]: Isaiah 59:21 As for me, this is my covenant with them, saith the LORD; My spirit that is upon thee, and my words which I have put in thy mouth, shall not depart out of thy mouth, nor out of the mouth of thy seed, nor out of the mouth of thy seed's seed, saith the LORD, from henceforth and for ever.
 
 Romans 1:16 For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and also to the Greek.
 
@@ -98,11 +95,11 @@ Romans 10:17 So then faith cometh by hearing, and hearing by the word of God.
 
 Ephesians 5:26 That he might sanctify and cleanse it with the washing of water by the word,
 
-[^fne]: Genesis 26:4 And I will make thy seed to multiply as the stars of heaven, and will give unto thy seed all these countries; and in thy seed shall all the nations of the earth be blessed;
+[^fn54e]: Genesis 26:4 And I will make thy seed to multiply as the stars of heaven, and will give unto thy seed all these countries; and in thy seed shall all the nations of the earth be blessed;
 
 Revelation 5:9 And they sung a new song, saying, Thou art worthy to take the book, and to open the seals thereof: for thou wast slain, and hast redeemed us to God by thy blood out of every kindred, and tongue, and people, and nation;
 
-[^fnf]: Romans 8:29 For whom he did foreknow, he also did predestinate to be conformed to the image of his Son, that he might be the firstborn among many brethren.
+[^fn54f]: Romans 8:29 For whom he did foreknow, he also did predestinate to be conformed to the image of his Son, that he might be the firstborn among many brethren.
 
 Romans 8:30 Moreover whom he did predestinate, them he also called: and whom he called, them he also justified: and whom he justified, them he also glorified.
 
@@ -114,7 +111,7 @@ Ephesians 1:12 That we should be to the praise of his glory, who first trusted i
 
 Ephesians 1:13 In whom ye also trusted, after that ye heard the word of truth, the gospel of your salvation: in whom also after that ye believed, ye were sealed with that holy Spirit of promise,
 
-[^fng]: Acts 2:46 And they, continuing daily with one accord in the temple, and breaking bread from house to house, did eat their meat with gladness and singleness of heart,
+[^fn54g]: Acts 2:46 And they, continuing daily with one accord in the temple, and breaking bread from house to house, did eat their meat with gladness and singleness of heart,
 
 Ephesians 4:3 Endeavouring to keep the unity of the Spirit in the bond of peace.
 
@@ -124,7 +121,7 @@ Ephesians 4:5 One Lord, one faith, one baptism,
 
 Ephesians 4:6 One God and Father of all, who is above all, and through all, and in you all.
 
-[^fnh]: Psalm 23:6 Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.
+[^fn54h]: Psalm 23:6 Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.
 
 1 Corinthians 1:8 Who shall also confirm you unto the end, that ye may be blameless in the day of our Lord Jesus Christ.
 
@@ -136,7 +133,7 @@ John 10:28 And I give unto them eternal life; and they shall never perish, neith
 
 1 Peter 1:5 Who are kept by the power of God through faith unto salvation ready to be revealed in the last time.
 
-[^fni]: 1 John 3:14 We know that we have passed from death unto life, because we love the brethren. He that loveth not his brother abideth in death.
+[^fn54i]: 1 John 3:14 We know that we have passed from death unto life, because we love the brethren. He that loveth not his brother abideth in death.
 
 1 John 3:19 And hereby we know that we are of the truth, and shall assure our hearts before him.
 
@@ -148,7 +145,7 @@ John 10:28 And I give unto them eternal life; and they shall never perish, neith
 
 Romans 8:10 And if Christ be in you, the body is dead because of sin; but the Spirit is life because of righteousness.
 
-[^fna]: 1 John 1:3 That which we have seen and heard declare we unto you, that ye also may have fellowship with us: and truly our fellowship is with the Father, and with his Son Jesus Christ.
+[^fn55a]: 1 John 1:3 That which we have seen and heard declare we unto you, that ye also may have fellowship with us: and truly our fellowship is with the Father, and with his Son Jesus Christ.
 
 1 Corinthians 1:9 God is faithful, by whom ye were called unto the fellowship of his Son Jesus Christ our Lord.
 
@@ -160,7 +157,7 @@ Romans 8:32 He that spared not his own Son, but delivered him up for us all, how
 
 1 Corinthians 6:17 But he that is joined unto the Lord is one spirit.
 
-[^fnb]: 1 Corinthians 12:21 And the eye cannot say unto the hand, I have no need of thee: nor again the head to the feet, I have no need of you.
+[^fn55b]: 1 Corinthians 12:21 And the eye cannot say unto the hand, I have no need of thee: nor again the head to the feet, I have no need of you.
 
 1 Corinthians 13:1 Though I speak with the tongues of men and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal.
 
@@ -176,7 +173,7 @@ Philippians 2:7 But made himself of no reputation, and took upon him the form of
 
 Philippians 2:8 And being found in fashion as a man, he humbled himself, and became obedient unto death, even the death of the cross.
 
-[^fna]: 1 John 2:2 And he is the propitiation for our sins: and not for ours only, but also for the sins of the whole world.
+[^fn56a]: 1 John 2:2 And he is the propitiation for our sins: and not for ours only, but also for the sins of the whole world.
 
 1 John 1:7 But if we walk in the light, as he is in the light, we have fellowship one with another, and the blood of Jesus Christ his Son cleanseth us from all sin.
 
@@ -184,7 +181,7 @@ Philippians 2:8 And being found in fashion as a man, he humbled himself, and bec
 
 2 Corinthians 5:21 For he hath made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him.
 
-[^fnb]: Jeremiah 31:34 And they shall teach no more every man his neighbour, and every man his brother, saying, Know the LORD: for they shall all know me, from the least of them unto the greatest of them, saith the LORD: for I will forgive their iniquity, and I will remember their sin no more.
+[^fn56b]: Jeremiah 31:34 And they shall teach no more every man his neighbour, and every man his brother, saying, Know the LORD: for they shall all know me, from the least of them unto the greatest of them, saith the LORD: for I will forgive their iniquity, and I will remember their sin no more.
 
 Psalm 103:3 Who forgiveth all thine iniquities; who healeth all thy diseases;
 
@@ -202,7 +199,7 @@ Romans 7:24 O wretched man that I am! who shall deliver me from the body of this
 
 Romans 7:25 I thank God through Jesus Christ our Lord. So then with the mind I myself serve the law of God; but with the flesh the law of sin.
 
-[^fnc]: Romans 8:1 There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.
+[^fn56c]: Romans 8:1 There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.
 
 Romans 8:2 For the law of the Spirit of life in Christ Jesus hath made me free from the law of sin and death.
 

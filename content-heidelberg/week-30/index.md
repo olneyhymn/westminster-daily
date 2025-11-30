@@ -23,7 +23,7 @@ What difference is there between the Lord's supper and the popish mass?
 
 ##### Answer
 
-The Lord's supper testifies to us, that we have a full pardon of all sin by the only sacrifice of Jesus Christ, which he himself has once accomplished on the cross; [^fna] and, that we by the Holy Ghost are ingrafted into Christ, [^fnb] who, according to his human nature is now not on earth, but in heaven, at the right hand of God his Father, [^fnc] and will there be worshipped by us. [^fnd] But the mass teaches, that the living and dead have not the pardon of sins through the sufferings of Christ, unless Christ is also daily offered for them by the priests; and further, that Christ is bodily under the form of bread and wine, and therefore is to be worshipped in them; so that the mass, at bottom, is nothing else than a denial of the one sacrifice and sufferings of Jesus Christ, and an accursed idolatry. [^fne]
+The Lord's supper testifies to us, that we have a full pardon of all sin by the only sacrifice of Jesus Christ, which he himself has once accomplished on the cross; [^fn80a] and, that we by the Holy Ghost are ingrafted into Christ, [^fn80b] who, according to his human nature is now not on earth, but in heaven, at the right hand of God his Father, [^fn80c] and will there be worshipped by us. [^fn80d] But the mass teaches, that the living and dead have not the pardon of sins through the sufferings of Christ, unless Christ is also daily offered for them by the priests; and further, that Christ is bodily under the form of bread and wine, and therefore is to be worshipped in them; so that the mass, at bottom, is nothing else than a denial of the one sacrifice and sufferings of Jesus Christ, and an accursed idolatry. [^fn80e]
 
 #### Question 81
 
@@ -31,7 +31,7 @@ For whom is the Lord's supper instituted?
 
 ##### Answer
 
-For those who are truly sorrowful for their sins, and yet trust that these are forgiven them for the sake of Christ; and that their remaining infirmities are covered by his passion and death; and who also earnestly desire to have their faith more and more strengthened, and their lives more holy; but hypocrites, and such as turn not to God with sincere hearts, eat and drink judgment to themselves. [^fna]
+For those who are truly sorrowful for their sins, and yet trust that these are forgiven them for the sake of Christ; and that their remaining infirmities are covered by his passion and death; and who also earnestly desire to have their faith more and more strengthened, and their lives more holy; but hypocrites, and such as turn not to God with sincere hearts, eat and drink judgment to themselves. [^fn81a]
 
 #### Question 82
 
@@ -39,14 +39,11 @@ Are they also to be admitted to this supper, who, by confession and life, declar
 
 ##### Answer
 
-No; for by this, the covenant of God would be profaned, and his wrath kindled against the whole congregation; [^fna] therefore it is the duty of the christian church, according to the appointment of Christ and his apostles, to exclude such persons, by the keys of the kingdom of heaven, till they show amendment of life.
+No; for by this, the covenant of God would be profaned, and his wrath kindled against the whole congregation; [^fn82a] therefore it is the duty of the christian church, according to the appointment of Christ and his apostles, to exclude such persons, by the keys of the kingdom of heaven, till they show amendment of life.
 
 
----
 
-### Scripture References
-
-[^fna]: Hebrews 7:27 Who needeth not daily, as those high priests, to offer up sacrifice, first for his own sins, and then for the people's: for this he did once, when he offered up himself.
+[^fn80a]: Hebrews 7:27 Who needeth not daily, as those high priests, to offer up sacrifice, first for his own sins, and then for the people's: for this he did once, when he offered up himself.
 
 Hebrews 9:12 Neither by the blood of goats and calves, but by his own blood he entered in once into the holy place, having obtained eternal redemption for us.
 
@@ -74,11 +71,11 @@ Luke 22:19 And he took bread, and gave thanks, and brake it, and gave unto them,
 
 Luke 22:20 Likewise also the cup after supper, saying, This cup is the new testament in my blood, which is shed for you.
 
-[^fnb]: 1 Corinthians 6:17 But he that is joined unto the Lord is one spirit.
+[^fn80b]: 1 Corinthians 6:17 But he that is joined unto the Lord is one spirit.
 
 1 Corinthians 10:16 The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ?
 
-[^fnc]: Hebrews 1:3 Who being the brightness of his glory, and the express image of his person, and upholding all things by the word of his power, when he had by himself purged our sins, sat down on the right hand of the Majesty on high;
+[^fn80c]: Hebrews 1:3 Who being the brightness of his glory, and the express image of his person, and upholding all things by the word of his power, when he had by himself purged our sins, sat down on the right hand of the Majesty on high;
 
 Hebrews 8:1 Now of the things which we have spoken this is the sum: We have such an high priest, who is set on the right hand of the throne of the Majesty in the heavens;
 
@@ -86,7 +83,7 @@ Hebrews 8:2 A minister of the sanctuary, and of the true tabernacle, which the L
 
 John 20:17 Jesus saith unto her, Touch me not; for I am not yet ascended to my Father: but go to my brethren, and say unto them, I ascend unto my Father, and your Father; and to my God, and your God.
 
-[^fnd]: Matthew 6:20 But lay up for yourselves treasures in heaven, where neither moth nor rust doth corrupt, and where thieves do not break through nor steal:
+[^fn80d]: Matthew 6:20 But lay up for yourselves treasures in heaven, where neither moth nor rust doth corrupt, and where thieves do not break through nor steal:
 
 Matthew 6:21 For where your treasure is, there will your heart be also.
 
@@ -122,7 +119,7 @@ Hebrews 9:9 Which was a figure for the time then present, in which were offered 
 
 Hebrews 9:10 Which stood only in meats and drinks, and divers washings, and carnal ordinances, imposed on them until the time of reformation.
 
-[^fne]: Hebrews 9:26 For then must he often have suffered since the foundation of the world: but now once in the end of the world hath he appeared to put away sin by the sacrifice of himself.
+[^fn80e]: Hebrews 9:26 For then must he often have suffered since the foundation of the world: but now once in the end of the world hath he appeared to put away sin by the sacrifice of himself.
 
 Hebrews 10:12 But this man, after he had offered one sacrifice for sins for ever, sat down on the right hand of God;
 
@@ -154,7 +151,7 @@ Hebrews 10:30 For we know him that hath said, Vengeance belongeth unto me, I wil
 
 Hebrews 10:31 It is a fearful thing to fall into the hands of the living God.
 
-[^fna]: 1 Corinthians 10:19 What say I then? that the idol is any thing, or that which is offered in sacrifice to idols is any thing?
+[^fn81a]: 1 Corinthians 10:19 What say I then? that the idol is any thing, or that which is offered in sacrifice to idols is any thing?
 
 1 Corinthians 10:20 But I say, that the things which the Gentiles sacrifice, they sacrifice to devils, and not to God: and I would not that ye should have fellowship with devils.
 
@@ -166,7 +163,7 @@ Hebrews 10:31 It is a fearful thing to fall into the hands of the living God.
 
 1 Corinthians 11:29 For he that eateth and drinketh unworthily, eateth and drinketh damnation to himself, not discerning the Lord's body.
 
-[^fna]: 1 Corinthians 11:20 When ye come together therefore into one place, this is not to eat the Lord's supper.
+[^fn82a]: 1 Corinthians 11:20 When ye come together therefore into one place, this is not to eat the Lord's supper.
 
 1 Corinthians 11:34 And if any man hunger, let him eat at home; that ye come not together unto condemnation. And the rest will I set in order when I come.
 

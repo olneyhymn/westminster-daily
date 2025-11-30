@@ -23,7 +23,7 @@ What does the seventh commandment teach us?
 
 ##### Answer
 
-That all uncleanness is accursed of God: [^fna] and that therefore we must with all our hearts detest the same, [^fnb] and live chastely and temperately, [^fnc] whether in holy wedlock, or in single life. [^fnd]
+That all uncleanness is accursed of God: [^fn108a] and that therefore we must with all our hearts detest the same, [^fn108b] and live chastely and temperately, [^fn108c] whether in holy wedlock, or in single life. [^fn108d]
 
 #### Question 109
 
@@ -31,26 +31,23 @@ Does God forbid in this commandment, only adultery, and such like gross sins?
 
 ##### Answer
 
-Since both our body and soul are temples of the holy Ghost, he commands us to preserve them pure and holy: therefore he forbids all unchaste actions, gestures, words, [^fna] thoughts, desires, [^fnb] and whatever can entice men thereto. [^fnc]
+Since both our body and soul are temples of the holy Ghost, he commands us to preserve them pure and holy: therefore he forbids all unchaste actions, gestures, words, [^fn109a] thoughts, desires, [^fn109b] and whatever can entice men thereto. [^fn109c]
 
 
----
 
-### Scripture References
-
-[^fna]: Leviticus 18:27 (For all these abominations have the men of the land done, which were before you, and the land is defiled;)
+[^fn108a]: Leviticus 18:27 (For all these abominations have the men of the land done, which were before you, and the land is defiled;)
 
 Leviticus 18:28 That the land spue not you out also, when ye defile it, as it spued out the nations that were before you.
 
-[^fnb]: Jude 1:23 And others save with fear, pulling them out of the fire; hating even the garment spotted by the flesh.
+[^fn108b]: Jude 1:23 And others save with fear, pulling them out of the fire; hating even the garment spotted by the flesh.
 
-[^fnc]: 1 Thessalonians 4:3 For this is the will of God, even your sanctification, that ye should abstain from fornication:
+[^fn108c]: 1 Thessalonians 4:3 For this is the will of God, even your sanctification, that ye should abstain from fornication:
 
 1 Thessalonians 4:4 That every one of you should know how to possess his vessel in sanctification and honour;
 
 1 Thessalonians 4:5 Not in the lust of concupiscence, even as the Gentiles which know not God:
 
-[^fnd]: Hebrews 13:4 Marriage is honourable in all, and the bed undefiled: but whoremongers and adulterers God will judge.
+[^fn108d]: Hebrews 13:4 Marriage is honourable in all, and the bed undefiled: but whoremongers and adulterers God will judge.
 
 1 Corinthians 7:7 For I would that all men were even as I myself. But every man hath his proper gift of God, one after this manner, and another after that.
 
@@ -60,7 +57,7 @@ Leviticus 18:28 That the land spue not you out also, when ye defile it, as it sp
 
 1 Corinthians 7:27 Art thou bound unto a wife? seek not to be loosed. Art thou loosed from a wife? seek not a wife.
 
-[^fna]: Ephesians 5:3 But fornication, and all uncleanness, or covetousness, let it not be once named among you, as becometh saints;
+[^fn109a]: Ephesians 5:3 But fornication, and all uncleanness, or covetousness, let it not be once named among you, as becometh saints;
 
 Ephesians 5:4 Neither filthiness, nor foolish talking, nor jesting, which are not convenient: but rather giving of thanks.
 
@@ -70,10 +67,10 @@ Ephesians 5:4 Neither filthiness, nor foolish talking, nor jesting, which are no
 
 1 Corinthians 6:20 For ye are bought with a price: therefore glorify God in your body, and in your spirit, which are God's.
 
-[^fnb]: Matthew 5:27 Ye have heard that it was said by them of old time, Thou shalt not commit adultery:
+[^fn109b]: Matthew 5:27 Ye have heard that it was said by them of old time, Thou shalt not commit adultery:
 
 Matthew 5:28 But I say unto you, That whosoever looketh on a woman to lust after her hath committed adultery with her already in his heart.
 
-[^fnc]: Ephesians 5:18 And be not drunk with wine, wherein is excess; but be filled with the Spirit;
+[^fn109c]: Ephesians 5:18 And be not drunk with wine, wherein is excess; but be filled with the Spirit;
 
 1 Corinthians 15:33 Be not deceived: evil communications corrupt good manners.

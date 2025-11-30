@@ -23,7 +23,7 @@ What does God require in the second commandment?
 
 ##### Answer
 
-That we in no wise represent God by images, [^fna] nor worship him in any other way than he has commanded in his word. [^fnb]
+That we in no wise represent God by images, [^fn96a] nor worship him in any other way than he has commanded in his word. [^fn96b]
 
 #### Question 97
 
@@ -31,7 +31,7 @@ Are images then not at all to be made?
 
 ##### Answer
 
-God neither can, nor may be represented by any means: [^fna] but as to creatures; though they may be represented, yet God forbids to make, or have any resemblance of them, either in order to worship them or to serve God by them. [^fnb]
+God neither can, nor may be represented by any means: [^fn97a] but as to creatures; though they may be represented, yet God forbids to make, or have any resemblance of them, either in order to worship them or to serve God by them. [^fn97b]
 
 #### Question 98
 
@@ -39,14 +39,11 @@ But may not images be tolerated in the churches, as books to the laity?
 
 ##### Answer
 
-No: for we must not pretend to be wiser than God, who will have his people taught, not by dump images, [^fna] but by the lively preaching of his word. [^fnb]
+No: for we must not pretend to be wiser than God, who will have his people taught, not by dump images, [^fn98a] but by the lively preaching of his word. [^fn98b]
 
 
----
 
-### Scripture References
-
-[^fna]: Deuteronomy 4:15 Take ye therefore good heed unto yourselves; for ye saw no manner of similitude on the day that the LORD spake unto you in Horeb out of the midst of the fire:
+[^fn96a]: Deuteronomy 4:15 Take ye therefore good heed unto yourselves; for ye saw no manner of similitude on the day that the LORD spake unto you in Horeb out of the midst of the fire:
 
 Deuteronomy 4:16 Lest ye corrupt yourselves, and make you a graven image, the similitude of any figure, the likeness of male or female,
 
@@ -78,7 +75,7 @@ Romans 1:24 Wherefore God also gave them up to uncleanness through the lusts of 
 
 Acts 17:29 Forasmuch then as we are the offspring of God, we ought not to think that the Godhead is like unto gold, or silver, or stone, graven by art and man's device.
 
-[^fnb]: 1 Samuel 15:23 For rebellion is as the sin of witchcraft, and stubbornness is as iniquity and idolatry. Because thou hast rejected the word of the LORD, he hath also rejected thee from being king.
+[^fn96b]: 1 Samuel 15:23 For rebellion is as the sin of witchcraft, and stubbornness is as iniquity and idolatry. Because thou hast rejected the word of the LORD, he hath also rejected thee from being king.
 
 Deuteronomy 12:30 Take heed to thyself that thou be not snared by following them, after that they be destroyed from before thee; and that thou enquire not after their gods, saying, How did these nations serve their gods? even so will I do likewise.
 
@@ -88,9 +85,9 @@ Deuteronomy 12:32 What thing soever I command you, observe to do it: thou shalt 
 
 Matthew 15:9 But in vain they do worship me, teaching for doctrines the commandments of men.
 
-[^fna]: Isaiah 40:25 To whom then will ye liken me, or shall I be equal? saith the Holy One.
+[^fn97a]: Isaiah 40:25 To whom then will ye liken me, or shall I be equal? saith the Holy One.
 
-[^fnb]: Exodus 23:24 Thou shalt not bow down to their gods, nor serve them, nor do after their works: but thou shalt utterly overthrow them, and quite break down their images.
+[^fn97b]: Exodus 23:24 Thou shalt not bow down to their gods, nor serve them, nor do after their works: but thou shalt utterly overthrow them, and quite break down their images.
 
 Exodus 23:25 And ye shall serve the LORD your God, and he shall bless thy bread, and thy water; and I will take sickness away from the midst of thee.
 
@@ -112,13 +109,13 @@ Deuteronomy 16:21 Thou shalt not plant thee a grove of any trees near unto the a
 
 2 Kings 18:4 He removed the high places, and brake the images, and cut down the groves, and brake in pieces the brasen serpent that Moses had made: for unto those days the children of Israel did burn incense to it: and he called it Nehushtan.
 
-[^fna]: Jeremiah 10:8 But they are altogether brutish and foolish: the stock is a doctrine of vanities.
+[^fn98a]: Jeremiah 10:8 But they are altogether brutish and foolish: the stock is a doctrine of vanities.
 
 Habakkuk 2:18 What profiteth the graven image that the maker thereof hath graven it; the molten image, and a teacher of lies, that the maker of his work trusteth therein, to make dumb idols?
 
 Habakkuk 2:19 Woe unto him that saith to the wood, Awake; to the dumb stone, Arise, it shall teach! Behold, it is laid over with gold and silver, and there is no breath at all in the midst of it.
 
-[^fnb]: Romans 10:14 How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?
+[^fn98b]: Romans 10:14 How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?
 
 Romans 10:15 And how shall they preach, except they be sent? as it is written, How beautiful are the feet of them that preach the gospel of peace, and bring glad tidings of good things!
 
