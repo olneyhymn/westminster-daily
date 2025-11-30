@@ -1,5 +1,6 @@
 SOURCES :=$(shell find content -name "*.md" | tr '\n' ' ' | sed 's/\.md/\.html/g; s/content/build\/westminster-daily/g' )
 CURRENT_FILE := $(shell date -u +"content/%m/%d.md")
+HEIDELBERG_SOURCES :=$(shell find content-heidelberg -name "*.md" 2>/dev/null | tr '\n' ' ' | sed 's/\.md/\/index\.html/g; s/content-heidelberg/build\/heidelberg-weekly/g' )
 
 .PHONY: help
 help: ## Show this help message
@@ -8,7 +9,9 @@ help: ## Show this help message
 	@echo 'Targets:'
 	@awk -F ':|##' '/^[^\t].+?:.*?##/ { printf "  %-20s %s\n", $$1, $$NF }' $(MAKEFILE_LIST)
 
-all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss podcast.rss ## Build entire site including HTML, RSS feeds and assets
+all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss podcast.rss heidelberg-all ## Build entire site including HTML, RSS feeds and assets
+
+heidelberg-all: build ${HEIDELBERG_SOURCES} build/heidelberg-weekly/index.html heidelberg-feed.rss ## Build Heidelberg Weekly site
 
 feed.rss: build ## Generate main RSS feed
 	python -m pip install uv
@@ -41,5 +44,28 @@ build/westminster-daily/index.html: build/westminster-daily ## Generate Westmins
 
 %.html: ## Build individual HTML pages
 	./build_page.sh "$@"
+
+build/heidelberg-weekly/%/index.html: content-heidelberg/%/index.md ## Build Heidelberg Weekly pages
+	./build_heidelberg_page.sh "$@"
+
+build/heidelberg-weekly/index.html: build/heidelberg-weekly ## Generate Heidelberg Weekly index page
+	python3 -c "from datetime import datetime, timedelta; \
+		jan_1 = datetime(2024, 1, 1); \
+		days_until_sunday = (6 - jan_1.weekday()) % 7; \
+		first_sunday = jan_1 + timedelta(days=days_until_sunday if days_until_sunday > 0 or jan_1.weekday() != 6 else 0); \
+		today = datetime.now(); \
+		weeks_diff = (today - first_sunday).days // 7; \
+		week_num = (weeks_diff % 52) + 1; \
+		week_fmt = f'{week_num:02d}'; \
+		import shutil; \
+		shutil.copy(f'content-heidelberg/week-{week_fmt}/index.md', 'content-heidelberg/index.md')"
+	./build_heidelberg_page.sh build/heidelberg-weekly/index.html
+
+heidelberg-feed.rss: build ## Generate Heidelberg Weekly RSS feed
+	python3 generate_heidelberg_feed.py
+	mv heidelberg-feed.rss build/heidelberg-weekly/feed.rss
+
+build/heidelberg-weekly: ## Create Heidelberg Weekly build directory
+	mkdir -p build/heidelberg-weekly
 
 FORCE:

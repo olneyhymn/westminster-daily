@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+
+    <!-- RSS Metas
+    ================================================== -->
+    <link rel="alternate" type="application/rss+xml" href="https://reformedconfessions.com/heidelberg-weekly/feed.rss"
+        title="Heidelberg Weekly RSS Feed">
+
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Open+Sans" rel="stylesheet">
+    <link rel='stylesheet' href='/css/main.css' />
+    <link rel='stylesheet' href='/css/bigfoot-default.css' />
+
+    <!-- Javascript
+    ================================================== -->
+    <script src="/js/jquery-1.9.0.min.js"></script>
+    <script src="/js/bigfoot.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.js"></script>
+
+    <script type="text/javascript">
+        var bf = jQuery.bigfoot({
+            buttonMarkup: '<div class=\'bigfoot-footnote__container\'> <button class="bigfoot-footnote__button" id="{{SUP:data-footnote-backlink-ref}}" data-footnote-number="{{FOOTNOTENUM}}" data-footnote-identifier="{{FOOTNOTEID}}" alt="See Footnote {{FOOTNOTENUM}}" rel="footnote" data-bigfoot-footnote="{{FOOTNOTECONTENT}}"> <svg class="bigfoot-footnote__button__circle" viewbox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg> <svg class="bigfoot-footnote__button__circle" viewbox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg>  </button></div>'
+        });
+        jQuery(document).ready(function () {
+
+            var hash = window.location.hash;
+            hash = hash.replace("fn:", "fnref:").replace(":", "\\:");
+            console.log(hash)
+            bf.activate(hash);
+
+        });
+
+    </script>
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-70052836-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <!-- Template block additions
+    ================================================== -->
+
+    <meta property="og:site_title" content="Heidelberg Weekly" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@reformedconfessions">
+    <meta name="twitter:creator" content="@reformedconfessions">
+
+    $if(week_number)$
+    <meta property="og:image" content="http://reformedconfessions.com/static/images/docs/0101-full.png" />
+    <meta name="twitter:image" content="http://reformedconfessions.com/static/images/docs/0101-full.png">
+    <meta property="og:title" content="$pagetitle$" />
+    <meta name="twitter:title" content="$pagetitle$">
+    <title>Heidelberg Weekly | $pagetitle$</title>
+    <meta property="og:url" content="http://reformedconfessions.com$this_url$" />
+    $else$
+    <meta property="og:image" content="http://reformedconfessions.com/static/images/docs/0101-full.png" />
+    <meta name="twitter:image" content="http://reformedconfessions.com/static/images/docs/0101-full.png">
+    <meta property="og:title" content="Heidelberg Weekly" />
+    <meta name="twitter:title" content="Heidelberg Weekly">
+    <title>Heidelberg Weekly | A Weekly Reading</title>
+    <meta property="og:url" content="http://reformedconfessions.com/heidelberg-weekly/" />
+    $endif$
+    <meta name="description" content="A weekly reading from the Heidelberg Catechism">
+    <meta property="og:description" content="A weekly reading from the Heidelberg Catechism" />
+    <meta name="twitter:description" content="A weekly reading from the Heidelberg Catechism">
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <hr class="" />
+            </div>
+        </div>
+        <div class="row half-bottom">
+            <div class="col-sm col-md-3 col-lg-3 ml-auto" style="text-align:center;">
+                <h3><a href="/heidelberg-weekly/">Heidelberg Weekly</a></h3>
+            </div>
+            <div class="col-sm col-md-5 col-lg-3 mr-auto" style="text-align:center;">
+                <h6 class=' text-muted'>Read the Heidelberg Catechism in a year.</h6>
+            </div>
+        </div>
+        $if(this_url)$
+        <div class="row pb-3">
+
+            <div class="col-sm col-md-3 col-lg-3 ml-auto" style="text-align:center;">
+                <a href="/heidelberg-weekly/about">
+                    <small>about</small>
+                </a>
+                &middot;
+                <a href="/heidelberg-weekly/reading-plan">
+                    <small>full plan</small>
+                </a>
+            </div>
+
+            <div class="col-sm col-md-5 col-lg-3 mr-auto" style="text-align:center;">
+
+                <strong>
+                    <a href="$prev_url$">
+                        < $prev_week$ </a>
+                            &middot;
+
+                            <a href="$this_url$">
+                                $this_week$
+                            </a>
+                            &middot;
+                            <a href="$next_url$">
+                                $next_week$ >
+                            </a>
+                </strong>
+
+            </div>
+        </div>
+        $endif$
+
+
+        <div class="row">
+            <div class="main col-md-8 col-lg-6 m-auto">
+                $body$
+
+
+            </div>
+        </div>
+
+        <div class="col-sm col-md-8 col-lg-6 m-auto" style="text-align:right;">
+            <button type="button" id="toggle" class="btn btn-light  btn-sm">toggle proof texts</button>
+        </div>
+        <br>
+        <div class="col-sm col-md-8 col-lg-6 m-auto" style="text-align:center;">
+
+            <a href="https://reformedconfessions.com/heidelberg-weekly/feed.rss">
+                <small>subscribe by rss</small></a>
+
+            <p style="font-size:0.7em">
+                Copyright &copy;
+                <script language="javascript" type="text/javascript">document.write((new Date()).getFullYear())</script>
+                <a href="https://tim.ulsterworldly.com/about/" target="_blank">Tim Hopper</a>.
+                Scripture taken from The Holy Bible, King James Version.
+            </p>
+
+            <a href="https://readmachen.com">
+                <small>readmachen.com</small></a>
+            &middot;
+            <a href="https://reformeddeacon.com">
+                <small>reformeddeacon.com</small></a>
+            &middot;
+            <a href="https://ulsterworldly.com">
+                <small>ulsterworldly.com</small></a>
+
+        </div>
+    </div><!-- container -->
+
+
+    <script type="text/javascript">
+
+        document.getElementById('toggle').onclick = toggle;
+        function toggle() {
+            jQuery(".bigfoot-footnote__container").toggle();
+        }
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+            //do work
+        });
+
+    </script>
+    <!-- End Document
+================================================== -->
+</body>
+
+</html>
