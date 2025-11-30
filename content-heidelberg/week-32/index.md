@@ -34,9 +34,6 @@ Cannot they then be saved, who, continuing in their wicked and ungrateful lives,
 By no means; for the holy scripture declares that no unchaste person, idolater, adulterer, thief, covetous man, drunkard, slanderer, robber, or any such like, shall inherit the kingdom of God. [^fn87a]
 
 
----
-
-### Scripture References
 
 [^fn86a]: Romans 6:13 Neither yield ye your members as instruments of unrighteousness unto sin: but yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto God.
 

@@ -42,9 +42,6 @@ But does not this doctrine make men careless and profane?
 By no means: for it is impossible that those, who are implanted into Christ by a true faith, should not bring forth fruits of thankfulness. [^fn64a]
 
 
----
-
-### Scripture References
 
 [^fn62a]: Galatians 3:10 For as many as are of the works of the law are under the curse: for it is written, Cursed is every one that continueth not in all things which are written in the book of the law to do them.
 

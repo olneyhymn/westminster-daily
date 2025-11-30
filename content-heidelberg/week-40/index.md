@@ -42,9 +42,6 @@ But is it enough that we do not kill any man in the manner mentioned above?
 No: for when God forbids envy, hatred, and anger, he commands us to love our neighbour as ourselves; [^fn107a] to show patience, peace, meekness, mercy, and all kindness, towards him, [^fn107b] and prevent his hurt as much as in us lies; [^fn107c] and that we do good, even to our enemies. [^fn107d]
 
 
----
-
-### Scripture References
 
 [^fn105a]: Matthew 5:21 Ye have heard that it was said by them of old time, Thou shalt not kill; and whosoever shall kill shall be in danger of the judgment:
 

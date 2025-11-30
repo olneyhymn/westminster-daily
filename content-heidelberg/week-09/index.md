@@ -26,9 +26,6 @@ What believest thou when thou sayest, "I believe in God the Father, Almighty, Ma
 That the eternal Father of our Lord Jesus Christ (who of nothing made heaven and earth, with all that is in them; [^fn26a] who likewise upholds and governs the same by his eternal counsel and providence) [^fn26b] is for the sake of Christ his Son, my God and my Father; [^fn26c] on whom I rely so entirely, that I have no doubt, but he will provide me with all things necessary for soul and body [^fn26d] and further, that he will make whatever evils he sends upon me, in this valley of tears turn out to my advantage; [^fn26e] for he is able to do it, being Almighty God, [^fn26f] and willing, being a faithful Father. [^fn26g]
 
 
----
-
-### Scripture References
 
 [^fn26a]: Genesis 1 and 2.
 

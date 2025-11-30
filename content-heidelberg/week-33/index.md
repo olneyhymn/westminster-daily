@@ -50,9 +50,6 @@ But what are good works?
 Only those which proceed from a true faith, [^fn91a] are performed according to the law of God, [^fn91b] and to his glory; [^fn91c] and not such as are founded on our imaginations, or the institutions of men. [^fn91d]
 
 
----
-
-### Scripture References
 
 [^fn88a]: Romans 6:1 What shall we say then? Shall we continue in sin, that grace may abound?
 

@@ -42,9 +42,6 @@ Are infants also to be baptized?
 Yes: for since they, as well as the adult, are included in the covenant and church of God; [^fn74a] and since redemption from sin [^fn74b] by the blood of Christ, and the Holy Ghost, the author of faith, is promised to them no less than to the adult; [^fn74c] they must therefore by baptism, as a sign of the covenant, be also admitted into the christian church; and be distinguished from the children of unbelievers [^fn74d] as was done in the old covenant or testament by circumcision, [^fn74e] instead of which baptism is instituted [^fn74f] in the new covenant.
 
 
----
-
-### Scripture References
 
 [^fn72a]: Matthew 3:11 I indeed baptize you with water unto repentance: but he that cometh after me is mightier than I, whose shoes I am not worthy to bear: he shall baptize you with the Holy Ghost, and with fire:
 

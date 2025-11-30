@@ -26,9 +26,6 @@ Which is the third petition?
 "Thy will be done on earth as it is in heaven"; that is, grant that we and all men may renounce our own will, [^fn124a] and without murmuring obey thy will, which is only good; [^fn124b] that every one may attend to, and perform the duties of his station and calling, [^fn124c] as willingly and faithfully as the angels do in heaven. [^fn124d]
 
 
----
-
-### Scripture References
 
 [^fn124a]: Matthew 16:24 Then said Jesus unto his disciples, If any man will come after me, let him deny himself, and take up his cross, and follow me.
 

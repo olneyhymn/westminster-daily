@@ -34,9 +34,6 @@ May we also swear by saints or any other creatures?
 No; for a lawful oath is calling upon God, as the only one who knows the heart, that he will bear witness to the truth, and punish me if I swear falsely; [^fn102a] which honour is due to no creature. [^fn102b]
 
 
----
-
-### Scripture References
 
 [^fn101a]: Deuteronomy 6:13 Thou shalt fear the LORD thy God, and serve him, and shalt swear by his name.
 

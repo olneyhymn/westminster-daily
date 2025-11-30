@@ -153,10 +153,9 @@ next_week: "Week {next_num}"
         if footnotes:
             all_footnotes.append(footnotes)
 
-    # Add all footnotes at the end
+    # Add all footnotes at the end (without section header - they'll render as BigFoot expandable footnotes)
     if all_footnotes:
-        content_lines.append("\n---\n")
-        content_lines.append("### Scripture References\n")
+        content_lines.append("\n")
         content_lines.append('\n\n'.join(all_footnotes))
 
     return '\n'.join(content_lines)

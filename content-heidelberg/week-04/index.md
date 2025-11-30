@@ -42,9 +42,6 @@ Is not God then also merciful?
 God is indeed merciful, [^fn11a] but also just; [^fn11b] therefore his justice requires, that sin which is committed against the most high majesty of God, be also punished with extreme, that is, with everlasting punishment of body and soul.
 
 
----
-
-### Scripture References
 
 [^fn9a]: Ephesians 4:24 And that ye put on the new man, which after God is created in righteousness and true holiness.
 

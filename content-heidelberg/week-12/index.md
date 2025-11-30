@@ -126,9 +126,6 @@ But why art thou called a Christian? (a)
 								Matthew 24:34 Verily I say unto you, This generation shall not pass, till all these things be fulfilled.
 
 
----
-
-### Scripture References
 
 [^fn31a]: Psalm 45:8 All thy garments smell of myrrh, and aloes, and cassia, out of the ivory palaces, whereby they have made thee glad.
 

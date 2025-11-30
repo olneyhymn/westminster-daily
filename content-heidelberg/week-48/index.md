@@ -26,9 +26,6 @@ Which is the second petition?
 "Thy kingdom come"; that is, rule us so by thy word and Spirit, that we may submit ourselves more and more to thee; [^fn123a] preserve and increase thy church; [^fn123b] destroy the works of the devil, and all violence which would exalt itself against thee; and also all wicked counsels devised against thy holy word; [^fn123c] till the full perfection of thy kingdom take place, [^fn123d] wherein thou shalt be all in all. [^fn123e]
 
 
----
-
-### Scripture References
 
 [^fn123a]: Matthew 6:33 But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.
 

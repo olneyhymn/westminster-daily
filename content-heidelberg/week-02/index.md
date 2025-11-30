@@ -43,9 +43,6 @@ Canst thou keep all these things perfectly?
 In no wise; [^fn5a] for I am prone by nature to hate God and my neighbour.[^fn5b]
 
 
----
-
-### Scripture References
 
 [^fn3a]: Romans 3:20 Therefore by the deeds of the law there shall no flesh be justified in his sight: for by the law is the knowledge of sin.
 

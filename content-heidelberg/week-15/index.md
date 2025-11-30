@@ -42,9 +42,6 @@ Is there anything more in his being "crucified", than if he had died some other 
 Yes there is; for thereby I am assured, that he took on him the curse which lay upon me; [^fn39a] for the death of the cross was accursed of God. [^fn39b]
 
 
----
-
-### Scripture References
 
 [^fn37a]: Isaiah 53:4 Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted.
 

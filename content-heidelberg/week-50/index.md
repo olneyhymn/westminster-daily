@@ -26,9 +26,6 @@ Which is the fourth petition?
 "Give us this day our daily bread"; that is, be pleased to provide us with all things necessary for the body, [^fn125a] that we may thereby acknowledge thee to be the only fountain of all good, [^fn125b] and that neither our care nor industry, nor even thy gifts, can profit us without thy blessing; [^fn125c] and therefore that we may withdraw our trust from all creatures, and place it alone in thee. [^fn125d]
 
 
----
-
-### Scripture References
 
 [^fn125a]: Psalm 104:27 These wait all upon thee; that thou mayest give them their meat in due season.
 

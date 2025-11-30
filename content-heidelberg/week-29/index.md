@@ -34,9 +34,6 @@ Why then doth Christ call the bread "his body", and the cup "his blood", or "the
 Christ speaks thus, not without great reason, namely, not only thereby to teach us, that as bread and wine support this temporal life, so his crucified body and shed blood are the true meat and drink, whereby our souls are fed to eternal life; [^fn79a] but more especially by these visible signs and pledges to assure us, that we are as really partakers of his true body and blood by the operation of the Holy Ghost as we receive by the mouths of our bodies these holy signs in remembrance of him; [^fn79b] and that all his sufferings and obedience are as certainly ours, as if we had in our own persons suffered and made satisfaction for our sins to God.
 
 
----
-
-### Scripture References
 
 [^fn78a]: Matthew 26:29 But I say unto you, I will not drink henceforth of this fruit of the vine, until that day when I drink it new with you in my Father's kingdom.
 

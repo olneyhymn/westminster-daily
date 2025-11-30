@@ -50,9 +50,6 @@ What sort of a mediator and deliverer then must we seek for?
 For one who is very man, and perfectly [^fn15a] righteous; [^fn15b] and yet more powerful than all creatures; that is, one who is also very God. [^fn15c]
 
 
----
-
-### Scripture References
 
 [^fn12a]: Genesis 2:17 But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.
 

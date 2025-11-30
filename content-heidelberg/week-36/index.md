@@ -34,9 +34,6 @@ Is then the profaning of God's name, by swearing and cursing, so heinous a sin, 
 It undoubtedly is, [^fn100a] for there is no sin greater or more provoking to God, than the profaning of his name; and therefore he has commanded this sin to be punished with death. [^fn100b]
 
 
----
-
-### Scripture References
 
 [^fn99a]: Leviticus 24:11 And the Israelitish woman's son blasphemed the name of the LORD, and cursed. And they brought him unto Moses: (and his mother's name was Shelomith, the daughter of Dibri, of the tribe of Dan:)
 

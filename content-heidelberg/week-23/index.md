@@ -42,9 +42,6 @@ Why sayest thou, that thou art righteous by faith only?
 Not that I am acceptable to God, on account of the worthiness of my faith; but because only the satisfaction, righteousness, and holiness of Christ, is my righteousness before God; [^fn61a] and that I cannot receive and apply the same to myself any other way than by faith only. [^fn61b]
 
 
----
-
-### Scripture References
 
 [^fn59a]: Habakkuk 2:4 Behold, his soul which is lifted up is not upright in him: but the just shall live by his faith.
 

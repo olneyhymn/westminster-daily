@@ -42,9 +42,6 @@ What believest thou concerning "the forgiveness of sins"?
 That God, for the sake of Christ's satisfaction, will no more remember my sins, neither my corrupt nature, against which I have to struggle all my life long; [^fn56a] but will graciously impute to me the righteousness of Christ, [^fn56b] that I may never be condemned before the tribunal of God. [^fn56c]
 
 
----
-
-### Scripture References
 
 [^fn54a]: Ephesians 5:26 That he might sanctify and cleanse it with the washing of water by the word,
 

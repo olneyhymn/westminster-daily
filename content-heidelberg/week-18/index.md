@@ -113,9 +113,6 @@ Of what advantage to us is Christ's ascension into heaven?
 First, that he is our advocate in the presence of his Father in heaven; [^fn49a] secondly, that we have our flesh in heaven as a sure pledge that he, as the head, will also take up to himself, us, his members; [^fn49b] thirdly, that he sends us his Spirit as an earnest, [^fn49c] by whose power we "seek the things which are above, where Christ sitteth on the right hand of God, and not things on earth." [^fn49d]
 
 
----
-
-### Scripture References
 
 [^fn46a]: Acts 1:9 And when he had spoken these things, while they beheld, he was taken up; and a cloud received him out of their sight.
 

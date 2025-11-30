@@ -34,9 +34,6 @@ Do such then believe in Jesus the only Saviour, who seek their salvation and wel
 They do not; for though they boast of him in words, yet in deeds they deny Jesus the only deliverer and Saviour; [^fn30a] for one of these two things must be true, that either Jesus is not a complete Saviour; or that they, who by a true faith receive this Saviour, must find all things in him necessary to their salvation. [^fn30b]
 
 
----
-
-### Scripture References
 
 [^fn29a]: Matthew 1:21 And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins.
 

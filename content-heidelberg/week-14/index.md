@@ -34,9 +34,6 @@ What profit dost thou receive by Christ's holy conception and nativity?
 That he is our Mediator; [^fn36a] and with His innocence and perfect holiness, covers in the sight of God, my sins, wherein I was conceived and brought forth. [^fn36b]
 
 
----
-
-### Scripture References
 
 [^fn35a]: Romans 1:4 And declared to be the Son of God with power, according to the spirit of holiness, by the resurrection from the dead:
 

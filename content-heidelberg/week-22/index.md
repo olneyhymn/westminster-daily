@@ -34,9 +34,6 @@ What comfort takest thou from the article of "life everlasting"?
 That since I now feel in my heart the beginning of eternal joy, [^fn58a] after this life, I shall inherit perfect salvation, which "eye has not seen, nor ear heard, neither has it entered into the heart of man" to conceive, and that to praise God therein for ever. [^fn58b]
 
 
----
-
-### Scripture References
 
 [^fn57a]: Luke 16:22 And it came to pass, that the beggar died, and was carried by the angels into Abraham's bosom: the rich man also died, and was buried;
 

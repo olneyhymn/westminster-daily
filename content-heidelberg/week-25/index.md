@@ -56,9 +56,6 @@ How many sacraments has Christ instituted in the new covenant, or testament?
 Two: namely, holy baptism, and the holy supper.
 
 
----
-
-### Scripture References
 
 [^fn65a]: Ephesians 2:8 For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:
 

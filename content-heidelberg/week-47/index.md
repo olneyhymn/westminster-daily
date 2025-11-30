@@ -26,9 +26,6 @@ Which is the first petition?
 "Hallowed be thy name"; that is, grant us, first, rightly to know thee, [^fn122a] and to sanctify, glorify and praise thee, [^fn122b] in all thy works, in which thy power, wisdom, goodness, justice, mercy and truth, are clearly displayed; and further also, that we may so order and direct our whole lives, our thoughts, words and actions, that thy name may never be blasphemed, but rather honoured and praised on our account. [^fn122c]
 
 
----
-
-### Scripture References
 
 [^fn122a]: John 17:3 And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent.
 

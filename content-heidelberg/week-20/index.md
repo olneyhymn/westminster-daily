@@ -26,9 +26,6 @@ What dost thou believe concerning the Holy Ghost?
 First, that he is true and coeternal God with the Father and the Son; [^fn53a] secondly, that he is also given me, [^fn53b] to make me by a true faith, partaker of Christ and all his benefits, [^fn53c] that he may comfort me [^fn53d] and abide with me for ever. [^fn53e]
 
 
----
-
-### Scripture References
 
 [^fn53a]: 1 John 5:7 For there are three that bear record in heaven, the Father, the Word, and the Holy Ghost: and these three are one.
 

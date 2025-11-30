@@ -26,9 +26,6 @@ What does God require in the fifth commandment?
 That I show all honour, love and fidelity, to my father and mother, and all in authority over me, and submit myself to their good instruction and correction, with due obedience; [^fn104a] and also patiently bear with their weaknesses and infirmities, [^fn104b] since it pleases God to govern us by their hand. [^fn104c]
 
 
----
-
-### Scripture References
 
 [^fn104a]: Ephesians 5:22 Wives, submit yourselves unto your own husbands, as unto the Lord.
 

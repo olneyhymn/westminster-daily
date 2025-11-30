@@ -34,9 +34,6 @@ What advantage is it to us to know that God has created, and by his providence d
 That we may be patient in adversity; [^fn28a] thankful in prosperity; [^fn28b] and that in all things, which may hereafter befall us, we place our firm trust in our faithful God and Father, [^fn28c] that nothing shall separate us from his love; [^fn28d] since all creatures are so in his hand, that without his will they cannot so much as move. [^fn28e]
 
 
----
-
-### Scripture References
 
 [^fn27a]: Acts 17:25 Neither is worshipped with men's hands, as though he needed any thing, seeing he giveth to all life, and breath, and all things;
 

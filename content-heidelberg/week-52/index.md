@@ -51,9 +51,6 @@ What does the word "Amen" signify?
 								2 Timothy 2:13 If we believe not, yet he abideth faithful: he cannot deny himself.
 
 
----
-
-### Scripture References
 
 [^fn127a]: John 15:5 I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.
 

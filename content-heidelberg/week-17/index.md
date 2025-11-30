@@ -26,9 +26,6 @@ What does the "resurrection" of Christ profit us?
 First, by his resurrection he has overcome death, that he might make us partakers of that righteousness which he had purchased for us by his death; [^fn45a] secondly, we are also by his power raised up to a new life; [^fn45b] and lastly, the resurrection of Christ is a sure pledge of our blessed resurrection. [^fn45c]
 
 
----
-
-### Scripture References
 
 [^fn45a]: 1 Corinthians 15:16 For if the dead rise not, then is not Christ raised:
 

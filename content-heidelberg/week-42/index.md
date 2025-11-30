@@ -34,9 +34,6 @@ But what does God require in this commandment?
 That I promote the advantage of my neighbour in every instance I can or may; and deal with him as I desire to be dealt with by others: [^fn111a] further also that I faithfully labour, so that I may be able to relieve the needy. [^fn111b]
 
 
----
-
-### Scripture References
 
 [^fn110a]: 1 Corinthians 6:10 Nor thieves, nor covetous, nor drunkards, nor revilers, nor extortioners, shall inherit the kingdom of God.
 

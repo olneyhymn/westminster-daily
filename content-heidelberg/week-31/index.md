@@ -42,9 +42,6 @@ How is the kingdom of heaven shut and opened by christian discipline?
 Thus: when according to the command of Christ, those, who under the name of christians, maintain doctrines, or practices inconsistent therewith, and will not, after having been often brotherly admonished, renounce their errors and wicked course of life, are complained of to the church, or to those, who are thereunto appointed by the church; and if they despise their admonition, are by them forbidden the use of the sacraments; whereby they are excluded from the christian church, and by God himself from the kingdom of Christ; and when they promise and show real amendment, are again received as members of Christ and his church. [^fn85a]
 
 
----
-
-### Scripture References
 
 [^fn84a]: Matthew 16:18 And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it.
 

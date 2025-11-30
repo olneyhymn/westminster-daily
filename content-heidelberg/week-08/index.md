@@ -117,9 +117,6 @@ Since there is but one only divine essence, (a) why speakest thou of Father, Son
 								Titus 3:6 Which he shed on us abundantly through Jesus Christ our Saviour;
 
 
----
-
-### Scripture References
 
 [^fn24a]: Deuteronomy 6:4 Hear, O Israel: The LORD our God is one LORD:
 

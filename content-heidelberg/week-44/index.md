@@ -42,9 +42,6 @@ Why will God then have the ten commandments so strictly preached, since no man i
 First, that all our lifetime we may learn more and more to know [^fn115a] our sinful nature, and thus become the more earnest in seeking the remission of sin, and righteousness in Christ; [^fn115b] likewise, that we constantly endeavour and pray to God for the grace of the Holy Spirit, that we may become more and more conformable to the image of God, till we arrive at the perfection proposed to us, in a life to come. [^fn115c]
 
 
----
-
-### Scripture References
 
 [^fn113a]: Romans 7:7 What shall we say then? Is the law sin? God forbid. Nay, I had not known sin, but by the law: for I had not known lust, except the law had said, Thou shalt not covet.
 

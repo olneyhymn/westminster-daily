@@ -50,9 +50,6 @@ What are these articles?
 1. I believe in God the Father, Almighty, Maker of heaven and earth: 2. And in Jesus Christ, his only begotten Son, our Lord: 3. Who was conceived by the Holy Ghost, born of the Virgin Mary: 4. Suffered under Pontius Pilate; was crucified, dead, and buried: He descended into hell: 5. The third day he rose again from the dead: 6. He ascended into heaven, and sitteth at the right hand of God the Father Almighty: 7. From thence he shall come to judge the quick and the dead: 8. I believe in the Holy Ghost: 9. I believe a holy catholic church: the communion of saints: 10. The forgiveness of sins: 11. The resurrection of the body: 12. And the life everlasting.
 
 
----
-
-### Scripture References
 
 [^fn20a]: Matthew 7:14 Because strait is the gate, and narrow is the way, which leadeth unto life, and few there be that find it.
 

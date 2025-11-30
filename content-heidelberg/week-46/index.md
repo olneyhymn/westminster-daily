@@ -34,9 +34,6 @@ Why is it here added, "Which art in heaven"?
 Lest we should form any earthly conceptions of God's heavenly majesty, [^fn121a] and that we may expect from his almighty power all things necessary for soul and body. [^fn121b]
 
 
----
-
-### Scripture References
 
 [^fn120a]: Matthew 7:9 Or what man is there of you, whom if his son ask bread, will he give him a stone?
 

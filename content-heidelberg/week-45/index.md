@@ -76,9 +76,6 @@ What are the words of that prayer? (a)
 								Luke 11:4 And forgive us our sins; for we also forgive every one that is indebted to us. And lead us not into temptation; but deliver us from evil.
 
 
----
-
-### Scripture References
 
 [^fn116a]: Psalm 50:14 Offer unto God thanksgiving; and pay thy vows unto the most High:
 

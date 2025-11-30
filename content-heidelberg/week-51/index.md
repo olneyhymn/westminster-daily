@@ -26,9 +26,6 @@ Which is the fifth petition?
 "And forgive us our debts as we forgive our debtors"; that is, be pleased for the sake of Christ's blood, not to impute to us poor sinners, our transgressions, nor that depravity, which always cleaves to us; [^fn126a] even as we feel this evidence of thy grace in us, that it is our firm resolution from the heart to forgive our neighbour. [^fn126b]
 
 
----
-
-### Scripture References
 
 [^fn126a]: Psalm 51:1 To the chief Musician, A Psalm of David, when Nathan the prophet came unto him, after he had gone in to Bathsheba. Have mercy upon me, O God, according to thy lovingkindness: according unto the multitude of thy tender mercies blot out my transgressions.
 

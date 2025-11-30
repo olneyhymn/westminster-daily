@@ -42,9 +42,6 @@ Where has Christ promised that he will as certainly feed and nourish believers w
 In the institution of the supper, which is thus expressed: [^fn77a] "The Lord Jesus, the same night in which he was betrayed, took bread, and when he had given thanks, he brake it, and: said: eat, this is my body, which is broken for you; this do in remembrance of me. After the same manner also he took the cup, when he had supped, saying: this cup is the new testament in my blood; this do ye, as often as ye drink it, in remembrance of me. For, as often as ye eat this bread, and drink this cup, ye do show the Lord's death till he come." 1 Corinthians 11:23-26. This promise is repeated by the holy apostle Paul, where he says "The cup of blessing which we bless, is it not the communion of the blood of Christ? The bread which we break, is it not the communion of the body of Christ? For we being many are one bread, and one body: for we are all partakers of that one bread." 1 Corinthians 10:16,17.
 
 
----
-
-### Scripture References
 
 [^fn75a]: Matthew 26:26 And as they were eating, Jesus took bread, and blessed it, and brake it, and gave it to the disciples, and said, Take, eat; this is my body.
 

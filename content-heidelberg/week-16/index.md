@@ -58,9 +58,6 @@ Why is there added, "he descended into hell"?
 That in my greatest temptations, I may be assured, and wholly comfort myself in this, that my Lord Jesus Christ, by his inexpressible anguish, pains, terrors, and hellish agonies, in which he was plunged during all his sufferings, [^fn44a] but especially on the cross, has delivered me from the anguish and torments of hell. [^fn44b]
 
 
----
-
-### Scripture References
 
 [^fn40a]: Genesis 2:17 But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.
 

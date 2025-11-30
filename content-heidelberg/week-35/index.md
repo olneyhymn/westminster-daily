@@ -42,9 +42,6 @@ But may not images be tolerated in the churches, as books to the laity?
 No: for we must not pretend to be wiser than God, who will have his people taught, not by dump images, [^fn98a] but by the lively preaching of his word. [^fn98b]
 
 
----
-
-### Scripture References
 
 [^fn96a]: Deuteronomy 4:15 Take ye therefore good heed unto yourselves; for ye saw no manner of similitude on the day that the LORD spake unto you in Horeb out of the midst of the fire:
 

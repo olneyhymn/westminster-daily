@@ -34,9 +34,6 @@ Does God forbid in this commandment, only adultery, and such like gross sins?
 Since both our body and soul are temples of the holy Ghost, he commands us to preserve them pure and holy: therefore he forbids all unchaste actions, gestures, words, [^fn109a] thoughts, desires, [^fn109b] and whatever can entice men thereto. [^fn109c]
 
 
----
-
-### Scripture References
 
 [^fn108a]: Leviticus 18:27 (For all these abominations have the men of the land done, which were before you, and the land is defiled;)
 

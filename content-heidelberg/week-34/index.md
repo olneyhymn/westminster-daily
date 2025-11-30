@@ -50,9 +50,6 @@ What is idolatry?
 Idolatry is, instead of, or besides that one true God, who has manifested himself in his word, to contrive, or have any other object, in which men place their trust. [^fn95a]
 
 
----
-
-### Scripture References
 
 [^fn93a]: Exodus 34:28 And he was there with the LORD forty days and forty nights; he did neither eat bread, nor drink water. And he wrote upon the tables the words of the covenant, the ten commandments.
 

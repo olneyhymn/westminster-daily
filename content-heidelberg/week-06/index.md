@@ -165,9 +165,6 @@ Whence knowest thou this?
 From the holy gospel, which God himself first revealed in Paradise; [^fn19a] and afterwards published by the patriarchs [^fn19b] and prophets, [^fn19c] and represented by the sacrifices and other ceremonies of the law; [^fn19d] and lastly, has fulfilled it by his only begotten Son. [^fn19e]
 
 
----
-
-### Scripture References
 
 [^fn16a]: Ezekiel 18:4 Behold, all souls are mine; as the soul of the father, so also the soul of the son is mine: the soul that sinneth, it shall die.
 

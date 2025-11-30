@@ -34,9 +34,6 @@ Wherefore callest thou him "our Lord"?
 Because he hath redeemed us, both soul and body, from all our sins, not with silver or gold, but with his precious blood, and has delivered us from all the power of the devil; and thus has made us his own property. [^fn34a]
 
 
----
-
-### Scripture References
 
 [^fn33a]: John 1:1 In the beginning was the Word, and the Word was with God, and the Word was God.
 

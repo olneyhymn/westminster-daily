@@ -26,9 +26,6 @@ What is required in the ninth commandment?
 That I bear false witness against no man, [^fn112a] nor falsify any man's words; [^fn112b] that I be no backbiter, nor slanderer; [^fn112c] that I do not judge, nor join in condemning any man rashly, or unheard; [^fn112d] but that I avoid all sorts of lies and deceit, as the proper works of the devil, [^fn112e] unless I would bring down upon me the heavy wrath of God; [^fn112f] likewise, that in judgment and all other dealings I love the truth, speak it uprightly and confess it; [^fn112g] also that I defend and promote, as much as I am able, the honor and good character of my neighbour. [^fn112h]
 
 
----
-
-### Scripture References
 
 [^fn112a]: Proverbs 19:5 A false witness shall not be unpunished, and he that speaketh lies shall not escape.
 

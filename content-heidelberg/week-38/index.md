@@ -26,9 +26,6 @@ What does God require in the fourth commandment?
 First, that the ministry of the gospel and the schools be maintained; [^fn103a] and that I, especially on the sabbath, that is, on the day of rest, diligently frequent the church of God, [^fn103b] to hear his word, [^fn103c] to use the sacraments, [^fn103d] publicly to call upon the Lord, [^fn103e] and contribute to the relief of the poor. [^fn103f] Secondly, that all the days of my life I cease from my evil works, and yield myself to the Lord, to work by his Holy Spirit in me: and thus begin in this life the eternal sabbath. [^fn103g]
 
 
----
-
-### Scripture References
 
 [^fn103a]: Titus 1:5 For this cause left I thee in Crete, that thou shouldest set in order the things that are wanting, and ordain elders in every city, as I had appointed thee:
 

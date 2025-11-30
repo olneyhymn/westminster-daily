@@ -42,9 +42,6 @@ What comfort is it to thee that "Christ shall come again to judge the quick and 
 That in all my sorrows and persecutions, with uplifted head I look for the very same person, who before offered himself for my sake, to the tribunal of God, and has removed all curse from me, to come as judge from heaven: [^fn52a] who shall cast all his and my enemies into everlasting condemnation, [^fn52b] but shall translate me with all his chosen ones to himself, into heavenly joys and glory. [^fn52c]
 
 
----
-
-### Scripture References
 
 [^fn50a]: Ephesians 1:20 Which he wrought in Christ, when he raised him from the dead, and set him at his own right hand in the heavenly places,
 

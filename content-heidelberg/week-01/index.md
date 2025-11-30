@@ -34,9 +34,6 @@ How many things are necessary for thee to know, that thou, enjoying this comfort
 Three; [^fn2a] the first, how great my sins and miseries are; [^fn2b] the second, how I may be delivered from all my sins and miseries; [^fn2c] the third, how I shall express my gratitude to God for such deliverance. [^fn2d]
 
 
----
-
-### Scripture References
 
 [^fn1a]: Romans 14:7 For none of us liveth to himself, and no man dieth to himself.
 

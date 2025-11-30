@@ -42,9 +42,6 @@ Are they also to be admitted to this supper, who, by confession and life, declar
 No; for by this, the covenant of God would be profaned, and his wrath kindled against the whole congregation; [^fn82a] therefore it is the duty of the christian church, according to the appointment of Christ and his apostles, to exclude such persons, by the keys of the kingdom of heaven, till they show amendment of life.
 
 
----
-
-### Scripture References
 
 [^fn80a]: Hebrews 7:27 Who needeth not daily, as those high priests, to offer up sacrifice, first for his own sins, and then for the people's: for this he did once, when he offered up himself.
 
