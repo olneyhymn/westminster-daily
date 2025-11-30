@@ -62,7 +62,8 @@ build/heidelberg-weekly/index.html: build/heidelberg-weekly ## Generate Heidelbe
 	./build_heidelberg_page.sh build/heidelberg-weekly/index.html
 
 heidelberg-feed.rss: build ## Generate Heidelberg Weekly RSS feed
-	python3 generate_heidelberg_feed.py
+	python -m pip install uv
+	python -m uv run generate_heidelberg_feed.py
 	mv heidelberg-feed.rss build/heidelberg-weekly/feed.rss
 
 build/heidelberg-weekly: ## Create Heidelberg Weekly build directory
