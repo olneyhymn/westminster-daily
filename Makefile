@@ -1,6 +1,6 @@
 SOURCES :=$(shell find content -name "*.md" | tr '\n' ' ' | sed 's/\.md/\.html/g; s/content/build\/westminster-daily/g' )
 CURRENT_FILE := $(shell date -u +"content/%m/%d.md")
-HEIDELBERG_SOURCES :=$(shell find content-heidelberg -name "*.md" 2>/dev/null | tr '\n' ' ' | sed 's/\.md/\/index\.html/g; s/content-heidelberg/build\/heidelberg-weekly/g' )
+HEIDELBERG_SOURCES :=$(shell find content-heidelberg -name "*.md" 2>/dev/null | tr '\n' ' ' | sed 's/\.md/\.html/g; s/content-heidelberg/build\/heidelberg-weekly/g' )
 
 .PHONY: help
 help: ## Show this help message
@@ -62,7 +62,8 @@ build/heidelberg-weekly/index.html: build/heidelberg-weekly ## Generate Heidelbe
 	./build_heidelberg_page.sh build/heidelberg-weekly/index.html
 
 heidelberg-feed.rss: build ## Generate Heidelberg Weekly RSS feed
-	python3 generate_heidelberg_feed.py
+	python -m pip install uv
+	python -m uv run generate_heidelberg_feed.py
 	mv heidelberg-feed.rss build/heidelberg-weekly/feed.rss
 
 build/heidelberg-weekly: ## Create Heidelberg Weekly build directory
