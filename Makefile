@@ -1,6 +1,6 @@
 SOURCES :=$(shell find content -name "*.md" | tr '\n' ' ' | sed 's/\.md/\.html/g; s/content/build\/westminster-daily/g' )
 CURRENT_FILE := $(shell date -u +"content/%m/%d.md")
-HEIDELBERG_SOURCES :=$(shell find content-heidelberg -name "*.md" 2>/dev/null | tr '\n' ' ' | sed 's/\.md/\/index\.html/g; s/content-heidelberg/build\/heidelberg-weekly/g' )
+HEIDELBERG_SOURCES :=$(shell find content-heidelberg -name "*.md" 2>/dev/null | tr '\n' ' ' | sed 's/\.md/\.html/g; s/content-heidelberg/build\/heidelberg-weekly/g' )
 
 .PHONY: help
 help: ## Show this help message
