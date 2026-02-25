@@ -31,7 +31,7 @@ import pytz
 from premailer import transform
 import markdown
 from functools import lru_cache
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
 
 # Base URL for the website and output filename
 URL = "https://reformedconfessions.com/westminster-daily"
@@ -74,6 +74,76 @@ def meta(month, day):
     return markdown_parser(month, day)[0].Meta
 
 
+def style_html(soup):
+    """
+    Apply inline styles to HTML elements for RSS feed display.
+
+    Styles various elements for consistent rendering across RSS readers
+    and email clients that may not support external stylesheets.
+    """
+    # 1. h4 (source label) — subtle small-caps label
+    for h4 in soup.find_all("h4"):
+        h4["style"] = (
+            "font-size: 11px; font-weight: normal; letter-spacing: 2px; "
+            "text-transform: uppercase; color: #8B7355; margin: 0 0 2px 0;"
+        )
+
+    # 2. h5 (chapter title) — dignified italic chapter heading
+    for h5 in soup.find_all("h5"):
+        h5["style"] = (
+            "font-size: 15px; font-weight: normal; font-style: italic; "
+            "color: #5C1A2A; margin: 0 0 16px 0;"
+        )
+
+    # 3. span.q (Q/A labels) — burgundy accent
+    for span in soup.find_all("span", class_="q"):
+        span["style"] = "font-weight: bold; color: #5C1A2A;"
+
+    # 4. sup (footnote numbers) — muted, smaller
+    for sup in soup.find_all("sup"):
+        sup["style"] = "font-size: 11px; color: #8B7355;"
+
+    # 5. hr in .footnote — styled border
+    for footnote_div in soup.find_all("div", class_="footnote"):
+        for hr in footnote_div.find_all("hr"):
+            hr["style"] = (
+                "border: none; border-top: 1px solid #D6CBAF; "
+                "margin: 24px 0 16px 0;"
+            )
+
+    # 6. ol in footnotes — smaller than body text
+    for footnote_div in soup.find_all("div", class_="footnote"):
+        for ol in footnote_div.find_all("ol"):
+            ol["style"] = (
+                "padding-left: 18px; margin: 0; font-size: 14px; "
+                "line-height: 1.7; color: #3D2E1F;"
+            )
+
+    # 7. h5 inside footnotes — burgundy verse labels (overrides #2)
+    for footnote_div in soup.find_all("div", class_="footnote"):
+        for h5 in footnote_div.find_all("h5"):
+            h5["style"] = (
+                "font-size: 13px; font-weight: bold; color: #5C1A2A; "
+                "margin: 14px 0 4px 0;"
+            )
+
+    # 8. div.esv-text — left-border blockquote effect for scripture
+    for div in soup.find_all("div", class_="esv-text"):
+        div["style"] = "padding-left: 12px; border-left: 2px solid #D6CBAF;"
+
+    # 9. span.small-caps — for "LORD"
+    for span in soup.find_all("span", class_="small-caps"):
+        span["style"] = "font-variant: small-caps;"
+
+    # 10. span.indent — replace with em space for email client compatibility
+    for span in soup.find_all("span", class_="indent"):
+        span.replace_with(NavigableString("\u2003"))
+
+    # 11. div.block-indent — hanging indent for poetry
+    for div in soup.find_all("div", class_="block-indent"):
+        div["style"] = "padding-left: 16px; text-indent: -16px;"
+
+
 def content(month, day):
     """
     Process and format the content for a specific day.
@@ -82,7 +152,8 @@ def content(month, day):
     1. Converts markdown to HTML
     2. Processes the HTML for email compatibility
     3. Removes unnecessary HTML elements
-    4. Cleans up whitespace and special characters
+    4. Applies inline styles for RSS display
+    5. Cleans up whitespace and special characters
 
     Args:
         month (str): Two-digit month (01-12)
@@ -98,6 +169,8 @@ def content(month, day):
     # Remove all anchor tags while preserving their content
     for a in soup.find_all("a"):
         a.unwrap()
+    # Apply inline styles for RSS readers
+    style_html(soup)
     c = str(soup)
     # Extract just the body content
     c = c[(c.find("body") + len("body>")) : -len("</body></html>")]
