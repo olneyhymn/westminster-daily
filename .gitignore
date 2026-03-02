@@ -8,10 +8,6 @@ package-lock.json
 node_modules/
 flask_application/static/css/
 *.rss
-
-# Heidelberg parsing temporary files
-fetch_heidelberg.py
-parse_heidelberg.py
-parse_heidelberg_v2.py
-heidelberg_preliminary.json
-heidelberg_sample.html
+print/.venv/
+print/westminster-daily.pdf
+print/westminster-daily.typ
