@@ -18,7 +18,6 @@
 
     <!-- CSS
     ================================================== -->
-    <link href="https://fonts.googleapis.com/css?family=Alegreya|Open+Sans" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css' />
     <link rel='stylesheet' href='/css/main.css' />
     <link rel='stylesheet' href='/css/bigfoot-default.css' />
@@ -28,9 +27,6 @@
     ================================================== -->
     <script src="/js/jquery-1.9.0.min.js"></script>
     <script src="/js/bigfoot.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-        crossorigin="anonymous"></script>
     <script src="/js/essential_audio.js"></script>
 
     <script type="text/javascript">
@@ -98,95 +94,96 @@
 <body>
     <div class="container">
         <div class="columns is-centered">
-            <div class="column is-6">
-                <hr class="" />
-            </div>
-        </div>
-        <div class="columns is-centered is-vcentered mb-2">
-            <div class="column is-narrow has-text-centered">
-                <h3><a href="/westminster-daily/">Westminster Daily</a></h3>
-            </div>
-            <div class="column is-narrow has-text-centered">
-                <h6 class='has-text-grey'>Read the Westminster Standards in a year.</h6>
-            </div>
-        </div>
-        $if(this_url)$
-        <div class="columns is-centered mb-3">
-            <div class="column is-narrow has-text-centered">
-                <a href="/westminster-daily/about">
-                    <small>about</small>
-                </a>
-                &middot;
-                <a href="/westminster-daily/reading-plan">
-                    <small>full plan</small>
-                </a>
-            </div>
-            <div class="column is-narrow has-text-centered">
-                <strong>
-                    <a href="$prev_url$">
-                        < $prev_date$ </a>
+            <div class="column is-8-tablet is-6-desktop content-page">
+                <div class="content-inner">
+
+                    <!-- Masthead -->
+                    <div class="has-text-centered" style="padding: 30px 24px 10px 24px;">
+                        <span class="masthead-label">A Daily Reading from the</span>
+                    </div>
+                    <div class="has-text-centered" style="padding: 0 24px 22px 24px;">
+                        <span class="masthead-title"><a href="/westminster-daily/">WESTMINSTER STANDARDS</a></span>
+                    </div>
+
+                    <!-- Gold rule -->
+                    <div style="padding: 0 24px;">
+                        <hr />
+                    </div>
+
+                    $if(this_url)$
+                    <!-- Navigation -->
+                    <div class="has-text-centered nav-links" style="padding: 16px 24px 8px 24px;">
+                        <a href="/westminster-daily/about"><small>about</small></a>
+                        &middot;
+                        <a href="/westminster-daily/reading-plan"><small>full plan</small></a>
+                    </div>
+                    <div class="has-text-centered" style="padding: 4px 24px 16px 24px;">
+                        <strong>
+                            <a href="$prev_url$">< $prev_date$</a>
                             &middot;
-                            <a href="$this_url$">
-                                $this_date$
-                            </a>
+                            <a href="$this_url$">$this_date$</a>
                             &middot;
-                            <a href="$next_url$">
-                                $next_date$ >
-                            </a>
-                </strong>
-            </div>
-        </div>
-        $endif$
-        <div class="columns">
-            <div class="column is-6 is-offset-3">
-                $body$
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column is-6 is-offset-3 has-text-right">
-                <button type="button" id="toggle" class="button is-light is-small">toggle proof texts</button>
-            </div>
-        </div>
-        <br>
-        <div class="columns">
-            <div class="column is-6 is-offset-3">
-                <div class="essential_audio" data-url="https://reformedconfessions.com/static/audio/$short_date$.mp3"></div>
-            </div>
-        </div>
-        <br>
-        <div class="columns">
-            <div class="column is-6 is-offset-3 has-text-centered">
-                <a href="http://feedpress.me/westminster-daily">
-                    <small>subscribe by rss</small></a>
-                &middot;
-                <a href="https://feed.press/e/mailverify?feed_id=westminster-daily">
-                    <small>subscribe by e-mail</small></a>
-                &middot;
-                <small><a href="https://feedpress.me/westminster-daily-audio">subscribe to podcast:</a></small>
-                  <a href="https://podcasts.apple.com/us/podcast/westminster-daily/id1661869655">
-                    <img src="/images/icons/Apple-Podcasts.png" height="25px" title="Apple Podcasts"></a>
-                    <a href="https://feedpress.me/westminster-daily-audio">
-                    <img src="/images/icons/RSS.png" height="25px" title="RSS"></a>
-                <p style="font-size:0.7em">
-                    Copyright &copy;
-                    <script language="javascript" type="text/javascript">document.write((new Date()).getFullYear())</script>
-                    <a href="https://waitingtables.org/about/" target="_blank">Tim Hopper</a>.
-                    Based on <a href="/pipa-calendar.pdf">Calendar of Readings in the Westminster Standards</a> by
-                    Dr. Joey Pipa.
-                    Scripture taken from The Holy Bible, English Standard Version. Copyright &copy;2001 by <a
-                        href="http://www.crosswaybibles.org">Crossway Bibles</a>, a publishing ministry of Good News
-                    Publishers. Used by permission. All rights reserved.
-                </p>
-                <a href="https://readmachen.com">
-                    <small>readmachen.com</small></a>
-                &middot;
-                <a href="https://reformeddeacon.com">
-                    <small>reformeddeacon.com</small></a>
-                &middot;
-                <a href="https://ulsterworldly.com">
-                    <small>ulsterworldly.com</small></a>
-            </div>
-        </div>
+                            <a href="$next_url$">$next_date$ ></a>
+                        </strong>
+                    </div>
+                    $endif$
+
+                    <!-- Thin rule before content -->
+                    <div style="padding: 0 24px;">
+                        <hr class="thin" />
+                    </div>
+
+                    <!-- Reading content -->
+                    <div style="padding: 22px 24px 30px 24px;">
+                        $body$
+                    </div>
+
+                    <!-- Toggle button -->
+                    <div class="has-text-right" style="padding: 0 24px 16px 24px;">
+                        <button type="button" id="toggle" class="button is-toggle">toggle proof texts</button>
+                    </div>
+
+                    <!-- Audio player -->
+                    <div style="padding: 0 24px 24px 24px;">
+                        <div class="essential_audio" data-url="https://reformedconfessions.com/static/audio/$short_date$.mp3"></div>
+                    </div>
+
+                    <!-- Subscribe links -->
+                    <div class="has-text-centered nav-links" style="padding: 0 24px 8px 24px;">
+                        <a href="http://feedpress.me/westminster-daily"><small>subscribe by rss</small></a>
+                        &middot;
+                        <a href="https://feed.press/e/mailverify?feed_id=westminster-daily"><small>subscribe by e-mail</small></a>
+                        &middot;
+                        <a href="https://feedpress.me/westminster-daily-audio"><small>subscribe to podcast</small></a>
+                        &middot;
+                        <a href="https://podcasts.apple.com/us/podcast/westminster-daily/id1661869655"><small>apple podcasts</small></a>
+                    </div>
+
+                    <!-- Bottom ornament -->
+                    <div class="ornament">&middot; &middot; &middot;</div>
+
+                    <!-- Footer -->
+                    <div class="site-footer">
+                        <p>
+                            Copyright &copy;
+                            <script language="javascript" type="text/javascript">document.write((new Date()).getFullYear())</script>
+                            <a href="https://waitingtables.org/about/" target="_blank">Tim Hopper</a>.
+                            Based on <a href="/pipa-calendar.pdf">Calendar of Readings in the Westminster Standards</a> by
+                            Dr. Joey Pipa.
+                            Scripture taken from The Holy Bible, English Standard Version. Copyright &copy;2001 by <a
+                                href="http://www.crosswaybibles.org">Crossway Bibles</a>, a publishing ministry of Good News
+                            Publishers. Used by permission. All rights reserved.
+                        </p>
+                        <a href="https://readmachen.com">readmachen.com</a>
+                        <span class="separator">&middot;</span>
+                        <a href="https://reformeddeacon.com">reformeddeacon.com</a>
+                        <span class="separator">&middot;</span>
+                        <a href="https://ulsterworldly.com">ulsterworldly.com</a>
+                    </div>
+
+                </div><!-- content-inner -->
+            </div><!-- content-page -->
+        </div><!-- columns -->
     </div><!-- container -->
 
 
