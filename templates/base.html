@@ -97,22 +97,22 @@
 
 <body>
     <div class="container">
-        <div class="columns">
-            <div class="column is-8 is-offset-2">
+        <div class="columns is-centered">
+            <div class="column is-6">
                 <hr class="" />
             </div>
         </div>
-        <div class="columns is-vcentered mb-2">
-            <div class="column is-3 has-text-centered">
+        <div class="columns is-centered is-vcentered mb-2">
+            <div class="column is-narrow has-text-centered">
                 <h3><a href="/westminster-daily/">Westminster Daily</a></h3>
             </div>
-            <div class="column is-3 has-text-centered">
+            <div class="column is-narrow has-text-centered">
                 <h6 class='has-text-grey'>Read the Westminster Standards in a year.</h6>
             </div>
         </div>
         $if(this_url)$
-        <div class="columns mb-3">
-            <div class="column is-3 has-text-centered">
+        <div class="columns is-centered mb-3">
+            <div class="column is-narrow has-text-centered">
                 <a href="/westminster-daily/about">
                     <small>about</small>
                 </a>
@@ -121,7 +121,7 @@
                     <small>full plan</small>
                 </a>
             </div>
-            <div class="column is-3 has-text-centered">
+            <div class="column is-narrow has-text-centered">
                 <strong>
                     <a href="$prev_url$">
                         < $prev_date$ </a>
@@ -138,24 +138,24 @@
         </div>
         $endif$
         <div class="columns">
-            <div class="column is-8 is-offset-2">
+            <div class="column is-6 is-offset-3">
                 $body$
             </div>
         </div>
         <div class="columns">
-            <div class="column is-8 is-offset-2 has-text-right">
+            <div class="column is-6 is-offset-3 has-text-right">
                 <button type="button" id="toggle" class="button is-light is-small">toggle proof texts</button>
             </div>
         </div>
         <br>
         <div class="columns">
-            <div class="column is-8 is-offset-2">
+            <div class="column is-6 is-offset-3">
                 <div class="essential_audio" data-url="https://reformedconfessions.com/static/audio/$short_date$.mp3"></div>
             </div>
         </div>
         <br>
         <div class="columns">
-            <div class="column is-8 is-offset-2 has-text-centered">
+            <div class="column is-6 is-offset-3 has-text-centered">
                 <a href="http://feedpress.me/westminster-daily">
                     <small>subscribe by rss</small></a>
                 &middot;
