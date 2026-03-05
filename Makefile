@@ -33,7 +33,7 @@ build/westminster-daily: ## Create Westminster Daily build directory
 
 build/css/main.css: static/scss/main.scss ## Compile SCSS to CSS
 	mkdir -p build/css/
-	node-sass --output-style compressed --source-map false static/scss/ -o build/css/
+	sass --style=compressed --no-source-map static/scss/main.scss build/css/main.css
 
 build/index.html: build/westminster-daily/index.html ## Create root index.html
 	cp build/westminster-daily/index.html build/index.html

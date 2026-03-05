@@ -1,7 +1,7 @@
 [build]
   base    = "."
   publish = "./build"
-  command = "python -V && npm install --quiet -g node-sass@4.13.0 && make all"
+  command = "python -V && npm install --quiet -g sass && make all"
   environment = { PYTHON_VERSION = "3.9" }
 
 [[redirects]]
