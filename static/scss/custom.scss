@@ -1,85 +1,246 @@
-$font-family-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$font-family-base:       $font-family-sans-serif ;
-$headings-font-family:  'Alegreya', "Times New Roman", serif;
+// === Color Palette (from newsletter) ===
+$parchment: #E8E0D2;
+$cream: #FFFDF7;
+$burgundy: #5C1A2A;
+$gold: #C4A265;
+$brown-muted: #8B7355;
+$brown-light: #A0937D;
+$dark-brown: #2C1810;
+$footer-bg: #F5F0E6;
+$border-light: #D6CBAF;
 
-$white:    #fff;
-$gray-100: #f8f9fa;
-$gray-200: #F8F5F0;
-$gray-300: #DFD7CA;
-$gray-400: #ced4da;
-$gray-500: #98978B;
-$gray-600: #8E8C84;
-$gray-700: #495057;
-$gray-800: #3E3F3A;
-$gray-900: #212529;
-$black:    #000;
+// === Base Typography ===
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.78;
+    color: $dark-brown;
+    background-color: $parchment;
+}
 
-$blue:    #325D88;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #e83e8c;
-$red:     #d9534f;
-$orange:  #F47C3C;
-$yellow:  #ffc107;
-$green:   #93C54B;
-$teal:    #20c997;
-$cyan:    #29ABE0;
+// === Headings ===
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: $burgundy;
+}
 
-$theme-colors: (
-    primary:       $blue,
-    secondary:     $gray-600,
-    success:       $green,
-    info:          $cyan,
-    warning:       $orange,
-    danger:        $red,
-    light:         $gray-200,
-    dark:          $gray-800
-) !default;
+h2, h3, h4 {
+    font-style: italic;
+}
 
+// === Links ===
+a {
+    color: $burgundy;
+    text-decoration: none;
+
+    &:hover {
+        color: #3d1019;
+        text-decoration: underline;
+    }
+}
+
+// === Masthead ===
+.masthead-label {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $brown-light;
+}
+
+.masthead-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: $dark-brown;
+
+    a {
+        color: $dark-brown;
+        text-decoration: none;
+
+        &:hover {
+            color: $burgundy;
+        }
+    }
+}
+
+.masthead-subtitle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 14px;
+    color: $brown-muted;
+    font-style: italic;
+}
+
+// === Gold Rules ===
+hr {
+    border: none;
+    border-top: 2px solid $gold;
+    margin: 0;
+}
+
+hr.thin {
+    border-top-width: 1px;
+}
+
+// === Navigation Links ===
+.nav-links {
+    a {
+        color: $burgundy;
+        text-decoration: none;
+    }
+
+    small {
+        font-family: Georgia, 'Times New Roman', serif;
+        color: $brown-muted;
+    }
+}
+
+// === Content Styles ===
 .q {
     font-size: 120%;
-    color: rgba(0,0,0,.6);
-    font-family: $headings-font-family;
+    color: $burgundy;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 .image {
     background-color: white;
-    border-left: 20px solid darkgray;
+    border-left: 4px solid $border-light;
 }
 
-// Better spacing for foonotes
+// ESV scripture blocks
 div.esv > h5 {
-    margin-bottom: 0em;
+    margin-bottom: 0;
+    color: $burgundy;
+    font-style: italic;
 }
 
 div.esv-text {
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 }
 
- /* Style the button that is used to open and close the collapsible content */
- .collapsible {
-    background-color: #fff;
-    color: #666;
+div.esv {
+    border-left: 3px solid $border-light;
+    padding-left: 1em;
+    margin: 1em 0;
+}
+
+// === Toggle Button ===
+.button.is-toggle {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $burgundy;
+    background-color: transparent;
+    border: 1px solid $border-light;
+    padding: 8px 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $footer-bg;
+        border-color: $gold;
+    }
+}
+
+// === Bottom Ornament ===
+.ornament {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    color: $gold;
+    letter-spacing: 8px;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+// === Footer ===
+.site-footer {
+    background-color: $footer-bg;
+    border-top: 1px solid $border-light;
+    padding: 1.5em;
+    text-align: center;
+
+    a {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 11px;
+        color: $brown-muted;
+        text-decoration: none;
+
+        &:hover {
+            color: $burgundy;
+        }
+    }
+
+    .separator {
+        color: $gold;
+        padding: 0 6px;
+    }
+
+    p {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 10px;
+        color: $brown-light;
+        line-height: 1.6;
+    }
+}
+
+// === Collapsible Sections ===
+.collapsible {
+    background-color: $cream;
+    color: $brown-muted;
     cursor: pointer;
     padding: 8px;
     width: 100%;
-    border: none;
+    border: 1px solid $border-light;
     text-align: left;
     outline: none;
     font-size: 15px;
-  }
+    font-family: Georgia, 'Times New Roman', serif;
+}
 
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .collapsible:hover {
-    background-color: #ccc;
-  }
+.active, .collapsible:hover {
+    background-color: $footer-bg;
+}
 
-  /* Style the collapsible content. Note: hidden by default */
-  .collapsible-content {
+.collapsible-content {
     padding: 0 18px;
     padding-bottom: 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
-  }
+    background-color: $cream;
+}
+
+// === Image sizing fix (prevent Bulma from overriding HTML height attrs) ===
+img[height] {
+    height: auto;
+    max-height: 25px;
+}
+
+// === Podcast icon sizing ===
+.podcast-icon {
+    height: 25px;
+    width: auto;
+    vertical-align: middle;
+}
+
+// === Bulma Overrides ===
+.container {
+    max-width: 960px;
+}
+
+// Ensure the content column has the cream background
+.content-page {
+    background-color: $cream;
+    border: 1px solid $border-light;
+    padding: 4px;
+}
+
+.content-inner {
+    border: 1px solid $border-light;
+    padding: 0;
+}
+
+// === Audio Player ===
+.essential_audio {
+    margin: 1em 0;
+}
