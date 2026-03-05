@@ -10,12 +10,17 @@ $footer-bg: #F5F0E6;
 $border-light: #D6CBAF;
 
 // === Base Typography ===
+html {
+    background-color: $parchment;
+}
+
 body {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 16px;
     line-height: 1.78;
     color: $dark-brown;
     background-color: $parchment;
+    min-height: 100vh;
 }
 
 // === Headings ===
