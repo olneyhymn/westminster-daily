@@ -14,13 +14,13 @@ all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.r
 heidelberg-all: build ${HEIDELBERG_SOURCES} build/heidelberg-weekly/index.html heidelberg-feed.rss ## Build Heidelberg Weekly site
 
 feed.rss: build ## Generate main RSS feed
-	python -m pip install uv
-	python -m uv run generate_feed.py
+	python3 -m pip install uv
+	python3 -m uv run generate_feed.py
 	mv feed.rss build/westminster-daily/
 
 podcast.rss: build ## Generate podcast RSS feed
-	python -m pip install uv
-	python -m uv run generate_podcast_feed.py
+	python3 -m pip install uv
+	python3 -m uv run generate_podcast_feed.py
 	mv podcast.rss build/westminster-daily/
 
 build: build/westminster-daily build/css/main.css ## Build site structure and compile CSS
@@ -62,8 +62,8 @@ build/heidelberg-weekly/index.html: build/heidelberg-weekly ## Generate Heidelbe
 	./build_heidelberg_page.sh build/heidelberg-weekly/index.html
 
 heidelberg-feed.rss: build ## Generate Heidelberg Weekly RSS feed
-	python -m pip install uv
-	python -m uv run generate_heidelberg_feed.py
+	python3 -m pip install uv
+	python3 -m uv run generate_heidelberg_feed.py
 	mv heidelberg-feed.rss build/heidelberg-weekly/feed.rss
 
 build/heidelberg-weekly: ## Create Heidelberg Weekly build directory
