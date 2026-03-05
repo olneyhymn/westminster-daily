@@ -1,7 +1,0 @@
-{
-  "name": "westminster-daily",
-  "private": true,
-  "dependencies": {
-    "sass": "^1.77.0"
-  }
-}
