@@ -9,7 +9,7 @@ help: ## Show this help message
 	@echo 'Targets:'
 	@awk -F ':|##' '/^[^\t].+?:.*?##/ { printf "  %-20s %s\n", $$1, $$NF }' $(MAKEFILE_LIST)
 
-all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss podcast.rss heidelberg-all ## Build entire site including HTML, RSS feeds and assets
+all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss podcast.rss heidelberg-all redirects ## Build entire site including HTML, RSS feeds and assets
 
 heidelberg-all: build ${HEIDELBERG_SOURCES} build/heidelberg-weekly/index.html heidelberg-feed.rss ## Build Heidelberg Weekly site
 
@@ -68,5 +68,11 @@ heidelberg-feed.rss: build ## Generate Heidelberg Weekly RSS feed
 
 build/heidelberg-weekly: ## Create Heidelberg Weekly build directory
 	mkdir -p build/heidelberg-weekly
+
+redirects: build ## Generate _redirects file for Cloudflare Pages
+	@echo "/static/images/docs/* https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/:splat 302" > build/_redirects
+	@echo "/static/audio/* https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/:splat 302" >> build/_redirects
+	@echo "/ /westminster-daily/ 302" >> build/_redirects
+	@echo "/about /westminster-daily/about 302" >> build/_redirects
 
 FORCE:
