@@ -26,7 +26,7 @@ The site uses python to generate RSS feeds:
 
 ## Deployment
 
-The site is automatically deployed to Netlify when changes are pushed to the main branch.
+The site is automatically deployed to Cloudflare Pages when changes are pushed to the main branch.
 
 ## Automated Builds
 

@@ -11,6 +11,3 @@ flask_application/static/css/
 print/.venv/
 print/westminster-daily.pdf
 print/westminster-daily.typ
-
-# Local Netlify folder
-.netlify
