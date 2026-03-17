@@ -216,7 +216,7 @@ def main():
         fe.id(url)
         fe.title(meta(month, day)["pagetitle"][0])
         fe.link(href=url)
-        fe.guid(url, permalink=True)
+        fe.guid(f"{url}{date.year}", permalink=False)
         fe.content(content(month, day), type="CDATA")
         fe.updated(date)
         fe.published(date)

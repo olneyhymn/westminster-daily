@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
   schedule:
-    - cron: "0 10 * * *" # 05:00 EST daily
+    - cron: "0 8 * * *" # 03:00 EST / 04:00 EDT daily
 
 jobs:
   deploy:
