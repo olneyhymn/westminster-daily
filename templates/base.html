@@ -64,19 +64,19 @@
     <!-- static? False -->
 
     $if(short_date)$
-    <meta property="og:image" content="http://reformedconfessions.com/static/images/docs/$short_date$-full.png" />
-    <meta name="twitter:image" content="http://reformedconfessions.com/static/images/docs/$short_date$-full.png">
+    <meta property="og:image" content="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/$short_date$-full.png" />
+    <meta name="twitter:image" content="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/$short_date$-full.png">
     <meta property="og:title" content="$pagetitle$" />
     <meta name="twitter:title" content="$pagetitle$">
     <title>Westminster Daily | $pagetitle$</title>
-    <meta property="og:url" content="http://reformedconfessions.com$this_url$" />
+    <meta property="og:url" content="https://reformedconfessions.com$this_url$" />
     $else$
-    <meta property="og:image" content="http://reformedconfessions.com/static/images/docs/0101-full.png" />
-    <meta name="twitter:image" content="http://reformedconfessions.com/static/images/docs/0101-full.png">
+    <meta property="og:image" content="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/0101-full.png" />
+    <meta name="twitter:image" content="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/0101-full.png">
     <meta property="og:title" content="Westminster Daily" />
     <meta name="twitter:title" content="Westminster Daily">
     <title>Westminster Daily | A Daily Reading</title>
-    <meta property="og:url" content="http://reformedconfessions.com/westminster-daily/" />
+    <meta property="og:url" content="https://reformedconfessions.com/westminster-daily/" />
     $endif$
     <meta name="description" content="A daily reading from the Westminster Confession and Catechisms">
     <meta property="og:description" content="A daily reading from the Westminster Confession and Catechisms" />
@@ -135,7 +135,7 @@
 
                     <!-- Audio player -->
                     <div style="padding: 0 24px 24px 24px;">
-                        <div class="essential_audio" data-url="https://reformedconfessions.com/static/audio/$short_date$.mp3"></div>
+                        <div class="essential_audio" data-url="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/$short_date$.mp3"></div>
                     </div>
 
                     <!-- Subscribe links -->

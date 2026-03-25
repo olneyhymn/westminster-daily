@@ -147,7 +147,7 @@ def main():
         
         # Generate URLs for the episode
         url = f"{URL}/{month}/{day}/"
-        mp3_url = f"https://d2pmxb5xfppxte.cloudfront.net/static/audio/{month}{day}.mp3"
+        mp3_url = f"https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/{month}{day}.mp3"
         
         # Add entry to the feed
         fe = fg.add_entry()
