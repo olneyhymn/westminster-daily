@@ -1,0 +1,25 @@
+name: Send daily Buttondown email
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # 1 hour after the deploy workflow (04:00 EDT / 05:00 EST)
+  workflow_dispatch: {}
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Send today's reading
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: uv run scripts/send_buttondown_email.py
