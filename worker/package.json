@@ -2,6 +2,10 @@
   "name": "westminster-daily-email-worker",
   "private": true,
   "version": "0.0.0",
+  "scripts": {
+    "sync-template": "cp ../templates/newsletter-buttondown.html src/template.html",
+    "prepare": "npm run sync-template"
+  },
   "devDependencies": {
     "wrangler": "^4.81.0"
   }

@@ -2,9 +2,10 @@ name = "westminster-daily-email"
 main = "src/index.js"
 compatibility_date = "2026-04-01"
 
-# Run daily at 09:00 UTC — 1 hour after the Cloudflare Pages deploy
-# workflow (04:00 EDT / 05:00 EST), which gives the site time to publish
-# the fresh feed.rss before we read it.
+# Run daily at 09:00 UTC. The upstream Pages deploy workflow runs at
+# 08:00 UTC (03:00 EST / 04:00 EDT), which gives the site roughly one
+# hour to publish the fresh feed.rss before we read it. The buffer
+# shrinks to one hour in EDT and expands to two hours in EST.
 [triggers]
 crons = ["0 9 * * *"]
 

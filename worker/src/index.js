@@ -16,12 +16,33 @@ import template from "./template.html";
 const FEED_URL =
   "https://reformedconfessions.com/westminster-daily/feed.rss";
 const BUTTONDOWN_URL = "https://api.buttondown.com/v1/emails";
+const HEALTHCHECK_URL =
+  "https://hc-ping.com/b0d50eaf-63d4-40db-9f76-f94629f98662";
 
 export default {
   async scheduled(_event, env, ctx) {
-    ctx.waitUntil(sendDailyEmail(env));
+    ctx.waitUntil(runWithHealthcheck(env));
   },
 };
+
+async function runWithHealthcheck(env) {
+  try {
+    await sendDailyEmail(env);
+    await fetch(HEALTHCHECK_URL, { method: "POST" }).catch((e) =>
+      console.error(`healthcheck success ping failed: ${e.message}`),
+    );
+  } catch (err) {
+    const detail = err?.stack || err?.message || String(err);
+    console.error(detail);
+    await fetch(`${HEALTHCHECK_URL}/fail`, {
+      method: "POST",
+      body: detail.slice(0, 10000),
+    }).catch((e) =>
+      console.error(`healthcheck fail ping failed: ${e.message}`),
+    );
+    throw err;
+  }
+}
 
 async function sendDailyEmail(env) {
   if (!env.BUTTONDOWN_API_KEY) {
