@@ -64,15 +64,15 @@
     <!-- static? False -->
 
     $if(short_date)$
-    <meta property="og:image" content="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/$short_date$-full.png" />
-    <meta name="twitter:image" content="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/$short_date$-full.png">
+    <meta property="og:image" content="https://reformedconfessions.com/images/docs/$short_date$-full.png" />
+    <meta name="twitter:image" content="https://reformedconfessions.com/images/docs/$short_date$-full.png">
     <meta property="og:title" content="$pagetitle$" />
     <meta name="twitter:title" content="$pagetitle$">
     <title>Westminster Daily | $pagetitle$</title>
     <meta property="og:url" content="https://reformedconfessions.com$this_url$" />
     $else$
-    <meta property="og:image" content="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/0101-full.png" />
-    <meta name="twitter:image" content="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/0101-full.png">
+    <meta property="og:image" content="https://reformedconfessions.com/images/docs/westminster-default-full.png" />
+    <meta name="twitter:image" content="https://reformedconfessions.com/images/docs/westminster-default-full.png">
     <meta property="og:title" content="Westminster Daily" />
     <meta name="twitter:title" content="Westminster Daily">
     <title>Westminster Daily | A Daily Reading</title>
@@ -142,8 +142,6 @@
                     <div class="has-text-centered nav-links" style="padding: 0 24px 8px 24px;">
                         <a href="http://feedpress.me/westminster-daily"><small>subscribe by rss</small></a>
                         &middot;
-                        <a href="https://feed.press/e/mailverify?feed_id=westminster-daily"><small>subscribe by e-mail</small></a>
-                        &middot;
                         <a href="https://feedpress.me/westminster-daily-audio"><small>subscribe to podcast</small></a>
                         &middot;
                         <a href="https://podcasts.apple.com/us/podcast/westminster-daily/id1661869655"><small>apple podcasts</small></a>
@@ -151,6 +149,26 @@
                         <a href="/westminster-daily/about"><small>about</small></a>
                         &middot;
                         <a href="/westminster-daily/reading-plan"><small>full plan</small></a>
+                    </div>
+
+                    <!-- Email signup -->
+                    <div class="email-signup" style="padding: 24px; margin: 16px 24px; border: 1px solid #e0d9c7; border-radius: 4px; background: #faf7f0; text-align: center;">
+                        <p style="margin: 0 0 12px 0; font-weight: bold;">Get Westminster Daily in your inbox</p>
+                        <p style="margin: 0 0 16px 0; font-size: 0.9em; color: #666;">A short daily reading from the Westminster Standards, delivered each morning.</p>
+                        <form
+                            action="https://buttondown.com/api/emails/embed-subscribe/reformedconfessions"
+                            method="post"
+                            class="embeddable-buttondown-form"
+                            target="popupwindow"
+                            onsubmit="window.open('https://buttondown.com/reformedconfessions', 'popupwindow')"
+                            style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center;"
+                        >
+                            <label for="bd-email" style="position: absolute; left: -9999px;">Enter your email</label>
+                            <input type="email" name="email" id="bd-email" placeholder="your@email.com" required
+                                style="flex: 1 1 220px; max-width: 320px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 3px; font-size: 1em;" />
+                            <input type="submit" value="Subscribe"
+                                style="padding: 8px 20px; background: #3c3c3c; color: #fff; border: none; border-radius: 3px; font-size: 1em; cursor: pointer;" />
+                        </form>
                     </div>
 
                     <!-- Bottom ornament -->
