@@ -1,0 +1,8 @@
+{
+  "name": "westminster-daily-email-worker",
+  "private": true,
+  "version": "0.0.0",
+  "devDependencies": {
+    "wrangler": "^4.81.0"
+  }
+}
