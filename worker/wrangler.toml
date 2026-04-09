@@ -9,6 +9,9 @@ compatibility_date = "2026-04-01"
 [triggers]
 crons = ["0 9 * * *"]
 
+[observability]
+enabled = true
+
 # Let us `import template from './template.html'` as a plain string.
 [[rules]]
 type = "Text"
