@@ -65,7 +65,7 @@ async function sendDailyEmail(env) {
   const entryUrl = `https://reformedconfessions.com/westminster-daily/${month}/${day}/`;
   const subject = `Westminster Daily : ${entry.title}`;
   const body = template
-    .replace("__ENTRY_URL__", entryUrl)
+    .replaceAll("__ENTRY_URL__", entryUrl)
     .replace("__ENTRY_CONTENT__", entry.content);
 
   const resp = await fetch(BUTTONDOWN_URL, {
