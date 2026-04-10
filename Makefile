@@ -14,41 +14,46 @@ all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.r
 heidelberg-all: build ${HEIDELBERG_SOURCES} build/heidelberg-weekly/index.html heidelberg-feed.rss ## Build Heidelberg Weekly site
 
 feed.rss: build ## Generate main RSS feed
-	python -m pip install uv
-	python -m uv run generate_feed.py
+	uv run generate_feed.py
 	mv feed.rss build/westminster-daily/
 
 podcast.rss: build ## Generate podcast RSS feed
-	python -m pip install uv
-	python -m uv run generate_podcast_feed.py
+	uv run generate_podcast_feed.py
 	mv podcast.rss build/westminster-daily/
 
-build: build/westminster-daily build/css/main.css ## Build site structure and compile CSS
+build: og-images build/westminster-daily build/css/main.css ## Build site structure and compile CSS
 	cp -r static/* build
+	node scripts/generate-og-review.mjs --output build/og-review/index.html
 	find build
 	rm -rf build/scss
 
 build/westminster-daily: ## Create Westminster Daily build directory
 	mkdir -p build/westminster-daily
 
-build/css/main.css: static/scss/main.scss ## Compile SCSS to CSS
+build/css/main.css: static/scss/main.scss package.json ## Compile SCSS to CSS
 	mkdir -p build/css/
-	sass --style=compressed --no-source-map static/scss/main.scss build/css/main.css
+	npx sass --style=compressed --no-source-map static/scss/main.scss build/css/main.css
+
+og-images: ## Generate Open Graph images
+	node scripts/generate-og-images.mjs --all
+
+og-image: ## Generate one Open Graph image (DATE=03/25 or WEEK=01)
+	node scripts/generate-og-images.mjs $(if $(DATE),--date $(DATE),) $(if $(WEEK),--week $(WEEK),) $(if $(DEFAULT),--default,) $(if $(HEIDELBERG_DEFAULT),--heidelberg-default,)
 
 build/index.html: build/westminster-daily/index.html ## Create root index.html
 	cp build/westminster-daily/index.html build/index.html
 
-build/westminster-daily/index.html: build/westminster-daily ## Generate Westminster Daily index page
+build/westminster-daily/index.html: build/westminster-daily templates/base.html build_page.sh ## Generate Westminster Daily index page
 	cp $(CURRENT_FILE) content/index.md
 	./build_page.sh build/westminster-daily/index.html
 
-%.html: ## Build individual HTML pages
+build/westminster-daily/%.html: content/%.md templates/base.html build_page.sh ## Build individual HTML pages
 	./build_page.sh "$@"
 
-build/heidelberg-weekly/%/index.html: content-heidelberg/%/index.md ## Build Heidelberg Weekly pages
+build/heidelberg-weekly/%/index.html: content-heidelberg/%/index.md templates/heidelberg-base.html build_heidelberg_page.sh ## Build Heidelberg Weekly pages
 	./build_heidelberg_page.sh "$@"
 
-build/heidelberg-weekly/index.html: build/heidelberg-weekly ## Generate Heidelberg Weekly index page
+build/heidelberg-weekly/index.html: build/heidelberg-weekly templates/heidelberg-base.html build_heidelberg_page.sh ## Generate Heidelberg Weekly index page
 	python3 -c "from datetime import datetime, timedelta; \
 		jan_1 = datetime(2024, 1, 1); \
 		days_until_sunday = (6 - jan_1.weekday()) % 7; \
@@ -62,16 +67,14 @@ build/heidelberg-weekly/index.html: build/heidelberg-weekly ## Generate Heidelbe
 	./build_heidelberg_page.sh build/heidelberg-weekly/index.html
 
 heidelberg-feed.rss: build ## Generate Heidelberg Weekly RSS feed
-	python -m pip install uv
-	python -m uv run generate_heidelberg_feed.py
+	uv run generate_heidelberg_feed.py
 	mv heidelberg-feed.rss build/heidelberg-weekly/feed.rss
 
 build/heidelberg-weekly: ## Create Heidelberg Weekly build directory
 	mkdir -p build/heidelberg-weekly
 
 redirects: build ## Generate _redirects file for Cloudflare Pages
-	@echo "/static/images/docs/* https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/images/docs/:splat 200" > build/_redirects
-	@echo "/static/audio/* https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/:splat 200" >> build/_redirects
+	@echo "/static/audio/* https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/:splat 200" > build/_redirects
 	@echo "/ /westminster-daily/ 200" >> build/_redirects
 	@echo "/about /westminster-daily/about 200" >> build/_redirects
 
