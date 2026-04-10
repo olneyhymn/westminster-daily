@@ -94,6 +94,10 @@ async function sendDailyEmail(env) {
 
   if (!resp.ok) {
     const text = await resp.text();
+    if (resp.status === 400 && text.includes("email_duplicate")) {
+      console.log(`Already sent (duplicate): ${subject}`);
+      return;
+    }
     throw new Error(`Buttondown API ${resp.status}: ${text}`);
   }
   console.log(`Sent: ${subject}`);
