@@ -4,10 +4,11 @@ venv/
 build/
 *.egg-info
 bower_components
-package-lock.json
 node_modules/
+static/images/docs/
 flask_application/static/css/
 *.rss
 print/.venv/
 print/westminster-daily.pdf
 print/westminster-daily.typ
+worker/.dev.vars
