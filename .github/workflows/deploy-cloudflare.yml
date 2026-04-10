@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
   schedule:
-    - cron: "0 8 * * *" # 03:00 EST / 04:00 EDT daily
+    - cron: "0 6 * * *" # 01:00 EST / 02:00 EDT daily
 
 jobs:
   deploy:
@@ -20,8 +20,11 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Install Dart Sass
-        run: npm install -g sass
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
 
       - name: Set up Python
         uses: actions/setup-python@v5

@@ -2,10 +2,11 @@ name = "westminster-daily-email"
 main = "src/index.js"
 compatibility_date = "2026-04-01"
 
-# Run daily at 09:00 UTC. The upstream Pages deploy workflow runs at
-# 08:00 UTC (03:00 EST / 04:00 EDT), which gives the site roughly one
-# hour to publish the fresh feed.rss before we read it. The buffer
-# shrinks to one hour in EDT and expands to two hours in EST.
+# Run daily at 09:00 UTC. The upstream Pages deploy workflow is
+# scheduled at 06:00 UTC via GitHub Actions, giving a ~3-hour buffer
+# for the site to publish the fresh feed.rss (GH Actions cron can
+# lag 30-60+ min). The worker also retries once after 5 min if the
+# feed entry is missing.
 [triggers]
 crons = ["0 9 * * *"]
 
