@@ -1,0 +1,13 @@
+{
+  "name": "westminster-daily",
+  "private": true,
+  "scripts": {
+    "build:css": "sass --style=compressed --no-source-map static/scss/main.scss build/css/main.css",
+    "generate:og": "node scripts/generate-og-images.mjs --all",
+    "generate:og-review": "node scripts/generate-og-review.mjs --output build/og-review/index.html"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0",
+    "sass": "^1.77.0"
+  }
+}
