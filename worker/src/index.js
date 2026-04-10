@@ -57,9 +57,18 @@ async function sendDailyEmail(env) {
   }
   const feed = await feedResp.text();
 
-  const entry = findEntry(feed, month, day);
+  let entry = findEntry(feed, month, day);
   if (!entry) {
-    throw new Error(`No feed entry found for ${month}/${day}`);
+    console.log(`No entry for ${month}/${day} yet — retrying in 5 minutes`);
+    await new Promise((r) => setTimeout(r, 5 * 60 * 1000));
+    const retryResp = await fetch(FEED_URL, { cf: { cacheTtl: 0 } });
+    if (!retryResp.ok) {
+      throw new Error(`Feed retry failed: ${retryResp.status}`);
+    }
+    entry = findEntry(await retryResp.text(), month, day);
+    if (!entry) {
+      throw new Error(`No feed entry found for ${month}/${day} after retry`);
+    }
   }
 
   const entryUrl = `https://reformedconfessions.com/westminster-daily/${month}/${day}/`;
