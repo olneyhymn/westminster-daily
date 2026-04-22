@@ -224,6 +224,19 @@ def main():
     # Write the RSS feed to file
     fg.rss_file(FILENAME, pretty=True)
 
+    # Inject xml-stylesheet processing instruction so browsers render
+    # the feed with feed.xsl while feed readers ignore it.
+    stylesheet_pi = (
+        '<?xml-stylesheet type="text/xsl" '
+        'href="/westminster-daily/feed.xsl"?>\n'
+    )
+    with open(FILENAME, "r", encoding="utf-8") as f:
+        rss = f.read()
+    xml_decl_end = rss.find("?>") + len("?>")
+    rss = rss[:xml_decl_end] + "\n" + stylesheet_pi + rss[xml_decl_end:].lstrip("\n")
+    with open(FILENAME, "w", encoding="utf-8") as f:
+        f.write(rss)
+
 
 if __name__ == "__main__":
     main()
