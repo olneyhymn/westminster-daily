@@ -9,7 +9,7 @@ help: ## Show this help message
 	@echo 'Targets:'
 	@awk -F ':|##' '/^[^\t].+?:.*?##/ { printf "  %-20s %s\n", $$1, $$NF }' $(MAKEFILE_LIST)
 
-all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss podcast.rss heidelberg-all redirects data-json ## Build entire site including HTML, RSS feeds and assets
+all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss podcast.rss heidelberg-all redirects headers data-json ## Build entire site including HTML, RSS feeds and assets
 
 heidelberg-all: build ${HEIDELBERG_SOURCES} build/heidelberg-weekly/index.html heidelberg-feed.rss ## Build Heidelberg Weekly site
 
@@ -77,6 +77,11 @@ redirects: build ## Generate _redirects file for Cloudflare Pages
 	@echo "/static/audio/* https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/:splat 200" > build/_redirects
 	@echo "/ /westminster-daily/ 200" >> build/_redirects
 	@echo "/about /westminster-daily/about 200" >> build/_redirects
+
+headers: build ## Generate _headers file for Cloudflare Pages
+	@printf "/westminster-daily/feed.rss\n  Content-Type: application/xml; charset=utf-8\n\n" > build/_headers
+	@printf "/westminster-daily/podcast.rss\n  Content-Type: application/xml; charset=utf-8\n\n" >> build/_headers
+	@printf "/heidelberg-weekly/feed.rss\n  Content-Type: application/xml; charset=utf-8\n" >> build/_headers
 
 data-json: build/westminster-daily ## Copy data.json files into build
 	find content -name "data.json" -exec sh -c 'dir=$$(dirname "{}"); dest="build/westminster-daily/$${dir#content/}"; mkdir -p "$$dest"; cp "{}" "$$dest/"' \;
