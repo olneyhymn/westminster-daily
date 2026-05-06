@@ -2,19 +2,19 @@
 //
 // On the cron schedule defined in wrangler.toml:
 //   1. Compute today's date in US/Eastern.
-//   2. Fetch the site's RSS feed (which is regenerated an hour earlier
-//      by the Cloudflare Pages deploy workflow).
-//   3. Find the <item> whose <link> matches today's MM/DD path.
-//   4. Wrap its content in the Buttondown HTML template.
-//   5. POST it to the Buttondown API for immediate send.
+//   2. Fetch the per-day data.json from the deployed site. These files are
+//      generated for the full year on every Pages build, so they survive a
+//      missed daily deploy — the worker no longer depends on feed.rss being
+//      regenerated that morning.
+//   3. Wrap data.title + data.feed in the Buttondown HTML template.
+//   4. POST it to the Buttondown API for immediate send.
 //
 // Secrets required (set via `wrangler secret put` or the deploy workflow):
 //   BUTTONDOWN_API_KEY
 
 import template from "./template.html";
 
-const FEED_URL =
-  "https://reformedconfessions.com/westminster-daily/feed.rss";
+const SITE_BASE = "https://reformedconfessions.com/westminster-daily";
 const BUTTONDOWN_URL = "https://api.buttondown.com/v1/emails";
 const HEALTHCHECK_URL =
   "https://hc-ping.com/b0d50eaf-63d4-40db-9f76-f94629f98662";
@@ -50,32 +50,26 @@ async function sendDailyEmail(env) {
   }
 
   const { month, day } = easternMonthDay(new Date());
+  const dataUrl = `${SITE_BASE}/${month}/${day}/data.json`;
 
-  const feedResp = await fetch(FEED_URL, { cf: { cacheTtl: 0 } });
-  if (!feedResp.ok) {
-    throw new Error(`Feed fetch failed: ${feedResp.status}`);
-  }
-  const feed = await feedResp.text();
-
-  let entry = findEntry(feed, month, day);
-  if (!entry) {
-    console.log(`No entry for ${month}/${day} yet — retrying in 5 minutes`);
+  let data = await fetchData(dataUrl);
+  if (!data) {
+    console.log(`data.json missing for ${month}/${day} — retrying in 5 minutes`);
     await new Promise((r) => setTimeout(r, 5 * 60 * 1000));
-    const retryResp = await fetch(FEED_URL, { cf: { cacheTtl: 0 } });
-    if (!retryResp.ok) {
-      throw new Error(`Feed retry failed: ${retryResp.status}`);
-    }
-    entry = findEntry(await retryResp.text(), month, day);
-    if (!entry) {
-      throw new Error(`No feed entry found for ${month}/${day} after retry`);
+    data = await fetchData(dataUrl);
+    if (!data) {
+      throw new Error(`data.json not available for ${month}/${day} after retry`);
     }
   }
+  if (!data.title || !data.feed) {
+    throw new Error(`data.json for ${month}/${day} missing title or feed`);
+  }
 
-  const entryUrl = `https://reformedconfessions.com/westminster-daily/${month}/${day}/`;
-  const subject = `Westminster Daily : ${entry.title}`;
+  const entryUrl = `${SITE_BASE}/${month}/${day}/`;
+  const subject = `Westminster Daily : ${data.title}`;
   const body = template
     .replaceAll("__ENTRY_URL__", entryUrl)
-    .replace("__ENTRY_CONTENT__", entry.content);
+    .replace("__ENTRY_CONTENT__", data.feed);
 
   const resp = await fetch(BUTTONDOWN_URL, {
     method: "POST",
@@ -117,37 +111,8 @@ function easternMonthDay(date) {
   };
 }
 
-function findEntry(feed, month, day) {
-  const needle = `/${month}/${day}/`;
-  const itemRegex = /<item>([\s\S]*?)<\/item>/g;
-  let m;
-  while ((m = itemRegex.exec(feed)) !== null) {
-    const chunk = m[1];
-    if (!chunk.includes(needle)) continue;
-    const title = extractTag(chunk, "title");
-    const content =
-      extractTag(chunk, "content:encoded") ?? extractTag(chunk, "description");
-    if (!title || !content) return null;
-    return { title: decodeXml(title), content };
-  }
-  return null;
-}
-
-function extractTag(chunk, tag) {
-  const re = new RegExp(`<${tag}>([\\s\\S]*?)<\\/${tag}>`);
-  const m = chunk.match(re);
-  if (!m) return null;
-  let v = m[1];
-  const cdata = v.match(/^\s*<!\[CDATA\[([\s\S]*?)\]\]>\s*$/);
-  if (cdata) v = cdata[1];
-  return v;
-}
-
-function decodeXml(s) {
-  return s
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;/g, "'");
+async function fetchData(url) {
+  const resp = await fetch(url, { cf: { cacheTtl: 0 } });
+  if (!resp.ok) return null;
+  return await resp.json();
 }
