@@ -1,0 +1,48 @@
+# Westminster Daily
+
+> A daily reading site that walks through the Westminster Confession of Faith,
+> the Westminster Larger Catechism, and the Westminster Shorter Catechism in
+> one year, following Dr. Joseph Pipa Jr.'s calendar of readings. Each day's
+> reading is paired with its Scripture proof texts (English Standard Version)
+> and an audio recording. A sister site, Heidelberg Weekly, walks through the
+> Heidelberg Catechism one Lord's Day at a time.
+
+The Westminster Standards (the Confession of Faith, the Larger Catechism, and
+the Shorter Catechism) are historic Presbyterian and Reformed doctrinal
+documents and are in the public domain. Scripture proof texts quoted on this
+site are from the English Standard Version (ESV), copyright 2001 by Crossway
+Bibles, a publishing ministry of Good News Publishers, and are used by
+permission; the ESV text itself is not public domain.
+
+## URL scheme
+
+- Daily readings live at `/westminster-daily/MM/DD` (two-digit month and day,
+  no trailing slash, e.g. `/westminster-daily/03/03`), covering all 366 days
+  of the year including February 29.
+- Each day also publishes a machine-readable JSON document at
+  `/westminster-daily/MM/DD/data.json` containing the day's reading(s) as
+  structured data: `content` (reading text without proof texts) and
+  `content_with_prooftexts` (the same reading with footnoted proof texts
+  inlined), each an array of objects with `abbv` (document abbreviation, e.g.
+  `wcf`), `name` (full document name), `chapter`, `paragraph`, `citation`,
+  `long_citation`, `section_title`, `title`, `type`, and `body`/`prooftexts`
+  (a map of footnote number to ESV Scripture HTML). It also includes a
+  `feed` field with fully-inlined HTML suitable for email/RSS rendering, and
+  a top-level `title` for the day's reading.
+- Heidelberg Weekly readings live at `/heidelberg-weekly/week-NN/` (two-digit
+  week number, trailing slash, e.g. `/heidelberg-weekly/week-01/`), covering
+  all 52 Lord's Days of the Heidelberg Catechism.
+
+## Key pages
+
+- [Westminster Daily home](https://reformedconfessions.com/westminster-daily/): today's reading
+- [About](https://reformedconfessions.com/westminster-daily/about): background on the Westminster Standards and the reading calendar
+- [Full reading plan](https://reformedconfessions.com/westminster-daily/reading-plan): the complete year-long calendar with links to every day
+- [Heidelberg Weekly home](https://reformedconfessions.com/heidelberg-weekly/): this week's Lord's Day reading
+
+## Feeds
+
+- [Westminster Daily RSS feed](https://reformedconfessions.com/westminster-daily/feed.rss)
+- [Westminster Daily podcast feed](https://reformedconfessions.com/westminster-daily/podcast.rss)
+- [Heidelberg Weekly RSS feed](https://reformedconfessions.com/heidelberg-weekly/feed.rss)
+- [Sitemap](https://reformedconfessions.com/sitemap.xml)

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Page Not Found | Westminster Daily</title>
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css' />
+    <link rel='stylesheet' href='/css/main.css' />
+
+    <style>
+        /* Fallback styles in case /css/main.css fails to load */
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background-color: #E8E0D2;
+            color: #2C1810;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8-tablet is-6-desktop content-page">
+                <div class="content-inner">
+
+                    <!-- Masthead -->
+                    <div class="has-text-centered" style="padding: 30px 24px 10px 24px;">
+                        <span class="masthead-label">A Daily Reading from the</span>
+                    </div>
+                    <div class="has-text-centered" style="padding: 0 24px 22px 24px;">
+                        <span class="masthead-title"><a href="/westminster-daily/">WESTMINSTER STANDARDS</a></span>
+                    </div>
+
+                    <!-- Gold rule -->
+                    <div style="padding: 0 24px;">
+                        <hr />
+                    </div>
+
+                    <!-- 404 content -->
+                    <div class="has-text-centered" style="padding: 40px 24px;">
+                        <h1 style="font-size: 28px; font-style: italic; margin-bottom: 16px;">Page Not Found</h1>
+                        <p style="margin-bottom: 24px;">
+                            The page you're looking for isn't here &mdash; perhaps it wandered off,
+                            or the link was mistyped.
+                        </p>
+                        <p>
+                            <a href="/westminster-daily/">Return to today's reading</a>
+                            &middot;
+                            <a href="/westminster-daily/reading-plan">See the full reading plan</a>
+                        </p>
+                    </div>
+
+                    <!-- Thin rule -->
+                    <div style="padding: 0 24px;">
+                        <hr class="thin" />
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="site-footer">
+                        <p>
+                            Copyright &copy; <span id="year"></span>
+                            <a href="https://waitingtables.org/about/" target="_blank">Tim Hopper</a>.
+                        </p>
+                    </div>
+
+                </div><!-- content-inner -->
+            </div><!-- content-page -->
+        </div><!-- columns -->
+    </div><!-- container -->
+
+    <script type="text/javascript">
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

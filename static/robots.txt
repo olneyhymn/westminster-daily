@@ -1,0 +1,9 @@
+# NOTE: Cloudflare Pages' automatic "managed" robots.txt currently blocks
+# this project (it disallows AI crawlers). This file will only be served
+# once that managed robots.txt is disabled for this project in the
+# Cloudflare dashboard.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://reformedconfessions.com/sitemap.xml
