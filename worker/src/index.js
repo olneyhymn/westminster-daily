@@ -65,7 +65,7 @@ async function sendDailyEmail(env) {
     throw new Error(`data.json for ${month}/${day} missing title or feed`);
   }
 
-  const entryUrl = `${SITE_BASE}/${month}/${day}/`;
+  const entryUrl = `${SITE_BASE}/${month}/${day}`;
   const subject = `Westminster Daily : ${data.title}`;
   const body = template
     .replaceAll("__ENTRY_URL__", entryUrl)

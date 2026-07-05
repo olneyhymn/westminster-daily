@@ -209,14 +209,18 @@ def main():
         date = date.replace(hour=0, minute=0, second=0, microsecond=0)
         month = date.strftime("%m")
         day = date.strftime("%d")
-        url = f"{URL}/{month}/{day}/"
+        url = f"{URL}/{month}/{day}"
+        # The site's canonical daily URL has no trailing slash, but the
+        # guid format (with trailing slash) is preserved unchanged so
+        # existing subscribers don't see every item redelivered as new.
+        guid_url = f"{URL}/{month}/{day}/"
 
         # Create feed entry
         fe = fg.add_entry()
         fe.id(url)
         fe.title(meta(month, day)["pagetitle"][0])
         fe.link(href=url)
-        fe.guid(f"{url}{date.year}", permalink=False)
+        fe.guid(f"{guid_url}{date.year}", permalink=False)
         fe.content(content(month, day), type="CDATA")
         fe.updated(date)
         fe.published(date)

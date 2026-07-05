@@ -146,16 +146,20 @@ def main():
         day = date.strftime("%d")
         
         # Generate URLs for the episode
-        url = f"{URL}/{month}/{day}/"
+        url = f"{URL}/{month}/{day}"
+        # The site's canonical daily URL has no trailing slash, but the
+        # guid (with trailing slash) is preserved unchanged so existing
+        # podcast subscribers don't see every episode redelivered as new.
+        guid_url = f"{URL}/{month}/{day}/"
         mp3_url = f"https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/{month}{day}.mp3"
-        
+
         # Add entry to the feed
         fe = fg.add_entry()
         fe.id(url)
         fe.enclosure(mp3_url, 0, "audio/mpeg")
         fe.title(meta(month, day)["pagetitle"][0])
         fe.link(href=url)
-        fe.guid(url, permalink=True)
+        fe.guid(guid_url, permalink=True)
         fe.content(content(month, day), type="CDATA")
         fe.updated(date)
         fe.published(date)
