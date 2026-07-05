@@ -1,5 +1,6 @@
 ---
 pagetitle: Reading Plan
+canonical_url: /westminster-daily/reading-plan
 date: February 19, 2020
 ---
 

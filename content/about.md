@@ -1,5 +1,6 @@
 ---
 pagetitle: About
+canonical_url: /westminster-daily/about
 date: February 19, 2020
 ---
 
