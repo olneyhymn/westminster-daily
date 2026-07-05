@@ -1,19 +1,19 @@
 .bigfoot-footnote__button {
   position: relative;
   z-index: 5;
-  top: -0.1em;
+  top: -0.3em;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   display: inline-block;
-  padding: 0.35em;
-  margin: 0 0.1em 0 0.2em;
+  padding: 0.3em 0.4em;
+  margin: 0 0.1em 0 0.15em;
   border: none;
-  border-radius: 0.0m;
+  border-radius: 1em;
   cursor: pointer;
-  background-color: rgba(110, 110, 110, 0.1);
+  background-color: #5c1a2a;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  font-size: .9rem;
+  font-size: .7rem;
   line-height: 0;
   vertical-align: middle;
   text-decoration: none;
@@ -25,13 +25,13 @@
 }
 .bigfoot-footnote__button:hover, .bigfoot-footnote__button:focus {
   outline: none;
-  background-color: rgba(110, 110, 110, 0.5);
+  background-color: #3d1019;
 }
 .bigfoot-footnote__button:active {
-  background-color: rgba(110, 110, 110, 0.5);
+  background-color: #3d1019;
 }
 .bigfoot-footnote__button.is-active {
-  background-color: #6e6e6e;
+  background-color: #c4a265;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
