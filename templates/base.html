@@ -14,34 +14,33 @@
 
     <!-- Mobile Specific Metas
     ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS
     ================================================== -->
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css' />
+    <link rel='stylesheet' href='/css/bulma.min.css' />
     <link rel='stylesheet' href='/css/main.css' />
     <link rel='stylesheet' href='/css/bigfoot-default.css' />
     <link rel="stylesheet" href="/css/essential_audio.css" />
 
     <!-- Javascript
     ================================================== -->
-    <script src="/js/jquery-1.9.0.min.js"></script>
-    <script src="/js/bigfoot.min.js"></script>
-    <script src="/js/essential_audio.js"></script>
+    <script defer src="/js/jquery-1.9.0.min.js"></script>
+    <script defer src="/js/bigfoot.min.js"></script>
+    <script defer src="/js/essential_audio.js"></script>
 
     <script type="text/javascript">
-        var bf = jQuery.bigfoot({
-            buttonMarkup: '<div class=\'bigfoot-footnote__container\'> <button class="bigfoot-footnote__button" id="{{SUP:data-footnote-backlink-ref}}" data-footnote-number="{{FOOTNOTENUM}}" data-footnote-identifier="{{FOOTNOTEID}}" alt="See Footnote {{FOOTNOTENUM}}" rel="footnote" data-bigfoot-footnote="{{FOOTNOTECONTENT}}"> <svg class="bigfoot-footnote__button__circle" viewbox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg> <svg class="bigfoot-footnote__button__circle" viewbox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg>  </button></div>'
-        });
-        jQuery(document).ready(function () {
+        // Deferred scripts finish before DOMContentLoaded, so jQuery/bigfoot
+        // are available by the time this runs.
+        document.addEventListener("DOMContentLoaded", function () {
+            var bf = jQuery.bigfoot({
+                buttonMarkup: '<div class=\'bigfoot-footnote__container\'> <button class="bigfoot-footnote__button" id="{{SUP:data-footnote-backlink-ref}}" data-footnote-number="{{FOOTNOTENUM}}" data-footnote-identifier="{{FOOTNOTEID}}" alt="See Footnote {{FOOTNOTENUM}}" rel="footnote" data-bigfoot-footnote="{{FOOTNOTECONTENT}}"> <svg class="bigfoot-footnote__button__circle" viewbox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg> <svg class="bigfoot-footnote__button__circle" viewbox="0 0 6 6" preserveAspectRatio="xMinYMin"><circle r="3" cx="3" cy="3" fill="white"></circle></svg>  </button></div>'
+            });
 
             var hash = window.location.hash;
             hash = hash.replace("fn:", "fnref:").replace(":", "\\:");
-            console.log(hash)
             bf.activate(hash);
-
         });
-
     </script>
 
 
@@ -56,31 +55,90 @@
     <!-- Template block additions
     ================================================== -->
 
-    <meta property="og:site_title" content="Westminster Daily" />
+    <meta property="og:site_name" content="Westminster Daily" />
+    <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@reformedconfessions">
     <meta name="twitter:creator" content="@reformedconfessions">
     <!-- static? False -->
 
-    $if(short_date)$
+    $if(this_url)$
+    <title>$pagetitle/nowrap$ | Westminster Daily</title>
+    <link rel="canonical" href="https://reformedconfessions.com$this_url$">
+    <meta name="description" content="$pagetitle/nowrap$ — the Westminster Daily reading for $this_date/nowrap$, with ESV proof texts and audio.">
+    <meta property="og:type" content="article" />
     <meta property="og:image" content="https://reformedconfessions.com/images/docs/$short_date$-full.png" />
     <meta name="twitter:image" content="https://reformedconfessions.com/images/docs/$short_date$-full.png">
-    <meta property="og:title" content="$pagetitle$" />
-    <meta name="twitter:title" content="$pagetitle$">
-    <title>Westminster Daily | $pagetitle$</title>
+    <meta property="og:title" content="$pagetitle/nowrap$" />
+    <meta name="twitter:title" content="$pagetitle/nowrap$">
     <meta property="og:url" content="https://reformedconfessions.com$this_url$" />
+    <meta property="og:description" content="$pagetitle/nowrap$ — the Westminster Daily reading for $this_date/nowrap$, with ESV proof texts and audio." />
+    <meta name="twitter:description" content="$pagetitle/nowrap$ — the Westminster Daily reading for $this_date/nowrap$, with ESV proof texts and audio.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "$pagetitle/nowrap$",
+          "image": "https://reformedconfessions.com/images/docs/$short_date$-full.png",
+          "url": "https://reformedconfessions.com$this_url$",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://reformedconfessions.com$this_url$"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Tim Hopper",
+            "url": "https://waitingtables.org/about/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Westminster Daily",
+            "url": "https://reformedconfessions.com/westminster-daily/"
+          },
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "Westminster Daily",
+            "url": "https://reformedconfessions.com/westminster-daily/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Westminster Daily",
+              "item": "https://reformedconfessions.com/westminster-daily/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "$pagetitle/nowrap$",
+              "item": "https://reformedconfessions.com$this_url$"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     $else$
+    <title>$if(pagetitle)$$pagetitle/nowrap$ | $endif$Westminster Daily</title>
+    $if(canonical_url)$
+    <link rel="canonical" href="https://reformedconfessions.com$canonical_url$">
+    $endif$
+    <meta name="description" content="A daily reading from the Westminster Confession of Faith and Catechisms, with ESV proof texts and audio.">
+    <meta property="og:type" content="website" />
     <meta property="og:image" content="https://reformedconfessions.com/images/docs/westminster-default-full.png" />
     <meta name="twitter:image" content="https://reformedconfessions.com/images/docs/westminster-default-full.png">
-    <meta property="og:title" content="Westminster Daily" />
-    <meta name="twitter:title" content="Westminster Daily">
-    <title>Westminster Daily | A Daily Reading</title>
+    <meta property="og:title" content="$if(pagetitle)$$pagetitle/nowrap$ | $endif$Westminster Daily" />
+    <meta name="twitter:title" content="$if(pagetitle)$$pagetitle/nowrap$ | $endif$Westminster Daily">
     <meta property="og:url" content="https://reformedconfessions.com/westminster-daily/" />
+    <meta property="og:description" content="A daily reading from the Westminster Confession of Faith and Catechisms, with ESV proof texts and audio." />
+    <meta name="twitter:description" content="A daily reading from the Westminster Confession of Faith and Catechisms, with ESV proof texts and audio.">
     $endif$
-    <meta name="description" content="A daily reading from the Westminster Confession and Catechisms">
-    <meta property="og:description" content="A daily reading from the Westminster Confession and Catechisms" />
-    <meta name="twitter:description" content="A daily reading from the Westminster Confession and Catechisms">
 
 
 
@@ -125,6 +183,7 @@
 
                     <!-- Reading content -->
                     <div style="padding: 22px 24px 30px 24px;">
+                        <h1 class="visually-hidden">$pagetitle/nowrap$</h1>
                         $body$
                     </div>
 
@@ -149,6 +208,8 @@
                         <a href="/westminster-daily/about"><small>about</small></a>
                         &middot;
                         <a href="/westminster-daily/reading-plan"><small>full plan</small></a>
+                        &middot;
+                        <a href="/heidelberg-weekly/"><small>heidelberg weekly</small></a>
                     </div>
 
                     <!-- Email signup -->
@@ -177,13 +238,12 @@
                     <!-- Footer -->
                     <div class="site-footer">
                         <p>
-                            Copyright &copy;
-                            <script language="javascript" type="text/javascript">document.write((new Date()).getFullYear())</script>
+                            Copyright &copy; 2015&ndash;2026
                             <a href="https://waitingtables.org/about/" target="_blank">Tim Hopper</a>.
                             Based on <a href="/pipa-calendar.pdf">Calendar of Readings in the Westminster Standards</a> by
                             Dr. Joey Pipa.
                             Scripture taken from The Holy Bible, English Standard Version. Copyright &copy;2001 by <a
-                                href="http://www.crosswaybibles.org">Crossway Bibles</a>, a publishing ministry of Good News
+                                href="https://www.crosswaybibles.org">Crossway Bibles</a>, a publishing ministry of Good News
                             Publishers. Used by permission. All rights reserved.
                         </p>
                         <a href="https://readmachen.com">readmachen.com</a>
@@ -201,6 +261,8 @@
 
     <script type="text/javascript">
 
+        // Uses jQuery only inside the click handler, which fires after the
+        // deferred scripts have loaded.
         document.getElementById('toggle').onclick = toggle;
         function toggle() {
             jQuery(".bigfoot-footnote__container").toggle();
