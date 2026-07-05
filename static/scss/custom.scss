@@ -106,6 +106,25 @@ hr.thin {
     margin-bottom: 1.25em;
 }
 
+// === Ordered / Unordered Lists ===
+// Bulma's reset strips list padding, so numbered items spill into the left
+// margin. Restore a proper hanging indent and give items breathing room.
+.content-inner {
+    ol, ul {
+        margin: 0 0 1.25em 0;
+        padding-left: 2.2em;
+    }
+
+    li {
+        margin-bottom: 0.6em;
+        padding-left: 0.3em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
 // === Content Styles ===
 .q {
     font-size: 120%;
