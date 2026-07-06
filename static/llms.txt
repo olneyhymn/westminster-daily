@@ -39,6 +39,8 @@ permission; the ESV text itself is not public domain.
 - [About](https://reformedconfessions.com/westminster-daily/about): background on the Westminster Standards and the reading calendar
 - [Full reading plan](https://reformedconfessions.com/westminster-daily/reading-plan): the complete year-long calendar with links to every day
 - [Heidelberg Weekly home](https://reformedconfessions.com/heidelberg-weekly/): this week's Lord's Day reading
+- [Heidelberg Weekly about](https://reformedconfessions.com/heidelberg-weekly/about): background on the Heidelberg Catechism
+- [Heidelberg Weekly reading plan](https://reformedconfessions.com/heidelberg-weekly/reading-plan): all 52 Lord's Days with links
 
 ## Feeds
 

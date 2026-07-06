@@ -27,6 +27,8 @@ The script:
 
 from feedgen.feed import FeedGenerator
 import datetime as dt
+import sys
+from pathlib import Path
 import pytz
 from premailer import transform
 import markdown
@@ -39,33 +41,8 @@ FILENAME = "heidelberg-feed.rss"
 NUMBER_OF_WEEKS = 8  # Number of weeks of content to include in the feed
 
 
-def get_week_number_for_date(date):
-    """
-    Calculate the week number (1-52) for a given date based on Sundays.
-    Week 1 starts on the first Sunday of January.
-
-    Args:
-        date (datetime): The date to calculate week number for
-
-    Returns:
-        int: Week number (1-52)
-    """
-    # Find first Sunday of January for the year
-    jan_1 = dt.datetime(date.year, 1, 1, tzinfo=date.tzinfo)
-    days_until_sunday = (6 - jan_1.weekday()) % 7
-
-    if days_until_sunday == 0 and jan_1.weekday() == 6:
-        first_sunday = jan_1
-    else:
-        first_sunday = jan_1 + dt.timedelta(days=days_until_sunday)
-        if first_sunday.day > 7:
-            first_sunday = jan_1 + dt.timedelta(days=(6 - jan_1.weekday()))
-
-    # Calculate weeks since first Sunday
-    days_diff = (date - first_sunday).days
-    week_number = (days_diff // 7) % 52
-
-    return week_number + 1  # Return 1-52
+sys.path.insert(0, str(Path(__file__).resolve().parent / "scripts"))
+from heidelberg_week import week_number_for_date as get_week_number_for_date  # noqa: E402
 
 
 @lru_cache()

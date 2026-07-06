@@ -65,6 +65,8 @@ def static_urls() -> list[str]:
     return [
         f"{BASE_URL}/westminster-daily/about",
         f"{BASE_URL}/westminster-daily/reading-plan",
+        f"{BASE_URL}/heidelberg-weekly/about",
+        f"{BASE_URL}/heidelberg-weekly/reading-plan",
     ]
 
 

@@ -7,6 +7,12 @@ bower_components
 node_modules/
 static/images/docs/
 static/css/main.css
+content/index.md
+content-heidelberg/index.md
+.DS_Store
+.direnv/
+.envrc
+output/
 flask_application/static/css/
 *.rss
 print/.venv/

@@ -42,8 +42,8 @@ def get_week_date_range(week_num):
 
     return sunday
 
-def format_prooftexts_markdown(q_data):
-    """Format prooftexts as markdown footnotes"""
+def format_prooftexts_markdown(q_data, q_num):
+    """Format prooftexts as markdown footnotes with unique IDs per question"""
     answer = q_data['answer']
     prooftexts = q_data.get('prooftexts', {})
     prooftext_verses = q_data.get('prooftext_verses', {})
@@ -51,11 +51,11 @@ def format_prooftexts_markdown(q_data):
     # Clean up answer - remove "Answer:" prefix if present
     answer = answer.replace('Answer:', '').strip()
 
-    # Build footnote references in answer
+    # Build footnote references in answer with question-specific IDs
     footnote_refs = []
     for marker in sorted(prooftexts.keys()):
-        # Create unique footnote ID
-        footnote_id = f"fn{marker}"
+        # Create unique footnote ID per question: fn1a, fn1b, fn2a, fn2b, etc.
+        footnote_id = f"fn{q_num}{marker}"
         footnote_refs.append((marker, footnote_id))
 
     # Build the footnotes section
@@ -63,8 +63,15 @@ def format_prooftexts_markdown(q_data):
     for marker, footnote_id in footnote_refs:
         if marker in prooftext_verses:
             verses_text = prooftext_verses[marker]
-            # Format as markdown footnote
-            footnotes.append(f"[^{footnote_id}]: {verses_text}")
+            # Indent continuation lines so multi-verse proof texts stay
+            # inside the footnote instead of leaking into the page body
+            lines = verses_text.split('\n')
+            first = lines[0]
+            rest = '\n'.join(f"    {line}" if line.strip() else "" for line in lines[1:])
+            footnote = f"[^{footnote_id}]: {first}"
+            if rest.strip():
+                footnote += f"\n{rest}"
+            footnotes.append(footnote)
 
     return answer, '\n\n'.join(footnotes)
 
@@ -138,13 +145,13 @@ next_week: "Week {next_num}"
         content_lines.append(f"{question}\n")
         content_lines.append(f"##### Answer\n")
 
-        # Format answer with prooftexts
-        answer, footnotes = format_prooftexts_markdown(q_data)
+        # Format answer with prooftexts (pass question number for unique IDs)
+        answer, footnotes = format_prooftexts_markdown(q_data, q_num)
 
-        # Add footnote markers to answer
+        # Add footnote markers to answer with question-specific IDs
         prooftexts = q_data.get('prooftexts', {})
         for marker in sorted(prooftexts.keys()):
-            footnote_id = f"fn{marker}"
+            footnote_id = f"fn{q_num}{marker}"
             # Replace (a), (b), (c) markers with footnote references
             answer = answer.replace(f'({marker})', f'[^{footnote_id}]')
 
@@ -153,10 +160,9 @@ next_week: "Week {next_num}"
         if footnotes:
             all_footnotes.append(footnotes)
 
-    # Add all footnotes at the end
+    # Add all footnotes at the end (without section header - they'll render as BigFoot expandable footnotes)
     if all_footnotes:
-        content_lines.append("\n---\n")
-        content_lines.append("### Scripture References\n")
+        content_lines.append("\n")
         content_lines.append('\n\n'.join(all_footnotes))
 
     return '\n'.join(content_lines)
