@@ -1,7 +1,6 @@
-# NOTE: Cloudflare Pages' automatic "managed" robots.txt currently blocks
-# this project (it disallows AI crawlers). This file will only be served
-# once that managed robots.txt is disabled for this project in the
-# Cloudflare dashboard.
+# All crawlers welcome, including AI crawlers. If AI bots stop reaching
+# the site, check that Cloudflare's managed robots.txt / AI Crawl Control
+# hasn't been re-enabled in the dashboard — it overrides this file.
 
 User-agent: *
 Allow: /
