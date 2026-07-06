@@ -5,8 +5,11 @@
 input="${1#build/heidelberg-weekly/}"
 if [ "$input" = "index.html" ]; then
     input="content-heidelberg/index.md"
-else
+elif [[ "$input" == */index.html ]]; then
     input="content-heidelberg/${input%/index.html}/index.md"
+else
+    # Flat pages like about.html -> content-heidelberg/about.md
+    input="content-heidelberg/${input%.html}.md"
 fi
 mkdir -p "$(dirname "$1")"
 pandoc --from markdown+footnotes --template templates/heidelberg-base.html --to html -o "$1" "$input"

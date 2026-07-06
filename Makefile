@@ -53,6 +53,9 @@ build/westminster-daily/%.html: content/%.md templates/base.html build_page.sh #
 build/heidelberg-weekly/%/index.html: content-heidelberg/%/index.md templates/heidelberg-base.html build_heidelberg_page.sh ## Build Heidelberg Weekly pages
 	./build_heidelberg_page.sh "$@"
 
+build/heidelberg-weekly/%.html: content-heidelberg/%.md templates/heidelberg-base.html build_heidelberg_page.sh ## Build Heidelberg Weekly flat pages (about, reading-plan)
+	./build_heidelberg_page.sh "$@"
+
 build/heidelberg-weekly/index.html: build/heidelberg-weekly templates/heidelberg-base.html build_heidelberg_page.sh scripts/heidelberg_week.py ## Generate Heidelberg Weekly index page
 	cp "content-heidelberg/week-$$(python3 scripts/heidelberg_week.py)/index.md" content-heidelberg/index.md
 	./build_heidelberg_page.sh build/heidelberg-weekly/index.html
