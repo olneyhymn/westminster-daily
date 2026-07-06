@@ -53,17 +53,8 @@ build/westminster-daily/%.html: content/%.md templates/base.html build_page.sh #
 build/heidelberg-weekly/%/index.html: content-heidelberg/%/index.md templates/heidelberg-base.html build_heidelberg_page.sh ## Build Heidelberg Weekly pages
 	./build_heidelberg_page.sh "$@"
 
-build/heidelberg-weekly/index.html: build/heidelberg-weekly templates/heidelberg-base.html build_heidelberg_page.sh ## Generate Heidelberg Weekly index page
-	python3 -c "from datetime import datetime, timedelta; \
-		jan_1 = datetime(2024, 1, 1); \
-		days_until_sunday = (6 - jan_1.weekday()) % 7; \
-		first_sunday = jan_1 + timedelta(days=days_until_sunday if days_until_sunday > 0 or jan_1.weekday() != 6 else 0); \
-		today = datetime.now(); \
-		weeks_diff = (today - first_sunday).days // 7; \
-		week_num = (weeks_diff % 52) + 1; \
-		week_fmt = f'{week_num:02d}'; \
-		import shutil; \
-		shutil.copy(f'content-heidelberg/week-{week_fmt}/index.md', 'content-heidelberg/index.md')"
+build/heidelberg-weekly/index.html: build/heidelberg-weekly templates/heidelberg-base.html build_heidelberg_page.sh scripts/heidelberg_week.py ## Generate Heidelberg Weekly index page
+	cp "content-heidelberg/week-$$(python3 scripts/heidelberg_week.py)/index.md" content-heidelberg/index.md
 	./build_heidelberg_page.sh build/heidelberg-weekly/index.html
 
 heidelberg-feed.rss: build ## Generate Heidelberg Weekly RSS feed
