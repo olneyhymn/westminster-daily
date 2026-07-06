@@ -6,6 +6,7 @@ build/
 bower_components
 node_modules/
 static/images/docs/
+static/css/main.css
 flask_application/static/css/
 *.rss
 print/.venv/
