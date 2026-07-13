@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """Generate a Typst source file for the Westminster Daily print book.
 
-Reads all content/MM/DD/data.json files and produces print/westminster-daily.typ.
+Reads all content/MM/DD/data.json files plus curation data from print/curation/*.json
+and produces print/westminster-daily.typ.
+
+Proof-text rules (spec v2):
+- Every reference is listed, grouped under its footnote number.
+- References selected in the curation files are printed in full (ESV text).
+- A global budget of <1,000 printed ESV verses is enforced.
 """
 
 import json
-import os
 import re
 import html as html_module
 from datetime import date, timedelta
@@ -14,7 +19,10 @@ from pathlib import Path
 from bs4 import BeautifulSoup, NavigableString
 
 CONTENT_DIR = Path(__file__).resolve().parent.parent / "content"
+CURATION_DIR = Path(__file__).resolve().parent / "curation"
 OUTPUT_FILE = Path(__file__).resolve().parent / "westminster-daily.typ"
+
+VERSE_BUDGET = 1000
 
 MONTHS = [
     "", "January", "February", "March", "April", "May", "June",
@@ -38,34 +46,38 @@ def escape_typst(text: str) -> str:
     return text
 
 
+def normalize_ref(reference: str) -> str:
+    """Normalize a Scripture reference for matching (dashes, whitespace)."""
+    ref = reference.replace("–", "-").replace("—", "-")
+    ref = re.sub(r"\s+", " ", ref).strip()
+    return ref
+
+
 def count_verses(reference: str) -> int | None:
     """Count the number of verses in a Scripture reference.
 
-    Returns None for multi-chapter references (always citation-only).
+    Returns None when the count can't be determined (multi-chapter ranges,
+    whole-chapter citations).
     """
-    # Multi-chapter references like "Hebrews 8-10" or "Hebrews 8:1-10:39"
-    if re.search(r'\d+[:-]\d+[:-]\d+', reference):
-        # Could be "Book X:Y-Z" with large numbers, check further
-        pass
+    ref = normalize_ref(reference)
 
-    # Match "Book Chapter:VerseStart-VerseEnd"
-    m = re.search(r':(\d+)\s*[-–]\s*(\d+)\s*$', reference)
+    # Cross-chapter range like "Hebrews 8:1-10:39"
+    if re.search(r"\d+:\d+\s*-\s*\d+:\d+", ref):
+        return None
+
+    # "Book Chapter:VerseStart-VerseEnd"
+    m = re.search(r":(\d+)\s*-\s*(\d+)\s*$", ref)
     if m:
         start, end = int(m.group(1)), int(m.group(2))
         if end >= start:
             return end - start + 1
         return None
 
-    # Match "Book Chapter:Verse" (single verse)
-    m = re.search(r':(\d+)\s*$', reference)
-    if m:
+    # "Book Chapter:Verse" (single verse)
+    if re.search(r":(\d+)\s*$", ref):
         return 1
 
-    # Multi-chapter like "Hebrews 8-10" (no colon, just chapter range)
-    m = re.search(r'(\d+)\s*[-–]\s*(\d+)\s*$', reference)
-    if m and ':' not in reference:
-        return None  # Multi-chapter, always citation-only
-
+    # Whole chapter(s): "Psalm 119" or "Hebrews 8-10"
     return None
 
 
@@ -304,6 +316,7 @@ def load_all_days() -> list[dict]:
             days.append({
                 "month": d.month,
                 "day": d.day,
+                "key": f"{mm}-{dd}",
                 "month_name": MONTHS[d.month],
                 "data": data,
             })
@@ -312,19 +325,61 @@ def load_all_days() -> list[dict]:
     return days
 
 
-def format_prooftexts(prooftexts: dict) -> str:
-    """Format prooftexts dict into Typst markup.
+def load_curation() -> dict:
+    """Load curation selections from print/curation/*.json.
 
-    For each numbered group, parse the HTML and apply the verse-count rule:
-    - ≤2 verses: include full text
-    - >2 verses: citation only
+    Each file maps "MM-DD" -> { citation -> { footnote_num -> [references] } }.
+    Returns the merged mapping with normalized references.
+    """
+    curation: dict = {}
+    if not CURATION_DIR.exists():
+        return curation
+    for path in sorted(CURATION_DIR.glob("*.json")):
+        with open(path) as f:
+            data = json.load(f)
+        for day_key, citations in data.items():
+            day_sel = curation.setdefault(day_key, {})
+            for citation, groups in citations.items():
+                cit_sel = day_sel.setdefault(citation, {})
+                for num, refs in groups.items():
+                    cit_sel[num] = [normalize_ref(r) for r in refs]
+    return curation
+
+
+class BudgetTracker:
+    """Tracks printed verses and curation mismatches across the build."""
+
+    def __init__(self):
+        self.printed_verses = 0
+        self.printed_passages = 0
+        self.uncountable: list[str] = []
+        self.unmatched: list[str] = []
+
+    def add(self, reference: str, context: str):
+        n = count_verses(reference)
+        if n is None:
+            self.uncountable.append(f"{context}: {reference}")
+            n = 5  # conservative fallback so the budget stays honest
+        self.printed_verses += n
+        self.printed_passages += 1
+
+
+def format_prooftexts(prooftexts: dict, selection: dict, context: str,
+                      tracker: BudgetTracker) -> str:
+    """Format prooftexts into Typst markup.
+
+    Every reference is listed under its footnote number. References named in
+    `selection` (footnote_num -> [normalized refs]) are printed in full; all
+    others appear as citations only.
     """
     if not prooftexts:
         return ""
 
     lines = []
-    # Sort by numeric key
     sorted_keys = sorted(prooftexts.keys(), key=lambda k: int(k))
+
+    # Track which selected refs we actually found, to flag curation typos
+    wanted = {(num, ref) for num, refs in selection.items() for ref in refs}
 
     for key in sorted_keys:
         html_str = prooftexts[key]
@@ -333,36 +388,32 @@ def format_prooftexts(prooftexts: dict) -> str:
         if not passages:
             continue
 
+        selected_refs = selection.get(key, [])
+
         full_texts = []
         citation_only = []
 
         for passage in passages:
-            ref = passage["reference"]
-            verse_count = count_verses(ref)
-
-            if verse_count is not None and verse_count <= 2:
+            ref = normalize_ref(passage["reference"])
+            if ref in selected_refs:
                 full_texts.append(passage)
+                wanted.discard((key, ref))
             else:
                 citation_only.append(passage)
 
         group_parts = []
 
-        # Full text passages
         for passage in full_texts:
             ref = escape_typst(passage["reference"])
             text = passage["text"]  # Already Typst-escaped during extraction
+            tracker.add(passage["reference"], context)
             if passage["is_poetry"]:
-                # Format poetry with line breaks
                 poetry_lines = text.split("\n")
-                formatted_lines = []
-                for line in poetry_lines:
-                    formatted_lines.append(line)
-                poetry_text = " \\\n".join(formatted_lines)
+                poetry_text = " \\\n".join(poetry_lines)
                 group_parts.append(f'#prooftext-full[{ref}][{poetry_text}]')
             else:
                 group_parts.append(f'#prooftext-full[{ref}][{text}]')
 
-        # Citation-only passages
         if citation_only:
             refs = ", ".join(escape_typst(p["reference"]) for p in citation_only)
             group_parts.append(f'#prooftext-citation[{refs}]')
@@ -371,13 +422,17 @@ def format_prooftexts(prooftexts: dict) -> str:
             content = "\n".join(group_parts)
             lines.append(f'#prooftext-group[{key}][\n{content}\n]')
 
+    for num, ref in sorted(wanted):
+        tracker.unmatched.append(f"{context} [{num}]: {ref}")
+
     return "\n".join(lines)
 
 
 def generate_front_matter() -> str:
     """Generate the front matter pages."""
-    return r'''// Suppress page numbers on front matter
-#set page(numbering: none, header: none)
+    return r'''// Suppress page numbers on front matter (running header stays; it
+// renders nothing until the first date-header sets the state)
+#set page(numbering: none)
 
 // Half title
 #align(center + horizon)[
@@ -390,13 +445,15 @@ def generate_front_matter() -> str:
 
 // Title page
 #align(center + horizon)[
-  #text(font: sans-font, size: 28pt, weight: "bold")[The Westminster Daily]
+  #text(font: sans-font, size: 26pt, weight: "bold")[The Westminster Daily]
   #v(12pt)
-  #text(font: sans-font, size: 14pt)[A Daily Reading Plan through]
+  #text(font: sans-font, size: 13pt)[A Daily Reading Plan through]
   #v(4pt)
-  #text(font: sans-font, size: 14pt)[the Westminster Standards]
-  #v(24pt)
-  #text(font: sans-font, size: 11pt, fill: luma(100))[with prooftexts from the ESV]
+  #text(font: sans-font, size: 13pt)[the Westminster Standards]
+  #v(36pt)
+  #text(font: sans-font, size: 10.5pt)[Compiled and edited by Tim Hopper]
+  #v(8pt)
+  #text(font: sans-font, size: 9pt, fill: luma(100))[Following the reading calendar of Dr.~Joseph A. Pipa Jr.]
 ]
 #pagebreak()
 
@@ -404,13 +461,25 @@ def generate_front_matter() -> str:
 #set par(justify: false)
 #v(1fr)
 #text(size: 8pt)[
+  \u{00A9} 2026 Tim Hopper. All rights reserved.
+
+  #v(6pt)
+
   Scripture quotations are from the ESV\u{00AE} Bible (The Holy Bible, English Standard Version\u{00AE}), copyright \u{00A9} 2001 by Crossway, a publishing ministry of Good News Publishers. Used by permission. All rights reserved.
 
   #v(6pt)
 
-  The Westminster Confession of Faith, the Westminster Shorter Catechism, and the Westminster Larger Catechism are public domain.
+  The Westminster Confession of Faith, the Westminster Shorter Catechism, and the Westminster Larger Catechism are in the public domain.
+
+  #v(6pt)
+
+  westminsterdaily.com
 ]
 #set par(justify: true)
+#pagebreak()
+
+// Table of contents
+#month-toc()
 #pagebreak()
 
 // Introduction
@@ -421,11 +490,15 @@ The Westminster Standards --- the Confession of Faith, the Shorter Catechism, an
 
 #v(6pt)
 
-This book divides the Standards into 366 daily readings, one for each day of the year including leap day. Each day's reading includes the relevant portion of the Standards along with the Scripture prooftexts cited by the Assembly. Short prooftexts (two verses or fewer) are printed in full; longer passages are given as citations for the reader to look up.
+This book divides the Standards into 366 daily readings, one for each day of the year including leap day, following the reading calendar prepared by Dr.~Joseph A. Pipa Jr. Each day's reading presents a portion of the Standards together with the Scripture proof texts cited by the Assembly.
 
 #v(6pt)
 
-The readings cycle through the Shorter Catechism, the Larger Catechism, and the Confession of Faith across the year. May this daily engagement with these faithful summaries of God's Word be a means of grace in your life.
+Every proof-text reference is listed so you can trace each statement to its biblical basis. For each day, a few passages --- those that most directly ground the doctrine or most warm the heart --- are printed in full from the English Standard Version. The rest are given as citations, an invitation to open your Bible alongside this book.
+
+#v(6pt)
+
+May this daily engagement with these faithful summaries of God's Word be a means of grace in your life.
 
 #pagebreak()
 
@@ -435,7 +508,7 @@ The readings cycle through the Shorter Catechism, the Larger Catechism, and the 
 '''
 
 
-def generate_typst(days: list[dict]) -> str:
+def generate_typst(days: list[dict], curation: dict, tracker: BudgetTracker) -> str:
     """Generate the complete Typst source."""
     parts = []
 
@@ -451,8 +524,10 @@ def generate_typst(days: list[dict]) -> str:
     for day_info in days:
         month = day_info["month"]
         day = day_info["day"]
+        day_key = day_info["key"]
         month_name = day_info["month_name"]
         data = day_info["data"]
+        day_curation = curation.get(day_key, {})
 
         # Month header on first day of month
         is_first_of_month = month != current_month
@@ -460,17 +535,16 @@ def generate_typst(days: list[dict]) -> str:
             current_month = month
             parts.append(f'\n#month-header[{month_name}]\n')
 
-        # Date header — use first-date-header after month header (no extra rule)
-        if is_first_of_month:
-            parts.append(f'#first-date-header[{month_name}][{day}]\n')
-        else:
-            parts.append(f'#date-header[{month_name}][{day}]\n')
+        topic = escape_typst(data.get("title", ""))
+        first_flag = "true" if is_first_of_month else "false"
+        parts.append(f'#date-header([{month_name}], [{day}], [{topic}], first: {first_flag})\n')
 
         # Content items
         content_items = data.get("content_with_prooftexts", [])
         for i, item in enumerate(content_items):
             item_type = item.get("type", "")
             long_citation = item.get("long_citation", "")
+            citation = item.get("citation", "")
 
             # Add separator between multiple entries within the same day
             if i > 0:
@@ -490,10 +564,12 @@ def generate_typst(days: list[dict]) -> str:
                 body = parse_answer_body(item.get("body", ""))
                 parts.append(f'#confession-body[{body}]\n')
 
-            # Prooftexts
+            # Prooftexts — all references listed, curated ones in full
             prooftexts = item.get("prooftexts", {})
             if prooftexts:
-                pt_markup = format_prooftexts(prooftexts)
+                selection = day_curation.get(citation, {})
+                context = f"{day_key} {citation}"
+                pt_markup = format_prooftexts(prooftexts, selection, context, tracker)
                 if pt_markup:
                     parts.append(f'\n#prooftext-section[\n{pt_markup}\n]\n')
 
@@ -505,14 +581,35 @@ def main():
     days = load_all_days()
     print(f"  Loaded {len(days)} days")
 
+    print("Loading curation...")
+    curation = load_curation()
+    print(f"  Curation for {len(curation)} days")
+
+    tracker = BudgetTracker()
+
     print("Generating Typst source...")
-    typst_source = generate_typst(days)
+    typst_source = generate_typst(days, curation, tracker)
 
     print(f"Writing {OUTPUT_FILE}...")
     with open(OUTPUT_FILE, "w") as f:
         f.write(typst_source)
 
     print(f"  Written {len(typst_source):,} characters")
+    print()
+    print("Verse budget report:")
+    print(f"  Printed passages: {tracker.printed_passages}")
+    print(f"  Printed verses:   {tracker.printed_verses} / {VERSE_BUDGET}")
+    if tracker.uncountable:
+        print(f"  Uncountable references (assumed 5 verses each):")
+        for item in tracker.uncountable:
+            print(f"    - {item}")
+    if tracker.unmatched:
+        print(f"  CURATION MISMATCHES (selected but not found):")
+        for item in tracker.unmatched:
+            print(f"    - {item}")
+    if tracker.printed_verses >= VERSE_BUDGET:
+        raise SystemExit(f"ERROR: verse budget exceeded ({tracker.printed_verses} >= {VERSE_BUDGET})")
+    print()
     print("Done! Run: typst compile print/westminster-daily.typ")
 
 
