@@ -70,8 +70,10 @@ with curated ESV proof texts.
 ## Navigation
 
 - **Month table of contents** — one page, months with page numbers
+- **Date locator** — one-page front-matter grid (month × day → page)
+- **Index of the Standards** — back matter: WCF chapters with page ranges,
+  WSC/WLC question numbers with pages (generated from Typst metadata queries)
 - Running date headers (above)
-- No index in v1.1 (Standards index deferred)
 
 ## Front Matter
 

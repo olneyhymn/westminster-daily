@@ -53,6 +53,21 @@ def normalize_plain(html_str: str) -> str:
     return re.sub(r"\s+", " ", text).strip().lower().rstrip("?.")
 
 
+def reading_metadata(item: dict) -> str:
+    """Emit a Typst metadata marker for the Standards index."""
+    doc = item.get("abbv", "").upper()
+    if item.get("type") == "catechism":
+        num = item.get("number", "")
+        if doc in ("WSC", "WLC") and str(num).isdigit():
+            return f'#metadata((kind: "rd", doc: "{doc}", num: {int(num)}))\n'
+    elif item.get("type") == "confession":
+        ch = item.get("chapter", "")
+        if str(ch).isdigit():
+            title = re.sub(r"^Chapter \d+:\s*", "", item.get("title", ""))
+            return f'#metadata((kind: "rd", doc: "WCF", ch: {int(ch)}, title: {json.dumps(title)}))\n'
+    return ""
+
+
 def topic_is_redundant(topic: str, items: list[dict]) -> bool:
     """True when the day's topic adds nothing over the readings' own headers."""
     t = normalize_plain(topic)
@@ -512,6 +527,10 @@ def generate_front_matter() -> str:
 #month-toc()
 #pagebreak()
 
+// Date locator (verso facing the introduction)
+#day-locator()
+#pagebreak()
+
 // Introduction opens on a recto
 #pagebreak(to: "odd")
 
@@ -582,6 +601,7 @@ def generate_typst(days: list[dict], curation: dict, tracker: BudgetTracker) -> 
             )
         else:
             parts.append(f'#date-header([{month_name}], [{day}], first: {first_flag})\n')
+        parts.append(f'#metadata((kind: "day", m: {month}, d: {day}))\n')
 
         # Content items
         for i, item in enumerate(content_items):
@@ -594,6 +614,7 @@ def generate_typst(days: list[dict], curation: dict, tracker: BudgetTracker) -> 
                 parts.append('\n#entry-separator()\n')
 
             parts.append(f'\n#document-label[{escape_typst(long_citation)}]\n')
+            parts.append(reading_metadata(item))
 
             if item_type == "catechism":
                 question = parse_answer_body(item.get("question", ""))
@@ -616,11 +637,14 @@ def generate_typst(days: list[dict], curation: dict, tracker: BudgetTracker) -> 
                 if pt_markup:
                     parts.append(f'\n#prooftext-section[\n{pt_markup}\n]\n')
 
+    # Back matter: index of the Standards (clear the running-date state so
+    # index pages carry no date header)
+    parts.append('\n#current-date.update("")\n')
+    parts.append('#standards-index()\n')
+
     # End on an even physical page count (KDP/IngramSpark expect it).
     # pagebreak(to: "even") always lands on an even page: +1 blank from an
-    # odd page, +2 from an even one. Clearing the running-date state first
-    # keeps the trailing blank's header empty.
-    parts.append('\n#current-date.update("")\n')
+    # odd page, +2 from an even one.
     parts.append('#pagebreak(to: "even")\n')
 
     return "".join(parts)

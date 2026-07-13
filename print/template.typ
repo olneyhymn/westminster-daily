@@ -81,6 +81,115 @@
   )
 }
 
+// Date locator — one-page grid mapping every date to its folio
+#let day-locator() = {
+  align(center)[
+    #text(font: sans-font, size: 13pt, weight: "bold", tracking: 1pt)[FIND A DATE]
+  ]
+  v(4pt)
+  align(center)[
+    #text(size: 8.5pt, style: "italic", fill: luma(40))[The page on which each day's reading begins]
+  ]
+  v(10pt)
+  context {
+    let days = query(metadata)
+      .filter(m => type(m.value) == dictionary and m.value.at("kind", default: "") == "day")
+    let pg = (:)
+    for m in days {
+      pg.insert(str(m.value.m) + "-" + str(m.value.d), counter(page).at(m.location()).first())
+    }
+    let months = ("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC")
+    let cells = ()
+    cells.push([])
+    for mo in months {
+      cells.push(align(center)[#text(font: sans-font, weight: "bold", size: 6.5pt)[#mo]])
+    }
+    for d in range(1, 32) {
+      cells.push(align(right)[#text(font: sans-font, weight: "bold", size: 6.5pt)[#d]])
+      for mm in range(1, 13) {
+        let key = str(mm) + "-" + str(d)
+        if key in pg {
+          cells.push(align(center)[#text(size: 7pt)[#pg.at(key)]])
+        } else {
+          cells.push(align(center)[#text(size: 7pt, fill: luma(150))[--]])
+        }
+      }
+    }
+    grid(
+      columns: (auto,) + ((1fr,) * 12),
+      row-gutter: 5.2pt,
+      column-gutter: 2pt,
+      ..cells,
+    )
+  }
+}
+
+// Index of the Standards — every chapter and question with its page(s)
+#let standards-index() = {
+  pagebreak(weak: true)
+  heading(level: 1, outlined: true)[Index of the Standards]
+  v(2pt)
+  align(center)[
+    #text(size: 8.5pt, style: "italic", fill: luma(40))[Where each portion of the Standards is read]
+  ]
+  v(8pt)
+  set par(justify: false)
+  context {
+    let rds = query(metadata)
+      .filter(m => type(m.value) == dictionary and m.value.at("kind", default: "") == "rd")
+    let pageof(m) = counter(page).at(m.location()).first()
+
+    // Confession of Faith, grouped by chapter with page ranges
+    let chapters = (:)
+    for m in rds.filter(m => m.value.doc == "WCF") {
+      let key = str(m.value.ch)
+      let entry = chapters.at(key, default: (title: m.value.title, pages: ()))
+      entry.pages.push(pageof(m))
+      chapters.insert(key, entry)
+    }
+    text(font: sans-font, size: 9.5pt, weight: "bold", tracking: 0.3pt)[#smallcaps[Confession of Faith]]
+    v(4pt)
+    for key in chapters.keys().sorted(key: k => int(k)) {
+      let e = chapters.at(key)
+      let pgs = e.pages.sorted()
+      let range-str = if pgs.first() == pgs.last() { str(pgs.first()) } else { str(pgs.first()) + "\u{2013}" + str(pgs.last()) }
+      block(above: 2.5pt, below: 0pt)[
+        #text(size: 8.5pt)[*#key* #h(4pt) #e.title #box(width: 1fr) #range-str]
+      ]
+    }
+    v(10pt)
+
+    // Catechisms: question number -> page(s), set in columns
+    let catechism(label, doc) = {
+      let qs = (:)
+      for m in rds.filter(m => m.value.doc == doc) {
+        let key = str(m.value.num)
+        let pages = qs.at(key, default: ())
+        pages.push(pageof(m))
+        qs.insert(key, pages)
+      }
+      let entries = qs.keys().sorted(key: k => int(k)).map(key =>
+        text(size: 8pt)[*#key* #h(3pt) #qs.at(key).sorted().dedup().map(str).join(", ")]
+      )
+      let ncols = 6
+      let per = calc.ceil(entries.len() / ncols)
+      text(font: sans-font, size: 9.5pt, weight: "bold", tracking: 0.3pt)[#smallcaps(label)]
+      v(4pt)
+      grid(
+        columns: (1fr,) * ncols,
+        column-gutter: 10pt,
+        ..range(ncols).map(c => {
+          let chunk = entries.slice(c * per, calc.min((c + 1) * per, entries.len()))
+          stack(dir: ttb, spacing: 3pt, ..chunk)
+        }),
+      )
+      v(10pt)
+    }
+    catechism("Shorter Catechism", "WSC")
+    catechism("Larger Catechism", "WLC")
+  }
+}
+
 // Date header for each day — hairline rule above; topic (when given) on its
 // own line beneath the date
 #let date-header(month, day, topic: none, first: false) = {
