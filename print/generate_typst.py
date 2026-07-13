@@ -46,6 +46,13 @@ def escape_typst(text: str) -> str:
     return text
 
 
+def normalize_plain(html_str: str) -> str:
+    """Reduce an HTML/text snippet to normalized plain text for comparison."""
+    text = BeautifulSoup(html_str, "html.parser").get_text()
+    text = html_module.unescape(text)
+    return re.sub(r"\s+", " ", text).strip().lower().rstrip("?.")
+
+
 def normalize_ref(reference: str) -> str:
     """Normalize a Scripture reference for matching (dashes, whitespace)."""
     ref = reference.replace("–", "-").replace("—", "-")
@@ -535,12 +542,24 @@ def generate_typst(days: list[dict], curation: dict, tracker: BudgetTracker) -> 
             current_month = month
             parts.append(f'\n#month-header[{month_name}]\n')
 
-        topic = escape_typst(data.get("title", ""))
         first_flag = "true" if is_first_of_month else "false"
-        parts.append(f'#date-header([{month_name}], [{day}], [{topic}], first: {first_flag})\n')
+        topic = data.get("title", "")
+        # Suppress the topic line when it merely repeats one of the day's
+        # catechism questions (typical for WSC/WLC days)
+        content_items = data.get("content_with_prooftexts", [])
+        questions = {
+            normalize_plain(item.get("question", ""))
+            for item in content_items if item.get("type") == "catechism"
+        }
+        if topic and normalize_plain(topic) not in questions:
+            parts.append(
+                f'#date-header([{month_name}], [{day}], '
+                f'topic: [{escape_typst(topic)}], first: {first_flag})\n'
+            )
+        else:
+            parts.append(f'#date-header([{month_name}], [{day}], first: {first_flag})\n')
 
         # Content items
-        content_items = data.get("content_with_prooftexts", [])
         for i, item in enumerate(content_items):
             item_type = item.get("type", "")
             long_citation = item.get("long_citation", "")

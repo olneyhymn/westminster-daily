@@ -81,22 +81,25 @@
   )
 }
 
-// Date header for each day — date + topic title, hairline rule above
-#let date-header(month, day, topic, first: false) = {
+// Date header for each day — hairline rule above; topic (when given) on its
+// own line beneath the date
+#let date-header(month, day, topic: none, first: false) = {
   current-date.update(month + " " + day)
   if not first {
-    v(13pt)
+    v(16pt)
     line(length: 100%, stroke: 0.15pt + luma(210))
-    v(5pt)
+    v(8pt)
   } else {
-    v(4pt)
+    v(6pt)
   }
   block(width: 100%, sticky: true)[
     #text(font: sans-font, size: 12.5pt, weight: "bold")[#month #day]
-    #h(1fr)
-    #text(font: sans-font, size: 8.5pt, style: "italic", fill: luma(90))[#topic]
+    #if topic != none {
+      v(2pt)
+      text(size: 9.5pt, style: "italic", fill: luma(90))[#topic]
+    }
   ]
-  v(3pt)
+  v(4pt)
 }
 
 // Document label — small caps
@@ -112,13 +115,10 @@
   ]
 }
 
-// Separator between multiple entries within the same day
+// Separator between multiple entries within the same day — clean space;
+// the small-caps document label marks the new reading
 #let entry-separator() = {
-  v(8pt)
-  align(center)[
-    #text(size: 9pt, fill: luma(140), tracking: 8pt)[\* \* \*]
-  ]
-  v(4pt)
+  v(10pt)
 }
 
 // Confession chapter title
@@ -146,37 +146,37 @@
 
 // Prooftext section wrapper — full-width hairline rule
 #let prooftext-section(content) = {
-  v(5pt)
+  v(6pt)
   line(length: 100%, stroke: 0.25pt + luma(190))
-  v(3pt)
+  v(1pt)
   content
-  v(3pt)
+  v(2pt)
 }
 
-// Curated prooftext printed in full — bold sans reference, then text
+// Curated prooftext printed in full — bold sans reference run in with the text
 #let prooftext-full(reference, content) = {
-  block(above: 3.5pt, below: 0pt, inset: (left: 10pt))[
-    #set par(leading: 4.5pt)
-    #text(font: sans-font, size: 7.5pt, weight: "bold", fill: luma(60))[#reference] #h(3pt) #text(size: proof-size)[#content]
+  block(above: 0pt, below: 3.5pt)[
+    #text(font: sans-font, size: 8pt, weight: "bold", fill: luma(60))[#reference]#h(4pt)#text(size: proof-size)[#content]
   ]
 }
 
-// Citation-only references — italic, small
+// Citation-only references — italic, small, ragged right
 #let prooftext-citation(references) = {
-  block(above: 3pt, below: 0pt, inset: (left: 10pt))[
+  block(above: 0pt, below: 0pt)[
+    #set par(justify: false)
     #text(size: proof-size, style: "italic", fill: luma(60))[#references]
   ]
 }
 
-// Prooftext group — numbered, subtle left border
+// Prooftext group — hanging number beside the content
 #let prooftext-group(num, content) = {
-  block(
-    above: 5pt,
-    below: 1pt,
-    breakable: false,
-    inset: (left: 6pt, top: 2pt, bottom: 2pt),
-    stroke: (left: 1.5pt + luma(200)),
-  )[
-    #text(font: sans-font, size: 7.5pt, weight: "bold", fill: luma(60))[#num.] #content
+  block(above: 6pt, below: 0pt, breakable: false, inset: (left: 4pt))[
+    #set par(leading: 4.5pt)
+    #grid(
+      columns: (15pt, 1fr),
+      column-gutter: 3pt,
+      text(font: sans-font, size: 8pt, weight: "bold", fill: luma(60))[#num.],
+      content,
+    )
   ]
 }
