@@ -192,28 +192,35 @@
 
 // Date header for each day — hairline rule above; topic (when given) on its
 // own line beneath the date
+// Spacing scale: small gaps live inside a reading, the medium gap sits
+// between readings, and the large gap + rule marks a new day. Blocks carry
+// explicit above/below so no implicit spacing sneaks in.
 #let date-header(month, day, topic: none, first: false) = {
   current-date.update(month + " " + day)
-  if not first {
-    v(16pt)
-    line(length: 100%, stroke: 0.5pt + luma(150))
-    v(8pt)
-  } else {
-    v(6pt)
-  }
-  block(width: 100%, sticky: true)[
+  // Rule + date form one unbreakable sticky unit so a page break can never
+  // strand the rule; the big between-day gap is the block's `above`
+  block(
+    width: 100%,
+    sticky: true,
+    breakable: false,
+    above: if first { 6pt } else { 26pt },
+    below: 0pt,
+  )[
+    #if not first {
+      line(length: 100%, stroke: 0.5pt + luma(150))
+      v(6pt)
+    }
     #text(font: sans-font, size: 12.5pt, weight: "bold")[#month #day]
     #if topic != none {
       v(2pt)
       text(size: 9.5pt, style: "italic", fill: luma(90))[#topic]
     }
   ]
-  v(4pt)
 }
 
 // Document label — small caps
 #let document-label(label) = {
-  block(above: 7pt, below: 4pt, sticky: true)[
+  block(above: 8pt, below: 4pt, sticky: true)[
     #text(
       font: sans-font,
       size: 8.5pt,
@@ -224,10 +231,11 @@
   ]
 }
 
-// Separator between multiple entries within the same day — clean space;
-// the small-caps document label marks the new reading
+// Separator between multiple entries within the same day — medium gap
+// (the following document label adds its own 8pt), clearly smaller than
+// the between-day gap
 #let entry-separator() = {
-  v(10pt)
+  v(6pt)
 }
 
 // Confession chapter title
@@ -255,13 +263,13 @@
   text[#b]
 }
 
-// Prooftext section wrapper — full-width hairline rule
+// Prooftext section wrapper — the rule caps the proof block: more air
+// above (toward the answer) than below (toward the first group)
 #let prooftext-section(content) = {
-  v(6pt)
+  v(7pt)
   line(length: 100%, stroke: 0.5pt + luma(150))
-  v(1pt)
+  v(0pt)
   content
-  v(2pt)
 }
 
 // Curated prooftext printed in full — bold sans reference run in with the text
@@ -281,7 +289,7 @@
 
 // Prooftext group — hanging number beside the content
 #let prooftext-group(num, content) = {
-  block(above: 6pt, below: 0pt, breakable: false, inset: (left: 4pt))[
+  block(above: 5pt, below: 0pt, breakable: false, inset: (left: 4pt))[
     #set par(leading: 4.5pt)
     #grid(
       columns: (15pt, 1fr),
