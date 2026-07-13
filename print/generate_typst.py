@@ -53,6 +53,22 @@ def normalize_plain(html_str: str) -> str:
     return re.sub(r"\s+", " ", text).strip().lower().rstrip("?.")
 
 
+def topic_is_redundant(topic: str, items: list[dict]) -> bool:
+    """True when the day's topic adds nothing over the readings' own headers."""
+    t = normalize_plain(topic)
+    t_base = re.sub(r",? part \d+$", "", t)
+    for item in items:
+        if item.get("type") == "catechism":
+            if normalize_plain(item.get("question", "")) == t:
+                return True
+        else:
+            title = normalize_plain(item.get("title", ""))
+            title = re.sub(r"^chapter \d+:\s*", "", title)
+            if title == t_base:
+                return True
+    return False
+
+
 def normalize_ref(reference: str) -> str:
     """Normalize a Scripture reference for matching (dashes, whitespace)."""
     ref = reference.replace("–", "-").replace("—", "-")
@@ -441,9 +457,10 @@ def generate_front_matter() -> str:
 // renders nothing until the first date-header sets the state)
 #set page(numbering: none)
 
-// Half title
-#align(center + horizon)[
-  #text(font: sans-font, size: 20pt, weight: "bold")[The Westminster Daily]
+// Half title — upper third, letter-spaced
+#v(1.6in)
+#align(center)[
+  #text(font: sans-font, size: 13pt, weight: "semibold", tracking: 2.5pt)[THE WESTMINSTER DAILY]
 ]
 #pagebreak()
 
@@ -451,17 +468,23 @@ def generate_front_matter() -> str:
 #pagebreak()
 
 // Title page
-#align(center + horizon)[
+#v(1.9in)
+#align(center)[
   #text(font: sans-font, size: 26pt, weight: "bold")[The Westminster Daily]
-  #v(12pt)
+  #v(14pt)
   #text(font: sans-font, size: 13pt)[A Daily Reading Plan through]
   #v(4pt)
   #text(font: sans-font, size: 13pt)[the Westminster Standards]
-  #v(36pt)
+  #v(40pt)
   #text(font: sans-font, size: 10.5pt)[Compiled and edited by Tim Hopper]
   #v(8pt)
-  #text(font: sans-font, size: 9pt, fill: luma(100))[Following the reading calendar of Dr.~Joseph A. Pipa Jr.]
+  #text(font: sans-font, size: 9.5pt)[Following the reading calendar of Dr.~Joseph A. Pipa Jr.]
 ]
+#v(1fr)
+#align(center)[
+  #text(font: sans-font, size: 9pt, tracking: 1pt)[westminsterdaily.com]
+]
+#v(0.35in)
 #pagebreak()
 
 // Copyright page
@@ -489,6 +512,9 @@ def generate_front_matter() -> str:
 #month-toc()
 #pagebreak()
 
+// Introduction opens on a recto
+#pagebreak(to: "odd")
+
 // Introduction
 #align(center)[#text(font: sans-font, size: 16pt, weight: "bold")[Introduction]]
 #v(12pt)
@@ -497,11 +523,11 @@ The Westminster Standards --- the Confession of Faith, the Shorter Catechism, an
 
 #v(6pt)
 
-This book divides the Standards into 366 daily readings, one for each day of the year including leap day, following the reading calendar prepared by Dr.~Joseph A. Pipa Jr. Each day's reading presents a portion of the Standards together with the Scripture proof texts cited by the Assembly.
+This book divides the Standards into 366 daily readings, one for each day of the year including leap day, following the reading calendar prepared by Dr.~Joseph A. Pipa Jr. Each day's reading presents a portion of the Standards together with the Scripture proof texts cited by the Assembly. Begin on any day of the year --- each reading stands on its own.
 
 #v(6pt)
 
-Every proof-text reference is listed so you can trace each statement to its biblical basis. For each day, a few passages --- those that most directly ground the doctrine or most warm the heart --- are printed in full from the English Standard Version. The rest are given as citations, an invitation to open your Bible alongside this book.
+Every proof-text reference is listed so you can trace each statement to its biblical basis. For each day, a few passages --- those that most directly ground the doctrine or most warm the heart --- are printed in full from the English Standard Version. The rest are given as citations. On days when the references run long, you are not meant to look up every one at the table: read the passages printed here, pray them back to God, and let the remaining citations serve as a map for unhurried study another time.
 
 #v(6pt)
 
@@ -509,7 +535,8 @@ May this daily engagement with these faithful summaries of God's Word be a means
 
 #pagebreak()
 
-// Restore page numbers and headers, reset counter to 1
+// Body opens on a recto with folio 1; restore page numbers
+#pagebreak(to: "odd")
 #set page(numbering: "1")
 #counter(page).update(1)
 '''
@@ -545,13 +572,10 @@ def generate_typst(days: list[dict], curation: dict, tracker: BudgetTracker) -> 
         first_flag = "true" if is_first_of_month else "false"
         topic = data.get("title", "")
         # Suppress the topic line when it merely repeats one of the day's
-        # catechism questions (typical for WSC/WLC days)
+        # catechism questions, or when a confession chapter title already
+        # conveys it ("Of good works, part 3" vs "Chapter 16: Of Good Works")
         content_items = data.get("content_with_prooftexts", [])
-        questions = {
-            normalize_plain(item.get("question", ""))
-            for item in content_items if item.get("type") == "catechism"
-        }
-        if topic and normalize_plain(topic) not in questions:
+        if topic and not topic_is_redundant(topic, content_items):
             parts.append(
                 f'#date-header([{month_name}], [{day}], '
                 f'topic: [{escape_typst(topic)}], first: {first_flag})\n'
@@ -591,6 +615,13 @@ def generate_typst(days: list[dict], curation: dict, tracker: BudgetTracker) -> 
                 pt_markup = format_prooftexts(prooftexts, selection, context, tracker)
                 if pt_markup:
                     parts.append(f'\n#prooftext-section[\n{pt_markup}\n]\n')
+
+    # End on an even physical page count (KDP/IngramSpark expect it).
+    # pagebreak(to: "even") always lands on an even page: +1 blank from an
+    # odd page, +2 from an even one. Clearing the running-date state first
+    # keeps the trailing blank's header empty.
+    parts.append('\n#current-date.update("")\n')
+    parts.append('#pagebreak(to: "even")\n')
 
     return "".join(parts)
 

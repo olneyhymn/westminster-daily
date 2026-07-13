@@ -11,7 +11,7 @@
     height: 9in,
     margin: (
       inside: 0.8in,
-      outside: 0.6in,
+      outside: 0.75in,
       top: 0.7in,
       bottom: 0.65in,
     ),
@@ -54,7 +54,7 @@
       #text(font: sans-font, size: 17pt, weight: "bold", tracking: 1.5pt)[#upper(it.body)]
     ]
     v(4pt)
-    line(length: 100%, stroke: 0.5pt + luma(180))
+    line(length: 100%, stroke: 0.75pt + luma(150))
     v(2pt)
   }
 
@@ -87,7 +87,7 @@
   current-date.update(month + " " + day)
   if not first {
     v(16pt)
-    line(length: 100%, stroke: 0.15pt + luma(210))
+    line(length: 100%, stroke: 0.5pt + luma(150))
     v(8pt)
   } else {
     v(6pt)
@@ -128,10 +128,12 @@
   ]
 }
 
-// Catechism question — bold italic
+// Catechism question — bold italic, ragged right (display lines are never justified)
 #let catechism-question(q) = {
-  text(weight: "bold", style: "italic")[Q. #q]
-  linebreak()
+  block(sticky: true, above: 0pt, below: 4pt)[
+    #set par(justify: false)
+    #text(weight: "bold", style: "italic")[Q. #q]
+  ]
 }
 
 // Catechism answer
@@ -147,7 +149,7 @@
 // Prooftext section wrapper — full-width hairline rule
 #let prooftext-section(content) = {
   v(6pt)
-  line(length: 100%, stroke: 0.25pt + luma(190))
+  line(length: 100%, stroke: 0.5pt + luma(150))
   v(1pt)
   content
   v(2pt)
@@ -156,7 +158,7 @@
 // Curated prooftext printed in full — bold sans reference run in with the text
 #let prooftext-full(reference, content) = {
   block(above: 0pt, below: 3.5pt)[
-    #text(font: sans-font, size: 8pt, weight: "bold", fill: luma(60))[#reference]#h(4pt)#text(size: proof-size)[#content]
+    #text(font: sans-font, size: 8pt, weight: "bold", fill: luma(40))[#reference]#h(4pt)#text(size: proof-size)[#content]
   ]
 }
 
@@ -164,7 +166,7 @@
 #let prooftext-citation(references) = {
   block(above: 0pt, below: 0pt)[
     #set par(justify: false)
-    #text(size: proof-size, style: "italic", fill: luma(60))[#references]
+    #text(size: proof-size, style: "italic", fill: luma(40))[#references]
   ]
 }
 
@@ -175,7 +177,7 @@
     #grid(
       columns: (15pt, 1fr),
       column-gutter: 3pt,
-      text(font: sans-font, size: 8pt, weight: "bold", fill: luma(60))[#num.],
+      text(font: sans-font, size: 8pt, weight: "bold", fill: luma(40))[#num.],
       content,
     )
   ]
