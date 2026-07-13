@@ -335,14 +335,17 @@ def parse_answer_body(html_str: str) -> str:
 
 
 def load_all_days() -> list[dict]:
-    """Load all data.json files in calendar order."""
+    """Load all data.json files in calendar order (Feb 29 omitted)."""
     days = []
-    # Use 2024 as base year (leap year, so Feb 29 exists)
+    # Use 2024 as base year so the calendar iterates cleanly
     start = date(2024, 1, 1)
     end = date(2024, 12, 31)
 
     d = start
     while d <= end:
+        if d.month == 2 and d.day == 29:
+            d += timedelta(days=1)
+            continue
         mm = f"{d.month:02d}"
         dd = f"{d.day:02d}"
         data_path = CONTENT_DIR / mm / dd / "data.json"
@@ -532,30 +535,16 @@ def generate_front_matter() -> str:
 
 // Date locator (verso facing the introduction)
 #day-locator()
-#pagebreak()
 
 // Introduction opens on a recto
 #pagebreak(to: "odd")
 
-// Introduction
+// Introduction — PLACEHOLDER: Tim writes this (see tasks/todo.md)
 #align(center)[#text(font: sans-font, size: 16pt, weight: "bold")[Introduction]]
-#v(12pt)
-
-The Westminster Standards --- the Confession of Faith, the Shorter Catechism, and the Larger Catechism --- are among the most carefully crafted summaries of biblical teaching ever produced. Completed in the 1640s by the Westminster Assembly, they have served generations of Christians as guides for understanding what Scripture teaches.
-
-#v(6pt)
-
-This book divides the Standards into 366 daily readings, one for each day of the year including leap day, following the reading calendar prepared by Dr.~Joseph A. Pipa Jr. Each day's reading presents a portion of the Standards together with the Scripture proof texts cited by the Assembly. Begin on any day of the year --- each reading stands on its own.
-
-#v(6pt)
-
-Every proof-text reference is listed so you can trace each statement to its biblical basis. For each day, a few passages --- those that most directly ground the doctrine or most warm the heart --- are printed in full from the English Standard Version. The rest are given as citations. On days when the references run long, you are not meant to look up every one at the table: read the passages printed here, pray them back to God, and let the remaining citations serve as a map for unhurried study another time.
-
-#v(6pt)
-
-May this daily engagement with these faithful summaries of God's Word be a means of grace in your life.
-
-#pagebreak()
+#v(48pt)
+#align(center)[
+  #text(size: 10pt, style: "italic", fill: luma(40))[\[ Introduction to be written. \]]
+]
 
 // Body opens on a recto with folio 1; restore page numbers
 #pagebreak(to: "odd")

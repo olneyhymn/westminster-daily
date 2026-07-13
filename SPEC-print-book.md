@@ -18,7 +18,7 @@ with curated ESV proof texts.
 
 ## Content Organization
 
-- **Order:** Calendar date (January 1 – December 31, including Feb 29)
+- **Order:** Calendar date (January 1 – December 31; Feb 29 omitted, 365 readings)
 - **Entries flow** — a day may share a page or run over; no forced page-per-day
 - **Month transitions:** prominent month header at the first day of each month (no
   divider pages)
@@ -84,8 +84,8 @@ with curated ESV proof texts.
 3. Copyright page — copyright notice, required ESV permission statement,
    westminsterdaily.com
 4. Table of contents (months)
-5. Introduction (~1 page) — what the book is, how to use it, the proof-text approach
-   (all references given; selected passages printed), credit to Dr. Pipa
+5. Introduction (~1 page) — written by Tim (build carries a placeholder page
+   until then; see tasks/todo.md)
 
 ## Build Process
 
