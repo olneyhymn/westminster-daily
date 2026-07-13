@@ -186,15 +186,13 @@ def extract_prose(div) -> str:
 
 
 def extract_poetry(div) -> str:
-    """Extract poetry text, preserving line structure."""
+    """Extract poetry text, preserving line structure and document order
+    (mixed passages interleave prose paragraphs with line-groups)."""
     lines = []
-    for p in div.find_all("p", class_="line-group"):
-        stanza_lines = process_poetry_p(p)
-        if stanza_lines:
-            lines.extend(stanza_lines)
-    # Also get any non-poetry paragraphs mixed in
     for p in div.find_all("p"):
-        if "line-group" not in (p.get("class") or []):
+        if "line-group" in (p.get("class") or []):
+            lines.extend(process_poetry_p(p))
+        else:
             text = process_inline(p).strip()
             if text:
                 lines.append(text)
@@ -446,7 +444,9 @@ def format_prooftexts(prooftexts: dict, selection: dict, context: str,
             text = passage["text"]  # Already Typst-escaped during extraction
             tracker.add(passage["reference"], context)
             if passage["is_poetry"]:
-                poetry_lines = text.split("\n")
+                # Drop empty lines (artifacts of literal newlines in the
+                # source HTML, e.g. inside words-of-Christ spans)
+                poetry_lines = [ln.rstrip() for ln in text.split("\n") if ln.strip()]
                 poetry_text = " \\\n".join(poetry_lines)
                 group_parts.append(f'#prooftext-full[{ref}][{poetry_text}]')
             else:
