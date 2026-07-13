@@ -454,7 +454,10 @@ def format_prooftexts(prooftexts: dict, selection: dict, context: str,
 
         if citation_only:
             refs = ", ".join(escape_typst(p["reference"]) for p in citation_only)
-            group_parts.append(f'#prooftext-citation[{refs}]')
+            if full_texts:
+                group_parts.append(f'#prooftext-citation(see-also: true)[{refs}]')
+            else:
+                group_parts.append(f'#prooftext-citation[{refs}]')
 
         if group_parts:
             content = "\n".join(group_parts)

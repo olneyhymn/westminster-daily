@@ -220,7 +220,7 @@
 
 // Document label — small caps
 #let document-label(label) = {
-  block(above: 8pt, below: 4pt, sticky: true)[
+  block(above: 11pt, below: 6pt, sticky: true)[
     #text(
       font: sans-font,
       size: 8.5pt,
@@ -240,14 +240,14 @@
 
 // Confession chapter title
 #let confession-title(title) = {
-  block(sticky: true, above: 3pt, below: 4pt)[
+  block(sticky: true, above: 6pt, below: 6pt)[
     #text(size: 9.5pt, style: "italic")[#title]
   ]
 }
 
 // Catechism question — bold italic, ragged right (display lines are never justified)
 #let catechism-question(q) = {
-  block(sticky: true, above: 0pt, below: 4pt)[
+  block(sticky: true, above: 6pt, below: 5pt)[
     #set par(justify: false)
     #text(weight: "bold", style: "italic")[Q. #q]
   ]
@@ -279,10 +279,16 @@
   ]
 }
 
-// Citation-only references — italic, small, ragged right
-#let prooftext-citation(references) = {
+// Citation-only references — italic, small, ragged right. When they follow
+// a printed passage in the same group, a "See also" prefix marks them as
+// further reading rather than part of the quotation.
+#let prooftext-citation(references, see-also: false) = {
   block(above: 0pt, below: 0pt)[
     #set par(justify: false)
+    #if see-also {
+      text(font: sans-font, size: 7pt, fill: luma(40), tracking: 0.3pt)[#smallcaps[See also]]
+      h(4pt)
+    }
     #text(size: proof-size, style: "italic", fill: luma(40))[#references]
   ]
 }
