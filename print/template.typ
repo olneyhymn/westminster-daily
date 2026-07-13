@@ -1,8 +1,8 @@
 // Westminster Daily — Print Book Template
 // 6" × 9" trim size, print-ready for Amazon KDP (no bleed)
 
-#let sans-font = "Gill Sans"
-#let proof-size = 8.5pt
+#let sans-font = "Source Sans 3"
+#let proof-size = 9pt
 #let current-date = state("current-date", "")
 
 #let book-setup(body) = {
@@ -36,14 +36,14 @@
 
   set text(
     font: "Libertinus Serif",
-    size: 10.5pt,
+    size: 11pt,
     lang: "en",
     hyphenate: true,
     costs: (orphan: 500%, widow: 500%),
   )
 
   set par(
-    leading: 6.5pt,
+    leading: 7.5pt,
     justify: true,
   )
 
