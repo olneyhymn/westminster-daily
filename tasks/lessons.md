@@ -9,3 +9,11 @@ Tim flagged vertical spacing again after the first fix. Root cause both times: I
 - Design vertical space as a hierarchy first (small within unit / medium between units / large between sections, ~1:2:4), then assign values — never tune gaps one at a time.
 - Typst blocks carry implicit above/below spacing; set them explicitly to 0 wherever a v() or scale value is meant to govern, or the printed gap won't match the designed one.
 - A separator rule must visually attach to what it introduces (asymmetric space), and must live in the same unbreakable block as it, or page breaks strand it.
+
+## 2026-07-14 — Token economy for large audits
+The first OPC audit burned ~6M tokens; the redo found more truth for ~2% of that. Rules:
+- Prefer text/structured sources over PDF-vision agents; a machine-readable yardstick (Creeds.json) turned 30 page-reading agents into one Python diff.
+- Mechanically normalize + diff BEFORE any model judgment; agents should only see genuine mismatches, batched (~25/agent), never one-agent-per-item.
+- Never switch models mid-workflow — it invalidates the resume cache and re-runs completed stages.
+- Fingerprint the provenance/edition of both sides FIRST (a single distinctive reading like Ps 19:1-3 vs 1-4, or 1 John 5:7's presence, identifies an edition) — auditing against the wrong yardstick produced 727 false findings.
+- Mine prior runs' journals before re-running anything; the data is already paid for.
