@@ -1,3 +1,7 @@
+> **SUPERSEDED (2026-07-14):** This report's WCF findings used the wrong yardstick
+> (our WCF follows the traditional/1647 apparatus, not OPC's). See
+> `provenance-audit-report.md` for the corrected audit.
+
 # Westminster Daily Proof-Text Audit
 
 **Source of truth:** OPC official proof-text editions (CFLayout.pdf / SCLayout.pdf / LCLayout.pdf, opc.org)
