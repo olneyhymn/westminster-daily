@@ -115,6 +115,14 @@ def count_verses(reference: str) -> int | None:
     if re.search(r":(\d+)\s*$", ref):
         return 1
 
+    # Single-chapter books cite verses without a chapter ("Jude 24", "Obadiah 10-14")
+    if re.match(r'^(Jude|Obadiah|Philemon|2 John|3 John)\b', ref):
+        m = re.search(r'(\d+)\s*-\s*(\d+)\s*$', ref)
+        if m:
+            return int(m.group(2)) - int(m.group(1)) + 1
+        if re.search(r'\d+\s*$', ref):
+            return 1
+
     # Whole chapter(s): "Psalm 119" or "Hebrews 8-10"
     return None
 
@@ -520,7 +528,7 @@ def generate_front_matter() -> str:
 
   #v(6pt)
 
-  The Westminster Confession of Faith, the Westminster Shorter Catechism, and the Westminster Larger Catechism are in the public domain.
+  The Westminster Confession of Faith, the Westminster Shorter Catechism, and the Westminster Larger Catechism are in the public domain. Scripture proof-text citations follow the edition of the Standards published by the Orthodox Presbyterian Church.
 
   #v(6pt)
 
