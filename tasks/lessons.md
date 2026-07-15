@@ -17,3 +17,16 @@ The first OPC audit burned ~6M tokens; the redo found more truth for ~2% of that
 - Never switch models mid-workflow — it invalidates the resume cache and re-runs completed stages.
 - Fingerprint the provenance/edition of both sides FIRST (a single distinctive reading like Ps 19:1-3 vs 1-4, or 1 John 5:7's presence, identifies an edition) — auditing against the wrong yardstick produced 727 false findings.
 - Mine prior runs' journals before re-running anything; the data is already paid for.
+
+## 2026-07-14 — Validate against the primary source, not your own pipeline
+The migration self-audit (data vs my own extraction) showed 171/171 clean while
+two systematic bugs lived in the extraction/transform themselves (See/Cf groups
+partially dropped; nested poetry spans duplicated). Random spot validation by
+independent agents against the source PDFs caught both. Lessons:
+- A self-audit that shares code with the pipeline under test can only catch
+  write-side bugs, never extraction-side bugs. Always validate a sample against
+  the primary source through an independent path.
+- When a validator finds one instance of a rule-based bug, sweep for the rule,
+  not the instance (the See/Cf bug affected 19 of 20 multi-ref groups).
+- Check actual data conventions before adopting a policy ("drop See refs" was
+  wrong; the existing catechism data carried them).
