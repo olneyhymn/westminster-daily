@@ -83,4 +83,7 @@ data-json: build/westminster-daily ## Copy data.json files into build
 sitemap: build ## Generate sitemap.xml for the whole site
 	python3 scripts/generate_sitemap.py build/sitemap.xml
 
+print-book: ## Build the print book PDF (print/westminster-daily.pdf)
+	cd print && .venv/bin/python generate_typst.py && typst compile --font-path fonts westminster-daily.typ
+
 FORCE:

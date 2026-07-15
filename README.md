@@ -12,10 +12,16 @@ Clone with `git clone https://github.com/olneyhymn/westminster-daily.git`.
 
 The site is built using Pandoc and a Makefile. The main commands are:
 
+* `npm ci`: Install frontend dependencies
+* `npx playwright install chromium`: Install the browser used to render Open Graph images
 * `make all`: Build the entire site including HTML, RSS feeds and assets
 * `make build`: Build the site structure and compile CSS
 * `make feed.rss`: Generate the main RSS feed
 * `make podcast.rss`: Generate the podcast RSS feed
+* `make og-images`: Regenerate all Open Graph images into `static/images/docs/`
+* `make og-image DATE=03/25`: Regenerate a single Westminster Daily image while iterating on the design
+* `make og-image WEEK=01`: Regenerate a single Heidelberg Weekly image
+* `build/og-review/index.html`: Review dashboard for spot-checking OG edge cases after a build
 
 ### RSS Feed Generation
 
@@ -38,3 +44,4 @@ The site is automatically rebuilt every day at 05:00 EST using cron-jobs.org. Th
 * `static/`: Static assets including SCSS files
 * `build/`: Generated site files
 * `build_page.sh`: Script to convert Markdown to HTML using Pandoc
+* `scripts/generate-og-images.mjs`: Playwright renderer for Open Graph images
