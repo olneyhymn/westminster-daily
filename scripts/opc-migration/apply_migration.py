@@ -97,18 +97,74 @@ def to_legacy(ref, v3_html):
         inner = re.sub(r'\bGOD\b', '<span class="small-caps">God</span>', inner)
         return inner
 
+    from bs4 import NavigableString, Tag
+
+    def divine_caps(text):
+        text = re.sub(r'\bLORD\b', '<span class="small-caps">Lord</span>', text)
+        return re.sub(r'\bGOD\b', '<span class="small-caps">God</span>', text)
+
+    def poetry_lines(p_tag):
+        """Linearize a v3 block-indent paragraph: v3 sometimes nests each
+        subsequent line span inside the previous line's woc span, so per-span
+        extraction duplicates content. Walk text nodes in document order,
+        split at <br/>, and derive indent/woc/small-caps from ancestors."""
+        lines = []
+        cur = []  # (text, woc, small_caps)
+
+        def flush():
+            if not any(t.strip() for t, _, _, _ in cur):
+                cur.clear()
+                return
+            indent = cur[0][3] if cur else False
+            pieces = []
+            all_woc = all(w for _, w, _, _ in cur)
+            for t, w, sc, _ in cur:
+                t = divine_caps(t)
+                if sc:
+                    t = f'<span class="small-caps">{t}</span>'
+                pieces.append(t)
+            body = re.sub(r'\s+', ' ', ''.join(pieces)).strip()
+            if all_woc:
+                body = f'<span class="woc">{body}</span>'
+            if indent:
+                body = '<span class="indent"></span>' + body
+            lines.append(body)
+            cur.clear()
+
+        for node in p_tag.descendants:
+            if isinstance(node, Tag) and node.name == 'br':
+                flush()
+                continue
+            if isinstance(node, NavigableString):
+                text = str(node).replace('\xa0', ' ')
+                if not text.strip():
+                    continue
+                woc = sc = indent = False
+                line_seen = False
+                anc = node.parent
+                while anc is not None and anc is not p_tag.parent:
+                    cls = anc.get('class') or [] if isinstance(anc, Tag) else []
+                    if 'woc' in cls:
+                        woc = True
+                    if 'small-caps' in cls:
+                        sc = True
+                    # indent comes from the NEAREST line ancestor only —
+                    # nested outer lines must not leak their indent inward
+                    if 'line' in cls and not line_seen:
+                        line_seen = True
+                        indent = 'indent' in cls
+                    if anc is p_tag:
+                        break
+                    anc = anc.parent
+                cur.append((text, woc, sc, indent))
+        flush()
+        return lines
+
     parts = []
     for p_tag in soup.find_all('p'):
         classes = p_tag.get('class') or []
         if 'block-indent' in classes:
-            lines = []
-            for span in p_tag.find_all('span', class_='line'):
-                inner = clean_inner(span)
-                if not inner:
-                    continue
-                if 'indent' in (span.get('class') or []):
-                    inner = '<span class="indent"></span>' + inner
-                lines.append(inner)
+            lines = poetry_lines(p_tag)
             if lines:
                 body = '<br />\n'.join(lines)
                 parts.append(f'<div class="block-indent">\n'

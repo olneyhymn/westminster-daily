@@ -97,13 +97,17 @@ def normalize_refs(refstr, book):
 
 
 def parse_refs(text):
-    refs, see_refs = [], []
+    """All concrete Scripture refs in print order. See/Cf cross-references ARE
+    included — the original OPC-derived catechism data carries them (verified
+    against SCLayout/LCLayout: WSC 91, WLC 116, WLC 174), so the WCF must too.
+    Only non-Scripture notes ('See chapter 5, section 4') yield no refs."""
+    refs = []
     for m in REF_RE.finditer(text):
-        see, raw_book, verses = m.group(1), m.group(2), m.group(3)
+        raw_book, verses = m.group(2), m.group(3)
         parts = raw_book.split()
         book = f'{parts[0]} {ABBREV[parts[1]]}' if len(parts) == 2 else ABBREV[parts[0]]
-        (see_refs if see else refs).extend(normalize_refs(verses, book))
-    return refs, see_refs
+        refs.extend(normalize_refs(verses, book))
+    return refs, []
 
 
 def main():
