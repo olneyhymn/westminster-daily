@@ -12,8 +12,10 @@ Strategy per confession item (chapter.paragraph):
 - For each new footnote group: if its normalized ref-set equals one of the old
   groups' ref-sets, reuse that group's ESV HTML; otherwise add to the fetch
   manifest (ESV API call needed).
-- OPC "See"/"Cf." cross-refs and note-only footnotes are dropped (consistent
-  with the catechisms' existing convention); dropped content is logged.
+- Concrete "See"/"Cf." Scripture cross-refs ARE carried, in OPC print order —
+  the original OPC-derived catechism data carries them (verified against the
+  PDFs: WSC 91, WLC 116, WLC 174). Only non-Scripture notes (e.g. WCF 6.1's
+  "See chapter 5, section 4") are dropped, and dropped content is logged.
 """
 
 import html

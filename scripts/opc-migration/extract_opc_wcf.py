@@ -7,7 +7,11 @@ Produces opc-wcf.json:
   { "<chapter>": {
       "title": str,
       "paragraphs": { "<n>": {"text": str-with-{letter}-markers, "markers": [...] } },
-      "footnotes": { "<letter>": {"refs": [...], "see_refs": [...]} } } }
+      "footnotes": { "<letter>": {"refs": [...], "see_refs": []} } } }
+
+Note: refs includes concrete See/Cf cross-references in print order (the OPC
+apparatus convention our data follows); see_refs is retained empty for schema
+compatibility. Footnotes with no Scripture refs at all carry a 'note' field.
 """
 
 import json

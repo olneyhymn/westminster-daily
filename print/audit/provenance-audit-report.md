@@ -81,10 +81,14 @@ Verified against the OPC PDFs (our catechisms' source):
 **Misfiled block:**
 - WLC 65 fn1 → WLC 66 fn1: John 1:16; Ephesians 3:16–19; Philippians 3:10; Romans 6:5–6
 
-Not errors: 5 notation-only differences (OPC "See"/"ff."/"Psalm 92 title" conventions;
-plus one OPC misprint — "Ps. 26:4" for Isaiah 26:4 at WLC 104 — that our data already
-has right). 12 of the 44 v1 findings were reporter errors caused by footnotes
-continuing across PDF page breaks.
+Not errors: 5 notation-only differences — OPC devices that cite no fetchable
+verse ("ff." open ranges, "Psalm 92 title", "See chapters 8–10" prose notes;
+plus one OPC misprint — "Ps. 26:4" for Isaiah 26:4 at WLC 104 — that our data
+already has right). Note the rule precisely: **concrete** See/Cf Scripture
+cross-references ARE part of the apparatus and are carried in our data (per
+the OPC-derived catechism convention, verified at WSC 91, WLC 116, WLC 174);
+only non-verse notations are excluded. 12 of the 44 v1 findings were reporter
+errors caused by footnotes continuing across PDF page breaks.
 
 ## 5. Recommendations
 
