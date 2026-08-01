@@ -6,51 +6,51 @@ date: August 1, 2026
 
 ## Start Here
 
-Westminster Daily gives you one short reading a day from the [Westminster
-Standards](https://en.wikipedia.org/wiki/Westminster_Standards) — the
-Confession of Faith, the Larger Catechism, and the Shorter Catechism. Follow it
-for a year and you will have read all three, with the proof texts printed in
-full.
+Westminster Daily gives you one short reading a day, two or three minutes, from
+the [Westminster
+Standards](https://en.wikipedia.org/wiki/Westminster_Standards): the Confession
+of Faith, the Larger Catechism, and the Shorter Catechism. Follow it for a year
+and you will have read all three, with the proof texts printed in full.
 
 The schedule is Dr. Joseph Pipa Jr.'s [Calendar of
 Readings](/pipa-calendar.pdf), which assigns every day of the year.
 
-### You can start today
+### Start today
 
-You do not need to wait for January.
+Any day of the year is a good first day. Dr. Pipa keyed the readings to the
+calendar, so begin today and you finish a year from today, having read the whole
+of the Standards. You get every question, in order. Each day's question stands on
+its own; no reading depends on the one before it.
 
-The readings are keyed to the calendar, so if you begin on the first of August
-you will finish on the thirty-first of July having read the whole of the
-Standards. Nothing is missing and nothing is out of order. Each day's question
-stands on its own — you are not walking into the middle of an argument.
+On January 1 the plan begins again, and everyone reads the same thing on the same
+morning: *What is the chief and highest end of man?* If you would rather begin at
+the beginning with everyone else, start now anyway and treat January as the
+second lap.
 
-On January 1 the plan begins again, and everyone reads the same thing on the
-same morning: *What is the chief and highest end of man?* If you would rather
-begin at the beginning with everyone else, start now anyway and treat January
-as the second lap.
+Every reading carries a day number, so you always know where you are in the year.
 
-Every reading carries a day number — day 213 of 365, and so on — so you always
-know where you are.
-
-### How to follow it
+### Get it by email, podcast, or web
 
 * **Email.** One reading each morning. [Subscribe
   here](https://buttondown.com/reformedconfessions).
 * **Podcast.** The day's reading, spoken, in about a minute. On [Apple
-  Podcasts](https://podcasts.apple.com/us/podcast/westminster-daily/id1661869655)
-  or by [RSS](/westminster-daily/podcast.rss).
+  Podcasts](https://podcasts.apple.com/us/podcast/westminster-daily/id1661869655),
+  on [Spotify](https://open.spotify.com/show/033ZFBJEpXBSSmKaUQDvn8), or by
+  [podcast RSS](/westminster-daily/podcast.rss).
 * **The web.** Today's reading is always at
   [reformedconfessions.com/westminster-daily](/westminster-daily/). Every day of
   the year has its own page, and the [full plan](/westminster-daily/reading-plan)
   lists all of them.
-* **RSS.** [feed.rss](/westminster-daily/feed.rss) for the daily reading.
+* **Text RSS.** [feed.rss](/westminster-daily/feed.rss) for the daily reading.
 
-If you would rather read the Heidelberg Catechism by Lord's Day, there is a
-companion site: [Heidelberg Weekly](/heidelberg-weekly/).
+You can also browse the Standards by question rather than by date: the [Shorter
+Catechism](/westminster-shorter-catechism/), the [Larger
+Catechism](/westminster-larger-catechism/), and the [Confession of
+Faith](/westminster-confession/).
 
-### How to use it
+### How Dr. Pipa suggests using it
 
-Dr. Pipa's own recommendations, from [his original plan](/pipa-calendar.pdf):
+Dr. Pipa's recommendations, from [his plan](/pipa-calendar.pdf):
 
 1. Use this calendar along with your daily Bible reading, or with your family in
    family worship.
@@ -64,19 +64,21 @@ Some catechism questions appear out of numerical order, grouped by theme. The
 format follows Dr. Morton Smith's *Harmony of the Westminster Confession and
 Catechisms*.
 
-### Reading it with others
+### Read it with others
 
-The plan works well for family worship and for a congregation reading together —
-everyone is on the same page on the same day, which is most of what makes a
-shared reading plan work. If you would like to put it in front of your church,
-[get in touch](https://waitingtables.org/about/) and I will send you something
-you can hand out.
+The plan works well for family worship and for a congregation reading together:
+everyone is on the same page on the same day. If you would like to put it in
+front of your church, [get in touch](https://waitingtables.org/about/) and I will
+send you something you can hand out.
 
-### A note on the texts
+### Where the texts come from
 
-The Confession and Catechisms are in the public domain. The proof texts are
-those of [The Confession of Faith and Catechisms](https://www.opc.org/confessions.html)
-published by the Orthodox Presbyterian Church, printed here in the ESV.
+The Confession and Catechisms are in the public domain. The proof texts come from
+the Orthodox Presbyterian Church's [Confession of Faith and
+Catechisms](https://www.opc.org/confessions.html). I print them here in the ESV.
 
-This site is free, has no advertising, and is maintained by [Tim
-Hopper](https://waitingtables.org/about/).
+If you would rather read the Heidelberg Catechism by Lord's Day, a companion
+site, [Heidelberg Weekly](/heidelberg-weekly/), covers it week by week.
+
+This site is free and carries no advertising. I am [Tim
+Hopper](https://waitingtables.org/about/), and I maintain it.
