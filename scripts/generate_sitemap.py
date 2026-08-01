@@ -23,6 +23,7 @@ BASE_URL = "https://reformedconfessions.com"
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = REPO_ROOT / "content"
 HEIDELBERG_CONTENT_DIR = REPO_ROOT / "content-heidelberg"
+REFERENCE_CONTENT_DIR = REPO_ROOT / "content-reference"
 
 DAILY_FILE_RE = re.compile(r"^(?P<mm>\d{2})/(?P<dd>\d{2})\.md$")
 WEEK_DIR_RE = re.compile(r"^week-(?P<num>\d{2})$")
@@ -61,8 +62,34 @@ def find_heidelberg_urls(heidelberg_content_dir: Path) -> list[str]:
     return urls
 
 
+def find_reference_urls(reference_dir: Path) -> list[str]:
+    """Every generated per-question and per-chapter reference page.
+
+    These are produced by scripts/generate_reference_content.py, so the
+    directory may not exist on a clean checkout before `make reference`.
+    """
+    if not reference_dir.is_dir():
+        return []
+    urls = []
+    for path in sorted(reference_dir.glob("*/**/index.md")):
+        relative = path.parent.relative_to(reference_dir).as_posix()
+        urls.append(f"{BASE_URL}/{relative}/")
+    for path in sorted(reference_dir.glob("*/index.md")):
+        relative = path.parent.relative_to(reference_dir).as_posix()
+        url = f"{BASE_URL}/{relative}/"
+        if url not in urls:
+            urls.append(url)
+    return sorted(set(urls))
+
+
 def static_urls() -> list[str]:
     return [
+        # The site root and the section index were absent from the sitemap
+        # entirely, so the two pages best placed to rank for the brand and
+        # for "Westminster Standards" were never submitted.
+        f"{BASE_URL}/",
+        f"{BASE_URL}/westminster-daily/",
+        f"{BASE_URL}/westminster-daily/start",
         f"{BASE_URL}/westminster-daily/about",
         f"{BASE_URL}/westminster-daily/reading-plan",
         f"{BASE_URL}/heidelberg-weekly/about",
@@ -90,7 +117,8 @@ def main() -> None:
 
     daily_urls = find_daily_urls(CONTENT_DIR)
     heidelberg_urls = find_heidelberg_urls(HEIDELBERG_CONTENT_DIR)
-    urls = daily_urls + heidelberg_urls + static_urls()
+    reference_urls = find_reference_urls(REFERENCE_CONTENT_DIR)
+    urls = daily_urls + heidelberg_urls + reference_urls + static_urls()
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(build_sitemap(urls), encoding="utf-8")
@@ -98,7 +126,7 @@ def main() -> None:
     print(
         f"Wrote {len(urls)} URLs to {output_path} "
         f"({len(daily_urls)} daily, {len(heidelberg_urls)} heidelberg, "
-        f"{len(static_urls())} static)"
+        f"{len(reference_urls)} reference, {len(static_urls())} static)"
     )
 
 

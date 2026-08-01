@@ -9,7 +9,15 @@ help: ## Show this help message
 	@echo 'Targets:'
 	@awk -F ':|##' '/^[^\t].+?:.*?##/ { printf "  %-20s %s\n", $$1, $$NF }' $(MAKEFILE_LIST)
 
-all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss podcast.rss heidelberg-all redirects headers data-json sitemap ## Build entire site including HTML, RSS feeds and assets
+all: build ${SOURCES} build/index.html build/westminster-daily/index.html feed.rss podcast.rss heidelberg-all reference redirects headers data-json sitemap ## Build entire site including HTML, RSS feeds and assets
+
+reference: build ## Generate per-question and per-chapter reference pages
+	python3 scripts/generate_reference_content.py
+	@find content-reference -name "index.md" | while read -r src; do \
+		out="build/$${src#content-reference/}"; \
+		./build_reference_page.sh "$${out%.md}.html"; \
+	done
+	@echo "Built $$(find build/westminster-shorter-catechism build/westminster-larger-catechism build/westminster-confession -name 'index.html' | wc -l | tr -d ' ') reference pages"
 
 heidelberg-all: build ${HEIDELBERG_SOURCES} build/heidelberg-weekly/index.html heidelberg-feed.rss ## Build Heidelberg Weekly site
 

@@ -43,9 +43,15 @@ with curated ESV proof texts.
 - **Curation criteria**, in priority order:
   1. **Doctrinally load-bearing** — the classic *sedes doctrinae* for the day's doctrine
   2. **Devotionally rich** — passages that warm the heart and pray well
-- **Global budget: <1,000 ESV verses printed across the whole book** (Crossway
-  standard-use license: ≤1,000 verses, <25% of the work, no complete Bible book). Works
+- **Global budget: <1,000 ESV verses printed across the whole book.** Works
   out to ~2–3 printed verses per day on average (~83 verses/month guideline).
+  > ⚠️ **This 1,000 figure is unverified and probably wrong.** Crossway's
+  > published standard-use limit is **500 verses**, and their terms exclude
+  > works quoting Scripture "in a commentary or other biblical reference
+  > work," which may void the allowance for this book altogether. The budget
+  > constant has deliberately not been lowered, because enforcing 500 means
+  > re-curating and cutting ~244 verses from a finished interior — a content
+  > decision, not a correction. See `tasks/todo.md`. Resolve before shipping.
 - Curation is stored as data (per-month JSON in `print/curation/`), not code, so
   selections are reviewable and editable by hand.
 - The build reports total printed verse count and fails loudly if the budget is exceeded.
@@ -106,7 +112,8 @@ with curated ESV proof texts.
 
 ## Licensing
 
-- ESV: stay within Crossway standard-use terms (≤1,000 verses, <25% of work); required
+- ESV: stay within Crossway standard-use terms (see the budget warning above —
+  the real published limit is 500 verses, not 1,000); required
   copyright notice on copyright page. Owner verifies before publication.
 - Dr. Pipa's reading calendar: owner to confirm permission for commercial use
 - Westminster Standards text: public domain

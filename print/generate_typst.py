@@ -22,6 +22,9 @@ CONTENT_DIR = Path(__file__).resolve().parent.parent / "content"
 CURATION_DIR = Path(__file__).resolve().parent / "curation"
 OUTPUT_FILE = Path(__file__).resolve().parent / "westminster-daily.typ"
 
+# NOTE: this is not Crossway's published standard-use limit, which is 500.
+# Left at 1000 deliberately -- lowering it cuts ~244 verses from a finished
+# interior, which is a content decision. See tasks/todo.md before shipping.
 VERSE_BUDGET = 1000
 
 MONTHS = [

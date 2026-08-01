@@ -23,16 +23,29 @@ and generates a podcast-compatible RSS feed that can be consumed by podcast play
 
 from feedgen.feed import FeedGenerator
 import datetime as dt
+import json
 import pytz
 from premailer import transform
 import markdown
+from concurrent.futures import ThreadPoolExecutor
 from functools import lru_cache
+from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 
 # Constants for the podcast feed configuration
 URL = "https://reformedconfessions.com/westminster-daily"  # Base URL for the podcast
 FILENAME = "podcast.rss"  # Output RSS feed filename
-NUMBER_OF_DAYS = 30  # Number of days of content to include in the feed
+
+# Expose the full year of episodes. Walking back 365 days covers every
+# calendar day exactly once (Feb 29 has no content), each with a real past
+# publication date, so the whole catalogue is visible to directories and
+# podcast search instead of a 30-day sliver.
+NUMBER_OF_DAYS = 365
+
+# Stable identity for the show itself. Without this every directory derives
+# its own GUID from the feed URL, so the show fragments across platforms and
+# a future feed move would orphan it.
+PODCAST_GUID = "d9282da9-ef51-5b85-9393-1338eb8077af"
 
 
 @lru_cache()
@@ -99,6 +112,60 @@ def content(month, day):
     return c
 
 
+@lru_cache()
+def day_data(month, day):
+    """
+    Load the per-day data.json, which carries the structured citations.
+
+    Returns None when the file is absent so callers can fall back to the
+    markdown metadata.
+    """
+    try:
+        with open(f"content/{month}/{day}/data.json", "r") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return None
+
+
+def episode_title(month, day):
+    """
+    Build a searchable episode title for a specific date.
+
+    Titles used to be the bare question, which left eight pairs of episodes
+    with byte-identical names (WLC 101 and WSC 43 both ask about the preface
+    to the Ten Commandments) and gave podcast search nothing to match on.
+    Prefixing the citation disambiguates them and puts the terms people
+    actually search for -- "Shorter Catechism 63", "WLC 123" -- in the title.
+    """
+    fallback = meta(month, day)["pagetitle"][0]
+    data = day_data(month, day)
+    if not data:
+        return fallback
+
+    title = data.get("title") or fallback
+    citations = [c["citation"] for c in data.get("content", []) if c.get("citation")]
+    if not citations:
+        return title
+    return f"{' + '.join(citations)} — {title}"
+
+
+def enclosure_length(mp3_url):
+    """
+    Look up the audio file's byte size.
+
+    The enclosure length was hardcoded to 0 on every item, which is a spec
+    violation and a submission risk. The files live on S3 rather than in the
+    repo, so this needs a HEAD request. Falls back to 0 rather than failing
+    the build if S3 is unreachable.
+    """
+    try:
+        req = Request(mp3_url, method="HEAD")
+        with urlopen(req, timeout=10) as resp:
+            return int(resp.headers.get("Content-Length", 0))
+    except Exception:
+        return 0
+
+
 def main():
     """
     Generate the podcast RSS feed.
@@ -115,7 +182,9 @@ def main():
     
     # Configure podcast metadata
     fg.podcast.itunes_category("Religion & Spirituality", "Christianity")
-    fg.podcast.itunes_explicit("clean")
+    # "clean" is a legacy value; the current spec wants true/false and
+    # validators reject the old form.
+    fg.podcast.itunes_explicit("no")
     fg.podcast.itunes_subtitle(
         "Listen to the Westminster Confession and Catechisms in a year."
     )
@@ -127,7 +196,8 @@ def main():
     fg.podcast.itunes_author("Westminster Daily")
     
     # Configure feed metadata
-    fg.id("https://feedpress.me/westminster-daily-audio")
+    # Was a FeedPress URL that no longer sits in the delivery path.
+    fg.id(f"{URL}/")
     fg.title("Westminster Daily")
     fg.author({"name": "Westminster Daily"})
     fg.subtitle("Listen to the Westminster Confession and Catechisms in a year.")
@@ -138,28 +208,41 @@ def main():
     # Get current time in Eastern timezone
     now = dt.datetime.now(tz=pytz.timezone("US/Eastern"))
 
-    # Process the last 30 days of content
-    for date in (now - dt.timedelta(n) for n in reversed(range(NUMBER_OF_DAYS))):
-        # Normalize date to start of day
-        date = date.replace(hour=0, minute=0, second=0, microsecond=0)
+    # Walk back a full year, oldest first.
+    dates = [
+        (now - dt.timedelta(n)).replace(hour=0, minute=0, second=0, microsecond=0)
+        for n in reversed(range(NUMBER_OF_DAYS))
+    ]
+
+    def mp3_for(date):
+        return (
+            "https://s3.amazonaws.com/www.reformedconfessions.com"
+            f"/westminster-daily/static/audio/{date:%m}{date:%d}.mp3"
+        )
+
+    # Size every enclosure concurrently; 366 serial HEAD requests would
+    # dominate the build.
+    with ThreadPoolExecutor(max_workers=16) as pool:
+        lengths = list(pool.map(lambda d: enclosure_length(mp3_for(d)), dates))
+
+    for date, length in zip(dates, lengths):
         month = date.strftime("%m")
         day = date.strftime("%d")
-        
-        # Generate URLs for the episode
-        url = f"{URL}/{month}/{day}"
-        # The site's canonical daily URL has no trailing slash, but the
-        # guid (with trailing slash) is preserved unchanged so existing
-        # podcast subscribers don't see every episode redelivered as new.
-        guid_url = f"{URL}/{month}/{day}/"
-        mp3_url = f"https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/{month}{day}.mp3"
 
-        # Add entry to the feed
+        url = f"{URL}/{month}/{day}"
+        # The guid previously omitted the year, so every episode collided
+        # with the same calendar day from the year before and clients
+        # deduplicated it away -- anyone subscribed longer than a year
+        # silently stopped receiving episodes. A tag URI keeps the guid
+        # unique per airing without pretending to be a permalink.
+        guid = f"tag:reformedconfessions.com,{date:%Y}:westminster-daily/{month}/{day}"
+
         fe = fg.add_entry()
         fe.id(url)
-        fe.enclosure(mp3_url, 0, "audio/mpeg")
-        fe.title(meta(month, day)["pagetitle"][0])
+        fe.enclosure(mp3_for(date), length, "audio/mpeg")
+        fe.title(episode_title(month, day))
         fe.link(href=url)
-        fe.guid(guid_url, permalink=True)
+        fe.guid(guid, permalink=False)
         fe.content(content(month, day), type="CDATA")
         fe.updated(date)
         fe.published(date)
@@ -177,6 +260,20 @@ def main():
         rss = f.read()
     xml_decl_end = rss.find("?>") + len("?>")
     rss = rss[:xml_decl_end] + "\n" + stylesheet_pi + rss[xml_decl_end:].lstrip("\n")
+
+    # feedgen has no podcast-namespace support, so declare it and stamp the
+    # show guid by hand.
+    rss = rss.replace(
+        "<rss ",
+        '<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" ',
+        1,
+    )
+    rss = rss.replace(
+        "<channel>",
+        f"<channel>\n    <podcast:guid>{PODCAST_GUID}</podcast:guid>",
+        1,
+    )
+
     with open(FILENAME, "w", encoding="utf-8") as f:
         f.write(rss)
 
