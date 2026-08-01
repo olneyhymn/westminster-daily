@@ -65,42 +65,94 @@ resuming a posting cadence.
   indexes. Cross-linked both ways with the date pages. Sitemap 422 → 764.
 - **Documented that the ESV verse budget is wrong** (1,000 assumed, 500 is
   Crossway's published limit). Constant deliberately unchanged.
+- **`www` fixed.** The cause was not a missing redirect: `www` had two live A
+  records pointing at Netlify (13.52.188.95, 52.52.192.191) left over from the
+  migration, and the Pages project had `reformedconfessions.com` but never the
+  www variant. Both A records replaced with `CNAME www →
+  westminster-daily.pages.dev`. Every path now 200s. Canonical tags already
+  point at the apex, so Google consolidates rather than seeing duplicates.
+- **Podcast owner email made deliverable.** `<itunes:owner>` published
+  `tim@waiting-tables.com`, and that domain has no MX records at all — the
+  address could not receive mail. Spotify, YouTube, and Amazon all verify feed
+  ownership by mailing a code there, so every one of them would have stalled
+  silently. Now `podcast@reformedconfessions.com`, routed to `t@ehop.me` by
+  Cloudflare Email Routing on the podcast's own domain.
+- **Submitted to Spotify** — 28.2% of podcast listening, previously absent.
+  https://open.spotify.com/show/033ZFBJEpXBSSmKaUQDvn8. Hosting stays on
+  Cloudflare; Spotify polls the feed. Filed under Society & Culture (Culture,
+  Society): **Spotify's taxonomy has no Religion & Spirituality option**, which
+  is worth knowing before wondering why. The Apple feed still declares
+  `Religion & Spirituality > Christianity` and is unaffected.
+- **Podcast downloads now measured.** Enclosures route through an
+  [OP3](https://op3.dev) counting redirect with the show guid attached. The
+  build's own HEAD requests deliberately bypass the prefix — sizing 365
+  enclosures through it would register 365 downloads per build.
+- **Email verified by test send.** Rendered from the live template with real
+  `data.json`: all placeholders substituted, subscribe link and share line
+  present, subject reads `Day 213 · …`. The worry about whether
+  `X-Buttondown-Live-Dangerously` renders Django variables turned out to be
+  moot — the template uses a literal signup URL, so there are no variables. It
+  would matter again only if someone switches to `{{ subscribe_url }}`.
 
 ## Immediate, not yet done
 
-1. **Redirect `www` → apex.** Every path under `www.reformedconfessions.com`
-   returns 404 from a stale Netlify origin while the apex is healthy on
-   Cloudflare Pages. Cloudflare dashboard, ~15 minutes. Every play below ends
-   in someone typing or scanning a URL; a QR code pointing at a 404 is worse
-   than no QR code.
-2. **Test-send the email** and confirm the new footer renders through the
-   worker's `X-Buttondown-Live-Dangerously` path.
-3. **Submit the podcast to Spotify** (`creators.spotify.com/pod/dashboard/podcast/submit`)
-   — 28.2% of podcast listening, currently absent. Fix the feed first (done),
-   then submit, or ingestion may reject it. Verification code goes to the
-   `itunes:owner` address, `tim@waiting-tables.com` — confirm that mailbox is
-   live. Then YouTube (RSS ingestion is **not** deprecated; Google Podcasts was)
-   and Amazon. Everything else absent is worth ~2% combined; skip it.
-4. **Google Search Console.** There appears to be no property, so none of the
-   reference-page work is measurable. Verify by DNS TXT.
-5. **Instrument conversion.** Plausible is installed but has no custom events
+1. **Instrument conversion.** Plausible is installed but has no custom events
    and no UTM tags, and the signup form POSTs cross-origin with no confirmation
    page — so signup conversion is invisible and some unknown share of the 450
-   monthly uniques is existing subscribers clicking through from email.
-6. **Podcast downloads are entirely unmeasured.** Enclosures point straight at
-   S3. A free OP3 prefix gives real numbers in a week. Apple Podcasts Connect
-   is free and apparently unused.
+   monthly uniques is existing subscribers clicking through from email. This is
+   now the largest measurement gap left.
+2. **YouTube and Amazon.** Both use the same ownership-verification path, which
+   now works. Together they are worth ~1–2% of listening against Spotify's
+   28.2%, so this is a rainy-day task, not a priority. YouTube RSS ingestion is
+   **not** deprecated; Google Podcasts was, in 2024.
+3. **Check the OP3 stats page** once real traffic has flowed. OP3 creates a
+   show page only after it observes requests. Apple Podcasts Connect is also
+   free and apparently still unused.
 
-## The Pipa conversation — do this first, and soon
+**Google Search Console already exists** and is verified by DNS TXT
+(`google-site-verification=wYUT-z5U9WMv6kd-mXYdmM_saz08sfazn0syJD9fw4w`). An
+earlier draft of this plan said there was no property; that was wrong, and came
+from checking the repo and page HTML for a meta tag without checking DNS. This
+is better than a fresh setup — there is existing history to compare the
+reference pages against.
+
+## The Pipa conversation
 
 He is a friend, which makes this a conversation rather than a permission
 request. It is also the gate on everything institutional below.
 
-What changed the framing: **GPTS dropped his Calendar of Readings.** The URL in
-the README 404s, there is no resources section on gpts.edu, and
-`static/pipa-calendar.pdf` here is byte-identical to the archived original. The
-PDF carries no copyright notice, no rights reservation, and no permission
-statement. You are the only person still publishing his work.
+**The correspondence changes the picture substantially.** In April 2022 he
+proposed the book himself, unprompted:
+
+> "Is it possible to get a digital copy of Westminster Subscription? It has
+> been suggested we put in booklet. **Be under your name and mine.** What do you
+> think? Dr. P"
+
+and on the proof texts:
+
+> "I WOULD PREFER TO KEEP PROOF TEXTS AS YOU HAVE THEM. **GREENVILLE COULD
+> POSSIBLY PUBLISH IT.** WHAT YOU THINK?"
+
+Tim raised the ESV copyright problem; Pipa replied *"Ok. I will have Andy look
+into it,"* and the thread ends there. A follow-up sent 13 July 2026 is still
+unanswered.
+
+Three consequences:
+
+- **Permission is not the existential risk this plan originally treated it as.**
+  That framing came from reading `tasks/todo.md` alone. He initiated the idea.
+- **But what he proposed is not what is being built.** Joint byline, possibly
+  published by Greenville, versus a solo KDP paperback under one name. Name that
+  difference explicitly rather than treating 2022 as blanket approval.
+- **The ESV question is four years old.** Raised in 2022, delegated to "Andy,"
+  never resolved, and still the item standing between the book and publication.
+
+**On timing, and this matters more than the schedule.** A June 2025 prayer
+request in Tim's inbox reports that Dr. Pipa's wife was diagnosed with
+inoperable cancer. The current situation is unknown and may well explain the
+unanswered July email. The Sept 15 "send it cold anyway" floor below applies to
+the institutional emails; **it does not apply to him.** Send those on schedule
+if nothing has come back, and let this conversation happen when it happens.
 
 Ask for, in order of value-to-imposition:
 
@@ -116,9 +168,16 @@ Do not ask him to approach Ligonier or a publisher, to advocate inside an OPC or
 PCA committee, or to confirm permission for the OPC proof-text edition — that is
 a separate courtesy note and should not ride on his name.
 
-Timing matters for a reason unrelated to growth: he is roughly 80, and
-permission that lives in a friendship does not survive into an estate. Get a
-sentence in writing.
+One thing still worth doing whenever the conversation resumes: he is roughly 80,
+and permission that lives in a friendship does not survive into an estate. A
+sentence in writing protects the project without asking anything of him.
+
+Also worth mentioning to him, independent of any ask: **GPTS dropped his
+Calendar of Readings** when the site was rebuilt. The old URL 404s, there is no
+resources section on gpts.edu, and `static/pipa-calendar.pdf` here is
+byte-identical to the archived original. That PDF carries no copyright notice,
+no rights reservation, and no permission statement. This site is the only place
+still publishing it.
 
 ## Institutional, September–November
 
@@ -152,8 +211,8 @@ published pricing anywhere), *Christian Renewal* (domain now a for-sale lander).
 
 | When | Do |
 |---|---|
-| **Aug 2026** | `www` redirect. Pipa conversation. Test-send. Spotify + YouTube submission. GSC. |
-| **Sep 2026** | CDM and OPC CCE — as introductions if Pipa came through. **Hard floor: if no reply by Sept 15, send cold.** |
+| **Aug 2026** | ~~`www`, test-send, Spotify, GSC~~ all done 1 Aug. Remaining: instrument signup conversion in Plausible. Pipa conversation when the moment is right, not on a schedule. |
+| **Sep 2026** | CDM and OPC CCE — as introductions if Pipa came through. **Hard floor: if nothing by Sept 15, send them cold.** The floor governs the institutional emails, not the Pipa conversation. |
 | **Oct 2026** | **Oct 15 is the only published hard deadline anywhere** — *Ordained Servant* runs the 15th of the second month prior, so this is the last chance at a December issue. NAPARC sweep, Banner, Crown & Covenant. |
 | **Nov 2026** | **Print book live on KDP by ~Nov 15** or it misses Christmas and the January window. Aquila Report. Bulletin insert finalized. |
 | **Dec 2026** | Nothing new. "We start over January 1" to the list and to anyone who listed you. |
@@ -170,6 +229,12 @@ offset it, and at ~5,000 daily recipients Gmail's bulk-sender rules bind with a
 hard <0.3% complaint ceiling. Swapping the site to KJV/ASV/WEB is a scripted
 weekend that removes the exposure and unlocks the only revenue a free devotional
 realistically has. **Deferred by decision, 2026-08-01.**
+
+This question is older than it looks. Tim raised ESV copyright with Dr. Pipa in
+April 2022; Pipa said he would have "Andy" look into it, and nothing came back.
+Four years on it is still the one item genuinely blocking the print book, and it
+is now blocking a decision about the site as well. Whatever the answer, it is
+worth closing rather than deferring a fifth time.
 
 Worth noting: the podcast audio is built from `data["content"]`, which contains
 no ESV. It is the only Crossway-free asset, and therefore the only channel that
