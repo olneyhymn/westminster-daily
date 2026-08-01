@@ -191,7 +191,12 @@ def main():
     fg.podcast.itunes_summary(
         "Listen to the Westminster Confession and Catechisms in a year.  Based on Calendar of Readings in the Westminster Standards by Dr. Joey Pipa."
     )
-    fg.podcast.itunes_owner(name="Westminster Daily", email="tim@waiting-tables.com")
+    # Spotify, YouTube, and Amazon all prove feed ownership by mailing a code
+    # to this address, so it has to be deliverable. waiting-tables.com has no
+    # MX records at all; this one routes through Cloudflare Email Routing.
+    fg.podcast.itunes_owner(
+        name="Westminster Daily", email="podcast@reformedconfessions.com"
+    )
     fg.podcast.itunes_image("https://reformedconfessions.com/images/pulpit_full.png")
     fg.podcast.itunes_author("Westminster Daily")
     
