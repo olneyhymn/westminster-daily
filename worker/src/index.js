@@ -66,9 +66,13 @@ async function sendDailyEmail(env) {
   }
 
   const entryUrl = `${SITE_BASE}/${month}/${day}`;
-  const subject = `Westminster Daily : ${data.title}`;
+  const dayNumber = dayOfYear(month, day);
+  // Leading with the day number tells someone joining in August where they
+  // are, and makes January 1 legible as a shared restart.
+  const subject = `Day ${dayNumber} · ${data.title}`;
   const body = template
     .replaceAll("__ENTRY_URL__", entryUrl)
+    .replaceAll("__DAY_NUMBER__", String(dayNumber))
     .replace("__ENTRY_CONTENT__", data.feed);
 
   const resp = await fetch(BUTTONDOWN_URL, {
@@ -109,6 +113,15 @@ function easternMonthDay(date) {
     month: parts.find((p) => p.type === "month").value,
     day: parts.find((p) => p.type === "day").value,
   };
+}
+
+// Day of the year on a 365-day calendar. The reading plan has no Feb 29
+// entry, so leap years are deliberately not accounted for -- every date
+// maps to the same day number every year, which is what the plan means.
+const DAYS_BEFORE_MONTH = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+
+function dayOfYear(month, day) {
+  return DAYS_BEFORE_MONTH[Number(month) - 1] + Number(day);
 }
 
 async function fetchData(url) {
