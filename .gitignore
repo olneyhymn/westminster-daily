@@ -19,3 +19,4 @@ print/.venv/
 print/westminster-daily.pdf
 print/westminster-daily.typ
 worker/.dev.vars
+content-reference/

@@ -193,19 +193,30 @@
 
                     <!-- Reading content -->
                     <div style="padding: 22px 24px 30px 24px;">
+                        $if(own_heading)$
+                        $else$
+                        $if(short_date)$
                         <h1 class="visually-hidden">$pagetitle/nowrap$</h1>
+                        $else$
+                        <h1>$pagetitle/nowrap$</h1>
+                        $endif$
+                        $endif$
                         $body$
                     </div>
 
-                    <!-- Toggle button -->
+                    $if(short_date)$
+                    <!-- Toggle button and audio player: daily readings only.
+                         These were rendered unconditionally, so About and the
+                         reading plan shipped a proof-text toggle with nothing
+                         to toggle and a player pointed at /audio/.mp3. -->
                     <div class="has-text-right" style="padding: 0 24px 16px 24px;">
                         <button type="button" id="toggle" class="button is-toggle">toggle proof texts</button>
                     </div>
 
-                    <!-- Audio player -->
                     <div style="padding: 0 24px 24px 24px;">
                         <div class="essential_audio" data-url="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/$short_date$.mp3"></div>
                     </div>
+                    $endif$
 
                     <!-- Subscribe links -->
                     <div class="has-text-centered nav-links" style="padding: 0 24px 8px 24px;">
@@ -222,6 +233,18 @@
                         <a href="/westminster-daily/reading-plan"><small>full plan</small></a>
                         &middot;
                         <a href="/heidelberg-weekly/"><small>heidelberg weekly</small></a>
+                    </div>
+
+                    <!-- Browse the Standards by question and chapter rather
+                         than by date. Also the crawl path into the reference
+                         tree, which would otherwise be orphaned. -->
+                    <div class="has-text-centered nav-links" style="padding: 0 24px 16px 24px;">
+                        <small>Browse by question:</small>
+                        <a href="/westminster-shorter-catechism/"><small>shorter catechism</small></a>
+                        &middot;
+                        <a href="/westminster-larger-catechism/"><small>larger catechism</small></a>
+                        &middot;
+                        <a href="/westminster-confession/"><small>confession of faith</small></a>
                     </div>
 
                     <!-- Email signup -->
