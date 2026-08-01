@@ -2,7 +2,12 @@
 
 # Westminster Daily
 
-Read through the [Westminster Standards](https://en.wikipedia.org/wiki/Westminster_Standards) in a year at [reformedconfessions.com](http://www.reformedconfessions.com). Based on [https://www.gpts.edu/resources/documents/Calendar%20Readings%20in%20WestminsterNumbered.pdf](Calendar of Readings in the Westminster Standards) by Dr. Joseph Pipa Jr.
+Read through the [Westminster Standards](https://en.wikipedia.org/wiki/Westminster_Standards) in a year at [reformedconfessions.com](https://reformedconfessions.com). Based on the [Calendar of Readings in the Westminster Standards](/static/pipa-calendar.pdf) by Dr. Joseph Pipa Jr.
+
+> The calendar was originally published by Greenville Presbyterian Theological
+> Seminary. That URL now 404s and the seminary's resources section is gone from
+> the rebuilt site; `static/pipa-calendar.pdf` here is byte-identical to the
+> archived original.
 
 ## Setup and Development
 

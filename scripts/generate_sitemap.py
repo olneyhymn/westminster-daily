@@ -63,6 +63,12 @@ def find_heidelberg_urls(heidelberg_content_dir: Path) -> list[str]:
 
 def static_urls() -> list[str]:
     return [
+        # The site root and the section index were absent from the sitemap
+        # entirely, so the two pages best placed to rank for the brand and
+        # for "Westminster Standards" were never submitted.
+        f"{BASE_URL}/",
+        f"{BASE_URL}/westminster-daily/",
+        f"{BASE_URL}/westminster-daily/start",
         f"{BASE_URL}/westminster-daily/about",
         f"{BASE_URL}/westminster-daily/reading-plan",
         f"{BASE_URL}/heidelberg-weekly/about",
