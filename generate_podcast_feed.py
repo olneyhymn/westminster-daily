@@ -47,6 +47,13 @@ NUMBER_OF_DAYS = 365
 # a future feed move would orphan it.
 PODCAST_GUID = "d9282da9-ef51-5b85-9393-1338eb8077af"
 
+# Downloads were entirely unmeasured: enclosures pointed straight at S3, so
+# the only numbers available were Apple's and Spotify's own slices. OP3 is a
+# free, open-source counting redirect (https://op3.dev) -- the player fetches
+# the prefixed URL, OP3 logs it and redirects to S3. Audio is still served
+# from the bucket; OP3 hosts nothing.
+OP3_PREFIX = f"https://op3.dev/e,pg={PODCAST_GUID}"
+
 
 @lru_cache()
 def markdown_parser(month, day):
@@ -149,6 +156,19 @@ def episode_title(month, day):
     return f"{' + '.join(citations)} — {title}"
 
 
+def op3_url(mp3_url):
+    """
+    Wrap an audio URL in the OP3 counting redirect.
+
+    OP3 wants the scheme stripped for https targets, so the published URL is
+    https://op3.dev/e,pg=<guid>/s3.amazonaws.com/... -- note this is only ever
+    applied to what goes in the feed. The build's own HEAD requests must keep
+    hitting S3 directly, or sizing 365 enclosures would register 365 downloads
+    every single build.
+    """
+    return f"{OP3_PREFIX}/{mp3_url.removeprefix('https://')}"
+
+
 def enclosure_length(mp3_url):
     """
     Look up the audio file's byte size.
@@ -244,7 +264,7 @@ def main():
 
         fe = fg.add_entry()
         fe.id(url)
-        fe.enclosure(mp3_for(date), length, "audio/mpeg")
+        fe.enclosure(op3_url(mp3_for(date)), length, "audio/mpeg")
         fe.title(episode_title(month, day))
         fe.link(href=url)
         fe.guid(guid, permalink=False)
