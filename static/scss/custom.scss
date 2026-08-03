@@ -240,6 +240,96 @@ hr.thin {
     font-family: Georgia, 'Times New Roman', serif;
 }
 
+// === Reference Pages ===
+// The 339 per-question and per-chapter pages. Their generator emits nine
+// classes and, until now, the stylesheet defined none of them, so confession
+// paragraphs stacked with no space between them and the trailing prose ran
+// straight into the text of the last one.
+
+// Confession paragraphs. Numbered, hanging indent, and separated.
+.wcf-paragraph {
+    margin-bottom: 1.1em;
+    padding-left: 1.9em;
+    text-indent: -1.9em;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.paragraph-number {
+    color: $burgundy;
+    font-weight: bold;
+    padding-right: 0.35em;
+}
+
+// Catechism question and answer.
+.reference-qa {
+    .q {
+        margin-bottom: 0.7em;
+    }
+
+    .a {
+        margin-bottom: 0;
+        padding-left: 1.9em;
+        text-indent: -1.9em;
+    }
+
+    .q-label {
+        color: $burgundy;
+        font-weight: bold;
+        padding-right: 0.35em;
+    }
+}
+
+// "Read on February 10, ... in the Westminster Daily plan." A pointer back to
+// the calendar, not part of the text it follows, so it gets a rule and air.
+.reference-dates {
+    margin-top: 1.8em;
+    padding-top: 1.1em;
+    border-top: 1px solid $border-light;
+    font-size: 15px;
+    color: $brown-text;
+
+    a {
+        color: $burgundy;
+    }
+}
+
+.reference-blurb {
+    margin-bottom: 1.25em;
+}
+
+// Chapter and question navigation. Matches the daily site's date row, minus
+// the current-position emphasis: here the heading already says where you are.
+.reference-nav {
+    margin-top: 1.8em;
+    font-family: Georgia, 'Times New Roman', serif;
+    text-align: center;
+
+    a {
+        font-size: 15px;
+        color: $brown-text;
+
+        &:hover {
+            color: $burgundy;
+        }
+    }
+
+    .reference-nav__sep {
+        color: $gold;
+        padding: 0 10px;
+    }
+}
+
+.reference-index {
+    margin-top: 1.5em;
+
+    li {
+        margin-bottom: 0.75em;
+    }
+}
+
 .image {
     background-color: white;
     border-left: 4px solid $border-light;

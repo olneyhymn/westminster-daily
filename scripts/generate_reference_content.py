@@ -219,12 +219,13 @@ def render_item(abbv: str, record: dict, prev_rec, next_rec) -> str:
             f"<h2>Question {html.escape(key)}</h2>"
         )
 
+    # Guillemets and gold separators, matching the daily site's date row.
     nav = []
     if prev_rec:
         label = "Chapter" if abbv == "wcf" else "Q"
         sep = " " if abbv == "wcf" else ""
         nav.append(
-            f'<a href="/{slug}/{prev_rec["key"]}/">&lt; {label}{sep}{prev_rec["key"]}</a>'
+            f'<a href="/{slug}/{prev_rec["key"]}/">&lsaquo;&nbsp;{label}{sep}{prev_rec["key"]}</a>'
         )
     unit = "chapters" if abbv == "wcf" else "questions"
     nav.append(f'<a href="/{slug}/">All {unit}</a>')
@@ -232,11 +233,10 @@ def render_item(abbv: str, record: dict, prev_rec, next_rec) -> str:
         label = "Chapter" if abbv == "wcf" else "Q"
         sep = " " if abbv == "wcf" else ""
         nav.append(
-            f'<a href="/{slug}/{next_rec["key"]}/">{label}{sep}{next_rec["key"]} &gt;</a>'
+            f'<a href="/{slug}/{next_rec["key"]}/">{label}{sep}{next_rec["key"]}&nbsp;&rsaquo;</a>'
         )
-    nav_html = (
-        '<div class="reference-nav">' + " &middot; ".join(nav) + "</div>"
-    )
+    joiner = '<span class="reference-nav__sep">&middot;</span>'
+    nav_html = '<div class="reference-nav">' + joiner.join(nav) + "</div>"
 
     meta = front_matter(
         pagetitle.replace('"', "'"),
