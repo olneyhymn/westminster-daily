@@ -93,17 +93,24 @@ a {
 }
 
 // === Masthead ===
+// Display type set on the body's 1.78 leading wastes about 15px above the
+// reading for no gain. Both lines are blocks so their own line-height governs
+// the row rather than the wrapper's.
 .masthead-label {
+    display: block;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 10px;
+    line-height: 1.4;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: $brown-text;
 }
 
 .masthead-title {
+    display: block;
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 20px;
+    line-height: 1.2;
     letter-spacing: 3px;
     text-decoration: none;
     color: $dark-brown;
@@ -178,11 +185,16 @@ hr.thin {
 
 // Where you are in the year. The email carries this line too, and the Start
 // Here page promises it: "Every reading carries a day number."
+//
+// It sits inside .date-nav rather than in a row of its own: the date and the
+// day number are one thought, and splitting them cost 35px above the reading.
 .day-number {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 12px;
+    line-height: 1.4;
     letter-spacing: 1px;
     color: $brown-text;
+    margin-top: 3px;
 }
 
 // === Audio Label ===

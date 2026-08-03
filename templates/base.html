@@ -151,10 +151,10 @@
                 <div class="content-inner">
 
                     <!-- Masthead -->
-                    <div class="has-text-centered" style="padding: 30px 24px 10px 24px;">
+                    <div class="has-text-centered" style="padding: 24px 24px 4px 24px;">
                         <span class="masthead-label">A Daily Reading from the</span>
                     </div>
-                    <div class="has-text-centered" style="padding: 0 24px 22px 24px;">
+                    <div class="has-text-centered" style="padding: 0 24px 14px 24px;">
                         <span class="masthead-title"><a href="/westminster-daily/">WESTMINSTER STANDARDS</a></span>
                     </div>
 
@@ -166,21 +166,18 @@
                     $if(this_url)$
                     <!-- Navigation. Today is a span, not a link: it is the page
                          you are already on, and the weight marks your place. -->
-                    <div class="has-text-centered date-nav" style="padding: 16px 24px 6px 24px;">
+                    <div class="has-text-centered date-nav" style="padding: 12px 24px 10px 24px;">
                         <a class="date-nav__adjacent" href="$prev_url$">&lsaquo;&nbsp;$prev_date$</a>
                         <span class="date-nav__sep">&middot;</span>
                         <span class="date-nav__current">$this_date$</span>
                         <span class="date-nav__sep">&middot;</span>
                         <a class="date-nav__adjacent" href="$next_url$">$next_date$&nbsp;&rsaquo;</a>
-                    </div>
-
-                    <div class="has-text-centered day-number" style="padding: 0 24px 14px 24px;">
-                        Day $day_number$ of 365
+                        <div class="day-number">Day $day_number$ of 365</div>
                     </div>
 
                     <!-- Mid-year arrivals land on an arbitrary day with no
                          context. Say plainly that starting today works. -->
-                    <div class="has-text-centered" style="padding: 0 24px 14px 24px;">
+                    <div class="has-text-centered" style="padding: 0 24px 10px 24px;">
                         <small>
                             New here?
                             <a href="/westminster-daily/start">Start today</a>
@@ -195,7 +192,7 @@
                     </div>
 
                     <!-- Reading content -->
-                    <div style="padding: 22px 24px 30px 24px;">
+                    <div style="padding: 18px 24px 30px 24px;">
                         $if(own_heading)$
                         $else$
                         $if(short_date)$
