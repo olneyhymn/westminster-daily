@@ -38,7 +38,9 @@ build: og-images build/westminster-daily build/css/main.css ## Build site struct
 build/westminster-daily: ## Create Westminster Daily build directory
 	mkdir -p build/westminster-daily
 
-build/css/main.css: static/scss/main.scss package.json ## Compile SCSS to CSS
+# Depends on every partial, not just main.scss: custom.scss holds nearly all
+# the styling, and editing it alone used to leave the built CSS stale.
+build/css/main.css: $(wildcard static/scss/*.scss) package.json ## Compile SCSS to CSS
 	mkdir -p build/css/
 	npx sass --style=compressed --no-source-map static/scss/main.scss build/css/main.css
 
