@@ -1,12 +1,25 @@
 // === Color Palette (from newsletter) ===
+//
+// Roles, not a swatch box. Every colour below has one job and a contrast
+// floor, because the palette's failure mode is expressing "quiet" as
+// "lighter" until it stops being readable. Quiet is size, weight, and
+// letter-spacing; it is never a value above L*50.
+//
+//   ink         body copy                    16.6:1 on cream
+//   accent      headings and links           12.6:1 on cream
+//   ink-muted   ALL secondary text, any size  6.3:1 on cream, 4.9:1 on parchment
+//   ornament    rules and flourishes          decorative only, NEVER text
+//   edge        borders                       decorative
+//   surfaces    cream (page), parchment (recessed)
+//
 $parchment: #E8E0D2;
 $cream: #FFFDF7;
 $burgundy: #5C1A2A;
 $gold: #C4A265;
-$brown-muted: #8B7355;
-$brown-light: #A0937D;
-// Both browns above fall under the 4.5:1 AA floor on cream and on the footer
-// background, so any brown carrying actual words uses this one instead.
+// #8B7355 (4.41:1 on cream — under AA by 0.09) and #A0937D (2.96:1) used to
+// live here as $brown-muted and $brown-light. Every element that used them
+// now uses $brown-text, so they are gone rather than sitting around waiting
+// to be picked up again.
 $brown-text: #6B5D45;
 $dark-brown: #2C1810;
 $footer-bg: #F5F0E6;
@@ -108,7 +121,7 @@ a {
 .masthead-subtitle {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 14px;
-    color: $brown-muted;
+    color: $brown-text;
     font-style: italic;
 }
 
@@ -266,8 +279,10 @@ div.esv {
 }
 
 // === Footer ===
+// The fill used to be $footer-bg, 1.12:1 against the cream page — a panel
+// nobody could see, carried entirely by its own border. The rule does the
+// work; the fill was paying rent for nothing.
 .site-footer {
-    background-color: $footer-bg;
     border-top: 1px solid $border-light;
     padding: 1.5em;
     text-align: center;
@@ -298,10 +313,52 @@ div.esv {
     }
 }
 
+// === Email Signup ===
+// The one part of the design that was not from this palette: #666 body text
+// and a #3c3c3c button, the only cool neutrals among fifteen warm colours.
+// Both passed contrast; both read as pasted in from another site. Parchment
+// also gives the box a value step you can actually see (1.29:1 against the
+// page, where the old #FAF7F0 was 1.05:1).
+.email-signup {
+    background-color: $parchment;
+    border: 1px solid $border-light;
+
+    .email-signup__title {
+        font-weight: bold;
+        color: $dark-brown;
+        margin-bottom: 12px;
+    }
+
+    .email-signup__blurb {
+        font-size: 0.9em;
+        color: $brown-text;
+        margin-bottom: 16px;
+    }
+
+    input[type="email"] {
+        font-family: Georgia, 'Times New Roman', serif;
+        border: 1px solid $border-light;
+        background-color: $cream;
+        color: $dark-brown;
+    }
+
+    input[type="submit"] {
+        font-family: Georgia, 'Times New Roman', serif;
+        background-color: $burgundy;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #3d1019;
+        }
+    }
+}
+
 // === Collapsible Sections ===
 .collapsible {
     background-color: $cream;
-    color: $brown-muted;
+    color: $brown-text;
     cursor: pointer;
     padding: 8px;
     width: 100%;
