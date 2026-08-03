@@ -164,15 +164,18 @@
                     </div>
 
                     $if(this_url)$
-                    <!-- Navigation -->
-                    <div class="has-text-centered" style="padding: 16px 24px 16px 24px;">
-                        <strong>
-                            <a href="$prev_url$">< $prev_date$</a>
-                            &middot;
-                            <a href="$this_url$">$this_date$</a>
-                            &middot;
-                            <a href="$next_url$">$next_date$ ></a>
-                        </strong>
+                    <!-- Navigation. Today is a span, not a link: it is the page
+                         you are already on, and the weight marks your place. -->
+                    <div class="has-text-centered date-nav" style="padding: 16px 24px 6px 24px;">
+                        <a class="date-nav__adjacent" href="$prev_url$">&lsaquo;&nbsp;$prev_date$</a>
+                        <span class="date-nav__sep">&middot;</span>
+                        <span class="date-nav__current">$this_date$</span>
+                        <span class="date-nav__sep">&middot;</span>
+                        <a class="date-nav__adjacent" href="$next_url$">$next_date$&nbsp;&rsaquo;</a>
+                    </div>
+
+                    <div class="has-text-centered day-number" style="padding: 0 24px 14px 24px;">
+                        Day $day_number$ of 365
                     </div>
 
                     <!-- Mid-year arrivals land on an arbitrary day with no
@@ -214,6 +217,7 @@
                     </div>
 
                     <div style="padding: 0 24px 24px 24px;">
+                        <div class="audio-label">Listen to today&rsquo;s reading</div>
                         <div class="essential_audio" data-url="https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/$short_date$.mp3"></div>
                     </div>
                     $endif$

@@ -160,15 +160,14 @@
                     </div>
 
                     $if(this_url)$
-                    <!-- Navigation -->
-                    <div class="has-text-centered" style="padding: 16px 24px 16px 24px;">
-                        <strong>
-                            <a href="$prev_url$">< $prev_week$</a>
-                            &middot;
-                            <a href="$this_url$">$this_week$</a>
-                            &middot;
-                            <a href="$next_url$">$next_week$ ></a>
-                        </strong>
+                    <!-- Navigation. Same treatment as the daily site: the week
+                         you are reading is a span, and the neighbours recede. -->
+                    <div class="has-text-centered date-nav" style="padding: 16px 24px 16px 24px;">
+                        <a class="date-nav__adjacent" href="$prev_url$">&lsaquo;&nbsp;$prev_week$</a>
+                        <span class="date-nav__sep">&middot;</span>
+                        <span class="date-nav__current">$this_week$</span>
+                        <span class="date-nav__sep">&middot;</span>
+                        <a class="date-nav__adjacent" href="$next_url$">$next_week$&nbsp;&rsaquo;</a>
                     </div>
                     $endif$
 
