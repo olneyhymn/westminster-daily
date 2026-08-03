@@ -5,6 +5,9 @@ $burgundy: #5C1A2A;
 $gold: #C4A265;
 $brown-muted: #8B7355;
 $brown-light: #A0937D;
+// Both browns above fall under the 4.5:1 AA floor on cream and on the footer
+// background, so any brown carrying actual words uses this one instead.
+$brown-text: #6B5D45;
 $dark-brown: #2C1810;
 $footer-bg: #F5F0E6;
 $border-light: #D6CBAF;
@@ -24,13 +27,29 @@ body {
 }
 
 // === Headings ===
+// Bulma's minireset flattens every heading to font-size: 100%, so without a
+// scale here an h1 renders identically to the paragraph beneath it.
 h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, 'Times New Roman', serif;
     color: $burgundy;
+    line-height: 1.32;
+    margin: 0 0 0.5em 0;
 }
+
+h1 { font-size: 27px; }
+h2 { font-size: 22px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5, h6 { font-size: 15px; }
 
 h2, h3, h4 {
     font-style: italic;
+}
+
+// Air above a heading that follows something, but not above one that opens
+// the page — the daily reading starts on its "Larger Catechism" label.
+.content-inner {
+    * + h2, * + h3, * + h4 { margin-top: 1.6em; }
 }
 
 // === Links ===
@@ -44,13 +63,29 @@ a {
     }
 }
 
+// Link burgundy is also heading burgundy, so an unlined link inside running
+// prose reads as emphasis rather than as something to click. Navigation rows
+// don't need this — their position already says "link".
+.content-inner p a,
+.content-inner li a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+// An index row whose entire text is the link — the catechism and confession
+// listings — is navigation, not prose. 107 underlined rows is a thicket.
+.content-inner li > a:only-child {
+    text-decoration: none;
+}
+
 // === Masthead ===
 .masthead-label {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 10px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: $brown-light;
+    color: $brown-text;
 }
 
 .masthead-title {
@@ -97,8 +132,56 @@ hr.thin {
 
     small {
         font-family: Georgia, 'Times New Roman', serif;
-        color: $brown-muted;
+        color: $brown-text;
     }
+}
+
+// === Date / Week Navigation ===
+// Yesterday, today, tomorrow used to render identically, so the row never
+// said which one you were reading. Today is the anchor; the neighbours recede.
+.date-nav {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    .date-nav__adjacent {
+        font-size: 15px;
+        color: $brown-text;
+
+        &:hover {
+            color: $burgundy;
+        }
+    }
+
+    .date-nav__current {
+        font-size: 18px;
+        font-weight: bold;
+        color: $burgundy;
+    }
+
+    .date-nav__sep {
+        color: $gold;
+        padding: 0 10px;
+    }
+}
+
+// Where you are in the year. The email carries this line too, and the Start
+// Here page promises it: "Every reading carries a day number."
+.day-number {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: $brown-text;
+}
+
+// === Audio Label ===
+// The player is a bare play button on a hairline; without a label nothing
+// says the reading is also spoken.
+.audio-label {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $brown-text;
+    margin-bottom: 6px;
 }
 
 // === Paragraph Spacing ===
@@ -191,8 +274,8 @@ div.esv {
 
     a {
         font-family: Georgia, 'Times New Roman', serif;
-        font-size: 11px;
-        color: $brown-muted;
+        font-size: 12px;
+        color: $brown-text;
         text-decoration: none;
 
         &:hover {
@@ -205,11 +288,13 @@ div.esv {
         padding: 0 6px;
     }
 
+    // Was 10px #A0937D on #F5F0E6 — 2.7:1, well under AA, for the text that
+    // carries the Pipa attribution and the Crossway permission notice.
     p {
         font-family: Georgia, 'Times New Roman', serif;
-        font-size: 10px;
-        color: $brown-light;
-        line-height: 1.6;
+        font-size: 12px;
+        color: $brown-text;
+        line-height: 1.65;
     }
 }
 
