@@ -5,6 +5,11 @@ on:
     branches: [master]
     paths:
       - "worker/**"
+      # The email body lives here, not under worker/. worker/src/template.html
+      # is a gitignored copy that `npm ci` regenerates via the prepare script,
+      # so without this path an edit to the newsletter template would sit
+      # unshipped until something else in worker/ happened to change.
+      - "templates/newsletter-buttondown.html"
       - ".github/workflows/deploy-worker.yml"
   workflow_dispatch: {}
 
@@ -22,6 +27,13 @@ jobs:
       - name: Install worker dependencies
         working-directory: worker
         run: npm ci
+
+      # npm ci already runs this through the prepare hook. Doing it explicitly
+      # keeps the pipeline readable and means the deploy does not depend on a
+      # lifecycle script staying wired up.
+      - name: Sync the newsletter template into the worker
+        working-directory: worker
+        run: npm run sync-template
 
       - name: Deploy worker
         uses: cloudflare/wrangler-action@v3
