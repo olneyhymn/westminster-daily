@@ -4,8 +4,6 @@ canonical_url: /westminster-daily/start
 date: August 1, 2026
 ---
 
-## Start Here
-
 Westminster Daily gives you one short reading a day, two or three minutes, from
 the [Westminster
 Standards](https://en.wikipedia.org/wiki/Westminster_Standards): the Confession
@@ -15,7 +13,7 @@ and you will have read all three, with the proof texts printed in full.
 The schedule is Dr. Joseph Pipa Jr.'s [Calendar of
 Readings](/pipa-calendar.pdf), which assigns every day of the year.
 
-### Start today
+## Start today
 
 Any day of the year is a good first day. Dr. Pipa keyed the readings to the
 calendar, so begin today and you finish a year from today, having read the whole
@@ -29,7 +27,7 @@ second lap.
 
 Every reading carries a day number, so you always know where you are in the year.
 
-### Get it by email, podcast, or web
+## Get it by email, podcast, or web
 
 * **Email.** One reading each morning. [Subscribe
   here](https://buttondown.com/reformedconfessions).
@@ -48,7 +46,7 @@ Catechism](/westminster-shorter-catechism/), the [Larger
 Catechism](/westminster-larger-catechism/), and the [Confession of
 Faith](/westminster-confession/).
 
-### How Dr. Pipa suggests using it
+## How Dr. Pipa suggests using it
 
 Dr. Pipa's recommendations, from [his plan](/pipa-calendar.pdf):
 
@@ -64,14 +62,14 @@ Some catechism questions appear out of numerical order, grouped by theme. The
 format follows Dr. Morton Smith's *Harmony of the Westminster Confession and
 Catechisms*.
 
-### Read it with others
+## Read it with others
 
 The plan works well for family worship and for a congregation reading together:
 everyone is on the same page on the same day. If you would like to put it in
 front of your church, [get in touch](https://waitingtables.org/about/) and I will
 send you something you can hand out.
 
-### Where the texts come from
+## Where the texts come from
 
 The Confession and Catechisms are in the public domain. The proof texts come from
 the Orthodox Presbyterian Church's [Confession of Faith and
