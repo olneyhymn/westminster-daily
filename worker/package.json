@@ -7,6 +7,6 @@
     "prepare": "npm run sync-template"
   },
   "devDependencies": {
-    "wrangler": "^4.81.0"
+    "wrangler": "^4.118.0"
   }
 }
