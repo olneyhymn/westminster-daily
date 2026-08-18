@@ -26,6 +26,7 @@ Usage:
 """
 
 import argparse
+import json
 import os
 import sys
 from pathlib import Path
@@ -78,6 +79,50 @@ def male_voices(api):
     return found
 
 
+MOCKUP_SHAPES = {
+    ("03", "25"): "One catechism question — the commonest shape of the year",
+    ("01", "14"): "Confession prose, no question — 171 days look like this",
+    ("01", "01"): "Two documents in one day — 122 days pair readings",
+}
+
+
+def write_manifest(candidates):
+    """
+    Record the audition: full voice ids, their labels, and the file each one
+    produced. The dashboard reads this instead of calling the API, so browsing
+    the results never spends credits or needs a key.
+    """
+    OUT.mkdir(parents=True, exist_ok=True)
+    manifest = {
+        "candidates": [
+            dict(voice, solo=f"solo/{solo_filename(voice)}") for voice in candidates
+        ],
+        "mockups": [
+            {
+                "day": f"{month}/{day}",
+                "file": f"mockup/{month}{day}.mp3",
+                "shape": shape,
+            }
+            for (month, day), shape in MOCKUP_SHAPES.items()
+        ],
+    }
+    (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2))
+    return manifest
+
+
+def cmd_manifest(args):
+    write_manifest(
+        [v for v in male_voices(client()) if not args.voices
+         or v["id"] in args.voices.split(",")]
+    )
+    print(f"wrote {OUT / 'manifest.json'}")
+
+
+def solo_filename(voice):
+    safe = "".join(c if c.isalnum() else "-" for c in voice["name"])
+    return f"{safe}-{voice['id'][:8]}.mp3"
+
+
 def cmd_list(args):
     for voice in male_voices(client()):
         print(f"{voice['id']}  {voice['name']:<22} {voice['age']:<12} "
@@ -126,9 +171,9 @@ def cmd_solo(args):
     else:
         candidates = catalogue[: args.limit]
     print(f"auditioning {len(candidates)} voices on {month}/{day}")
+    write_manifest(candidates)
     for voice in candidates:
-        safe = "".join(c if c.isalnum() else "-" for c in voice["name"])
-        destination = OUT / "solo" / f"{safe}-{voice['id'][:8]}.mp3"
+        destination = OUT / "solo" / solo_filename(voice)
         segments = day_segments(month, day, lambda role: voice["id"])
         render(api, segments, destination)
         print(f"  {destination.name}")
@@ -154,6 +199,9 @@ def main():
 
     sub.add_parser("list", help="print every male voice on the account")
 
+    manifest = sub.add_parser("manifest", help="rewrite manifest.json only")
+    manifest.add_argument("--voices", default="")
+
     solo = sub.add_parser("solo", help="each candidate reads the same day")
     solo.add_argument("--day", default="03/25")
     solo.add_argument("--limit", type=int, default=12)
@@ -167,7 +215,12 @@ def main():
     )
 
     args = parser.parse_args()
-    {"list": cmd_list, "solo": cmd_solo, "mockup": cmd_mockup}[args.command](args)
+    {
+        "list": cmd_list,
+        "solo": cmd_solo,
+        "mockup": cmd_mockup,
+        "manifest": cmd_manifest,
+    }[args.command](args)
 
 
 if __name__ == "__main__":
