@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#E8E0D2">
+<title>Westminster Daily &mdash; voice pilot</title>
+<style>
+:root{--ink:#2C1810;--accent:#5C1A2A;--muted:#6B5D45;--orn:#C4A265;--edge:#D6CBAF;
+--surface:#FFFDF7;--recessed:#E8E0D2}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--recessed);color:var(--ink);
+font:17px/1.7 Georgia,'Times New Roman',serif;padding-bottom:104px}
+.wrap{max-width:660px;margin:0 auto;padding:0 18px}
+header{padding:34px 0 18px;border-bottom:2px solid var(--orn)}
+.label{font-size:10px;text-transform:uppercase;letter-spacing:3px;color:var(--muted);margin:0}
+h1{font-size:26px;color:var(--accent);font-weight:normal;margin:5px 0 8px}
+.lede{color:var(--muted);margin:0;font-size:15px}
+ol{list-style:none;margin:0;padding:0}
+li{border-bottom:1px solid var(--edge)}
+button.row{width:100%;text-align:left;background:none;border:0;padding:15px 4px;
+display:flex;gap:13px;align-items:baseline;font:inherit;color:inherit;cursor:pointer}
+button.row:active{background:var(--surface)}
+li.on{background:var(--surface);box-shadow:inset 3px 0 0 var(--accent)}
+li.on .cite{color:var(--accent)}
+.n{font-size:11px;color:var(--muted);min-width:22px;font-variant-numeric:tabular-nums}
+.body{flex:1;min-width:0}
+.cite{font-size:17px;display:block}
+.sub{font-size:13px;color:var(--muted);margin-top:2px;display:block}
+.dur{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--surface);
+border-top:1px solid var(--orn);padding:11px 18px calc(11px + env(safe-area-inset-bottom))}
+.bar .inner{max-width:660px;margin:0 auto}
+.now{font-size:13px;color:var(--muted);margin:0 0 7px;white-space:nowrap;overflow:hidden;
+text-overflow:ellipsis}
+audio{width:100%;height:38px;display:block}
+.foot{color:var(--muted);font-size:13px;padding:22px 0 8px;line-height:1.6}
+</style>
+</head><body>
+<div class="wrap">
+<header>
+<p class="label">Westminster Daily</p>
+<h1>Voice pilot</h1>
+<p class="lede">Thirty-one days in the new cast. Tap any reading; it plays straight
+through to the next one.</p>
+</header>
+<ol id="list">
+<li id="i0"><button class="row" data-i="0">
+<span class="n">1</span>
+<span class="body"><span class="cite">WSC 73 + WLC 140</span>
+<span class="sub">Tue 18 August &middot; George &rarr; Will</span></span>
+<span class="dur">0:19</span></button></li>
+<li id="i1"><button class="row" data-i="1">
+<span class="n">2</span>
+<span class="body"><span class="cite">WSC 74 + WLC 141</span>
+<span class="sub">Wed 19 August &middot; George &rarr; Knightley</span></span>
+<span class="dur">1:12</span></button></li>
+<li id="i2"><button class="row" data-i="2">
+<span class="n">3</span>
+<span class="body"><span class="cite">WSC 75 + WLC 142</span>
+<span class="sub">Thu 20 August &middot; George &rarr; Jackson</span></span>
+<span class="dur">1:38</span></button></li>
+<li id="i3"><button class="row" data-i="3">
+<span class="n">4</span>
+<span class="body"><span class="cite">WSC 76 + WLC 143</span>
+<span class="sub">Fri 21 August &middot; George &rarr; Bill</span></span>
+<span class="dur">0:24</span></button></li>
+<li id="i4"><button class="row" data-i="4">
+<span class="n">5</span>
+<span class="body"><span class="cite">WSC 77 + WLC 144</span>
+<span class="sub">Sat 22 August &middot; George &rarr; Brian</span></span>
+<span class="dur">1:24</span></button></li>
+<li id="i5"><button class="row" data-i="5">
+<span class="n">6</span>
+<span class="body"><span class="cite">WSC 78 + WLC 145</span>
+<span class="sub">Sun 23 August &middot; George &rarr; Will</span></span>
+<span class="dur">2:22</span></button></li>
+<li id="i6"><button class="row" data-i="6">
+<span class="n">7</span>
+<span class="body"><span class="cite">WSC 79 + WLC 146</span>
+<span class="sub">Mon 24 August &middot; George &rarr; Knightley</span></span>
+<span class="dur">0:38</span></button></li>
+<li id="i7"><button class="row" data-i="7">
+<span class="n">8</span>
+<span class="body"><span class="cite">WSC 80 + WLC 147</span>
+<span class="sub">Tue 25 August &middot; George &rarr; Jackson</span></span>
+<span class="dur">0:42</span></button></li>
+<li id="i8"><button class="row" data-i="8">
+<span class="n">9</span>
+<span class="body"><span class="cite">WSC 81 + WLC 148</span>
+<span class="sub">Wed 26 August &middot; George &rarr; Bill</span></span>
+<span class="dur">0:41</span></button></li>
+<li id="i9"><button class="row" data-i="9">
+<span class="n">10</span>
+<span class="body"><span class="cite">WSC 82 + WLC 149</span>
+<span class="sub">Thu 27 August &middot; George &rarr; Brian</span></span>
+<span class="dur">0:34</span></button></li>
+<li id="i10"><button class="row" data-i="10">
+<span class="n">11</span>
+<span class="body"><span class="cite">WSC 83 + WLC 150</span>
+<span class="sub">Fri 28 August &middot; George &rarr; Will</span></span>
+<span class="dur">0:35</span></button></li>
+<li id="i11"><button class="row" data-i="11">
+<span class="n">12</span>
+<span class="body"><span class="cite">WLC 151</span>
+<span class="sub">Sat 29 August &middot; George &rarr; Knightley</span></span>
+<span class="dur">1:47</span></button></li>
+<li id="i12"><button class="row" data-i="12">
+<span class="n">13</span>
+<span class="body"><span class="cite">WSC 84 + WLC 152</span>
+<span class="sub">Sun 30 August &middot; George &rarr; Jackson</span></span>
+<span class="dur">0:38</span></button></li>
+<li id="i13"><button class="row" data-i="13">
+<span class="n">14</span>
+<span class="body"><span class="cite">WCF 20.1</span>
+<span class="sub">Mon 31 August &middot; George &rarr; David</span></span>
+<span class="dur">1:13</span></button></li>
+<li id="i14"><button class="row" data-i="14">
+<span class="n">15</span>
+<span class="body"><span class="cite">WCF 20.2</span>
+<span class="sub">Tue 1 September &middot; George &rarr; David</span></span>
+<span class="dur">0:36</span></button></li>
+<li id="i15"><button class="row" data-i="15">
+<span class="n">16</span>
+<span class="body"><span class="cite">WCF 20.3</span>
+<span class="sub">Wed 2 September &middot; George &rarr; David</span></span>
+<span class="dur">0:25</span></button></li>
+<li id="i16"><button class="row" data-i="16">
+<span class="n">17</span>
+<span class="body"><span class="cite">WCF 20.4</span>
+<span class="sub">Thu 3 September &middot; George &rarr; David</span></span>
+<span class="dur">1:07</span></button></li>
+<li id="i17"><button class="row" data-i="17">
+<span class="n">18</span>
+<span class="body"><span class="cite">WCF 21.1</span>
+<span class="sub">Fri 4 September &middot; George &rarr; David</span></span>
+<span class="dur">0:49</span></button></li>
+<li id="i18"><button class="row" data-i="18">
+<span class="n">19</span>
+<span class="body"><span class="cite">WCF 21.2</span>
+<span class="sub">Sat 5 September &middot; George &rarr; David</span></span>
+<span class="dur">0:22</span></button></li>
+<li id="i19"><button class="row" data-i="19">
+<span class="n">20</span>
+<span class="body"><span class="cite">WCF 21.3 + WLC 185</span>
+<span class="sub">Sun 6 September &middot; George &rarr; David &rarr; Bill</span></span>
+<span class="dur">0:57</span></button></li>
+<li id="i20"><button class="row" data-i="20">
+<span class="n">21</span>
+<span class="body"><span class="cite">WSC 98 + WLC 178</span>
+<span class="sub">Mon 7 September &middot; George &rarr; Brian</span></span>
+<span class="dur">0:34</span></button></li>
+<li id="i21"><button class="row" data-i="21">
+<span class="n">22</span>
+<span class="body"><span class="cite">WLC 179</span>
+<span class="sub">Tue 8 September &middot; George &rarr; Will</span></span>
+<span class="dur">0:23</span></button></li>
+<li id="i22"><button class="row" data-i="22">
+<span class="n">23</span>
+<span class="body"><span class="cite">WLC 180</span>
+<span class="sub">Wed 9 September &middot; George &rarr; Knightley</span></span>
+<span class="dur">0:24</span></button></li>
+<li id="i23"><button class="row" data-i="23">
+<span class="n">24</span>
+<span class="body"><span class="cite">WLC 181</span>
+<span class="sub">Thu 10 September &middot; George &rarr; Jackson</span></span>
+<span class="dur">0:29</span></button></li>
+<li id="i24"><button class="row" data-i="24">
+<span class="n">25</span>
+<span class="body"><span class="cite">WLC 182</span>
+<span class="sub">Fri 11 September &middot; George &rarr; Bill</span></span>
+<span class="dur">0:33</span></button></li>
+<li id="i25"><button class="row" data-i="25">
+<span class="n">26</span>
+<span class="body"><span class="cite">WCF 21.4</span>
+<span class="sub">Sat 12 September &middot; George &rarr; David</span></span>
+<span class="dur">0:18</span></button></li>
+<li id="i26"><button class="row" data-i="26">
+<span class="n">27</span>
+<span class="body"><span class="cite">WLC 183</span>
+<span class="sub">Sun 13 September &middot; George &rarr; Brian</span></span>
+<span class="dur">0:22</span></button></li>
+<li id="i27"><button class="row" data-i="27">
+<span class="n">28</span>
+<span class="body"><span class="cite">WLC 184</span>
+<span class="sub">Mon 14 September &middot; George &rarr; Will</span></span>
+<span class="dur">0:16</span></button></li>
+<li id="i28"><button class="row" data-i="28">
+<span class="n">29</span>
+<span class="body"><span class="cite">WCF 21.5</span>
+<span class="sub">Tue 15 September &middot; George &rarr; David</span></span>
+<span class="dur">0:41</span></button></li>
+<li id="i29"><button class="row" data-i="29">
+<span class="n">30</span>
+<span class="body"><span class="cite">WCF 21.6</span>
+<span class="sub">Wed 16 September &middot; George &rarr; David</span></span>
+<span class="dur">0:40</span></button></li>
+<li id="i30"><button class="row" data-i="30">
+<span class="n">31</span>
+<span class="body"><span class="cite">WCF 21.7</span>
+<span class="sub">Thu 17 September &middot; George &rarr; David</span></span>
+<span class="dur">0:46</span></button></li>
+</ol>
+<p class="foot">George asks. Bill, Brian, Will, Knightley and Jackson answer in turn,
+one each in rotation. David reads the Confession on the days that have no question.</p>
+</div>
+
+<div class="bar"><div class="inner">
+<p class="now" id="now">Nothing playing</p>
+<audio id="a" controls preload="none"></audio>
+</div></div>
+
+<script>
+const TRACKS = [{"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0818.mp3", "c": "WSC 73 + WLC 140", "d": "Tue 18 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0819.mp3", "c": "WSC 74 + WLC 141", "d": "Wed 19 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0820.mp3", "c": "WSC 75 + WLC 142", "d": "Thu 20 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0821.mp3", "c": "WSC 76 + WLC 143", "d": "Fri 21 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0822.mp3", "c": "WSC 77 + WLC 144", "d": "Sat 22 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0823.mp3", "c": "WSC 78 + WLC 145", "d": "Sun 23 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0824.mp3", "c": "WSC 79 + WLC 146", "d": "Mon 24 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0825.mp3", "c": "WSC 80 + WLC 147", "d": "Tue 25 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0826.mp3", "c": "WSC 81 + WLC 148", "d": "Wed 26 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0827.mp3", "c": "WSC 82 + WLC 149", "d": "Thu 27 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0828.mp3", "c": "WSC 83 + WLC 150", "d": "Fri 28 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0829.mp3", "c": "WLC 151", "d": "Sat 29 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0830.mp3", "c": "WSC 84 + WLC 152", "d": "Sun 30 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0831.mp3", "c": "WCF 20.1", "d": "Mon 31 August"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0901.mp3", "c": "WCF 20.2", "d": "Tue 1 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0902.mp3", "c": "WCF 20.3", "d": "Wed 2 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0903.mp3", "c": "WCF 20.4", "d": "Thu 3 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0904.mp3", "c": "WCF 21.1", "d": "Fri 4 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0905.mp3", "c": "WCF 21.2", "d": "Sat 5 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0906.mp3", "c": "WCF 21.3 + WLC 185", "d": "Sun 6 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0907.mp3", "c": "WSC 98 + WLC 178", "d": "Mon 7 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0908.mp3", "c": "WLC 179", "d": "Tue 8 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0909.mp3", "c": "WLC 180", "d": "Wed 9 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0910.mp3", "c": "WLC 181", "d": "Thu 10 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0911.mp3", "c": "WLC 182", "d": "Fri 11 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0912.mp3", "c": "WCF 21.4", "d": "Sat 12 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0913.mp3", "c": "WLC 183", "d": "Sun 13 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0914.mp3", "c": "WLC 184", "d": "Mon 14 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0915.mp3", "c": "WCF 21.5", "d": "Tue 15 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0916.mp3", "c": "WCF 21.6", "d": "Wed 16 September"}, {"u": "https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/0917.mp3", "c": "WCF 21.7", "d": "Thu 17 September"}];
+const a = document.getElementById('a'), now = document.getElementById('now');
+let cur = -1;
+
+function play(i){
+  if(i<0||i>=TRACKS.length) return;
+  document.querySelectorAll('li.on').forEach(function(el){el.classList.remove('on');});
+  const li = document.getElementById('i'+i);
+  if(li) li.classList.add('on');
+  cur = i;
+  a.src = TRACKS[i].u;
+  now.textContent = (i+1)+'. '+TRACKS[i].c+' \u00b7 '+TRACKS[i].d;
+  a.play().catch(function(){});
+  if('mediaSession' in navigator){
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: TRACKS[i].c, artist: 'Westminster Daily', album: TRACKS[i].d
+    });
+  }
+}
+
+document.getElementById('list').addEventListener('click', function(e){
+  const b = e.target.closest('button.row');
+  if(b) play(parseInt(b.dataset.i,10));
+});
+
+// Roll into the next reading so a walk is not interrupted every twenty seconds.
+a.addEventListener('ended', function(){ if(cur+1 < TRACKS.length) play(cur+1); });
+
+if('mediaSession' in navigator){
+  navigator.mediaSession.setActionHandler('nexttrack', function(){ play(cur+1); });
+  navigator.mediaSession.setActionHandler('previoustrack', function(){ play(cur-1); });
+}
+</script>
+</body></html>
