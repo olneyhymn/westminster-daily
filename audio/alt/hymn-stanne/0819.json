@@ -1,0 +1,59 @@
+{
+  "fingerprint": "c91c78ba81b14584f4106ede3d4f6c65d8f8f3a8bc4300ef02cf77ca9f693cd1",
+  "respondent": [
+    "respondent_a",
+    "respondent_b"
+  ],
+  "model": "eleven_multilingual_v2",
+  "characters": 1121,
+  "segments": [
+    {
+      "role": "music",
+      "text": "hymn-stanne-intro"
+    },
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism seventy-four"
+    },
+    {
+      "role": "catechist",
+      "text": "What is required in the eighth commandment"
+    },
+    {
+      "role": "respondent_a",
+      "text": "The eighth commandment requireth the lawful procuring and furthering the wealth and outward estate of ourselves and others."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and forty-one"
+    },
+    {
+      "role": "catechist",
+      "text": "What are the duties required in the eighth commandment"
+    },
+    {
+      "role": "respondent_b",
+      "text": "The duties required in the eighth commandment are, truth, faithfulness, and justice in contracts and commerce between man and man; rendering to everyone his due;"
+    },
+    {
+      "role": "respondent_b",
+      "text": "restitution of goods unlawfully detained from the right owners thereof; giving and lending freely, according to our abilities, and the necessities of others;"
+    },
+    {
+      "role": "respondent_b",
+      "text": "moderation of our judgments, wills, and affections concerning worldly goods;"
+    },
+    {
+      "role": "respondent_b",
+      "text": "a provident care and study to get, keep, use, and dispose these things which are necessary and convenient for the sustentation of our nature, and suitable to our condition;"
+    },
+    {
+      "role": "respondent_b",
+      "text": "a lawful calling, and diligence in it; frugality; avoiding unnecessary lawsuits, and suretyship, or other like engagements;"
+    },
+    {
+      "role": "respondent_b",
+      "text": "and an endeavor, by all just and lawful means, to procure, preserve, and further the wealth and outward estate of others, as well as our own."
+    }
+  ]
+}
