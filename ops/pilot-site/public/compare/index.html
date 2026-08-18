@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#E8E0D2">
+<title>Music comparison &mdash; Westminster Daily</title>
+<style>
+:root{--ink:#2C1810;--accent:#5C1A2A;--muted:#6B5D45;--orn:#C4A265;
+--edge:#D6CBAF;--surface:#FFFDF7;--recessed:#E8E0D2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--recessed);color:var(--ink);
+font:17px/1.7 Georgia,'Times New Roman',serif}
+.wrap{max-width:620px;margin:0 auto;padding:0 18px 60px}
+header{padding:34px 0 18px;border-bottom:2px solid var(--orn)}
+.label{font-size:10px;text-transform:uppercase;letter-spacing:3px;color:var(--muted);margin:0}
+h1{font-size:26px;color:var(--accent);font-weight:normal;margin:5px 0 8px}
+.lede{color:var(--muted);margin:0;font-size:15px}
+.card{background:var(--surface);border:1px solid var(--edge);padding:16px 18px;margin:14px 0}
+h3{margin:0 0 3px;font-size:18px;font-style:italic;font-weight:normal}
+.meta{font-size:13px;color:var(--muted);margin:0 0 11px}
+audio{width:100%;height:38px}
+.foot{color:var(--muted);font-size:13px;padding-top:20px;line-height:1.6}
+a{color:var(--accent)}
+</style></head><body><div class="wrap">
+<header><p class="label">Westminster Daily</p>
+<h1>Music comparison</h1>
+<p class="lede">08/19 in all four. Same speech throughout &mdash; only the music
+differs. It is a two-reading day, so the seam is audible.</p></header>
+<div class="card">
+<h3>No music</h3><p class="meta">Reading only. Your original instinct.</p>
+<audio controls preload="metadata" src="/compare/1-none.mp3"></audio></div>
+<div class="card">
+<h3>Soft sting</h3><p class="meta">Three partials instead of six, slow attack, -33 LUFS instead of -28. No seam.</p>
+<audio controls preload="metadata" src="/compare/2-soft.mp3"></audio></div>
+<div class="card">
+<h3>Organ, intro only</h3><p class="meta">Current sting, but nothing between the readings.</p>
+<audio controls preload="metadata" src="/compare/3-organ-intro-only.mp3"></audio></div>
+<div class="card">
+<h3>Organ + seam</h3><p class="meta">What is live now, for reference.</p>
+<audio controls preload="metadata" src="/compare/4-organ-plus-seam.mp3"></audio></div>
+<p class="foot">Changing this costs nothing now: speech is cached by its own
+content, so arrangement is free to change as often as you like.
+<a href="/">Back to the pilot</a>.</p>
+</div></body></html>
