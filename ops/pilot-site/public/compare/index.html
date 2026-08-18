@@ -1,44 +1,41 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#E8E0D2">
-<title>Music comparison &mdash; Westminster Daily</title>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#E8E0D2"><title>Organ voicings &mdash; Westminster Daily</title>
 <style>
-:root{--ink:#2C1810;--accent:#5C1A2A;--muted:#6B5D45;--orn:#C4A265;
---edge:#D6CBAF;--surface:#FFFDF7;--recessed:#E8E0D2}
+:root{--ink:#2C1810;--accent:#5C1A2A;--muted:#6B5D45;--orn:#C4A265;--edge:#D6CBAF;
+--surface:#FFFDF7;--recessed:#E8E0D2}
 *{box-sizing:border-box}
-body{margin:0;background:var(--recessed);color:var(--ink);
-font:17px/1.7 Georgia,'Times New Roman',serif}
+body{margin:0;background:var(--recessed);color:var(--ink);font:17px/1.7 Georgia,'Times New Roman',serif}
 .wrap{max-width:620px;margin:0 auto;padding:0 18px 60px}
 header{padding:34px 0 18px;border-bottom:2px solid var(--orn)}
 .label{font-size:10px;text-transform:uppercase;letter-spacing:3px;color:var(--muted);margin:0}
 h1{font-size:26px;color:var(--accent);font-weight:normal;margin:5px 0 8px}
+h2{font-size:20px;font-style:italic;color:var(--accent);margin:34px 0 4px}
 .lede{color:var(--muted);margin:0;font-size:15px}
 .card{background:var(--surface);border:1px solid var(--edge);padding:16px 18px;margin:14px 0}
 h3{margin:0 0 3px;font-size:18px;font-style:italic;font-weight:normal}
 .meta{font-size:13px;color:var(--muted);margin:0 0 11px}
 audio{width:100%;height:38px}
+.bare{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--edge)}
+.bare span{font-size:14px;color:var(--muted);min-width:78px}
+.bare audio{height:34px}
 .foot{color:var(--muted);font-size:13px;padding-top:20px;line-height:1.6}
 a{color:var(--accent)}
 </style></head><body><div class="wrap">
-<header><p class="label">Westminster Daily</p>
-<h1>Music comparison</h1>
-<p class="lede">08/19 in all four. Same speech throughout &mdash; only the music
-differs. It is a two-reading day, so the seam is audible.</p></header>
-<div class="card">
-<h3>No music</h3><p class="meta">Reading only. Your original instinct.</p>
-<audio controls preload="metadata" src="/compare/1-none.mp3"></audio></div>
-<div class="card">
-<h3>Soft sting</h3><p class="meta">Three partials instead of six, slow attack, -33 LUFS instead of -28. No seam.</p>
-<audio controls preload="metadata" src="/compare/2-soft.mp3"></audio></div>
-<div class="card">
-<h3>Organ, intro only</h3><p class="meta">Current sting, but nothing between the readings.</p>
-<audio controls preload="metadata" src="/compare/3-organ-intro-only.mp3"></audio></div>
-<div class="card">
-<h3>Organ + seam</h3><p class="meta">What is live now, for reference.</p>
-<audio controls preload="metadata" src="/compare/4-organ-plus-seam.mp3"></audio></div>
-<p class="foot">Changing this costs nothing now: speech is cached by its own
-content, so arrangement is free to change as often as you like.
+<header><p class="label">Westminster Daily</p><h1>Organ voicings</h1>
+<p class="lede">08/19 in each. Same speech throughout, intro only, no marker
+between the readings.</p></header>
+<div class="card"><h3>No music</h3><p class="meta">The reference.</p><audio controls preload="metadata" src="/compare/0-none.mp3"></audio></div>
+<div class="card"><h3>Stopped flute</h3><p class="meta">Almost pure tone, a breath of chiff, the most reverb. The quietest of the three.</p><audio controls preload="metadata" src="/compare/1-flute.mp3"></audio></div>
+<div class="card"><h3>Warm diapason</h3><p class="meta">Fuller fundamental with quiet upperwork and a soft octave rank above.</p><audio controls preload="metadata" src="/compare/2-diapason.mp3"></audio></div>
+<div class="card"><h3>Principal chorus</h3><p class="meta">Three ranks at 8', 4' and 2', each tuned a few cents apart so they beat against one another.</p><audio controls preload="metadata" src="/compare/3-principal.mp3"></audio></div>
+<h2>The stings alone</h2>
+<p class="label">1.35 seconds each</p>
+<div class="bare"><span>Flute</span><audio controls preload="metadata" src="/compare/sting-flute.mp3"></audio></div>
+<div class="bare"><span>Diapason</span><audio controls preload="metadata" src="/compare/sting-diapason.mp3"></audio></div>
+<div class="bare"><span>Principal</span><audio controls preload="metadata" src="/compare/sting-principal.mp3"></audio></div>
+<p class="foot">These add reverb, chiff at the onset, ranks tuned a few cents
+apart, and a gentle roll-off on top &mdash; the previous one was a bare stack of
+harmonics with none of that, which is why it sounded like a keyboard.
 <a href="/">Back to the pilot</a>.</p>
 </div></body></html>
