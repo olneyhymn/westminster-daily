@@ -52,6 +52,7 @@ CONTENT = REPO / "content"
 CAST_FILE = REPO / "audio" / "cast.json"
 OVERRIDES_FILE = REPO / "audio" / "overrides.json"
 DEFAULT_OUT = REPO / "audio" / "out"
+MUSIC = REPO / "audio" / "music"
 
 # Matches the existing catalogue exactly (mono, 44.1 kHz, 128 kbps), so
 # regenerated files drop into S3 without changing the shape of the feed.
@@ -189,13 +190,31 @@ def breathe(role, text, gap_after):
     ]
 
 
-def segments_for(data, respondent):
+def sting(part, music):
+    """
+    A music segment carries a filename where speech carries text.
+
+    Rendering it is a copy rather than a synthesis, so the same segment list,
+    the same fingerprint and the same concatenation handle both without a
+    parallel code path.
+    """
+    if not music or not music.get(part):
+        return []
+    gap = music.get(f"gap_after_{part}", 0.3)
+    return [Segment("music", f"{music['style']}-{part}", gap)]
+
+
+def segments_for(data, respondent, music=None):
     """Break a day's reading into role-tagged segments, in order."""
-    segments = []
+    segments = list(sting("intro", music))
     sections = data["content"]
     for i, section in enumerate(sections):
         last = i == len(sections) - 1
         tail = 0.0 if last else GAP_AFTER_SECTION
+        if i and music:
+            # Between readings the catechist already names the next citation,
+            # so the marker is there to say "a new reading" before he does.
+            segments += sting("seam", music)
         segments += breathe(
             "catechist", spoken_citation(section["long_citation"]), GAP_AFTER_CITATION
         )
@@ -207,7 +226,7 @@ def segments_for(data, respondent):
             segments += breathe(respondent, speakable(section["answer"]), tail)
         else:
             segments += breathe("confessor", speakable(section["body"]), tail)
-    return segments
+    return segments + sting("outro", music)
 
 
 @lru_cache(maxsize=1)
@@ -250,7 +269,8 @@ def fingerprint(segments, cast, model):
     payload = json.dumps(
         {
             "segments": [(s.role, s.text, s.gap_after) for s in segments],
-            "voices": {s.role: cast["voices"][s.role] for s in segments},
+            "voices": {s.role: cast["voices"][s.role]
+                       for s in segments if s.role != "music"},
             "settings": cast["settings"],
             "model": model,
         },
@@ -314,7 +334,7 @@ def render_day(client, month, day, cast, overrides, out_dir, force):
 
     data = apply_overrides(load_json(data_path), month, day, overrides)
     respondent = respondent_for(month, day, cast["respondents"])
-    segments = segments_for(data, respondent)
+    segments = segments_for(data, respondent, cast.get("music"))
     model = cast["model"]
 
     destination = out_dir / f"{month}{day}.mp3"
@@ -330,15 +350,18 @@ def render_day(client, month, day, cast, overrides, out_dir, force):
         parts = []
         for i, segment in enumerate(segments):
             part = workdir / f"{i:03d}.mp3"
-            part.write_bytes(
-                synthesise(
-                    client,
-                    segment.text,
-                    cast["voices"][segment.role],
-                    cast["settings"],
-                    model,
+            if segment.role == "music":
+                part.write_bytes((MUSIC / f"{segment.text}.mp3").read_bytes())
+            else:
+                part.write_bytes(
+                    synthesise(
+                        client,
+                        segment.text,
+                        cast["voices"][segment.role],
+                        cast["settings"],
+                        model,
+                    )
                 )
-            )
             parts.append(part)
             if segment.gap_after > 0:
                 gap = workdir / f"{i:03d}-gap.mp3"
@@ -353,7 +376,7 @@ def render_day(client, month, day, cast, overrides, out_dir, force):
                 "fingerprint": stamp,
                 "respondent": respondent,
                 "model": model,
-                "characters": sum(len(s.text) for s in segments),
+                "characters": sum(len(s.text) for s in segments if s.role != "music"),
                 "segments": [{"role": s.role, "text": s.text} for s in segments],
             },
             indent=2,
@@ -414,9 +437,11 @@ def main():
                 load_json(CONTENT / month / day / "data.json"), month, day, overrides
             )
             respondent = respondent_for(month, day, cast["respondents"])
-            segments = segments_for(data, respondent)
-            total += sum(len(s.text) for s in segments)
+            segments = segments_for(data, respondent, cast.get("music"))
+            total += sum(len(s.text) for s in segments if s.role != "music")
             for segment in segments:
+                if segment.role == "music":
+                    continue
                 tally[segment.role] = tally.get(segment.role, 0) + len(segment.text)
         print(f"{len(days)} days, {total:,} characters")
         print(f"estimated cost: ${total / 1000 * 0.10:,.2f} at $0.10/1k")

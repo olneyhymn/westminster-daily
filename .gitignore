@@ -22,3 +22,4 @@ content-reference/
 # Generated audio: renders live in S3, not in the repo
 audio/out/
 audio/bakeoff/
+audio/demo-*/
