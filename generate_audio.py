@@ -56,6 +56,15 @@ MUSIC = REPO / "audio" / "music"
 
 # Matches the existing catalogue exactly (mono, 44.1 kHz, 128 kbps), so
 # regenerated files drop into S3 without changing the shape of the feed.
+# Podcast loudness target for mono. Episodes were landing anywhere from -24 to
+# -20 LUFS, because the voices differ in inherent level and nothing was
+# levelling them, so a listener met a four-decibel step between one day and the
+# next and reached for the volume. Measured first and applied as a flat gain,
+# so nothing is compressed and the pauses stay as quiet as they were written.
+TARGET_LUFS = -19.0
+TRUE_PEAK = -1.5
+LOUDNESS_RANGE = 11.0
+
 OUTPUT_FORMAT = "mp3_44100_128"
 SAMPLE_RATE = 44100
 BITRATE = "128k"
@@ -204,48 +213,99 @@ def sting(part, music):
     return [Segment("music", f"{music['style']}-{part}", gap)]
 
 
+def same_reading(first, second):
+    """
+    True when two sections ask and answer in identical words.
+
+    Both halves must match. The Shorter and Larger Catechism reach the same
+    answer from different questions on 01/15, and collapsing that pair would
+    drop a question the reader never gets back -- so answer equality alone is
+    not enough to justify saying it once.
+    """
+    if "question" not in first or "question" not in second:
+        return False
+    return (
+        speakable(first["question"]) == speakable(second["question"])
+        and speakable(first["answer"]) == speakable(second["answer"])
+    )
+
+
+def runs_for(sections):
+    """
+    Group consecutive sections that are word-for-word the same reading.
+
+    The Shorter Catechism condenses the Larger, so on eight days of the year
+    the two coincide exactly and one voice would otherwise say the same
+    sentence twice in a row, which sounds like a fault in the tape rather than
+    two documents agreeing. A run is read once under both citations.
+    """
+    runs = []
+    for section in sections:
+        if runs and same_reading(runs[-1][-1], section):
+            runs[-1].append(section)
+        else:
+            runs.append([section])
+    return runs
+
+
 def segments_for(data, respondent, music=None):
-    """Break a day's reading into role-tagged segments, in order."""
+    """
+    Break a day's reading into role-tagged segments, in order.
+
+    `respondent` may be one voice for the whole day or a callable taking the
+    run's index, which is what lets two readings in one day answer in
+    different voices.
+    """
+    voice_for = respondent if callable(respondent) else (lambda i: respondent)
     segments = list(sting("intro", music))
-    sections = data["content"]
-    for i, section in enumerate(sections):
+    sections = runs_for(data["content"])
+    for i, run in enumerate(sections):
+        section = run[0]
         last = i == len(sections) - 1
         tail = 0.0 if last else GAP_AFTER_SECTION
         if i and music:
             # Between readings the catechist already names the next citation,
             # so the marker is there to say "a new reading" before he does.
             segments += sting("seam", music)
-        segments += breathe(
-            "catechist", spoken_citation(section["long_citation"]), GAP_AFTER_CITATION
-        )
+        # One reading, every citation that carries it.
+        citation = ", and ".join(spoken_citation(s["long_citation"]) for s in run)
+        segments += breathe("catechist", citation, GAP_AFTER_CITATION)
         if "question" in section:
             segments += breathe(
                 "catechist", speakable(section["question"].replace("?", "")),
                 GAP_AFTER_QUESTION,
             )
-            segments += breathe(respondent, speakable(section["answer"]), tail)
+            segments += breathe(voice_for(i), speakable(section["answer"]), tail)
         else:
             segments += breathe("confessor", speakable(section["body"]), tail)
     return segments + sting("outro", music)
 
 
 @lru_cache(maxsize=1)
-def catechism_days():
+def catechism_runs():
     """
-    Every day that asks a question, in calendar order, mapped to its position.
+    Every reading that asks a question, in calendar order, mapped to its
+    position.
 
-    Confession-only days never reach a respondent, so counting them would put
-    gaps in the rotation and let the pool drift out of step.
+    Counting readings rather than days does two things: Confession-only days
+    no longer leave gaps that drift the pool out of step, and a day holding
+    two readings draws two consecutive voices, so the pair answer in different
+    ones. That matters most on the days the two catechisms nearly coincide,
+    where one voice twice sounds like a stutter.
     """
+    overrides = load_json(OVERRIDES_FILE)
     order = {}
     for month, day in resolve_days("all"):
-        sections = load_json(CONTENT / month / day / "data.json")["content"]
-        if any("question" in section for section in sections):
-            order[(month, day)] = len(order)
+        data = apply_overrides(
+            load_json(CONTENT / month / day / "data.json"), month, day, overrides
+        )
+        for i, run in enumerate(runs_for(data["content"])):
+            if "question" in run[0]:
+                order[(month, day, i)] = len(order)
     return order
 
 
-def respondent_for(month, day, pool):
+def respondent_for(month, day, pool, run=0):
     """
     Pick the answering voice by where the day falls among the days that have
     an answer to give.
@@ -257,7 +317,7 @@ def respondent_for(month, day, pool):
     pool in order gives every voice 41 or 42 of the 208 days and never repeats
     one two days running.
     """
-    return pool[catechism_days().get((month, day), 0) % len(pool)]
+    return pool[catechism_runs().get((month, day, run), 0) % len(pool)]
 
 
 def fingerprint(segments, cast, model):
@@ -327,13 +387,59 @@ def concat(parts, destination):
         os.unlink(manifest_path)
 
 
+def measure_loudness(path):
+    """Read the file's loudness so the correction can be a known, flat gain."""
+    probe = subprocess.run(
+        ["ffmpeg", "-hide_banner", "-nostats", "-i", str(path), "-af",
+         f"loudnorm=I={TARGET_LUFS}:TP={TRUE_PEAK}:LRA={LOUDNESS_RANGE}"
+         ":print_format=json", "-f", "null", "-"],
+        capture_output=True, text=True,
+    )
+    report = probe.stderr
+    start, end = report.rfind("{"), report.rfind("}")
+    if start < 0 or end < 0:
+        return None
+    try:
+        return json.loads(report[start:end + 1])
+    except ValueError:
+        return None
+
+
+def normalise(path):
+    """
+    Bring one episode to the target, measuring first.
+
+    Single-pass loudnorm rides the level as it goes, which pumps the quiet
+    beats between question and answer. Measuring first allows linear mode: one
+    gain for the whole file, so the balance written into it survives.
+    """
+    measured = measure_loudness(path)
+    if not measured:
+        return False
+    settings = ":".join([
+        f"loudnorm=I={TARGET_LUFS}", f"TP={TRUE_PEAK}", f"LRA={LOUDNESS_RANGE}",
+        f"measured_I={measured['input_i']}",
+        f"measured_TP={measured['input_tp']}",
+        f"measured_LRA={measured['input_lra']}",
+        f"measured_thresh={measured['input_thresh']}",
+        "linear=true", "print_format=summary",
+    ])
+    levelled = path.with_suffix(".levelled.mp3")
+    ffmpeg(["-i", str(path), "-af", settings, "-ac", "1", "-ar", str(SAMPLE_RATE),
+            "-c:a", "libmp3lame", "-b:a", BITRATE, str(levelled)])
+    levelled.replace(path)
+    return True
+
+
 def render_day(client, month, day, cast, overrides, out_dir, force):
     data_path = CONTENT / month / day / "data.json"
     if not data_path.exists():
         return None
 
     data = apply_overrides(load_json(data_path), month, day, overrides)
-    respondent = respondent_for(month, day, cast["respondents"])
+    def respondent(run):
+        return respondent_for(month, day, cast["respondents"], run)
+
     segments = segments_for(data, respondent, cast.get("music"))
     model = cast["model"]
 
@@ -369,12 +475,15 @@ def render_day(client, month, day, cast, overrides, out_dir, force):
                 parts.append(gap)
         out_dir.mkdir(parents=True, exist_ok=True)
         concat(parts, destination)
+    normalise(destination)
 
     sidecar.write_text(
         json.dumps(
             {
                 "fingerprint": stamp,
-                "respondent": respondent,
+                "respondent": sorted(
+                    {s.role for s in segments if s.role.startswith("respondent_")}
+                ),
                 "model": model,
                 "characters": sum(len(s.text) for s in segments if s.role != "music"),
                 "segments": [{"role": s.role, "text": s.text} for s in segments],
@@ -436,8 +545,11 @@ def main():
             data = apply_overrides(
                 load_json(CONTENT / month / day / "data.json"), month, day, overrides
             )
-            respondent = respondent_for(month, day, cast["respondents"])
-            segments = segments_for(data, respondent, cast.get("music"))
+            segments = segments_for(
+                data,
+                lambda run: respondent_for(month, day, cast["respondents"], run),
+                cast.get("music"),
+            )
             total += sum(len(s.text) for s in segments if s.role != "music")
             for segment in segments:
                 if segment.role == "music":
