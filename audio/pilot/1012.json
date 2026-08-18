@@ -1,0 +1,24 @@
+{
+  "fingerprint": "83d49ebc160d983ff9d254bfaee07ed62c651a76d1963352f048f0b732545e62",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 705,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-three, paragraph four"
+    },
+    {
+      "role": "confessor",
+      "text": "It is the duty of people to pray for magistrates, to honor their persons, to pay them tribute or other dues, to obey their lawful commands, and to be subject to their authority, for conscience' sake."
+    },
+    {
+      "role": "confessor",
+      "text": "Infidelity, or difference in religion, doth not make void the magistrates' just and legal authority, nor free the people from their due obedience to them: from which ecclesiastical persons are not exempted, much less hath the pope any power and jurisdiction over them in their dominions, or over any of their people;"
+    },
+    {
+      "role": "confessor",
+      "text": "and, least of all, to deprive them of their dominions, or lives, if he shall judge them to be heretics, or upon any other pretense whatsoever."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "fingerprint": "9cd04751f97df63e046eb006d70608bf95f2034c00d12b386a2006397c00355f",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 175,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and eighty-eight"
+    },
+    {
+      "role": "catechist",
+      "text": "Of how many parts doth the Lord's Prayer consist"
+    },
+    {
+      "role": "reader",
+      "text": "The Lord's Prayer consists of three parts; a preface, petitions, and a conclusion."
+    }
+  ]
+}

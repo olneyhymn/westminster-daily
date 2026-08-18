@@ -1,0 +1,20 @@
+{
+  "fingerprint": "3aafd6cdc5481e33f44430690fd82d21eafa1a3655a192b6d38a5cfb68ed2cb3",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 399,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-three, paragraph two"
+    },
+    {
+      "role": "confessor",
+      "text": "It is lawful for Christians to accept and execute the office of a magistrate, when called thereunto: in the managing whereof, as they ought especially to maintain piety, justice, and peace, according to the wholesome laws of each commonwealth;"
+    },
+    {
+      "role": "confessor",
+      "text": "so, for that end, they may lawfully, now under the new testament, wage war, upon just and necessary occasion."
+    }
+  ]
+}

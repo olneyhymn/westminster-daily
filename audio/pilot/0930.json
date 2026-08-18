@@ -1,0 +1,52 @@
+{
+  "fingerprint": "9a2b22e343798a1c4eeab31b49715860a49b1d9215533feb0771d7ec748d417a",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1748,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism one hundred and six"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the sixth petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the sixth petition, which is, And lead us not into temptation, but deliver us from evil, we pray that God would either keep us from being tempted to sin, or support and deliver us when we are tempted."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and ninety-five"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the sixth petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the sixth petition, (which is, And lead us not into temptation, but deliver us from evil,) acknowledging, that the most wise, righteous, and gracious God, for divers holy and just ends, may so order things, that we may be assaulted, foiled, and for a time led captive by temptations;"
+    },
+    {
+      "role": "reader",
+      "text": "that Satan, the world, and the flesh, are ready powerfully to draw us aside, and ensnare us;"
+    },
+    {
+      "role": "reader",
+      "text": "and that we, even after the pardon of our sins, by reason of our corruption, weakness, and want of watchfulness, are not only subject to be tempted, and forward to expose ourselves unto temptations, but also of ourselves unable and unwilling to resist them, to recover out of them, and to improve them;"
+    },
+    {
+      "role": "reader",
+      "text": "and worthy to be left under the power of them: we pray, that God would so overrule the world and all in it, subdue the flesh, and restrain Satan, order all things, bestow and bless all means of grace, and quicken us to watchfulness in the use of them, that we and all his people may by his providence be kept from being tempted to sin;"
+    },
+    {
+      "role": "reader",
+      "text": "or, if tempted, that by his Spirit we may be powerfully supported and enabled to stand in the hour of temptation;"
+    },
+    {
+      "role": "reader",
+      "text": "or when fallen, raised again and recovered out of it, and have a sanctified use and improvement thereof: that our sanctification and salvation may be perfected, Satan trodden under our feet, and we fully freed from sin, temptation, and all evil, forever."
+    }
+  ]
+}

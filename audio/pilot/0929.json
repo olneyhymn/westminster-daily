@@ -1,0 +1,48 @@
+{
+  "fingerprint": "b6958a0dd1ca71777f6bc5403a638f6e69e8a15383fc392fe2623c97aba55dc3",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1286,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism one hundred and five"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the fifth petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the fifth petition, which is, And forgive us our debts, as we forgive our debtors, we pray that God, for Christ's sake, would freely pardon all our sins;"
+    },
+    {
+      "role": "reader",
+      "text": "which we are the rather encouraged to ask, because by his grace we are enabled from the heart to forgive others."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and ninety-four"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the fifth petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the fifth petition, (which is, Forgive us our debts, as we forgive our debtors,) acknowledging, that we and all others are guilty both of original and actual sin, and thereby become debtors to the justice of God;"
+    },
+    {
+      "role": "reader",
+      "text": "and that neither we, nor any other creature, can make the least satisfaction for that debt: we pray for ourselves and others, that God of his free grace would, through the obedience and satisfaction of Christ, apprehended and applied by faith, acquit us both from the guilt and punishment of sin, accept us in his Beloved;"
+    },
+    {
+      "role": "reader",
+      "text": "continue his favor and grace to us, pardon our daily failings, and fill us with peace and joy, in giving us daily more and more assurance of forgiveness;"
+    },
+    {
+      "role": "reader",
+      "text": "which we are the rather emboldened to ask, and encouraged to expect, when we have this testimony in ourselves, that we from the heart forgive others their offenses."
+    }
+  ]
+}

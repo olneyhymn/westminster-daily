@@ -1,0 +1,20 @@
+{
+  "fingerprint": "dccfa339c139bf47c43df39f2a6cf03ffd3bd9d2eb97108078210ccb2fe8e4de",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 291,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-four, paragraph four"
+    },
+    {
+      "role": "confessor",
+      "text": "Marriage ought not to be within the degrees of consanguinity or affinity forbidden by the Word."
+    },
+    {
+      "role": "confessor",
+      "text": "Nor can such incestuous marriages ever be made lawful by any law of man or consent of parties, so as those persons may live together as man and wife."
+    }
+  ]
+}

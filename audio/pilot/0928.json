@@ -1,0 +1,48 @@
+{
+  "fingerprint": "bac53723aa0ee72c2aae9c69ef0caed62e47c859571747a67edb7afb4dabf62e",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1259,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism one hundred and four"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the fourth petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the fourth petition, which is, Give us this day our daily bread, we pray that of God's free gift we may receive a competent portion of the good things of this life, and enjoy his blessing with them."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and ninety-three"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the fourth petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the fourth petition, (which is, Give us this day our daily bread,) acknowledging, that in Adam, and by our own sin, we have forfeited our right to all the outward blessings of this life, and deserve to be wholly deprived of them by God, and to have them cursed to us in the use of them;"
+    },
+    {
+      "role": "reader",
+      "text": "and that neither they of themselves are able to sustain us, nor we to merit, or by our own industry to procure them;"
+    },
+    {
+      "role": "reader",
+      "text": "but prone to desire, get, and use them unlawfully: we pray for ourselves and others, that both they and we, waiting upon the providence of God from day to day in the use of lawful means, may, of his free gift, and as to his fatherly wisdom shall seem best, enjoy a competent portion of them;"
+    },
+    {
+      "role": "reader",
+      "text": "and have the same continued and blessed unto us in our holy and comfortable use of them, and contentment in them;"
+    },
+    {
+      "role": "reader",
+      "text": "and be kept from all things that are contrary to our temporal support and comfort."
+    }
+  ]
+}

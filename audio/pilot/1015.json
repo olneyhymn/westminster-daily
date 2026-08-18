@@ -1,0 +1,20 @@
+{
+  "fingerprint": "5655e73677d4cce004f1bd6bc9eebc41e11c38ed807ce1e0023772a7054a7bc7",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 468,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-four, paragraph three"
+    },
+    {
+      "role": "confessor",
+      "text": "It is lawful for all sorts of people to marry, who are able with judgment to give their consent. Yet it is the duty of Christians to marry only in the Lord."
+    },
+    {
+      "role": "confessor",
+      "text": "And therefore such as profess the true reformed religion should not marry with infidels, papists, or other idolaters: neither should such as are godly be unequally yoked, by marrying with such as are notoriously wicked in their life, or maintain damnable heresies."
+    }
+  ]
+}

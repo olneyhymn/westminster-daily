@@ -1,0 +1,16 @@
+{
+  "fingerprint": "e99775cd45d808f6e8869d502eb568597560c12fa744c313b78f7402e0db8091",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 360,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-three, paragraph one"
+    },
+    {
+      "role": "confessor",
+      "text": "God, the supreme Lord and King of all the world, hath ordained civil magistrates, to be, under him, over the people, for his own glory, and the public good: and, to this end, hath armed them with the power of the sword, for the defense and encouragement of them that are good, and for the punishment of evildoers."
+    }
+  ]
+}

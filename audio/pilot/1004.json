@@ -1,0 +1,16 @@
+{
+  "fingerprint": "10158bee2f6909767d7bf0ea2ff3037bf85a393b2b41fa2e7fcc675861160545",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 363,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-two, paragraph three"
+    },
+    {
+      "role": "confessor",
+      "text": "Whosoever taketh an oath ought duly to consider the weightiness of so solemn an act, and therein to avouch nothing but what he is fully persuaded is the truth: neither may any man bind himself by oath to anything but what is good and just, and what he believeth so to be, and what he is able and resolved to perform."
+    }
+  ]
+}

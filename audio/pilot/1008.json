@@ -1,0 +1,20 @@
+{
+  "fingerprint": "1cb0880d77627ea493272a61064f58d3cee0fed18b5f8562e31ae02c1a82d836",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 513,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-two, paragraph seven"
+    },
+    {
+      "role": "confessor",
+      "text": "No man may vow to do anything forbidden in the Word of God, or what would hinder any duty therein commanded, or which is not in his own power, and for the performance whereof he hath no promise of ability from God."
+    },
+    {
+      "role": "confessor",
+      "text": "In which respects, popish monastical vows of perpetual single life, professed poverty, and regular obedience, are so far from being degrees of higher perfection, that they are superstitious and sinful snares, in which no Christian may entangle himself."
+    }
+  ]
+}

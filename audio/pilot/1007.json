@@ -1,0 +1,20 @@
+{
+  "fingerprint": "4f498d4c76aafda434510d67f9d77e3e400ffd9288f1deae7fb9e464ccf8abee",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 416,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-two, paragraph six"
+    },
+    {
+      "role": "confessor",
+      "text": "It is not to be made to any creature, but to God alone: and, that it may be accepted, it is to be made voluntarily, out of faith, and conscience of duty, in way of thankfulness for mercy received, or for the obtaining of what we want, whereby we more strictly bind ourselves to necessary duties;"
+    },
+    {
+      "role": "confessor",
+      "text": "or, to other things, so far and so long as they may fitly conduce thereunto."
+    }
+  ]
+}

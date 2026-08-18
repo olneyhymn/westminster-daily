@@ -1,0 +1,36 @@
+{
+  "fingerprint": "73549579a39310baa2a506cb55c11ea70672aa45238930972b4c9688dc3f5bd0",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1093,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism one hundred and three"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the third petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the third petition, which is, Thy will be done in earth, as it is in heaven, we pray that God, by his grace, would make us able and willing to know, obey, and submit to his will in all things, as the angels do in heaven."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and ninety-two"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the third petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the third petition, (which is, Thy will be done in earth, as it is in heaven,) acknowledging, that by nature we and all men are not only utterly unable and unwilling to know and do the will of God, but prone to rebel against his Word, to repine and murmur against his providence, and wholly inclined to do the will of the flesh, and of the devil: we pray, that God would by his Spirit take away from ourselves and others all blindness, weakness, indisposedness, and perverseness of heart;"
+    },
+    {
+      "role": "reader",
+      "text": "and by his grace make us able and willing to know, do, and submit to his will in all things, with the like humility, cheerfulness, faithfulness, diligence, zeal, sincerity, and constancy, as the angels do in heaven."
+    }
+  ]
+}

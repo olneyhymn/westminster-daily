@@ -1,0 +1,20 @@
+{
+  "fingerprint": "d7d3b32e5f580a669cd528663efae9f1b1f7eb962814125ca5462ed2286c0272",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 376,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-four, paragraph five"
+    },
+    {
+      "role": "confessor",
+      "text": "Adultery or fornication committed after a contract, being detected before marriage, giveth just occasion to the innocent party to dissolve that contract."
+    },
+    {
+      "role": "confessor",
+      "text": "In the case of adultery after marriage, it is lawful for the innocent party to sue out a divorce: and, after the divorce, to marry another, as if the offending party were dead."
+    }
+  ]
+}

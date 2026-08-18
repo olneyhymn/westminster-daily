@@ -1,0 +1,56 @@
+{
+  "fingerprint": "948b0e61c04d9595217d60dfc25160f13d8afa6dbeef3dcbf4b2389f6260d783",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1157,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism one hundred and seven"
+    },
+    {
+      "role": "catechist",
+      "text": "What doth the conclusion of the Lord's prayer teach us"
+    },
+    {
+      "role": "reader",
+      "text": "The conclusion of the Lord's Prayer, which is, For thine is the kingdom, and the power, and the glory, for ever."
+    },
+    {
+      "role": "reader",
+      "text": "Amen, teacheth us to take our encouragement in prayer from God only, and in our prayers to praise him, ascribing kingdom, power, and glory to him;"
+    },
+    {
+      "role": "reader",
+      "text": "and, in testimony of our desire, and assurance to be heard, we say, Amen."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and ninety-six"
+    },
+    {
+      "role": "catechist",
+      "text": "What doth the conclusion of the Lord's Prayer teach us"
+    },
+    {
+      "role": "reader",
+      "text": "The conclusion of the Lord's Prayer, (which is, For thine is the kingdom, and the power, and the glory, for ever."
+    },
+    {
+      "role": "reader",
+      "text": "Amen.) teacheth us to enforce our petitions with arguments, which are to be taken, not from any worthiness in ourselves, or in any other creature, but from God;"
+    },
+    {
+      "role": "reader",
+      "text": "and with our prayers to join praises, ascribing to God alone eternal sovereignty, omnipotency, and glorious excellency;"
+    },
+    {
+      "role": "reader",
+      "text": "in regard whereof, as he is able and willing to help us, so we by faith are emboldened to plead with him that he would, and quietly to rely upon him, that he will fulfill our requests."
+    },
+    {
+      "role": "reader",
+      "text": "And, to testify this our desire and assurance, we say, Amen."
+    }
+  ]
+}

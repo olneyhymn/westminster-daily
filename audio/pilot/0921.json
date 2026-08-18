@@ -1,0 +1,40 @@
+{
+  "fingerprint": "0dca5fc15b187ec66cc899b202450a0ed283e7a1745f81389fb9fcb3bbdf0ffc",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 573,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism ninety-nine"
+    },
+    {
+      "role": "catechist",
+      "text": "What rule hath God given for our direction in prayer"
+    },
+    {
+      "role": "reader",
+      "text": "The whole Word of God is of use to direct us in prayer;"
+    },
+    {
+      "role": "reader",
+      "text": "but the special rule of direction is that form of prayer which Christ taught his disciples, commonly called the Lord's Prayer."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and eighty-six"
+    },
+    {
+      "role": "catechist",
+      "text": "What rule hath God given for our direction in the duty of prayer"
+    },
+    {
+      "role": "reader",
+      "text": "The whole Word of God is of use to direct us in the duty of prayer;"
+    },
+    {
+      "role": "reader",
+      "text": "but the special rule of direction is that form of prayer which our Savior Christ taught his disciples, commonly called the Lord's Prayer."
+    }
+  ]
+}

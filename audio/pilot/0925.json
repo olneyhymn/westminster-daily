@@ -1,0 +1,44 @@
+{
+  "fingerprint": "0a4fe6f8246be3750b24b3931ab2fdffe5093cc4bd1bff8fef0f6a96f0512da8",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1005,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism one hundred and one"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the first petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the first petition, which is, Hallowed be thy name, we pray that God would enable us, and others, to glorify him in all that whereby he maketh himself known;"
+    },
+    {
+      "role": "reader",
+      "text": "and that he would dispose all things to his own glory."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and ninety"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the first petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the first petition, (which is, Hallowed be thy name,) acknowledging the utter inability and indisposition that is in ourselves and all men to honor God aright, we pray, that God would by his grace enable and incline us and others to know, to acknowledge, and highly to esteem him, his titles, attributes, ordinances, Word, works, and whatsoever he is pleased to make himself known by;"
+    },
+    {
+      "role": "reader",
+      "text": "and to glorify him in thought, word, and deed: that he would prevent and remove atheism, ignorance, idolatry, profaneness, and whatsoever is dishonorable to him;"
+    },
+    {
+      "role": "reader",
+      "text": "and, by his overruling providence, direct and dispose of all things to his own glory."
+    }
+  ]
+}

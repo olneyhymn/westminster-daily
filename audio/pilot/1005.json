@@ -1,0 +1,20 @@
+{
+  "fingerprint": "39c34aad0d98ed85ffe1b12799124147ffcb0aecf1049b7c1fc272f05fa78ca5",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 343,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-two, paragraph four"
+    },
+    {
+      "role": "confessor",
+      "text": "An oath is to be taken in the plain and common sense of the words, without equivocation, or mental reservation. It cannot oblige to sin;"
+    },
+    {
+      "role": "confessor",
+      "text": "but in anything not sinful, being taken, it binds to performance, although to a man's own hurt. Nor is it to be violated, although made to heretics, or infidels."
+    }
+  ]
+}

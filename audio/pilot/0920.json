@@ -1,0 +1,40 @@
+{
+  "fingerprint": "5d1a671d8281385ba1c53dfe71534f19b76bf5a3910adee65bc5249defe2f2ec",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1065,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism sixty"
+    },
+    {
+      "role": "catechist",
+      "text": "How is the sabbath to be sanctified"
+    },
+    {
+      "role": "reader",
+      "text": "The Sabbath is to be sanctified by a holy resting all that day, even from such worldly employments and recreations as are lawful on other days;"
+    },
+    {
+      "role": "reader",
+      "text": "and spending the whole time in the public and private exercises of God's worship, except so much as is to be taken up in the works of necessity and mercy."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and seventeen"
+    },
+    {
+      "role": "catechist",
+      "text": "How is the Sabbath or the Lord's Day to be sanctified"
+    },
+    {
+      "role": "reader",
+      "text": "The Sabbath or Lord's Day is to be sanctified by an holy resting all the day, not only from such works as are at all times sinful, but even from such worldly employments and recreations as are on other days lawful;"
+    },
+    {
+      "role": "reader",
+      "text": "and making it our delight to spend the whole time (except so much of it as is to be taken up in works of necessity and mercy) in the public and private exercises of God's worship: and, to that end, we are to prepare our hearts, and with such foresight, diligence, and moderation, to dispose and seasonably dispatch our worldly business, that we may be the more free and fit for the duties of that day."
+    }
+  ]
+}

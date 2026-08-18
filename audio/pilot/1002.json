@@ -1,0 +1,16 @@
+{
+  "fingerprint": "b3df05e53584663865a80a50b9dd13695b07f0c4b6f7b10752d4c74827225e4b",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 278,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-two, paragraph one"
+    },
+    {
+      "role": "confessor",
+      "text": "A lawful oath is a part of religious worship, wherein, upon just occasion, the person swearing solemnly calleth God to witness what he asserteth, or promiseth, and to judge him according to the truth or falsehood of what he sweareth."
+    }
+  ]
+}

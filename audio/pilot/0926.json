@@ -1,0 +1,40 @@
+{
+  "fingerprint": "b43a048512866e00316aadd435fd5984d9c75b8bf2b5610fb1052701e58a2735",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1312,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism one hundred and two"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the second petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the second petition, which is, Thy kingdom come, we pray that Satan's kingdom may be destroyed;"
+    },
+    {
+      "role": "reader",
+      "text": "and that the kingdom of grace may be advanced, ourselves and others brought into it, and kept in it; and that the kingdom of glory may be hastened."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and ninety-one"
+    },
+    {
+      "role": "catechist",
+      "text": "What do we pray for in the second petition"
+    },
+    {
+      "role": "reader",
+      "text": "In the second petition, (which is, Thy kingdom come,) acknowledging ourselves and all mankind to be by nature under the dominion of sin and Satan, we pray, that the kingdom of sin and Satan may be destroyed, the gospel propagated throughout the world, the Jews called, the fullness of the Gentiles brought in;"
+    },
+    {
+      "role": "reader",
+      "text": "the church furnished with all gospel officers and ordinances, purged from corruption, countenanced and maintained by the civil magistrate: that the ordinances of Christ may be purely dispensed, and made effectual to the converting of those that are yet in their sins, and the confirming, comforting, and building up of those that are already converted: that Christ would rule in our hearts here, and hasten the time of his second coming, and our reigning with him forever: and that he would be pleased so to exercise the kingdom of his power in all the world, as may best conduce to these ends."
+    }
+  ]
+}

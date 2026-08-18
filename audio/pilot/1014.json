@@ -1,0 +1,20 @@
+{
+  "fingerprint": "d5a132ee5e076c416367e60c01c8ef94bf636536dccf8d0e0c4f8451c6fd8698",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 230,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-four, paragraph two"
+    },
+    {
+      "role": "confessor",
+      "text": "Marriage was ordained for the mutual help of husband and wife, for the increase of mankind with legitimate issue, and of the church with an holy seed;"
+    },
+    {
+      "role": "confessor",
+      "text": "and for preventing of uncleanness."
+    }
+  ]
+}

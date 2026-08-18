@@ -1,0 +1,28 @@
+{
+  "fingerprint": "e6eb6d40233b85214ca12b35036c125fc24610e0dd6a5e5d0733517ed00d2f52",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 529,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-two, paragraph two"
+    },
+    {
+      "role": "confessor",
+      "text": "The name of God only is that by which men ought to swear, and therein it is to be used with all holy fear and reverence."
+    },
+    {
+      "role": "confessor",
+      "text": "Therefore, to swear vainly, or rashly, by that glorious and dreadful Name; or, to swear at all by any other thing, is sinful, and to be abhorred."
+    },
+    {
+      "role": "confessor",
+      "text": "Yet, as in matters of weight and moment, an oath is warranted by the Word of God, under the new testament as well as under the old;"
+    },
+    {
+      "role": "confessor",
+      "text": "so a lawful oath, being imposed by lawful authority, in such matters, ought to be taken."
+    }
+  ]
+}

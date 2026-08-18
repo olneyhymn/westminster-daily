@@ -1,0 +1,16 @@
+{
+  "fingerprint": "2ce4d88a07a3dd7f4d285169aac21f54712bd3be1272ebce3d9d04bda11207ac",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 461,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-one, paragraph eight"
+    },
+    {
+      "role": "confessor",
+      "text": "This Sabbath is then kept holy unto the Lord, when men, after a due preparing of their hearts, and ordering of their common affairs beforehand, do not only observe an holy rest, all the day, from their own works, words, and thoughts about their worldly employments and recreations, but also are taken up, the whole time, in the public and private exercises of his worship, and in the duties of necessity and mercy."
+    }
+  ]
+}

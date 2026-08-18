@@ -1,0 +1,16 @@
+{
+  "fingerprint": "d25a2b77433c665ca5db8283ec01341d0d658ab268f3f3b94df1b3fee3521404",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 196,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-two, paragraph five"
+    },
+    {
+      "role": "confessor",
+      "text": "A vow is of the like nature with a promissory oath, and ought to be made with the like religious care, and to be performed with the like faithfulness."
+    }
+  ]
+}

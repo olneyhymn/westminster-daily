@@ -1,0 +1,24 @@
+{
+  "fingerprint": "320dc156f3e4b0cf93a0cf728531b48af21914d39de220f619f63190b39825f2",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 352,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and eighty-seven"
+    },
+    {
+      "role": "catechist",
+      "text": "How is the Lord's Prayer to be used"
+    },
+    {
+      "role": "reader",
+      "text": "The Lord's Prayer is not only for direction, as a pattern, according to which we are to make other prayers;"
+    },
+    {
+      "role": "reader",
+      "text": "but may also be used as a prayer, so that it be done with understanding, faith, reverence, and other graces necessary to the right performance of the duty of prayer."
+    }
+  ]
+}

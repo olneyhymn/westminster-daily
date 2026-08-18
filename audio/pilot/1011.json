@@ -1,0 +1,32 @@
+{
+  "fingerprint": "b4fdc904995261232513f09146223cc9894e1eb46e46ea9eacbdd93c982e7529",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1299,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-three, paragraph three"
+    },
+    {
+      "role": "confessor",
+      "text": "Civil magistrates may not assume to themselves the administration of the Word and sacraments; or the power of the keys of the kingdom of heaven;"
+    },
+    {
+      "role": "confessor",
+      "text": "or, in the least, interfere in matters of faith."
+    },
+    {
+      "role": "confessor",
+      "text": "Yet, as nursing fathers, it is the duty of civil magistrates to protect the church of our common Lord, without giving the preference to any denomination of Christians above the rest, in such a manner that all ecclesiastical persons whatever shall enjoy the full, free, and unquestioned liberty of discharging every part of their sacred functions, without violence or danger."
+    },
+    {
+      "role": "confessor",
+      "text": "And, as Jesus Christ hath appointed a regular government and discipline in his church, no law of any commonwealth should interfere with, let, or hinder, the due exercise thereof, among the voluntary members of any denomination of Christians, according to their own profession and belief."
+    },
+    {
+      "role": "confessor",
+      "text": "It is the duty of civil magistrates to protect the person and good name of all their people, in such an effectual manner as that no person be suffered, either upon pretense of religion or of infidelity, to offer any indignity, violence, abuse, or injury to any other person whatsoever: and to take order, that all religious and ecclesiastical assemblies be held without molestation or disturbance."
+    }
+  ]
+}

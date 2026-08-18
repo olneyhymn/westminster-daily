@@ -1,0 +1,40 @@
+{
+  "fingerprint": "d27bfd54091782e6d22405c8331fd5d8e69e4158cb7c2fa893982cb863d1ca1c",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 820,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism one hundred"
+    },
+    {
+      "role": "catechist",
+      "text": "What doth the preface of the Lord's prayer teach us"
+    },
+    {
+      "role": "reader",
+      "text": "The preface of the Lord's Prayer, which is, Our Father which art in heaven, teacheth us to draw near to God with all holy reverence and confidence, as children to a father, able and ready to help us;"
+    },
+    {
+      "role": "reader",
+      "text": "and that we should pray with and for others."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and eighty-nine"
+    },
+    {
+      "role": "catechist",
+      "text": "What doth the preface of the Lord's Prayer teach us"
+    },
+    {
+      "role": "reader",
+      "text": "The preface of the Lord's Prayer (contained in these words, Our Father which art in heaven,) teacheth us, when we pray, to draw near to God with confidence of his fatherly goodness, and our interest therein;"
+    },
+    {
+      "role": "reader",
+      "text": "with reverence, and all other childlike dispositions, heavenly affections, and due apprehensions of his sovereign power, majesty, and gracious condescension: as also, to pray with and for others."
+    }
+  ]
+}

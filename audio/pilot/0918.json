@@ -1,0 +1,44 @@
+{
+  "fingerprint": "9370f36e855090572f06bcde4890ddf5a5f7df716ae7a5908873331d8e268226",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 830,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism fifty-nine"
+    },
+    {
+      "role": "catechist",
+      "text": "Which day of the seven hath God appointed to be the weekly sabbath"
+    },
+    {
+      "role": "reader",
+      "text": "From the beginning of the world to the resurrection of Christ, God appointed the seventh day of the week to be the weekly Sabbath;"
+    },
+    {
+      "role": "reader",
+      "text": "and the first day of the week ever since, to continue to the end of the world, which is the Christian Sabbath."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and sixteen"
+    },
+    {
+      "role": "catechist",
+      "text": "What is required in the fourth commandment"
+    },
+    {
+      "role": "reader",
+      "text": "The fourth commandment requireth of all men the sanctifying or keeping holy to God such set times as he hath appointed in his Word, expressly one whole day in seven;"
+    },
+    {
+      "role": "reader",
+      "text": "which was the seventh from the beginning of the world to the resurrection of Christ, and the first day of the week ever since, and so to continue to the end of the world;"
+    },
+    {
+      "role": "reader",
+      "text": "which is the Christian sabbath, and in the New Testament called the Lord's Day."
+    }
+  ]
+}
