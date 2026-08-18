@@ -5,13 +5,19 @@
       "Sid": "WriteGmailArchiveBackupOnly",
       "Effect": "Allow",
       "Action": ["s3:PutObject", "s3:GetObject"],
-      "Resource": "arn:aws:s3:::www.reformedconfessions.com/private-backups/gmail-2024/*"
+      "Resource": [
+        "arn:aws:s3:::www.reformedconfessions.com/private-backups/gmail-2024/*",
+        "arn:aws:s3:::hopperhosted/backups/*"
+      ]
     },
     {
-      "Sid": "ListThatOneBucket",
+      "Sid": "ListBuckets",
       "Effect": "Allow",
-      "Action": ["s3:ListBucket"],
-      "Resource": "arn:aws:s3:::www.reformedconfessions.com"
+      "Action": ["s3:ListBucket", "s3:GetBucketLocation", "s3:GetBucketPublicAccessBlock"],
+      "Resource": [
+        "arn:aws:s3:::www.reformedconfessions.com",
+        "arn:aws:s3:::hopperhosted"
+      ]
     }
   ]
 }
