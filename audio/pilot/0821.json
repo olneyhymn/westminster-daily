@@ -1,6 +1,9 @@
 {
-  "fingerprint": "26ede1a74247fd25082f1fe9b85cef80d12ecaf39a74b6901ede54ae67f8e9ae",
-  "respondent": "respondent_a",
+  "fingerprint": "e5a13cd9c6046027f176839481ab4774d1246aab782491384ad40d26398e8133",
+  "respondent": [
+    "respondent_a",
+    "respondent_e"
+  ],
   "model": "eleven_multilingual_v2",
   "characters": 296,
   "segments": [
@@ -13,7 +16,7 @@
       "text": "Which is the ninth commandment"
     },
     {
-      "role": "respondent_a",
+      "role": "respondent_e",
       "text": "The ninth commandment is, Thou shalt not bear false witness against thy neighbour."
     },
     {

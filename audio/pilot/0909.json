@@ -1,6 +1,8 @@
 {
-  "fingerprint": "bc67ecf08719636842a61ff653420381e4af2b2c25b775d587f03430451f9064",
-  "respondent": "respondent_d",
+  "fingerprint": "3a9bd7388d69489b3c774c54faf7f5d12bf03fd51ed9cb50edf2b1efe0276905",
+  "respondent": [
+    "respondent_c"
+  ],
   "model": "eleven_multilingual_v2",
   "characters": 373,
   "segments": [
@@ -13,11 +15,11 @@
       "text": "What is it to pray in the name of Christ"
     },
     {
-      "role": "respondent_d",
+      "role": "respondent_c",
       "text": "To pray in the name of Christ is, in obedience to his command, and in confidence on his promises, to ask mercy for his sake;"
     },
     {
-      "role": "respondent_d",
+      "role": "respondent_c",
       "text": "not by bare mentioning of his name, but by drawing our encouragement to pray, and our boldness, strength, and hope of acceptance in prayer, from Christ and his mediation."
     }
   ]

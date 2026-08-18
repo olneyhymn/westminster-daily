@@ -1,6 +1,9 @@
 {
-  "fingerprint": "2c5ebcc2fbde8991894407b87cf4d39fcf8ddd3e1c5afa4521808679305f998c",
-  "respondent": "respondent_e",
+  "fingerprint": "53d81a032937ed1c3da07f7314692e75fb45c50ee553c8ffd77003e8444da228",
+  "respondent": [
+    "respondent_c",
+    "respondent_d"
+  ],
   "model": "eleven_multilingual_v2",
   "characters": 595,
   "segments": [
@@ -13,7 +16,7 @@
       "text": "What is required in the tenth commandment"
     },
     {
-      "role": "respondent_e",
+      "role": "respondent_c",
       "text": "The tenth commandment requireth full contentment with our own condition, with a right and charitable frame of spirit toward our neighbor, and all that is his."
     },
     {
@@ -25,7 +28,7 @@
       "text": "What are the duties required in the tenth commandment"
     },
     {
-      "role": "respondent_e",
+      "role": "respondent_d",
       "text": "The duties required in the tenth commandment are, such a full contentment with our own condition, and such a charitable frame of the whole soul toward our neighbor, as that all our inward motions and affections touching him, tend unto, and further all that good which is his."
     }
   ]

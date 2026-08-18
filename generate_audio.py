@@ -477,13 +477,12 @@ def render_day(client, month, day, cast, overrides, out_dir, force):
         concat(parts, destination)
     normalise(destination)
 
+    voices = sorted({s.role for s in segments if s.role.startswith("respondent_")})
     sidecar.write_text(
         json.dumps(
             {
                 "fingerprint": stamp,
-                "respondent": sorted(
-                    {s.role for s in segments if s.role.startswith("respondent_")}
-                ),
+                "respondent": voices,
                 "model": model,
                 "characters": sum(len(s.text) for s in segments if s.role != "music"),
                 "segments": [{"role": s.role, "text": s.text} for s in segments],
@@ -491,7 +490,7 @@ def render_day(client, month, day, cast, overrides, out_dir, force):
             indent=2,
         )
     )
-    return respondent
+    return ", ".join(v.split("_")[1] for v in voices) or "confession"
 
 
 def resolve_days(spec):

@@ -1,6 +1,9 @@
 {
-  "fingerprint": "01a1b209177fdcd12b146a81096ac4d088aedf64d325ad37c8ec9b8e4b2e377d",
-  "respondent": "respondent_e",
+  "fingerprint": "6b4e1cf642d0d8994d1753643d54c13274e4c87a59b8ce2fdd9005cccecb182a",
+  "respondent": [
+    "respondent_b",
+    "respondent_c"
+  ],
   "model": "eleven_multilingual_v2",
   "characters": 479,
   "segments": [
@@ -13,7 +16,7 @@
       "text": "What doth every sin deserve"
     },
     {
-      "role": "respondent_e",
+      "role": "respondent_b",
       "text": "Every sin deserveth God's wrath and curse, both in this life, and that which is to come."
     },
     {
@@ -25,11 +28,11 @@
       "text": "What doth every sin deserve at the hands of God"
     },
     {
-      "role": "respondent_e",
+      "role": "respondent_c",
       "text": "Every sin, even the least, being against the sovereignty, goodness, and holiness of God, and against his righteous law, deserveth his wrath and curse, both in this life, and that which is to come;"
     },
     {
-      "role": "respondent_e",
+      "role": "respondent_c",
       "text": "and cannot be expiated but by the blood of Christ."
     }
   ]

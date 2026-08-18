@@ -1,6 +1,9 @@
 {
-  "fingerprint": "12c84f7cb97a6fdb03593d70bd61a48300d15bccd2ebe835bc52153861aa8e42",
-  "respondent": "respondent_b",
+  "fingerprint": "72fb56cb0a822f76a913bf6dfd5173b6a5b88061ce23ea1deae976d3da425316",
+  "respondent": [
+    "respondent_b",
+    "respondent_c"
+  ],
   "model": "eleven_multilingual_v2",
   "characters": 501,
   "segments": [
@@ -25,7 +28,7 @@
       "text": "Is any man able perfectly to keep the commandments of God"
     },
     {
-      "role": "respondent_b",
+      "role": "respondent_c",
       "text": "No man is able, either of himself, or by any grace received in this life, perfectly to keep the commandments of God; but doth daily break them in thought, word, and deed."
     }
   ]

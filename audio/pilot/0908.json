@@ -1,6 +1,8 @@
 {
-  "fingerprint": "5b2b011d6a42b900ede1c9e3e5468aac8a1cc3b0de4c7d2a1a928129b717f332",
-  "respondent": "respondent_c",
+  "fingerprint": "807cfa8f34c3a64e7c82b0ff9f2a602c0fbafda1731a10df4aca635695cf21b3",
+  "respondent": [
+    "respondent_b"
+  ],
   "model": "eleven_multilingual_v2",
   "characters": 342,
   "segments": [
@@ -13,11 +15,11 @@
       "text": "Are we to pray unto God only"
     },
     {
-      "role": "respondent_c",
+      "role": "respondent_b",
       "text": "God only being able to search the hearts, hear the requests, pardon the sins, and fulfill the desires of all; and only to be believed in, and worshiped with religious worship;"
     },
     {
-      "role": "respondent_c",
+      "role": "respondent_b",
       "text": "prayer, which is a special part thereof, is to be made by all to him alone, and to none other."
     }
   ]

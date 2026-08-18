@@ -1,6 +1,9 @@
 {
-  "fingerprint": "37f88fac14b86f76e89ff06e8729d0d27dc8b33f6b6fdc7a1ebcdf64e17e1769",
-  "respondent": "respondent_b",
+  "fingerprint": "995a05e57fffc07082380f7472d70ee61353a48d6d3dc1d7f12562c1f7565a9a",
+  "respondent": [
+    "respondent_b",
+    "respondent_c"
+  ],
   "model": "eleven_multilingual_v2",
   "characters": 1262,
   "segments": [
@@ -25,31 +28,31 @@
       "text": "What are the duties required in the ninth commandment"
     },
     {
-      "role": "respondent_b",
+      "role": "respondent_c",
       "text": "The duties required in the ninth commandment are, the preserving and promoting of truth between man and man, and the good name of our neighbor, as well as our own;"
     },
     {
-      "role": "respondent_b",
+      "role": "respondent_c",
       "text": "appearing and standing for the truth;"
     },
     {
-      "role": "respondent_b",
+      "role": "respondent_c",
       "text": "and from the heart, sincerely, freely, clearly, and fully, speaking the truth, and only the truth, in matters of judgment and justice, and in all other things whatsoever;"
     },
     {
-      "role": "respondent_b",
+      "role": "respondent_c",
       "text": "a charitable esteem of our neighbors; loving, desiring, and rejoicing in their good name; sorrowing for, and covering of their infirmities;"
     },
     {
-      "role": "respondent_b",
+      "role": "respondent_c",
       "text": "freely acknowledging of their gifts and graces, defending their innocency; a ready receiving of a good report, and unwillingness to admit of an evil report, concerning them;"
     },
     {
-      "role": "respondent_b",
+      "role": "respondent_c",
       "text": "discouraging talebearers, flatterers, and slanderers; love and care of our own good name, and defending it when need requireth; keeping of lawful promises;"
     },
     {
-      "role": "respondent_b",
+      "role": "respondent_c",
       "text": "studying and practicing of whatsoever things are true, honest, lovely, and of good report."
     }
   ]

@@ -1,6 +1,8 @@
 {
-  "fingerprint": "9957f7a7041f945363fc9db0cde110b89cb444bb333bf633479ce1188757c2c7",
-  "respondent": "respondent_d",
+  "fingerprint": "7f555697d7f7c67da04390e1da18f5d1e7a7af1a18c315b89f74a9800fc6ace7",
+  "respondent": [
+    "respondent_a"
+  ],
   "model": "eleven_multilingual_v2",
   "characters": 1669,
   "segments": [
@@ -13,35 +15,35 @@
       "text": "What are those aggravations that make some sins more heinous than others"
     },
     {
-      "role": "respondent_d",
+      "role": "respondent_a",
       "text": "Sins receive their aggravations, From the persons offending: if they be of riper age, greater experience or grace, eminent for profession, gifts, place, office, guides to others, and whose example is likely to be followed by others."
     },
     {
-      "role": "respondent_d",
+      "role": "respondent_a",
       "text": "From the parties offended: if immediately against God, his attributes, and worship; against Christ, and his grace; the Holy Spirit, his witness, and workings;"
     },
     {
-      "role": "respondent_d",
+      "role": "respondent_a",
       "text": "against superiors, men of eminency, and such as we stand especially related and engaged unto;"
     },
     {
-      "role": "respondent_d",
+      "role": "respondent_a",
       "text": "against any of the saints, particularly weak brethren, the souls of them, or any other, and the common good of all or many."
     },
     {
-      "role": "respondent_d",
+      "role": "respondent_a",
       "text": "From the nature and quality of the offense: if it be against the express letter of the law, break many commandments, contain in it many sins: if not only conceived in the heart, but breaks forth in words and actions, scandalize others, and admit of no reparation: if against means, mercies, judgments, light of nature, conviction of conscience, public or private admonition, censures of the church, civil punishments;"
     },
     {
-      "role": "respondent_d",
+      "role": "respondent_a",
       "text": "and our prayers, purposes, promises, vows, covenants, and engagements to God or men: if done deliberately, willfully, presumptuously, impudently, boastingly, maliciously, frequently, obstinately, with delight, continuance, or relapsing after repentance."
     },
     {
-      "role": "respondent_d",
+      "role": "respondent_a",
       "text": "From circumstances of time and place: if on the Lord's Day, or other times of divine worship;"
     },
     {
-      "role": "respondent_d",
+      "role": "respondent_a",
       "text": "or immediately before or after these, or other helps to prevent or remedy such miscarriages: if in public, or in the presence of others, who are thereby likely to be provoked or defiled."
     }
   ]
