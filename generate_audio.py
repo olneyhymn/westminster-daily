@@ -493,6 +493,61 @@ def render_day(client, month, day, cast, overrides, out_dir, force):
     return ", ".join(v.split("_")[1] for v in voices) or "confession"
 
 
+def verify(days, cast, overrides, out_dir):
+    """
+    Check that every requested day is on disk and current.
+
+    A render can stop halfway -- the API runs out of quota, the network drops
+    -- and the days already written still look perfectly good on their own.
+    Measuring the output cannot tell you a file is simply older than the
+    configuration that was supposed to produce it, so this compares each
+    sidecar's fingerprint against what today's cast and text would generate.
+
+    Returns the list of problems, empty when everything is current.
+    """
+    problems = []
+    for month, day in days:
+        destination = out_dir / f"{month}{day}.mp3"
+        sidecar = out_dir / f"{month}{day}.json"
+        if not destination.exists():
+            problems.append(f"{month}/{day}: missing")
+            continue
+        if not sidecar.exists():
+            problems.append(f"{month}/{day}: no sidecar, cannot tell if current")
+            continue
+
+        data = apply_overrides(
+            load_json(CONTENT / month / day / "data.json"), month, day, overrides
+        )
+        segments = segments_for(
+            data,
+            lambda run: respondent_for(month, day, cast["respondents"], run),
+            cast.get("music"),
+        )
+        if load_json(sidecar).get("fingerprint") != fingerprint(
+            segments, cast, cast["model"]
+        ):
+            problems.append(f"{month}/{day}: stale, predates the current settings")
+            continue
+
+        probe = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries",
+             "stream=codec_name,sample_rate,channels", "-of", "csv=p=0",
+             str(destination)],
+            capture_output=True, text=True,
+        )
+        if probe.stdout.strip() != f"mp3,{SAMPLE_RATE},1":
+            problems.append(f"{month}/{day}: wrong format ({probe.stdout.strip()})")
+            continue
+
+        measured = measure_loudness(destination)
+        if measured:
+            level = float(measured["input_i"])
+            if not TARGET_LUFS - 2.5 <= level <= TARGET_LUFS + 2.5:
+                problems.append(f"{month}/{day}: {level:.1f} LUFS, off target")
+    return problems
+
+
 def resolve_days(spec):
     """
     Turn "all", "03", "03/25", or a comma-separated list of those into an
@@ -531,11 +586,21 @@ def main():
                         help="re-render even when the fingerprint matches")
     parser.add_argument("--dry-run", action="store_true",
                         help="report casting and character counts, call nothing")
+    parser.add_argument("--verify", action="store_true",
+                        help="check the days on disk are present and current, "
+                             "render nothing; exits non-zero if any are not")
     args = parser.parse_args()
 
     cast = load_json(CAST_FILE)
     overrides = load_json(OVERRIDES_FILE)
     days = resolve_days(args.days)
+
+    if args.verify:
+        problems = verify(days, cast, overrides, args.out)
+        for problem in problems:
+            print(f"  {problem}")
+        print(f"{len(days) - len(problems)} of {len(days)} current.")
+        return 1 if problems else 0
 
     if args.dry_run:
         total = 0
@@ -561,9 +626,37 @@ def main():
         return
 
     client = ElevenLabs(api_key=os.environ["ELEVEN_LABS_API_KEY"])
+    failures, consecutive = [], 0
     for month, day in days:
-        result = render_day(client, month, day, cast, overrides, args.out, args.force)
+        try:
+            result = render_day(
+                client, month, day, cast, overrides, args.out, args.force
+            )
+            consecutive = 0
+        except Exception as exc:
+            # One transient error should not throw away a long run, but a
+            # steady stream of them means the quota is gone or the key is
+            # dead, and every further call is a wasted round trip.
+            failures.append((f"{month}/{day}", str(exc).split("\n")[0][:160]))
+            consecutive += 1
+            print(f"{month}/{day}: FAILED — {failures[-1][1]}", flush=True)
+            if consecutive >= 3:
+                print("\nthree failures running; stopping.", flush=True)
+                break
+            continue
         print(f"{month}/{day}: {result}", flush=True)
+
+    problems = verify(days, cast, overrides, args.out)
+    if failures or problems:
+        print(f"\n{len(failures)} failed to render, "
+              f"{len(problems)} not current after the run:", flush=True)
+        for day, why in failures[:10]:
+            print(f"  {day}: {why}", flush=True)
+        for problem in problems[:10]:
+            print(f"  {problem}", flush=True)
+        return 1
+    print(f"\nall {len(days)} days rendered and verified.", flush=True)
+    return 0
 
 
 if __name__ == "__main__":
