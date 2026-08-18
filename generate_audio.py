@@ -348,7 +348,7 @@ def main():
             print(f"  {role:<12} {count:>7,} chars")
         return
 
-    client = ElevenLabs(api_key=os.environ["ELEVENLABS_API_KEY"])
+    client = ElevenLabs(api_key=os.environ["ELEVEN_LABS_API_KEY"])
     for month, day in days:
         result = render_day(client, month, day, cast, overrides, args.out, args.force)
         print(f"{month}/{day}: {result}", flush=True)

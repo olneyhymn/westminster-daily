@@ -56,7 +56,7 @@ MOCKUP_DAYS = [("03", "25"), ("01", "14"), ("01", "01")]
 
 
 def client():
-    return ElevenLabs(api_key=os.environ["ELEVENLABS_API_KEY"])
+    return ElevenLabs(api_key=os.environ["ELEVEN_LABS_API_KEY"])
 
 
 def male_voices(api):
@@ -118,7 +118,13 @@ def cmd_solo(args):
     """One candidate, one day, whole reading in that single voice."""
     api = client()
     month, day = args.day.split("/")
-    candidates = male_voices(api)[: args.limit]
+    catalogue = male_voices(api)
+    if args.voices:
+        wanted = args.voices.split(",")
+        by_id = {v["id"]: v for v in catalogue}
+        candidates = [by_id[v] for v in wanted if v in by_id]
+    else:
+        candidates = catalogue[: args.limit]
     print(f"auditioning {len(candidates)} voices on {month}/{day}")
     for voice in candidates:
         safe = "".join(c if c.isalnum() else "-" for c in voice["name"])
@@ -151,6 +157,8 @@ def main():
     solo = sub.add_parser("solo", help="each candidate reads the same day")
     solo.add_argument("--day", default="03/25")
     solo.add_argument("--limit", type=int, default=12)
+    solo.add_argument("--voices", default="",
+                      help="comma-separated voice ids; overrides --limit")
 
     mockup = sub.add_parser("mockup", help="a cast reads real days end to end")
     mockup.add_argument(
