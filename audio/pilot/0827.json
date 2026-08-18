@@ -1,0 +1,32 @@
+{
+  "fingerprint": "12c84f7cb97a6fdb03593d70bd61a48300d15bccd2ebe835bc52153861aa8e42",
+  "respondent": "respondent_b",
+  "model": "eleven_multilingual_v2",
+  "characters": 501,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism eighty-two"
+    },
+    {
+      "role": "catechist",
+      "text": "Is any man able perfectly to keep the commandments of God"
+    },
+    {
+      "role": "respondent_b",
+      "text": "No mere man, since the fall, is able in this life perfectly to keep the commandments of God, but doth daily break them in thought, word, and deed."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and forty-nine"
+    },
+    {
+      "role": "catechist",
+      "text": "Is any man able perfectly to keep the commandments of God"
+    },
+    {
+      "role": "respondent_b",
+      "text": "No man is able, either of himself, or by any grace received in this life, perfectly to keep the commandments of God; but doth daily break them in thought, word, and deed."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "fingerprint": "7a5013ea1ca1815283e31a78e025efc79bc58ad09ee1f9b1b21eeaa802c9a454",
+  "respondent": "respondent_e",
+  "model": "eleven_multilingual_v2",
+  "characters": 639,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-one, paragraph seven"
+    },
+    {
+      "role": "confessor",
+      "text": "As it is the law of nature, that, in general, a due proportion of time be set apart for the worship of God;"
+    },
+    {
+      "role": "confessor",
+      "text": "so, in his Word, by a positive, moral, and perpetual commandment binding all men in all ages, he hath particularly appointed one day in seven, for a Sabbath, to be kept holy unto him: which, from the beginning of the world to the resurrection of Christ, was the last day of the week;"
+    },
+    {
+      "role": "confessor",
+      "text": "and, from the resurrection of Christ, was changed into the first day of the week, which, in Scripture, is called the Lord's day, and is to be continued to the end of the world, as the Christian Sabbath."
+    }
+  ]
+}

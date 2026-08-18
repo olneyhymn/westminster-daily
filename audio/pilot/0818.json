@@ -1,0 +1,32 @@
+{
+  "fingerprint": "2588bc52a862b3842e32543ee7ee61a17368f43d48c5aeeddb55ca5c659141ae",
+  "respondent": "respondent_c",
+  "model": "eleven_multilingual_v2",
+  "characters": 227,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism seventy-three"
+    },
+    {
+      "role": "catechist",
+      "text": "Which is the eighth commandment"
+    },
+    {
+      "role": "respondent_c",
+      "text": "The eighth commandment is, Thou shalt not steal."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and forty"
+    },
+    {
+      "role": "catechist",
+      "text": "Which is the eighth commandment"
+    },
+    {
+      "role": "respondent_c",
+      "text": "The eighth commandment is, Thou shalt not steal."
+    }
+  ]
+}

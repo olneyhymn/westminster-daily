@@ -1,0 +1,20 @@
+{
+  "fingerprint": "687d3d1ac34dd4a2ca768207853eb6d00e7f4dcaf80fc69d37136c04b8e119f6",
+  "respondent": "respondent_a",
+  "model": "eleven_multilingual_v2",
+  "characters": 634,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-one, paragraph one"
+    },
+    {
+      "role": "confessor",
+      "text": "The light of nature showeth that there is a God, who hath lordship and sovereignty over all, is good, and doth good unto all, and is therefore to be feared, loved, praised, called upon, trusted in, and served, with all the heart, and with all the soul, and with all the might."
+    },
+    {
+      "role": "confessor",
+      "text": "But the acceptable way of worshiping the true God is instituted by himself, and so limited by his own revealed will, that he may not be worshiped according to the imaginations and devices of men, or the suggestions of Satan, under any visible representation, or any other way not prescribed in the Holy Scripture."
+    }
+  ]
+}

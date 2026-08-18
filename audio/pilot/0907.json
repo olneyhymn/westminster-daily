@@ -1,0 +1,32 @@
+{
+  "fingerprint": "25e884330ccd2c52736eac564723837d5037ecfa727a396995aaf33db58feef5",
+  "respondent": "respondent_b",
+  "model": "eleven_multilingual_v2",
+  "characters": 455,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism ninety-eight"
+    },
+    {
+      "role": "catechist",
+      "text": "What is prayer"
+    },
+    {
+      "role": "respondent_b",
+      "text": "Prayer is an offering up of our desires unto God, for things agreeable to his will, in the name of Christ, with confession of our sins, and thankful acknowledgment of his mercies."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and seventy-eight"
+    },
+    {
+      "role": "catechist",
+      "text": "What is prayer"
+    },
+    {
+      "role": "respondent_b",
+      "text": "Prayer is an offering up of our desires unto God, in the name of Christ, by the help of his Spirit; with confession of our sins, and thankful acknowledgment of his mercies."
+    }
+  ]
+}

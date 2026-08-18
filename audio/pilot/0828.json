@@ -1,0 +1,32 @@
+{
+  "fingerprint": "2e31500937b5037c6526fe7d670aa3416a83c078ac3521cfa2ab7a6b8009a20a",
+  "respondent": "respondent_c",
+  "model": "eleven_multilingual_v2",
+  "characters": 504,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism eighty-three"
+    },
+    {
+      "role": "catechist",
+      "text": "Are all transgressions of the law equally heinous"
+    },
+    {
+      "role": "respondent_c",
+      "text": "Some sins in themselves, and by reason of several aggravations, are more heinous in the sight of God than others."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and fifty"
+    },
+    {
+      "role": "catechist",
+      "text": "Are all transgressions of the law of God equally heinous in themselves, and in the sight of God"
+    },
+    {
+      "role": "respondent_c",
+      "text": "All transgressions of the law of God are not equally heinous; but some sins in themselves, and by reason of several aggravations, are more heinous in the sight of God than others."
+    }
+  ]
+}

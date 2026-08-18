@@ -1,0 +1,20 @@
+{
+  "fingerprint": "1200110395996275bc0ecfdad6b2c90b1211dbe51238649793b9e70f1e9e8b99",
+  "respondent": "respondent_b",
+  "model": "eleven_multilingual_v2",
+  "characters": 249,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-one, paragraph four"
+    },
+    {
+      "role": "confessor",
+      "text": "Prayer is to be made for things lawful;"
+    },
+    {
+      "role": "confessor",
+      "text": "and for all sorts of men living, or that shall live hereafter: but not for the dead, nor for those of whom it may be known that they have sinned the sin unto death."
+    }
+  ]
+}

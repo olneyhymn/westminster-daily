@@ -1,0 +1,24 @@
+{
+  "fingerprint": "bc67ecf08719636842a61ff653420381e4af2b2c25b775d587f03430451f9064",
+  "respondent": "respondent_d",
+  "model": "eleven_multilingual_v2",
+  "characters": 373,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and eighty"
+    },
+    {
+      "role": "catechist",
+      "text": "What is it to pray in the name of Christ"
+    },
+    {
+      "role": "respondent_d",
+      "text": "To pray in the name of Christ is, in obedience to his command, and in confidence on his promises, to ask mercy for his sake;"
+    },
+    {
+      "role": "respondent_d",
+      "text": "not by bare mentioning of his name, but by drawing our encouragement to pray, and our boldness, strength, and hope of acceptance in prayer, from Christ and his mediation."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublishDailyAudioOnly",
+      "Effect": "Allow",
+      "Action": ["s3:PutObject", "s3:PutObjectAcl", "s3:GetObject"],
+      "Resource": "arn:aws:s3:::www.reformedconfessions.com/westminster-daily/static/audio/*"
+    },
+    {
+      "Sid": "ListThatOneBucket",
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket", "s3:GetBucketOwnershipControls", "s3:GetBucketPublicAccessBlock"],
+      "Resource": "arn:aws:s3:::www.reformedconfessions.com"
+    }
+  ]
+}

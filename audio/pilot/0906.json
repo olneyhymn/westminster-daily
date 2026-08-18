@@ -1,0 +1,36 @@
+{
+  "fingerprint": "426587b9228baa90a4020b179994c79323c78f4ba41d476f1123e575741068df",
+  "respondent": "respondent_a",
+  "model": "eleven_multilingual_v2",
+  "characters": 745,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-one, paragraph three"
+    },
+    {
+      "role": "confessor",
+      "text": "Prayer, with thanksgiving, being one special part of religious worship, is by God required of all men: and, that it may be accepted, it is to be made in the name of the Son, by the help of his Spirit, according to his will, with understanding, reverence, humility, fervency, faith, love, and perseverance;"
+    },
+    {
+      "role": "confessor",
+      "text": "and, if vocal, in a known tongue."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and eighty-five"
+    },
+    {
+      "role": "catechist",
+      "text": "How are we to pray"
+    },
+    {
+      "role": "respondent_a",
+      "text": "We are to pray with an awful apprehension of the majesty of God, and deep sense of our own unworthiness, necessities, and sins; with penitent, thankful, and enlarged hearts;"
+    },
+    {
+      "role": "respondent_a",
+      "text": "with understanding, faith, sincerity, fervency, love, and perseverance, waiting upon him, with humble submission to his will."
+    }
+  ]
+}

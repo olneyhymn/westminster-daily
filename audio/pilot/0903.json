@@ -1,0 +1,24 @@
+{
+  "fingerprint": "6a82fff5bfb63d354d40a70deb7d56d4fc574999a8b0914ba5a817a80c02489e",
+  "respondent": "respondent_a",
+  "model": "eleven_multilingual_v2",
+  "characters": 949,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty, paragraph four"
+    },
+    {
+      "role": "confessor",
+      "text": "And because the powers which God hath ordained, and the liberty which Christ hath purchased, are not intended by God to destroy, but mutually to uphold and preserve one another, they who, upon pretense of Christian liberty, shall oppose any lawful power, or the lawful exercise of it, whether it be civil or ecclesiastical, resist the ordinance of God."
+    },
+    {
+      "role": "confessor",
+      "text": "And, for their publishing of such opinions, or maintaining of such practices, as are contrary to the light of nature, or to the known principles of Christianity (whether concerning faith, worship, or conversation), or to the power of godliness;"
+    },
+    {
+      "role": "confessor",
+      "text": "or, such erroneous opinions or practices, as either in their own nature, or in the manner of publishing or maintaining them, are destructive to the external peace and order which Christ hath established in the church, they may lawfully be called to account, and proceeded against, by the censures of the church."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "fingerprint": "42be9c968a3af12465040378f637bd2ce167f50f641c28763edd73cd9385fbfa",
+  "respondent": "respondent_e",
+  "model": "eleven_multilingual_v2",
+  "characters": 586,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-one, paragraph five"
+    },
+    {
+      "role": "confessor",
+      "text": "The reading of the Scriptures with godly fear, the sound preaching and conscionable hearing of the Word, in obedience unto God, with understanding, faith, and reverence, singing of psalms with grace in the heart;"
+    },
+    {
+      "role": "confessor",
+      "text": "as also, the due administration and worthy receiving of the sacraments instituted by Christ, are all parts of the ordinary religious worship of God: beside religious oaths, vows, solemn fastings, and thanksgivings upon special occasions, which are, in their several times and seasons, to be used in an holy and religious manner."
+    }
+  ]
+}

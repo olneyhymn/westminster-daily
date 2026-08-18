@@ -1,0 +1,36 @@
+{
+  "fingerprint": "01a1b209177fdcd12b146a81096ac4d088aedf64d325ad37c8ec9b8e4b2e377d",
+  "respondent": "respondent_e",
+  "model": "eleven_multilingual_v2",
+  "characters": 479,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism eighty-four"
+    },
+    {
+      "role": "catechist",
+      "text": "What doth every sin deserve"
+    },
+    {
+      "role": "respondent_e",
+      "text": "Every sin deserveth God's wrath and curse, both in this life, and that which is to come."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and fifty-two"
+    },
+    {
+      "role": "catechist",
+      "text": "What doth every sin deserve at the hands of God"
+    },
+    {
+      "role": "respondent_e",
+      "text": "Every sin, even the least, being against the sovereignty, goodness, and holiness of God, and against his righteous law, deserveth his wrath and curse, both in this life, and that which is to come;"
+    },
+    {
+      "role": "respondent_e",
+      "text": "and cannot be expiated but by the blood of Christ."
+    }
+  ]
+}

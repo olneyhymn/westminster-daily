@@ -1,0 +1,36 @@
+{
+  "fingerprint": "f59a3b4ee883a6d74f5dcf197b3c48ec64f3dac441665cc0230fbcc47a30f341",
+  "respondent": "respondent_a",
+  "model": "eleven_multilingual_v2",
+  "characters": 564,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism eighty-one"
+    },
+    {
+      "role": "catechist",
+      "text": "What is forbidden in the tenth commandment"
+    },
+    {
+      "role": "respondent_a",
+      "text": "The tenth commandment forbiddeth all discontentment with our own estate, envying or grieving at the good of our neighbor, and all inordinate motions and affections to anything that is his."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and forty-eight"
+    },
+    {
+      "role": "catechist",
+      "text": "What are the sins forbidden in the tenth commandment"
+    },
+    {
+      "role": "respondent_a",
+      "text": "The sins forbidden in the tenth commandment are, discontentment with our own estate;"
+    },
+    {
+      "role": "respondent_a",
+      "text": "envying and grieving at the good of our neighbor, together with all inordinate motions and affections to anything that is his."
+    }
+  ]
+}

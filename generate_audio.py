@@ -40,6 +40,7 @@ import subprocess
 import sys
 import tempfile
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 
 import inflect
@@ -209,16 +210,35 @@ def segments_for(data, respondent):
     return segments
 
 
+@lru_cache(maxsize=1)
+def catechism_days():
+    """
+    Every day that asks a question, in calendar order, mapped to its position.
+
+    Confession-only days never reach a respondent, so counting them would put
+    gaps in the rotation and let the pool drift out of step.
+    """
+    order = {}
+    for month, day in resolve_days("all"):
+        sections = load_json(CONTENT / month / day / "data.json")["content"]
+        if any("question" in section for section in sections):
+            order[(month, day)] = len(order)
+    return order
+
+
 def respondent_for(month, day, pool):
     """
-    Pick the answering voice from the date alone.
+    Pick the answering voice by where the day falls among the days that have
+    an answer to give.
 
-    md5 rather than hash(): Python salts str hashing per process, so hash()
-    would hand the same day a different voice on every run and quietly
-    invalidate the whole cache.
+    This was an md5 of the date, which distributes acceptably across a year
+    and badly across a month: one voice took 53% of April and a third or more
+    of eight months, with runs of four consecutive days -- a rotation the
+    listener cannot hear is a rotation that was not worth building. Walking the
+    pool in order gives every voice 41 or 42 of the 208 days and never repeats
+    one two days running.
     """
-    digest = hashlib.md5(f"{month}{day}".encode()).hexdigest()
-    return pool[int(digest, 16) % len(pool)]
+    return pool[catechism_days().get((month, day), 0) % len(pool)]
 
 
 def fingerprint(segments, cast, model):
@@ -343,7 +363,20 @@ def render_day(client, month, day, cast, overrides, out_dir, force):
 
 
 def resolve_days(spec):
-    """Turn "all", "03" or "03/25" into an ordered list of (month, day)."""
+    """
+    Turn "all", "03", "03/25", or a comma-separated list of those into an
+    ordered list of (month, day). A list keeps a run of dates in one process,
+    which matters because each invocation otherwise pays for a fresh
+    interpreter and a fresh client.
+    """
+    if "," in spec:
+        seen, days = set(), []
+        for part in spec.split(","):
+            for entry in resolve_days(part.strip()):
+                if entry not in seen:
+                    seen.add(entry)
+                    days.append(entry)
+        return days
     if spec == "all":
         return sorted(
             (p.parent.parent.name, p.parent.name)
@@ -360,7 +393,8 @@ def resolve_days(spec):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--days", default="all", help='"all", "03", or "03/25"')
+    parser.add_argument("--days", default="all",
+                        help='"all", "03", "03/25", or a comma-separated list')
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--force", action="store_true",
                         help="re-render even when the fingerprint matches")

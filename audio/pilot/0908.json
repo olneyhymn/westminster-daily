@@ -1,0 +1,24 @@
+{
+  "fingerprint": "5b2b011d6a42b900ede1c9e3e5468aac8a1cc3b0de4c7d2a1a928129b717f332",
+  "respondent": "respondent_c",
+  "model": "eleven_multilingual_v2",
+  "characters": 342,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and seventy-nine"
+    },
+    {
+      "role": "catechist",
+      "text": "Are we to pray unto God only"
+    },
+    {
+      "role": "respondent_c",
+      "text": "God only being able to search the hearts, hear the requests, pardon the sins, and fulfill the desires of all; and only to be believed in, and worshiped with religious worship;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "prayer, which is a special part thereof, is to be made by all to him alone, and to none other."
+    }
+  ]
+}

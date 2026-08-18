@@ -1,0 +1,24 @@
+{
+  "fingerprint": "f00dd9db0145605f43f9407e46fc3383b03b1ff2145b8e3a3f02626039d5cd3f",
+  "respondent": "respondent_c",
+  "model": "eleven_multilingual_v2",
+  "characters": 534,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-one, paragraph six"
+    },
+    {
+      "role": "confessor",
+      "text": "Neither prayer, nor any other part of religious worship, is now, under the gospel, either tied unto, or made more acceptable by any place in which it is performed, or towards which it is directed: but God is to be worshiped everywhere, in spirit and truth;"
+    },
+    {
+      "role": "confessor",
+      "text": "as, in private families daily, and in secret, each one by himself;"
+    },
+    {
+      "role": "confessor",
+      "text": "so, more solemnly in the public assemblies, which are not carelessly or willfully to be neglected, or forsaken, when God, by his Word or providence, calleth thereunto."
+    }
+  ]
+}

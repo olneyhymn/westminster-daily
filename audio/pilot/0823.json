@@ -1,0 +1,76 @@
+{
+  "fingerprint": "bf838e6dfc7b84aee02acac8df75854ab0740f52af36985ae649bf74879ef13f",
+  "respondent": "respondent_c",
+  "model": "eleven_multilingual_v2",
+  "characters": 2063,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism seventy-eight"
+    },
+    {
+      "role": "catechist",
+      "text": "What is forbidden in the ninth commandment"
+    },
+    {
+      "role": "respondent_c",
+      "text": "The ninth commandment forbiddeth whatsoever is prejudicial to truth, or injurious to our own, or our neighbor's, good name."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and forty-five"
+    },
+    {
+      "role": "catechist",
+      "text": "What are the sins forbidden in the ninth commandment"
+    },
+    {
+      "role": "respondent_c",
+      "text": "The sins forbidden in the ninth commandment are, all prejudicing the truth, and the good name of our neighbors, as well as our own, especially in public judicature;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "giving false evidence, suborning false witnesses, wittingly appearing and pleading for an evil cause, outfacing and overbearing the truth;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "passing unjust sentence, calling evil good, and good evil; rewarding the wicked according to the work of the righteous, and the righteous according to the work of the wicked;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "forgery, concealing the truth, undue silence in a just cause, and holding our peace when iniquity calleth for either a reproof from ourselves, or complaint to others;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "speaking the truth unseasonably, or maliciously to a wrong end, or perverting it to a wrong meaning, or in doubtful and equivocal expressions, to the prejudice of truth or justice;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "speaking untruth, lying, slandering, backbiting, detracting, talebearing, whispering, scoffing, reviling, rash, harsh, and partial censuring;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "misconstructing intentions, words, and actions; flattering, vainglorious boasting; thinking or speaking too highly or too meanly of ourselves or others;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "denying the gifts and graces of God; aggravating smaller faults; hiding, excusing, or extenuating of sins, when called to a free confession; unnecessary discovering of infirmities;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "raising false rumors, receiving and countenancing evil reports, and stopping our ears against just defense; evil suspicion;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "envying or grieving at the deserved credit of any, endeavoring or desiring to impair it, rejoicing in their disgrace and infamy; scornful contempt, fond admiration;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "breach of lawful promises;"
+    },
+    {
+      "role": "respondent_c",
+      "text": "neglecting such things as are of good report, and practicing, or not avoiding ourselves, or not hindering what we can in others, such things as procure an ill name."
+    }
+  ]
+}
