@@ -1,5 +1,5 @@
 {
-  "fingerprint": "fa168341759170e044e78fb69d874b1cc2e12cc75902587d2625787bfeff83d9",
+  "fingerprint": "37ad53d2299ca27e66f2233dc76b566da2f759b0d123c38cc603dc6b44bc2557",
   "respondent": [
     "respondent_a",
     "respondent_e"
@@ -7,10 +7,6 @@
   "model": "eleven_multilingual_v2",
   "characters": 455,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Shorter Catechism ninety-eight"
@@ -22,10 +18,6 @@
     {
       "role": "respondent_e",
       "text": "Prayer is an offering up of our desires unto God, for things agreeable to his will, in the name of Christ, with confession of our sins, and thankful acknowledgment of his mercies."
-    },
-    {
-      "role": "music",
-      "text": "organ-seam"
     },
     {
       "role": "catechist",

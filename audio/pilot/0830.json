@@ -1,5 +1,5 @@
 {
-  "fingerprint": "e2bff76fbb749bb70efc3bce9a53497d007b5f2a413a46d012ca8818b38bdd90",
+  "fingerprint": "e6ebf3b36abf076ed8c56eeb3236269be0fd99c9e2d4cdc2b8ac4bd1ddbcc9a7",
   "respondent": [
     "respondent_b",
     "respondent_c"
@@ -7,10 +7,6 @@
   "model": "eleven_multilingual_v2",
   "characters": 479,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Shorter Catechism eighty-four"
@@ -22,10 +18,6 @@
     {
       "role": "respondent_b",
       "text": "Every sin deserveth God's wrath and curse, both in this life, and that which is to come."
-    },
-    {
-      "role": "music",
-      "text": "organ-seam"
     },
     {
       "role": "catechist",

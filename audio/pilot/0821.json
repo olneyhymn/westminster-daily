@@ -1,5 +1,5 @@
 {
-  "fingerprint": "c92dcec659d319134f414dd6f03b59d12498b1946c736431df589118455f50ff",
+  "fingerprint": "6caec64c1385b3d3301f7e39bc9d57c3de4045663dbbbd268f6c864efd05cef9",
   "respondent": [
     "respondent_a",
     "respondent_e"
@@ -7,10 +7,6 @@
   "model": "eleven_multilingual_v2",
   "characters": 296,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Shorter Catechism seventy-six"
@@ -22,10 +18,6 @@
     {
       "role": "respondent_e",
       "text": "The ninth commandment is, Thou shalt not bear false witness against thy neighbour."
-    },
-    {
-      "role": "music",
-      "text": "organ-seam"
     },
     {
       "role": "catechist",

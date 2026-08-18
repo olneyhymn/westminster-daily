@@ -1,5 +1,5 @@
 {
-  "fingerprint": "ea134e356a9b1f85677e5be4f289f6983643dfa253b7bced5a249abe9839dc9e",
+  "fingerprint": "a37d26d511cde88f162dba0997c755098db8b9747c56fae566c90ffb368c182c",
   "respondent": [
     "respondent_b",
     "respondent_c"
@@ -7,10 +7,6 @@
   "model": "eleven_multilingual_v2",
   "characters": 501,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Shorter Catechism eighty-two"
@@ -22,10 +18,6 @@
     {
       "role": "respondent_b",
       "text": "No mere man, since the fall, is able in this life perfectly to keep the commandments of God, but doth daily break them in thought, word, and deed."
-    },
-    {
-      "role": "music",
-      "text": "organ-seam"
     },
     {
       "role": "catechist",

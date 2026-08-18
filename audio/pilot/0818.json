@@ -1,15 +1,11 @@
 {
-  "fingerprint": "47d7ab56f70c516376681471ab4a3a94369dd43dbd87a68695c07188e7cce8e9",
+  "fingerprint": "628fca8fbdd25fc51b2c8f22e8799d17139ec4146feeefa69f992b49a165cab9",
   "respondent": [
     "respondent_e"
   ],
   "model": "eleven_multilingual_v2",
   "characters": 154,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Shorter Catechism seventy-three, and Larger Catechism one hundred and forty"

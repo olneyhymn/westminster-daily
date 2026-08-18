@@ -1,5 +1,5 @@
 {
-  "fingerprint": "94bfed951c1c9e45fd87260fdd3c1513ea4c694c51d017754418880b0f8143ea",
+  "fingerprint": "bab7253d0317717d7eaddc48a70e2889d0b4af5dfb79be3dd7432020e64cb718",
   "respondent": [
     "respondent_a",
     "respondent_e"
@@ -7,10 +7,6 @@
   "model": "eleven_multilingual_v2",
   "characters": 564,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Shorter Catechism eighty-one"
@@ -22,10 +18,6 @@
     {
       "role": "respondent_e",
       "text": "The tenth commandment forbiddeth all discontentment with our own estate, envying or grieving at the good of our neighbor, and all inordinate motions and affections to anything that is his."
-    },
-    {
-      "role": "music",
-      "text": "organ-seam"
     },
     {
       "role": "catechist",

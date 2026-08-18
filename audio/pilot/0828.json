@@ -1,5 +1,5 @@
 {
-  "fingerprint": "82d4533daac112dbef25c51befb41e16140ec87ff2f52398d2dca33bb2a89db2",
+  "fingerprint": "23798ab10ae6b88a3aede7a80af96a6904fc87a40d274b5fce742eb8888f5c18",
   "respondent": [
     "respondent_d",
     "respondent_e"
@@ -7,10 +7,6 @@
   "model": "eleven_multilingual_v2",
   "characters": 504,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Shorter Catechism eighty-three"
@@ -22,10 +18,6 @@
     {
       "role": "respondent_d",
       "text": "Some sins in themselves, and by reason of several aggravations, are more heinous in the sight of God than others."
-    },
-    {
-      "role": "music",
-      "text": "organ-seam"
     },
     {
       "role": "catechist",

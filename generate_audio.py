@@ -87,9 +87,19 @@ PARAGRAPH_NUMBER_RE = re.compile(
 # Silence around each part of the reading, in seconds. The citation needs room
 # before the question lands; the beat between question and answer is what makes
 # the handoff between the two voices audible as a handoff.
-GAP_AFTER_CITATION = 1.0
+# Podcast pacing is tighter than a daily office wants. These are set for
+# formation rather than for holding attention: the citation is a new frame and
+# needs room, the seam between readings is a real boundary, and the answer
+# follows its question closely because it is the response to that question --
+# lengthening that particular beat would turn a reply into a recitation.
+GAP_AFTER_CITATION = 1.75
 GAP_AFTER_QUESTION = 0.5
-GAP_AFTER_SECTION = 1.0
+GAP_AFTER_SECTION = 2.25
+
+# Held silence before the file ends. A reading that stops the instant the last
+# word lands gives the listener nowhere to put it, and on a walk this is the
+# part actually used.
+CLOSING_SILENCE = 4.0
 
 # The longest answer is 1,783 characters and the model reads it as one
 # unbroken breath: listening tests put the onset of drone at about forty-five
@@ -337,6 +347,7 @@ def fingerprint(segments, cast, model):
                        for s in segments if s.role != "music"},
             "settings": cast["settings"],
             "model": model,
+            "tail": CLOSING_SILENCE,
         },
         sort_keys=True,
     )
@@ -506,6 +517,10 @@ def render_day(client, month, day, cast, overrides, out_dir, force):
                 gap = workdir / f"{i:03d}-gap.mp3"
                 write_silence(gap, segment.gap_after)
                 parts.append(gap)
+        if CLOSING_SILENCE:
+            close = workdir / "zzz-close.mp3"
+            write_silence(close, CLOSING_SILENCE)
+            parts.append(close)
         out_dir.mkdir(parents=True, exist_ok=True)
         concat(parts, destination)
     normalise(destination)

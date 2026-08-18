@@ -1,15 +1,11 @@
 {
-  "fingerprint": "5b6e4a560bcb141c3e087d76115c045c772e4750b638661980a68b222b4e8151",
+  "fingerprint": "d8fa77fc253e92cf615dbf3408dfebf931392674b53379b99537e3a81f36e2cc",
   "respondent": [
     "respondent_e"
   ],
   "model": "eleven_multilingual_v2",
   "characters": 458,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Larger Catechism one hundred and eighty-two"

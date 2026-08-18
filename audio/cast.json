@@ -24,12 +24,5 @@
     "use_speaker_boost": true,
     "speed": 0.95
   },
-  "music": {
-    "style": "organ",
-    "intro": true,
-    "seam": true,
-    "outro": false,
-    "gap_after_intro": 0.45,
-    "gap_after_seam": 0.35
-  }
+  "music": {}
 }

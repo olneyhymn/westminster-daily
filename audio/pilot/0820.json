@@ -1,5 +1,5 @@
 {
-  "fingerprint": "0f25c2e79c03c116f56bf3a658edcb75063324ae00bc5b237c5696348ee936a6",
+  "fingerprint": "332907d0942ba4646d0d7aec3134265636fb2b5a284ca29ebd792f24943dc00f",
   "respondent": [
     "respondent_c",
     "respondent_d"
@@ -7,10 +7,6 @@
   "model": "eleven_multilingual_v2",
   "characters": 1292,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Shorter Catechism seventy-five"
@@ -22,10 +18,6 @@
     {
       "role": "respondent_c",
       "text": "The eighth commandment forbiddeth whatsoever doth, or may, unjustly hinder our own, or our neighbor's, wealth or outward estate."
-    },
-    {
-      "role": "music",
-      "text": "organ-seam"
     },
     {
       "role": "catechist",

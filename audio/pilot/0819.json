@@ -1,5 +1,5 @@
 {
-  "fingerprint": "34e716128e0356ef9ceb3ea9521a3c3b6ec31152a49172f35a14587342937bfe",
+  "fingerprint": "6924be7df3c9b707b7dfdf36389029f6ed135e27c89fdab1462ec1a090ab908b",
   "respondent": [
     "respondent_a",
     "respondent_b"
@@ -7,10 +7,6 @@
   "model": "eleven_multilingual_v2",
   "characters": 1121,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Shorter Catechism seventy-four"
@@ -22,10 +18,6 @@
     {
       "role": "respondent_a",
       "text": "The eighth commandment requireth the lawful procuring and furthering the wealth and outward estate of ourselves and others."
-    },
-    {
-      "role": "music",
-      "text": "organ-seam"
     },
     {
       "role": "catechist",

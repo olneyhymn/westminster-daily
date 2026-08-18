@@ -1,13 +1,9 @@
 {
-  "fingerprint": "371e93a72d29482a9fd6981634f0266da0ac51343a7bc79ce8a5e8c2f48be503",
+  "fingerprint": "7afb4837ee59e60781d7e1373b98b320edf04ace699d583261f3278c1e594bbb",
   "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 949,
   "segments": [
-    {
-      "role": "music",
-      "text": "organ-intro"
-    },
     {
       "role": "catechist",
       "text": "Confession of Faith twenty, paragraph four"
