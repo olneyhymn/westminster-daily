@@ -1,8 +1,6 @@
 {
-  "fingerprint": "5f9bd833906c7b0082c8b6d7b18cb843469e568bc5073c6e9589e07fdef1f664",
-  "respondent": [
-    "respondent_d"
-  ],
+  "fingerprint": "1e5cfec7490f016873dce59d2d2d9a58667ef8eb4e7ccc2431404f66f4ddb3a4",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 382,
   "segments": [
@@ -15,11 +13,11 @@
       "text": "Why are we to pray in the name of Christ"
     },
     {
-      "role": "respondent_d",
+      "role": "reader",
       "text": "The sinfulness of man, and his distance from God by reason thereof, being so great, as that we can have no access into his presence without a mediator;"
     },
     {
-      "role": "respondent_d",
+      "role": "reader",
       "text": "and there being none in heaven or earth appointed to, or fit for, that glorious work but Christ alone, we are to pray in no other name but his only."
     }
   ]

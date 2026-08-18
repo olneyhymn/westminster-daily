@@ -1,8 +1,6 @@
 {
-  "fingerprint": "0be88d175d370637bb3084637a5c18dd5cdfc7c54d30567c8a3fbc83c09bdd57",
-  "respondent": [
-    "respondent_a"
-  ],
+  "fingerprint": "ff8ed9f01efd5678cd64567ff348bc459898d4de3713d9892e5e6d7b941e1d76",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 352,
   "segments": [
@@ -15,11 +13,11 @@
       "text": "For whom are we to pray"
     },
     {
-      "role": "respondent_a",
+      "role": "reader",
       "text": "We are to pray for the whole church of Christ upon earth; for magistrates, and ministers; for ourselves, our brethren, yea, our enemies;"
     },
     {
-      "role": "respondent_a",
+      "role": "reader",
       "text": "and for all sorts of men living, or that shall live hereafter; but not for the dead, nor for those that are known to have sinned the sin unto death."
     }
   ]

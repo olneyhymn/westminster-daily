@@ -1,8 +1,6 @@
 {
-  "fingerprint": "41feeb7aee2377559f222d7a2112fee49c1eafe634a5dae4c982aef1bb00f192",
-  "respondent": [
-    "respondent_b"
-  ],
+  "fingerprint": "51cd7a690b3cccf4ebb5d437f670abba6d7269f62dc163feebc9198837b6ca5b",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 223,
   "segments": [
@@ -15,7 +13,7 @@
       "text": "For what things are we to pray"
     },
     {
-      "role": "respondent_b",
+      "role": "reader",
       "text": "We are to pray for all things tending to the glory of God, the welfare of the church, our own or others' good; but not for anything that is unlawful."
     }
   ]

@@ -1,8 +1,6 @@
 {
-  "fingerprint": "d8fa77fc253e92cf615dbf3408dfebf931392674b53379b99537e3a81f36e2cc",
-  "respondent": [
-    "respondent_e"
-  ],
+  "fingerprint": "0bb7cc826faee69754ebd9047f570446dfb5d412dda8f863e44dd4a2e0c81a6c",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 458,
   "segments": [
@@ -15,11 +13,11 @@
       "text": "How doth the Spirit help us to pray"
     },
     {
-      "role": "respondent_e",
+      "role": "reader",
       "text": "We not knowing what to pray for as we ought, the Spirit helpeth our infirmities, by enabling us to understand both for whom, and what, and how prayer is to be made;"
     },
     {
-      "role": "respondent_e",
+      "role": "reader",
       "text": "and by working and quickening in our hearts (although not in all persons, nor at all times, in the same measure) those apprehensions, affections, and graces which are requisite for the right performance of that duty."
     }
   ]

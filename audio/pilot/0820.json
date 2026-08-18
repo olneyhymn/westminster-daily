@@ -1,9 +1,6 @@
 {
-  "fingerprint": "332907d0942ba4646d0d7aec3134265636fb2b5a284ca29ebd792f24943dc00f",
-  "respondent": [
-    "respondent_c",
-    "respondent_d"
-  ],
+  "fingerprint": "d8a71e0250931b7a1436cf478356a1f865cc731e7b392104456ab5bdebf78020",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 1292,
   "segments": [
@@ -16,7 +13,7 @@
       "text": "What is forbidden in the eighth commandment"
     },
     {
-      "role": "respondent_c",
+      "role": "reader",
       "text": "The eighth commandment forbiddeth whatsoever doth, or may, unjustly hinder our own, or our neighbor's, wealth or outward estate."
     },
     {
@@ -28,31 +25,31 @@
       "text": "What are the sins forbidden in the eighth commandment"
     },
     {
-      "role": "respondent_d",
+      "role": "reader",
       "text": "The sins forbidden in the eighth commandment, besides the neglect of the duties required, are, theft, robbery, manstealing, and receiving anything that is stolen;"
     },
     {
-      "role": "respondent_d",
+      "role": "reader",
       "text": "fraudulent dealing, false weights and measures, removing landmarks, injustice and unfaithfulness in contracts between man and man, or in matters of trust;"
     },
     {
-      "role": "respondent_d",
+      "role": "reader",
       "text": "oppression, extortion, usury, bribery, vexatious lawsuits, unjust enclosures and depredation; engrossing commodities to enhance the price;"
     },
     {
-      "role": "respondent_d",
+      "role": "reader",
       "text": "unlawful callings, and all other unjust or sinful ways of taking or withholding from our neighbor what belongs to him, or of enriching ourselves; covetousness;"
     },
     {
-      "role": "respondent_d",
+      "role": "reader",
       "text": "inordinate prizing and affecting worldly goods; distrustful and distracting cares and studies in getting, keeping, and using them; envying at the prosperity of others;"
     },
     {
-      "role": "respondent_d",
+      "role": "reader",
       "text": "as likewise idleness, prodigality, wasteful gaming;"
     },
     {
-      "role": "respondent_d",
+      "role": "reader",
       "text": "and all other ways whereby we do unduly prejudice our own outward estate, and defrauding ourselves of the due use and comfort of that estate which God hath given us."
     }
   ]

@@ -1,9 +1,6 @@
 {
-  "fingerprint": "6caec64c1385b3d3301f7e39bc9d57c3de4045663dbbbd268f6c864efd05cef9",
-  "respondent": [
-    "respondent_a",
-    "respondent_e"
-  ],
+  "fingerprint": "01f5e5ca0f2ea5519d6a1d8fc2f442ac61a29b87b42ff13a31050455e7137d49",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 296,
   "segments": [
@@ -16,7 +13,7 @@
       "text": "Which is the ninth commandment"
     },
     {
-      "role": "respondent_e",
+      "role": "reader",
       "text": "The ninth commandment is, Thou shalt not bear false witness against thy neighbour."
     },
     {
@@ -28,7 +25,7 @@
       "text": "Which is the ninth commandment"
     },
     {
-      "role": "respondent_a",
+      "role": "reader",
       "text": "The ninth commandment is,Thou shalt not bear false witness against thy neighbour."
     }
   ]

@@ -1,8 +1,6 @@
 {
-  "fingerprint": "628fca8fbdd25fc51b2c8f22e8799d17139ec4146feeefa69f992b49a165cab9",
-  "respondent": [
-    "respondent_e"
-  ],
+  "fingerprint": "3bc68c2b93a263e974823903dd50e8f8ff91a33d8501a2f0575c3c644c69b5a0",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 154,
   "segments": [
@@ -15,7 +13,7 @@
       "text": "Which is the eighth commandment"
     },
     {
-      "role": "respondent_e",
+      "role": "reader",
       "text": "The eighth commandment is, Thou shalt not steal."
     }
   ]

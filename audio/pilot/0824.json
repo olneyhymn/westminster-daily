@@ -1,9 +1,6 @@
 {
-  "fingerprint": "b64dfceb3b802ce689c6cd5fb60b751cc94d87d814d8b9e42858458e6475d44d",
-  "respondent": [
-    "respondent_a",
-    "respondent_b"
-  ],
+  "fingerprint": "a406d89115d26c4fd6d7dd1d4e48f3d27907a060c7eec7ea6dfab6774fea5c94",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 566,
   "segments": [
@@ -16,7 +13,7 @@
       "text": "Which is the tenth commandment"
     },
     {
-      "role": "respondent_a",
+      "role": "reader",
       "text": "The tenth commandment is, Thou shalt not covet thy neighbour's house, thou shalt not covet thy neighbour's wife, nor his manservant, nor his maidservant, nor his ox, nor his ass, nor any thing that is thy neighbour's."
     },
     {
@@ -28,7 +25,7 @@
       "text": "Which is the tenth commandment"
     },
     {
-      "role": "respondent_b",
+      "role": "reader",
       "text": "The tenth commandment is, Thou shalt not covet thy neighbour's house, thou shall not covet thy neighbour's wife, nor his manservant, nor his maidservant, nor his ox, nor his ass, nor any thing that is thy neighbour's."
     }
   ]

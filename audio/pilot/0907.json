@@ -1,9 +1,6 @@
 {
-  "fingerprint": "37ad53d2299ca27e66f2233dc76b566da2f759b0d123c38cc603dc6b44bc2557",
-  "respondent": [
-    "respondent_a",
-    "respondent_e"
-  ],
+  "fingerprint": "02185c5d65799fdf093167cf7a99af42edf93e416f6244ba72c48ebf350f9d2d",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 455,
   "segments": [
@@ -16,7 +13,7 @@
       "text": "What is prayer"
     },
     {
-      "role": "respondent_e",
+      "role": "reader",
       "text": "Prayer is an offering up of our desires unto God, for things agreeable to his will, in the name of Christ, with confession of our sins, and thankful acknowledgment of his mercies."
     },
     {
@@ -28,7 +25,7 @@
       "text": "What is prayer"
     },
     {
-      "role": "respondent_a",
+      "role": "reader",
       "text": "Prayer is an offering up of our desires unto God, in the name of Christ, by the help of his Spirit; with confession of our sins, and thankful acknowledgment of his mercies."
     }
   ]

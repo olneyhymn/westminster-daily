@@ -1,21 +1,13 @@
 {
-  "_comment": "Voice IDs are filled in from the bake-off (scripts/audio_bakeoff.py). Roles: catechist reads the citation and question; confessor reads Confession prose; respondents is the rotating pool the answering voice is drawn from, keyed to the date.",
+  "_comment": "Two voices for the whole year. The catechist reads every citation and every question; the reader answers and reads Confession prose. Roles track kinds of text, not the calendar: a daily office wants today to sound like yesterday.",
   "model": "eleven_multilingual_v2",
   "voices": {
     "catechist": "JBFqnCBsd6RMkjVDRZzb",
-    "confessor": "N2aSOa1ZWmfPD1VcNuV8",
-    "respondent_a": "pqHfZKP75CvOlQylNhV4",
-    "respondent_b": "nPczCjzI2devNBz1zQrb",
-    "respondent_c": "bIHbv24MWmeRgasZH58o",
-    "respondent_d": "ZMZpwpXkV4GaVyJJXtJ3",
-    "respondent_e": "ZthjuvLPty3kTMaNKVKb"
+    "confessor": "ZMZpwpXkV4GaVyJJXtJ3",
+    "reader": "ZMZpwpXkV4GaVyJJXtJ3"
   },
   "respondents": [
-    "respondent_a",
-    "respondent_b",
-    "respondent_c",
-    "respondent_d",
-    "respondent_e"
+    "reader"
   ],
   "settings": {
     "stability": 0.45,

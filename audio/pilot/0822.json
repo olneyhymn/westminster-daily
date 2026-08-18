@@ -1,9 +1,6 @@
 {
-  "fingerprint": "cbf2113a392f7ef3d5f80cf446bb401410bd192937f95d97d1382000d1d0aa57",
-  "respondent": [
-    "respondent_b",
-    "respondent_c"
-  ],
+  "fingerprint": "4c793bafbea82f1b3d6de9f89b9bda85f13a8a90514b6fd91e011e062b71e970",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 1262,
   "segments": [
@@ -16,7 +13,7 @@
       "text": "What is required in the ninth commandment"
     },
     {
-      "role": "respondent_b",
+      "role": "reader",
       "text": "The ninth commandment requireth the maintaining and promoting of truth between man and man, and of our own and our neighbor's good name, especially in witness bearing."
     },
     {
@@ -28,31 +25,31 @@
       "text": "What are the duties required in the ninth commandment"
     },
     {
-      "role": "respondent_c",
+      "role": "reader",
       "text": "The duties required in the ninth commandment are, the preserving and promoting of truth between man and man, and the good name of our neighbor, as well as our own;"
     },
     {
-      "role": "respondent_c",
+      "role": "reader",
       "text": "appearing and standing for the truth;"
     },
     {
-      "role": "respondent_c",
+      "role": "reader",
       "text": "and from the heart, sincerely, freely, clearly, and fully, speaking the truth, and only the truth, in matters of judgment and justice, and in all other things whatsoever;"
     },
     {
-      "role": "respondent_c",
+      "role": "reader",
       "text": "a charitable esteem of our neighbors; loving, desiring, and rejoicing in their good name; sorrowing for, and covering of their infirmities;"
     },
     {
-      "role": "respondent_c",
+      "role": "reader",
       "text": "freely acknowledging of their gifts and graces, defending their innocency; a ready receiving of a good report, and unwillingness to admit of an evil report, concerning them;"
     },
     {
-      "role": "respondent_c",
+      "role": "reader",
       "text": "discouraging talebearers, flatterers, and slanderers; love and care of our own good name, and defending it when need requireth; keeping of lawful promises;"
     },
     {
-      "role": "respondent_c",
+      "role": "reader",
       "text": "studying and practicing of whatsoever things are true, honest, lovely, and of good report."
     }
   ]

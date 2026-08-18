@@ -1,9 +1,6 @@
 {
-  "fingerprint": "bab7253d0317717d7eaddc48a70e2889d0b4af5dfb79be3dd7432020e64cb718",
-  "respondent": [
-    "respondent_a",
-    "respondent_e"
-  ],
+  "fingerprint": "5171a285e3f1dad6ed752795a118444b81b3ef43aabc36e1c03e0cf8943b9f33",
+  "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 564,
   "segments": [
@@ -16,7 +13,7 @@
       "text": "What is forbidden in the tenth commandment"
     },
     {
-      "role": "respondent_e",
+      "role": "reader",
       "text": "The tenth commandment forbiddeth all discontentment with our own estate, envying or grieving at the good of our neighbor, and all inordinate motions and affections to anything that is his."
     },
     {
@@ -28,11 +25,11 @@
       "text": "What are the sins forbidden in the tenth commandment"
     },
     {
-      "role": "respondent_a",
+      "role": "reader",
       "text": "The sins forbidden in the tenth commandment are, discontentment with our own estate;"
     },
     {
-      "role": "respondent_a",
+      "role": "reader",
       "text": "envying and grieving at the good of our neighbor, together with all inordinate motions and affections to anything that is his."
     }
   ]
