@@ -1,5 +1,5 @@
 {
-  "fingerprint": "53d81a032937ed1c3da07f7314692e75fb45c50ee553c8ffd77003e8444da228",
+  "fingerprint": "7ce7d7e346422d39c3ef8f2ded5813c7403fefef8cdb9e9cb677bc5ec13d0af4",
   "respondent": [
     "respondent_c",
     "respondent_d"
@@ -7,6 +7,10 @@
   "model": "eleven_multilingual_v2",
   "characters": 595,
   "segments": [
+    {
+      "role": "music",
+      "text": "organ-intro"
+    },
     {
       "role": "catechist",
       "text": "Shorter Catechism eighty"
@@ -18,6 +22,10 @@
     {
       "role": "respondent_c",
       "text": "The tenth commandment requireth full contentment with our own condition, with a right and charitable frame of spirit toward our neighbor, and all that is his."
+    },
+    {
+      "role": "music",
+      "text": "organ-seam"
     },
     {
       "role": "catechist",

@@ -1,5 +1,5 @@
 {
-  "fingerprint": "1b77e7ad9f37d620c255976f5f30134c1c6d2337867d7752b26f80d298a3d424",
+  "fingerprint": "622b13adbac810a53306b95e53002510961cb2cb271d6526f20744503e5a4f98",
   "respondent": [
     "respondent_a",
     "respondent_b"
@@ -7,6 +7,10 @@
   "model": "eleven_multilingual_v2",
   "characters": 566,
   "segments": [
+    {
+      "role": "music",
+      "text": "organ-intro"
+    },
     {
       "role": "catechist",
       "text": "Shorter Catechism seventy-nine"
@@ -18,6 +22,10 @@
     {
       "role": "respondent_a",
       "text": "The tenth commandment is, Thou shalt not covet thy neighbour's house, thou shalt not covet thy neighbour's wife, nor his manservant, nor his maidservant, nor his ox, nor his ass, nor any thing that is thy neighbour's."
+    },
+    {
+      "role": "music",
+      "text": "organ-seam"
     },
     {
       "role": "catechist",

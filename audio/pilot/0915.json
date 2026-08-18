@@ -1,9 +1,13 @@
 {
-  "fingerprint": "42be9c968a3af12465040378f637bd2ce167f50f641c28763edd73cd9385fbfa",
+  "fingerprint": "663af13d1b39e04f43c943a63501643add46b774e1ebc06a0a1d7b8ef1443473",
   "respondent": [],
   "model": "eleven_multilingual_v2",
   "characters": 586,
   "segments": [
+    {
+      "role": "music",
+      "text": "organ-intro"
+    },
     {
       "role": "catechist",
       "text": "Confession of Faith twenty-one, paragraph five"

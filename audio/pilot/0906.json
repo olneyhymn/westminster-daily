@@ -1,11 +1,15 @@
 {
-  "fingerprint": "c01b5298b456d403725d3e0366f2a5c1c4298e15c835f8cf68b192990f88a49a",
+  "fingerprint": "30f1e2fa52b806209b6c59048e4efff013a5efda68e36b5cf81ec7fe363b50e4",
   "respondent": [
     "respondent_d"
   ],
   "model": "eleven_multilingual_v2",
   "characters": 745,
   "segments": [
+    {
+      "role": "music",
+      "text": "organ-intro"
+    },
     {
       "role": "catechist",
       "text": "Confession of Faith twenty-one, paragraph three"
@@ -17,6 +21,10 @@
     {
       "role": "confessor",
       "text": "and, if vocal, in a known tongue."
+    },
+    {
+      "role": "music",
+      "text": "organ-seam"
     },
     {
       "role": "catechist",
