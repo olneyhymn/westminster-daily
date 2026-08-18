@@ -179,6 +179,45 @@ def cmd_solo(args):
         print(f"  {destination.name}")
 
 
+def cmd_handoff(args):
+    """
+    The same day, once per respondent, with the catechist held constant.
+
+    A mockup shows one handoff; this shows the seam as the only variable, which
+    is the comparison that decides whether a rotation is audible or wasted.
+    """
+    api = client()
+    cast = load_json(REPO / "audio" / "cast.json")
+    manifest = json.loads((OUT / "manifest.json").read_text())
+    names = {c["id"]: c["name"].split(" - ")[0] for c in manifest["candidates"]}
+    month, day = args.day.split("/")
+    fixed = {
+        "catechist": cast["voices"]["catechist"],
+        "confessor": cast["voices"]["confessor"],
+    }
+
+    entries = []
+    for key in cast["respondents"]:
+        voice_id = cast["voices"][key]
+        name = names.get(voice_id, key)
+        destination = OUT / "handoff" / f"{name}.mp3"
+        render(api, day_segments(month, day, lambda role: fixed.get(role, voice_id)),
+               destination)
+        entries.append({
+            "respondent": name,
+            "file": f"handoff/{name}.mp3",
+            "day": f"{month}/{day}",
+        })
+        print(f"  {destination.name}")
+
+    manifest["handoffs"] = {
+        "day": f"{month}/{day}",
+        "catechist": names.get(fixed["catechist"], "catechist"),
+        "takes": entries,
+    }
+    (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2))
+
+
 def cmd_mockup(args):
     """A proposed cast reading real days, to judge the handoff."""
     api = client()
@@ -208,6 +247,10 @@ def main():
     solo.add_argument("--voices", default="",
                       help="comma-separated voice ids; overrides --limit")
 
+    handoff = sub.add_parser(
+        "handoff", help="one day per respondent, catechist held constant")
+    handoff.add_argument("--day", default="03/25")
+
     mockup = sub.add_parser("mockup", help="a cast reads real days end to end")
     mockup.add_argument(
         "--cast", required=True,
@@ -220,6 +263,7 @@ def main():
         "solo": cmd_solo,
         "mockup": cmd_mockup,
         "manifest": cmd_manifest,
+        "handoff": cmd_handoff,
     }[args.command](args)
 
 

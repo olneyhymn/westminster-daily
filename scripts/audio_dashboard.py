@@ -156,6 +156,10 @@ PAGE = """<!doctype html>
       <p class="label">The architecture, not the casting</p>
       <div id="mockups"></div>
 
+      <h2>Handoffs</h2>
+      <p class="label" id="handoff-label">Not rendered yet</p>
+      <div id="handoffs"></div>
+
       <h2>Candidates</h2>
       <p class="label">Identical text — Larger Catechism 39</p>
       <div id="candidates"></div>
@@ -227,6 +231,23 @@ function renderMockups() {
       <h3>${m.day}</h3>
       <p class="meta">${m.shape}</p>
       <audio controls preload="metadata" src="/audio/${m.file}?v=${manifest.stamp}"></audio>
+    </div>`).join('');
+}
+
+function renderHandoffs() {
+  const h = manifest.handoffs;
+  const box = document.getElementById('handoffs');
+  const label = document.getElementById('handoff-label');
+  if (!h || !h.takes || !h.takes.length) {
+    label.textContent = 'Not rendered yet — run the handoff command';
+    box.innerHTML = '';
+    return;
+  }
+  label.textContent = `${h.day} — ${h.catechist} asks in every take`;
+  box.innerHTML = h.takes.map(t => `
+    <div class="card mockup">
+      <h3>${t.respondent} answers</h3>
+      <audio controls preload="metadata" src="/audio/${t.file}?v=${manifest.stamp}"></audio>
     </div>`).join('');
 }
 
@@ -351,6 +372,7 @@ document.getElementById('preview').onclick = async () => {
   bindKnob('style','k-style','o-style', x => (+x).toFixed(2));
   bindKnob('speed','k-speed','o-speed', x => (+x).toFixed(2) + '×');
   renderMockups();
+  renderHandoffs();
   render();
 })();
 </script>
