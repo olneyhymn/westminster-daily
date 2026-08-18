@@ -1,5 +1,5 @@
 {
-  "fingerprint": "6110bb5025db8d8442586b6c82ef0febcd9a00b8d4a5167e8c95056a41358af7",
+  "fingerprint": "e61d4f0f0220d03391303c4b487d7d2b4bae5944b9132b5b4ae68f31ccac7047",
   "respondent": [
     "respondent_d",
     "respondent_e"
@@ -7,6 +7,10 @@
   "model": "eleven_multilingual_v2",
   "characters": 2063,
   "segments": [
+    {
+      "role": "music",
+      "text": "organ-intro"
+    },
     {
       "role": "catechist",
       "text": "Shorter Catechism seventy-eight"
@@ -18,6 +22,10 @@
     {
       "role": "respondent_d",
       "text": "The ninth commandment forbiddeth whatsoever is prejudicial to truth, or injurious to our own, or our neighbor's, good name."
+    },
+    {
+      "role": "music",
+      "text": "organ-seam"
     },
     {
       "role": "catechist",

@@ -53,6 +53,10 @@ CAST_FILE = REPO / "audio" / "cast.json"
 OVERRIDES_FILE = REPO / "audio" / "overrides.json"
 DEFAULT_OUT = REPO / "audio" / "out"
 MUSIC = REPO / "audio" / "music"
+# Rendered speech, keyed by what determines how it sounds. Arrangement --
+# music, gaps, the order of things -- is assembly, and assembly must never
+# cost an API call for words already spoken once.
+CACHE = REPO / "audio" / "cache"
 
 # Matches the existing catalogue exactly (mono, 44.1 kHz, 128 kbps), so
 # regenerated files drop into S3 without changing the shape of the feed.
@@ -339,8 +343,32 @@ def fingerprint(segments, cast, model):
     return hashlib.sha256(payload.encode()).hexdigest()
 
 
+SPOKEN = {"hits": 0, "misses": 0, "characters": 0}
+
+
+def speech_key(text, voice_id, settings, model):
+    """Everything that decides how a line sounds, and nothing that does not."""
+    payload = json.dumps(
+        {"text": text, "voice": voice_id, "settings": settings, "model": model},
+        sort_keys=True,
+    )
+    return hashlib.sha256(payload.encode()).hexdigest()
+
+
 def synthesise(client, text, voice_id, settings, model):
-    """Render one segment to mp3 bytes."""
+    """
+    Render one segment to mp3 bytes, reusing the recording if these exact
+    words have been spoken by this voice at these settings before.
+
+    Adding music to a finished month used to re-synthesise every word in it,
+    because the day's fingerprint covers arrangement as well as speech. The
+    cache separates the two: rearranging is free, and only genuinely new words
+    reach the API.
+    """
+    cached = CACHE / f"{speech_key(text, voice_id, settings, model)}.mp3"
+    if cached.exists():
+        SPOKEN["hits"] += 1
+        return cached.read_bytes()
     stream = client.text_to_speech.convert(
         voice_id=voice_id,
         text=text,
@@ -348,7 +376,12 @@ def synthesise(client, text, voice_id, settings, model):
         output_format=OUTPUT_FORMAT,
         voice_settings=VoiceSettings(**settings),
     )
-    return b"".join(stream)
+    audio = b"".join(stream)
+    CACHE.mkdir(parents=True, exist_ok=True)
+    cached.write_bytes(audio)
+    SPOKEN["misses"] += 1
+    SPOKEN["characters"] += len(text)
+    return audio
 
 
 def ffmpeg(args):
@@ -619,8 +652,23 @@ def main():
                 if segment.role == "music":
                     continue
                 tally[segment.role] = tally.get(segment.role, 0) + len(segment.text)
+        cached = sum(
+            len(s.text)
+            for m, d in days
+            for s in segments_for(
+                apply_overrides(
+                    load_json(CONTENT / m / d / "data.json"), m, d, overrides
+                ),
+                lambda run: respondent_for(m, d, cast["respondents"], run),
+                cast.get("music"),
+            )
+            if s.role != "music"
+            and (CACHE / f"{speech_key(s.text, cast['voices'][s.role], cast['settings'], cast['model'])}.mp3").exists()
+        )
+        due = total - cached
         print(f"{len(days)} days, {total:,} characters")
-        print(f"estimated cost: ${total / 1000 * 0.10:,.2f} at $0.10/1k")
+        print(f"already recorded: {cached:,}   to synthesise: {due:,}")
+        print(f"estimated cost: ${due / 1000 * 0.10:,.2f} at $0.10/1k")
         for role, count in sorted(tally.items(), key=lambda kv: -kv[1]):
             print(f"  {role:<12} {count:>7,} chars")
         return
@@ -656,6 +704,8 @@ def main():
             print(f"  {problem}", flush=True)
         return 1
     print(f"\nall {len(days)} days rendered and verified.", flush=True)
+    print(f"speech: {SPOKEN['hits']} reused, {SPOKEN['misses']} newly recorded "
+          f"({SPOKEN['characters']:,} characters billed)", flush=True)
     return 0
 
 

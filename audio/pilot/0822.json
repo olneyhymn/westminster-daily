@@ -1,5 +1,5 @@
 {
-  "fingerprint": "995a05e57fffc07082380f7472d70ee61353a48d6d3dc1d7f12562c1f7565a9a",
+  "fingerprint": "74824108cbbff2b5e5786535586fafb02daca4900ebf1005b0ee5ec2b6936a19",
   "respondent": [
     "respondent_b",
     "respondent_c"
@@ -7,6 +7,10 @@
   "model": "eleven_multilingual_v2",
   "characters": 1262,
   "segments": [
+    {
+      "role": "music",
+      "text": "organ-intro"
+    },
     {
       "role": "catechist",
       "text": "Shorter Catechism seventy-seven"
@@ -18,6 +22,10 @@
     {
       "role": "respondent_b",
       "text": "The ninth commandment requireth the maintaining and promoting of truth between man and man, and of our own and our neighbor's good name, especially in witness bearing."
+    },
+    {
+      "role": "music",
+      "text": "organ-seam"
     },
     {
       "role": "catechist",
