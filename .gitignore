@@ -18,3 +18,7 @@ print/westminster-daily.pdf
 print/westminster-daily.typ
 worker/.dev.vars
 content-reference/
+
+# Generated audio: renders live in S3, not in the repo
+audio/out/
+audio/bakeoff/
