@@ -1,0 +1,24 @@
+{
+  "fingerprint": "b78baf623386df314c7d785908c513baf066597e9624263247af45754351d990",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 433,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-seven, paragraph three"
+    },
+    {
+      "role": "confessor",
+      "text": "The grace which is exhibited in or by the sacraments rightly used, is not conferred by any power in them;"
+    },
+    {
+      "role": "confessor",
+      "text": "neither doth the efficacy of a sacrament depend upon the piety or intention of him that doth administer it:"
+    },
+    {
+      "role": "confessor",
+      "text": "but upon the work of the Spirit, and the word of institution, which contains, together with a precept authorizing the use thereof, a promise of benefit to worthy receivers."
+    }
+  ]
+}

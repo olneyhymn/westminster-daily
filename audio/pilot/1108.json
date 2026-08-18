@@ -1,0 +1,20 @@
+{
+  "fingerprint": "dda1713efcb42357b9e78ca74617af34f12528643ebd718266e4b448ea316791",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 209,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and fifty-eight"
+    },
+    {
+      "role": "catechist",
+      "text": "By whom is the Word of God to be preached"
+    },
+    {
+      "role": "reader",
+      "text": "The Word of God is to be preached only by such as are sufficiently gifted, and also duly approved and called to that office."
+    }
+  ]
+}

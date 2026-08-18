@@ -1,0 +1,40 @@
+{
+  "fingerprint": "5ceae972e7b893a6340332605ec5239c7b3bd7d86d0f43871036fb6feb133d78",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 672,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and sixty-one"
+    },
+    {
+      "role": "catechist",
+      "text": "How do the sacraments become effectual means of salvation"
+    },
+    {
+      "role": "reader",
+      "text": "The sacraments become effectual means of salvation, not by any power in themselves, or any virtue derived from the piety or intention of him by whom they are administered,"
+    },
+    {
+      "role": "reader",
+      "text": "but only by the working of the Holy Ghost, and the blessing of Christ, by whom they are instituted."
+    },
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism ninety-one"
+    },
+    {
+      "role": "catechist",
+      "text": "How do the sacraments become effectual means of salvation"
+    },
+    {
+      "role": "reader",
+      "text": "The sacraments become effectual means of salvation, not from any virtue in them, or in him that doth administer them;"
+    },
+    {
+      "role": "reader",
+      "text": "but only by the blessing of Christ, and the working of his Spirit in them that by faith receive them."
+    }
+  ]
+}

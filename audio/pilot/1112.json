@@ -1,0 +1,40 @@
+{
+  "fingerprint": "a9e0d5fbbf6c216a5bbb0241fd54bf170a6b0ed06bcddfe2d648db1f1234bbc9",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 672,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism ninety-two"
+    },
+    {
+      "role": "catechist",
+      "text": "What is a sacrament"
+    },
+    {
+      "role": "reader",
+      "text": "A sacrament is a holy ordinance instituted by Christ; wherein by sensible signs, Christ, and the benefits of the new covenant, are represented, sealed, and applied to believers."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and sixty-two"
+    },
+    {
+      "role": "catechist",
+      "text": "What is a sacrament"
+    },
+    {
+      "role": "reader",
+      "text": "A sacrament is an holy ordinance instituted by Christ in his church, to signify, seal, and exhibit unto those that are within the covenant of grace, the benefits of his mediation;"
+    },
+    {
+      "role": "reader",
+      "text": "to strengthen and increase their faith, and all other graces; to oblige them to obedience; to testify and cherish their love and communion one with another;"
+    },
+    {
+      "role": "reader",
+      "text": "and to distinguish them from those that are without."
+    }
+  ]
+}

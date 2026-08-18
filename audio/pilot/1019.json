@@ -1,0 +1,32 @@
+{
+  "fingerprint": "f1e6610b62510ebcd8c6cf5e5027cbd6938007a503846244abb3464f41dd3085",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 481,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-five, paragraph one"
+    },
+    {
+      "role": "confessor",
+      "text": "The catholic or universal church, which is invisible, consists of the whole number of the elect, that have been, are, or shall be gathered into one, under Christ the Head thereof;"
+    },
+    {
+      "role": "confessor",
+      "text": "and is the spouse, the body, the fullness of him that filleth all in all."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism sixty-four"
+    },
+    {
+      "role": "catechist",
+      "text": "What is the invisible church"
+    },
+    {
+      "role": "reader",
+      "text": "The invisible church is the whole number of the elect, that have been, are, or shall be gathered into one under Christ the head."
+    }
+  ]
+}

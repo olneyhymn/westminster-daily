@@ -1,0 +1,24 @@
+{
+  "fingerprint": "e9cc86a30e426696c600a46393097727093a279a26825522484d64525330f9b4",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 349,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and fifty-six"
+    },
+    {
+      "role": "catechist",
+      "text": "Is the Word of God to be read by all"
+    },
+    {
+      "role": "reader",
+      "text": "Although all are not to be permitted to read the Word publicly to the congregation, yet all sorts of people are bound to read it apart by themselves, and with their families:"
+    },
+    {
+      "role": "reader",
+      "text": "to which end, the Holy Scriptures are to be translated out of the original into vulgar languages."
+    }
+  ]
+}

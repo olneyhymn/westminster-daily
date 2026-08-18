@@ -1,0 +1,40 @@
+{
+  "fingerprint": "dda797dbb90f10e5fcba98baa11d0287802057fabf0a5c4b98fabc05ee9f3ec1",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 712,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism eighty-eight"
+    },
+    {
+      "role": "catechist",
+      "text": "What are the outward and ordinary means whereby Christ communicateth to us the benefits of redemption"
+    },
+    {
+      "role": "reader",
+      "text": "The outward and ordinary means whereby Christ communicateth to us the benefits of redemption are, his ordinances, especially the Word, sacraments, and prayer;"
+    },
+    {
+      "role": "reader",
+      "text": "all which are made effectual to the elect for salvation."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and fifty-four"
+    },
+    {
+      "role": "catechist",
+      "text": "What are the outward means whereby Christ communicates to us the benefits of his mediation"
+    },
+    {
+      "role": "reader",
+      "text": "The outward and ordinary means whereby Christ communicates to his church the benefits of his mediation, are all his ordinances; especially the Word, sacraments, and prayer;"
+    },
+    {
+      "role": "reader",
+      "text": "all which are made effectual to the elect for their salvation."
+    }
+  ]
+}

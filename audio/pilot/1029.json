@@ -1,0 +1,28 @@
+{
+  "fingerprint": "f80bdc24397be1c3266af14faac72db0dca3a22a243ef974530655b103931eb4",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 362,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism sixty-nine"
+    },
+    {
+      "role": "catechist",
+      "text": "What is the communion in grace which the members of the invisible church have with Christ"
+    },
+    {
+      "role": "reader",
+      "text": "The communion in grace which the members of the invisible church have with Christ, is their partaking of the virtue of his mediation, in their justification, adoption,"
+    },
+    {
+      "role": "reader",
+      "text": "sanctification,"
+    },
+    {
+      "role": "reader",
+      "text": "and whatever else, in this life, manifests their union with him."
+    }
+  ]
+}

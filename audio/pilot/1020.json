@@ -1,0 +1,20 @@
+{
+  "fingerprint": "1a61db85ad38396ff75e41853d43c57d540dc872b10184f8cd74f5bd79e0fef9",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 203,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism sixty-five"
+    },
+    {
+      "role": "catechist",
+      "text": "What special benefits do the members of the invisible church enjoy by Christ"
+    },
+    {
+      "role": "reader",
+      "text": "The members of the invisible church by Christ enjoy union and communion with him in grace and glory."
+    }
+  ]
+}

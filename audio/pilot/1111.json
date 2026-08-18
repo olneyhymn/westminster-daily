@@ -1,0 +1,24 @@
+{
+  "fingerprint": "fe4393f9406981138141848007b73ece58dae5aff66269370bd901db290e88f1",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 403,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-seven, paragraph one"
+    },
+    {
+      "role": "confessor",
+      "text": "Sacraments are holy signs and seals of the covenant of grace, immediately instituted by God, to represent Christ, and his benefits; and to confirm our interest in him:"
+    },
+    {
+      "role": "confessor",
+      "text": "as also, to put a visible difference between those that belong unto the church, and the rest of the world;"
+    },
+    {
+      "role": "confessor",
+      "text": "and solemnly to engage them to the service of God in Christ, according to his Word."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "fingerprint": "7461b555a975817c96b81b5aebc05648456f08290f5f940fdb97f6fd863400eb",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 851,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-five, paragraph three"
+    },
+    {
+      "role": "confessor",
+      "text": "Unto this catholic visible church Christ hath given the ministry, oracles,"
+    },
+    {
+      "role": "confessor",
+      "text": "and ordinances of God, for the gathering and perfecting of the saints, in this life, to the end of the world:"
+    },
+    {
+      "role": "confessor",
+      "text": "and doth, by his own presence and Spirit, according to his promise, make them effectual thereunto."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism sixty-three"
+    },
+    {
+      "role": "catechist",
+      "text": "What are the special privileges of the visible church"
+    },
+    {
+      "role": "reader",
+      "text": "The visible church hath the privilege of being under God's special care and government; of being protected and preserved in all ages, notwithstanding the opposition of all enemies;"
+    },
+    {
+      "role": "reader",
+      "text": "and of enjoying the communion of saints, the ordinary means of salvation, and offers of grace by Christ to all the members of it in the ministry of the gospel, testifying,"
+    },
+    {
+      "role": "reader",
+      "text": "that whosoever believes in him shall be saved, and excluding none that will come unto him."
+    }
+  ]
+}

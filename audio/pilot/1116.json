@@ -1,0 +1,20 @@
+{
+  "fingerprint": "8c238f14e9b414aeeb6f21e511aa46f52a2e1024f3de1a0c126c4f2808808de6",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 262,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-seven, paragraph four"
+    },
+    {
+      "role": "confessor",
+      "text": "There be only two sacraments ordained by Christ our Lord in the Gospel; that is to say, baptism, and the Supper of the Lord:"
+    },
+    {
+      "role": "confessor",
+      "text": "neither of which may be dispensed by any, but by a minister of the Word lawfully ordained."
+    }
+  ]
+}

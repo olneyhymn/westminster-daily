@@ -1,0 +1,24 @@
+{
+  "fingerprint": "4cc5a3fd70cd05e40d11834dd1605469a851e01dfbd518bbf44567fc6dab8db9",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 519,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-four, paragraph six"
+    },
+    {
+      "role": "confessor",
+      "text": "Although the corruption of man be such as is apt to study arguments unduly to put asunder those whom God hath joined together in marriage:"
+    },
+    {
+      "role": "confessor",
+      "text": "yet, nothing but adultery, or such willful desertion as can no way be remedied by the church, or civil magistrate, is cause sufficient of dissolving the bond of marriage:"
+    },
+    {
+      "role": "confessor",
+      "text": "wherein, a public and orderly course of proceeding is to be observed; and the persons concerned in it not left to their own wills, and discretion, in their own case."
+    }
+  ]
+}

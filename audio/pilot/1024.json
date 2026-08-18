@@ -1,0 +1,32 @@
+{
+  "fingerprint": "308ae5c0b20f794f652a6f2cb3cbec6ef77717437fb4a23291f33dde1180c609",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 521,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-five, paragraph five"
+    },
+    {
+      "role": "confessor",
+      "text": "The purest churches under heaven are subject both to mixture and error; and some have so degenerated, as to become no churches of Christ, but synagogues of Satan."
+    },
+    {
+      "role": "confessor",
+      "text": "Nevertheless, there shall be always a church on earth, to worship God according to his will."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism sixty-one"
+    },
+    {
+      "role": "catechist",
+      "text": "Are all they saved who hear the gospel, and live in the church"
+    },
+    {
+      "role": "reader",
+      "text": "All that hear the gospel, and live in the visible church, are not saved; but they only who are true members of the church invisible."
+    }
+  ]
+}

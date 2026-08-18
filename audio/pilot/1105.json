@@ -1,0 +1,44 @@
+{
+  "fingerprint": "651737b2beeadc722798cdab96ece7e5086617e06455c63925c39f4ac48ee78b",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 823,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism eighty-nine"
+    },
+    {
+      "role": "catechist",
+      "text": "How is the word made effectual to salvation"
+    },
+    {
+      "role": "reader",
+      "text": "The Spirit of God maketh the reading, but especially the preaching, of the Word, an effectual means of convincing and converting sinners,"
+    },
+    {
+      "role": "reader",
+      "text": "and of building them up in holiness and comfort, through faith, unto salvation."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and fifty-five"
+    },
+    {
+      "role": "catechist",
+      "text": "How is the Word made effectual to salvation"
+    },
+    {
+      "role": "reader",
+      "text": "The Spirit of God maketh the reading, but especially the preaching of the Word, an effectual means of enlightening, convincing, and humbling sinners;"
+    },
+    {
+      "role": "reader",
+      "text": "of driving them out of themselves, and drawing them unto Christ; of conforming them to his image, and subduing them to his will;"
+    },
+    {
+      "role": "reader",
+      "text": "of strengthening them against temptations and corruptions; of building them up in grace, and establishing their hearts in holiness and comfort through faith unto salvation."
+    }
+  ]
+}

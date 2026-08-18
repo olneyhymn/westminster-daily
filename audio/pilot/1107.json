@@ -1,0 +1,48 @@
+{
+  "fingerprint": "bf8f30c594c94a9906df5e1b70726d4cec48ca18dc65c1f87646b3c25525efba",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 754,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism ninety"
+    },
+    {
+      "role": "catechist",
+      "text": "How is the word to be read and heard, that it may become effectual to salvation"
+    },
+    {
+      "role": "reader",
+      "text": "That the Word may become effectual to salvation, we must attend thereunto with diligence, preparation, and prayer;"
+    },
+    {
+      "role": "reader",
+      "text": "receive it with faith and love, lay it up in our hearts, and practice it in our lives."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and fifty-seven"
+    },
+    {
+      "role": "catechist",
+      "text": "How is the Word of God to be read"
+    },
+    {
+      "role": "reader",
+      "text": "The Holy Scriptures are to be read with an high and reverent esteem of them;"
+    },
+    {
+      "role": "reader",
+      "text": "with a firm persuasion that they are the very Word of God, and that he only can enable us to understand them;"
+    },
+    {
+      "role": "reader",
+      "text": "with desire to know, believe, and obey the will of God revealed in them; with diligence, and attention to the matter and scope of them;"
+    },
+    {
+      "role": "reader",
+      "text": "with meditation, application, self-denial, and prayer."
+    }
+  ]
+}

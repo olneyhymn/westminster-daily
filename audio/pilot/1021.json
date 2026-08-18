@@ -1,0 +1,40 @@
+{
+  "fingerprint": "8290043e2eb021133b3556559017874c54cf120d0113f0d73d301ae8b13a5a1a",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 597,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-five, paragraph two"
+    },
+    {
+      "role": "confessor",
+      "text": "The visible church,"
+    },
+    {
+      "role": "confessor",
+      "text": "which is also catholic or universal under the gospel (not confined to one nation, as before under the law),"
+    },
+    {
+      "role": "confessor",
+      "text": "consists of all those throughout the world that profess the true religion;"
+    },
+    {
+      "role": "confessor",
+      "text": "and of their children: and is the kingdom of the Lord Jesus Christ, the house and family of God, out of which there is no ordinary possibility of salvation."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism sixty-two"
+    },
+    {
+      "role": "catechist",
+      "text": "What is the visible church"
+    },
+    {
+      "role": "reader",
+      "text": "The visible church is a society made up of all such as in all ages and places of the world do profess the true religion, and of their children."
+    }
+  ]
+}

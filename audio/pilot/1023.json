@@ -1,0 +1,24 @@
+{
+  "fingerprint": "babc928c111d49600ae61094224cbf1d4bb50aed78336c87872112d4dd0b34ce",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 337,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-five, paragraph four"
+    },
+    {
+      "role": "confessor",
+      "text": "This catholic church hath been sometimes more, sometimes less visible."
+    },
+    {
+      "role": "confessor",
+      "text": "And particular churches, which are members thereof, are more or less pure, according as the doctrine of the gospel is taught and embraced, ordinances administered,"
+    },
+    {
+      "role": "confessor",
+      "text": "and public worship performed more or less purely in them."
+    }
+  ]
+}

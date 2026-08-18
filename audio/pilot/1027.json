@@ -1,0 +1,28 @@
+{
+  "fingerprint": "f16812dff27f3b447feba506082cccc2bee6690e3da251b718dc189a75d8e5ba",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 468,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-six, paragraph two"
+    },
+    {
+      "role": "confessor",
+      "text": "Saints by profession are bound to maintain an holy fellowship and communion in the worship of God,"
+    },
+    {
+      "role": "confessor",
+      "text": "and in performing such other spiritual services as tend to their mutual edification;"
+    },
+    {
+      "role": "confessor",
+      "text": "as also in relieving each other in outward things, according to their several abilities and necessities."
+    },
+    {
+      "role": "confessor",
+      "text": "Which communion, as God offereth opportunity, is to be extended unto all those who, in every place, call upon the name of the Lord Jesus."
+    }
+  ]
+}

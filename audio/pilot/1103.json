@@ -1,0 +1,40 @@
+{
+  "fingerprint": "2c3b628f0c1b17785ec5b8c2d4112146aea228c7685e221ffd39e45bb1054dd8",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 792,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism eighty-five"
+    },
+    {
+      "role": "catechist",
+      "text": "What doth God require of us that we may escape his wrath and curse due to us for sin"
+    },
+    {
+      "role": "reader",
+      "text": "To escape the wrath and curse of God, due to us for sin, God requireth of us faith in Jesus Christ, repentance unto life,"
+    },
+    {
+      "role": "reader",
+      "text": "with the diligent use of all the outward means whereby Christ communicateth to us the benefits of redemption."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and fifty-three"
+    },
+    {
+      "role": "catechist",
+      "text": "What doth God require of us, that we may escape his wrath and curse due to us by reason of the transgression of the law"
+    },
+    {
+      "role": "reader",
+      "text": "That we may escape the wrath and curse of God due to us by reason of the transgression of the law, he requireth of us repentance toward God, and faith toward our Lord Jesus Christ,"
+    },
+    {
+      "role": "reader",
+      "text": "and the diligent use of the outward means whereby Christ communicates to us the benefits of his mediation."
+    }
+  ]
+}

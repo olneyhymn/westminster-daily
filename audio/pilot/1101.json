@@ -1,0 +1,52 @@
+{
+  "fingerprint": "ef0a5de1a676323616e63c16dbdb89fc85897d0d7615a1b154ce484e16ffc022",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1108,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism thirty-seven"
+    },
+    {
+      "role": "catechist",
+      "text": "What benefits do believers receive from Christ at death"
+    },
+    {
+      "role": "reader",
+      "text": "The souls of believers are at their death made perfect in holiness, and do immediately pass into glory;"
+    },
+    {
+      "role": "reader",
+      "text": "and their bodies, being still united to Christ, do rest in their graves, till the resurrection."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism eighty-six"
+    },
+    {
+      "role": "catechist",
+      "text": "What is the communion in glory with Christ, which the members of the invisible church enjoy immediately after death"
+    },
+    {
+      "role": "reader",
+      "text": "The communion in glory with Christ, which the members of the invisible church enjoy immediately after death, is, in that their souls are then made perfect in holiness,"
+    },
+    {
+      "role": "reader",
+      "text": "and received into the highest heavens, where they behold the face of God in light and glory, waiting for the full redemption of their bodies,"
+    },
+    {
+      "role": "reader",
+      "text": "which even in death continue united to Christ, and rest in their graves as in their beds, till at the last day they be again united to their souls."
+    },
+    {
+      "role": "reader",
+      "text": "Whereas the souls of the wicked are at their death cast into hell, where they remain in torments and utter darkness,"
+    },
+    {
+      "role": "reader",
+      "text": "and their bodies kept in their graves, as in their prisons, till the resurrection and judgment of the great day."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "fingerprint": "f6baa6a72e62cec66ef055ea565f8885da7d843522cd6bc40c7e6cabf6dca8d5",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 504,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-seven, paragraph two"
+    },
+    {
+      "role": "confessor",
+      "text": "There is, in every sacrament, a spiritual relation, or sacramental union, between the sign and the thing signified:"
+    },
+    {
+      "role": "confessor",
+      "text": "whence it comes to pass, that the names and effects of the one are attributed to the other."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and sixty-three"
+    },
+    {
+      "role": "catechist",
+      "text": "What are the parts of a sacrament"
+    },
+    {
+      "role": "reader",
+      "text": "The parts of a sacrament are two; the one an outward and sensible sign, used according to Christ's own appointment; the other an inward and spiritual grace thereby signified."
+    }
+  ]
+}

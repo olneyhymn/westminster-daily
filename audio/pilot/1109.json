@@ -1,0 +1,32 @@
+{
+  "fingerprint": "2a9e5039dd0a222ffa723ea810b9ea3b3756927faaa6b745e3ccd7be7cb15157",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 619,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism one hundred and fifty-nine"
+    },
+    {
+      "role": "catechist",
+      "text": "How is the Word of God to be preached by those that are called thereunto"
+    },
+    {
+      "role": "reader",
+      "text": "They that are called to labor in the ministry of the Word, are to preach sound doctrine, diligently, in season and out of season;"
+    },
+    {
+      "role": "reader",
+      "text": "plainly, not in the enticing words of man's wisdom, but in demonstration of the Spirit, and of power; faithfully, making known the whole counsel of God;"
+    },
+    {
+      "role": "reader",
+      "text": "wisely, applying themselves to the necessities and capacities of the hearers; zealously, with fervent love to God and the souls of his people;"
+    },
+    {
+      "role": "reader",
+      "text": "sincerely, aiming at his glory, and their conversion, edification, and salvation."
+    }
+  ]
+}

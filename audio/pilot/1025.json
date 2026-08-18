@@ -1,0 +1,16 @@
+{
+  "fingerprint": "bcda570bde8f19a4d0638ae69eae3e8411ab69429f6e0ec7cde3cb2181f47832",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 166,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-five, paragraph six"
+    },
+    {
+      "role": "confessor",
+      "text": "There is no other head of the church but the Lord Jesus Christ. Nor can the pope of Rome, in any sense, be head thereof."
+    }
+  ]
+}

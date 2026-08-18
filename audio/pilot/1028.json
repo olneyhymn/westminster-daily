@@ -1,0 +1,24 @@
+{
+  "fingerprint": "c2bf47593e1908445368399080d9dc72d2add2c0cf9366b2ff6fd11e00d61b9c",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 415,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Confession of Faith twenty-six, paragraph three"
+    },
+    {
+      "role": "confessor",
+      "text": "This communion which the saints have with Christ, doth not make them in any wise partakers of the substance of his Godhead; or to be equal with Christ in any respect:"
+    },
+    {
+      "role": "confessor",
+      "text": "either of which to affirm is impious and blasphemous."
+    },
+    {
+      "role": "confessor",
+      "text": "Nor doth their communion one with another, as saints, take away, or infringe the title or propriety which each man hath in his goods and possessions."
+    }
+  ]
+}

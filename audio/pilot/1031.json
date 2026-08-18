@@ -1,0 +1,52 @@
+{
+  "fingerprint": "997206e5e8a8e64a3c296f644b62286b3e89d199c8b5f562d5090a5990ec4252",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 1045,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Shorter Catechism thirty-six"
+    },
+    {
+      "role": "catechist",
+      "text": "What are the benefits which in this life do accompany or flow from justification, adoption and sanctification"
+    },
+    {
+      "role": "reader",
+      "text": "The benefits which in this life do accompany or flow from justification, adoption,"
+    },
+    {
+      "role": "reader",
+      "text": "and sanctification, are, assurance of God's love, peace of conscience, joy in the Holy Ghost, increase of grace, and perseverance therein to the end."
+    },
+    {
+      "role": "catechist",
+      "text": "Larger Catechism eighty-three"
+    },
+    {
+      "role": "catechist",
+      "text": "What is the communion in glory with Christ which the members of the invisible church enjoy in this life"
+    },
+    {
+      "role": "reader",
+      "text": "The members of the invisible church have communicated to them in this life the firstfruits of glory with Christ, as they are members of him their head,"
+    },
+    {
+      "role": "reader",
+      "text": "and so in him are interested in that glory which he is fully possessed of;"
+    },
+    {
+      "role": "reader",
+      "text": "and, as an earnest thereof, enjoy the sense of God's love, peace of conscience, joy in the Holy Ghost, and hope of glory;"
+    },
+    {
+      "role": "reader",
+      "text": "as, on the contrary, sense of God's revenging wrath, horror of conscience,"
+    },
+    {
+      "role": "reader",
+      "text": "and a fearful expectation of judgment, are to the wicked the beginning of their torments which they shall endure after death."
+    }
+  ]
+}

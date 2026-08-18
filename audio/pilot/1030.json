@@ -1,0 +1,24 @@
+{
+  "fingerprint": "80bc4b9d89957d240b086797c443e61a0880ba17acfff057cec01f26a06827d0",
+  "respondent": [],
+  "model": "eleven_multilingual_v2",
+  "characters": 302,
+  "segments": [
+    {
+      "role": "catechist",
+      "text": "Larger Catechism eighty-two"
+    },
+    {
+      "role": "catechist",
+      "text": "What is the communion in glory which the members of the invisible church have with Christ"
+    },
+    {
+      "role": "reader",
+      "text": "The communion in glory which the members of the invisible church have with Christ, is in this life, immediately after death,"
+    },
+    {
+      "role": "reader",
+      "text": "and at last perfected at the resurrection and day of judgment."
+    }
+  ]
+}

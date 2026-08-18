@@ -117,7 +117,20 @@ CLOSING_SILENCE = 4.0
 # granularity, not tempo.
 MAX_UNBROKEN = 180
 GAP_WITHIN_SECTION = 0.35
-CLAUSE_RE = re.compile(r"(?<=[;.])\s+")
+# Where a reader would stop, in descending order of strength. Punctuation
+# alone is not enough: these sentences hang subordinate clauses on "which",
+# "whereby", "yet so as", and a break taken only at a semicolon can run two
+# clauses together and leave the listener hunting for the main verb. The
+# connectives stay with the clause they open, and the comma stays with the
+# clause it closes, so each piece is still a sentence-shaped thing.
+CLAUSE_RE = re.compile(r"(?<=[;.:])\s+")
+SENSE_RE = re.compile(
+    r"(?<=,)\s+(?=(?:and|or|but|nor|yet|that|which|whereby|wherein|whereunto|"
+    r"whereof|whereupon|because|although|though|unless|so as|so that|"
+    r"according to|in that|not only|together with|as also)\b)",
+    re.IGNORECASE,
+)
+COMMA_RE = re.compile(r"(?<=,)\s+")
 
 
 @dataclass(frozen=True)
@@ -183,25 +196,43 @@ def apply_overrides(data, month, day, overrides):
     return data
 
 
-def clauses(text, limit=MAX_UNBROKEN):
-    """
-    Group a long reading into breath-sized pieces, splitting only at the
-    punctuation an editor already placed. Clauses are packed up to the limit
-    rather than emitted one per piece, so a run of short items still reads as
-    a list instead of a series of announcements.
-    """
-    if len(text) <= limit:
-        return [text]
+def pack(pieces, limit):
+    """Fill up to the limit rather than emitting one piece at a time."""
     grouped, buffer = [], ""
-    for clause in CLAUSE_RE.split(text):
-        if buffer and len(buffer) + len(clause) + 1 > limit:
+    for piece in pieces:
+        if buffer and len(buffer) + len(piece) + 1 > limit:
             grouped.append(buffer)
-            buffer = clause
+            buffer = piece
         else:
-            buffer = f"{buffer} {clause}".strip()
+            buffer = f"{buffer} {piece}".strip()
     if buffer:
         grouped.append(buffer)
     return grouped
+
+
+def clauses(text, limit=MAX_UNBROKEN):
+    """
+    Group a long reading into breath-sized pieces at the places a reader would
+    stop, taking the weakest break that will do the job.
+
+    Splitting on punctuation alone left 306 stretches still over the limit,
+    because a single semicolon can govern a hundred and fifty words of
+    enumeration. So a piece that is still too long is cut again at the
+    connectives that open a subordinate clause, and only then, if it is still
+    too long, at bare commas -- which are dense enough here (one every forty-two
+    characters) that using them first would shred the sentence.
+    """
+    if len(text) <= limit:
+        return [text]
+    pieces = pack(CLAUSE_RE.split(text), limit)
+    for splitter in (SENSE_RE, COMMA_RE):
+        if all(len(p) <= limit for p in pieces):
+            break
+        refined = []
+        for piece in pieces:
+            refined += pack(splitter.split(piece), limit) if len(piece) > limit else [piece]
+        pieces = refined
+    return pieces
 
 
 def breathe(role, text, gap_after):
