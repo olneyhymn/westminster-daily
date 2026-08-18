@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadBucketConfigurationOnly",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetBucketPolicy",
+        "s3:GetBucketAcl",
+        "s3:GetBucketOwnershipControls",
+        "s3:GetBucketPublicAccessBlock",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::www.reformedconfessions.com",
+        "arn:aws:s3:::www.reformedconfessions.com/*"
+      ]
+    }
+  ]
+}
