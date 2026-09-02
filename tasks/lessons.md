@@ -30,3 +30,12 @@ independent agents against the source PDFs caught both. Lessons:
   not the instance (the See/Cf bug affected 19 of 20 multi-ref groups).
 - Check actual data conventions before adopting a policy ("drop See refs" was
   wrong; the existing catechism data carried them).
+
+## 2026-09-02 — Designed artifacts need the design skill first
+Tim pointed out that a bulletin insert PDF should use the available design
+skill. Lessons:
+- For any artifact where visual quality is part of the request, read the
+  relevant design skill before the first design pass, not after a correction.
+- State a compact design plan before rendering: palette, type, layout, and the
+  one visual idea that earns attention.
+- Critique the render against that plan before calling the artifact done.
