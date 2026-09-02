@@ -26,6 +26,7 @@ The site is built using Pandoc and a Makefile. The main commands are:
 * `make og-images`: Regenerate all Open Graph images into `static/images/docs/`
 * `make og-image DATE=03/25`: Regenerate a single Westminster Daily image while iterating on the design
 * `make og-image WEEK=01`: Regenerate a single Heidelberg Weekly image
+* `make bulletin-insert`: Regenerate the half-page Westminster Daily bulletin insert PDF
 * `build/og-review/index.html`: Review dashboard for spot-checking OG edge cases after a build
 
 ### RSS Feed Generation

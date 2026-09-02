@@ -30,3 +30,27 @@ independent agents against the source PDFs caught both. Lessons:
   not the instance (the See/Cf bug affected 19 of 20 multi-ref groups).
 - Check actual data conventions before adopting a policy ("drop See refs" was
   wrong; the existing catechism data carried them).
+
+## 2026-09-02 — Designed artifacts need the design skill first
+Tim pointed out that a bulletin insert PDF should use the available design
+skill. Lessons:
+- For any artifact where visual quality is part of the request, read the
+  relevant design skill before the first design pass, not after a correction.
+- State a compact design plan before rendering: palette, type, layout, and the
+  one visual idea that earns attention.
+- Critique the render against that plan before calling the artifact done.
+- For half-page print inserts, unused space must still connect the sections:
+  the action path belongs near the promise, and supporting details should not
+  read as a detached second document.
+- Treat office-printer reproduction as a design constraint: use clear structure
+  even if pale fills and hairline rules lose contrast.
+- If whitespace remains after a revision, move structural anchors before adding
+  more copy; a footer can turn dead space into intentional bottom margin.
+- Align secondary bullets to the explanatory-text baseline, not to the step
+  headings, when a row mixes primary instructions with secondary use cases.
+- When a designed artifact still feels awkward after direct revisions, get an
+  independent design pass on the rendered output before changing copy or adding
+  elements; ask for concrete hierarchy, spacing, and print-robustness findings.
+- QR panels on editorial print pieces should look typeset into the page:
+  prefer open rules, smaller action headings, and enough scan whitespace over
+  shaded cards that read like pasted-in promotions.
