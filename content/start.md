@@ -66,7 +66,7 @@ Catechisms*.
 
 The plan works well for family worship and for a congregation reading together:
 everyone is on the same page on the same day. If you would like to put it in
-front of your church, [get in touch](https://waitingtables.org/about/) and I will
+front of your church, [send me a note](/westminster-daily/feedback) and I will
 send you something you can hand out.
 
 ## Where the texts come from

@@ -457,6 +457,69 @@ div.esv {
     }
 }
 
+// === Feedback Form ===
+.feedback-form {
+    margin-top: 1.5em;
+    padding-top: 1.2em;
+    border-top: 1px solid $border-light;
+
+    .feedback-form__field {
+        margin-bottom: 1em;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 4px;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 13px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $brown-text;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $dark-brown;
+        background-color: $cream;
+        border: 1px solid $border-light;
+        border-radius: 3px;
+        padding: 8px 10px;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+        outline: 2px solid $gold;
+        outline-offset: 2px;
+    }
+
+    textarea {
+        min-height: 160px;
+        resize: vertical;
+    }
+
+    button {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 16px;
+        color: #fff;
+        background-color: $burgundy;
+        border: none;
+        border-radius: 3px;
+        padding: 8px 20px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #3d1019;
+        }
+    }
+}
+
 // === Collapsible Sections ===
 .collapsible {
     background-color: $cream;
