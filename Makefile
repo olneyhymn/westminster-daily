@@ -84,6 +84,7 @@ redirects: build ## Generate _redirects file for Cloudflare Pages
 	@echo "/static/audio/* https://s3.amazonaws.com/www.reformedconfessions.com/westminster-daily/static/audio/:splat 200" > build/_redirects
 	@echo "/ /westminster-daily/ 200" >> build/_redirects
 	@echo "/about /westminster-daily/about 200" >> build/_redirects
+	@echo "/feedback /westminster-daily/feedback 200" >> build/_redirects
 
 headers: build ## Generate _headers file for Cloudflare Pages
 	@printf "/westminster-daily/feed.rss\n  Content-Type: application/xml; charset=utf-8\n\n" > build/_headers

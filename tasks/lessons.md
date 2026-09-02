@@ -39,3 +39,8 @@ skill. Lessons:
 - State a compact design plan before rendering: palette, type, layout, and the
   one visual idea that earns attention.
 - Critique the render against that plan before calling the artifact done.
+- For half-page print inserts, unused space must still connect the sections:
+  the action path belongs near the promise, and supporting details should not
+  read as a detached second document.
+- Treat office-printer reproduction as a design constraint: use clear structure
+  even if pale fills and hairline rules lose contrast.
