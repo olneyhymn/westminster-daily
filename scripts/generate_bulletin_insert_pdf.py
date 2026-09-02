@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#     "reportlab==4.4.9",
+# ]
+# ///
+
 """Generate a half-page Westminster Daily bulletin insert PDF."""
 
 from __future__ import annotations
@@ -25,14 +32,12 @@ CREAM = "#fffdf7"
 DARK_BROWN = "#2c1810"
 BROWN_TEXT = "#6b5d45"
 BURGUNDY = "#5c1a2a"
-BURGUNDY_DARK = "#3d1019"
 GOLD = "#c4a265"
 BORDER = "#d6cbaf"
 
 SITE_URL = "https://reformedconfessions.com/westminster-daily/"
 START_URL = "https://reformedconfessions.com/westminster-daily/start"
 FEEDBACK_URL = "https://reformedconfessions.com/westminster-daily/feedback"
-EMAIL_URL = "https://buttondown.com/reformedconfessions"
 
 
 def register_fonts() -> dict[str, str]:
@@ -281,7 +286,7 @@ def draw_cut_line(c: canvas.Canvas) -> None:
 def build_pdf(output: Path) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     fonts = register_fonts()
-    c = canvas.Canvas(str(output), pagesize=letter)
+    c = canvas.Canvas(str(output), pagesize=letter, invariant=1)
     c.setTitle("Westminster Daily Bulletin Insert")
     c.setAuthor("Tim Hopper")
     c.setSubject("Half-page bulletin insert for Westminster Daily")

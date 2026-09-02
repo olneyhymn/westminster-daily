@@ -50,6 +50,9 @@ og-images: ## Generate Open Graph images
 og-image: ## Generate one Open Graph image (DATE=03/25 or WEEK=01)
 	node scripts/generate-og-images.mjs $(if $(DATE),--date $(DATE),) $(if $(WEEK),--week $(WEEK),) $(if $(DEFAULT),--default,) $(if $(HEIDELBERG_DEFAULT),--heidelberg-default,)
 
+bulletin-insert: ## Generate the half-page Westminster Daily bulletin insert PDF
+	uv run scripts/generate_bulletin_insert_pdf.py --output static/westminster-daily/bulletin-insert.pdf
+
 build/index.html: build/westminster-daily/index.html ## Create root index.html
 	cp build/westminster-daily/index.html build/index.html
 
