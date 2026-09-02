@@ -44,3 +44,7 @@ skill. Lessons:
   read as a detached second document.
 - Treat office-printer reproduction as a design constraint: use clear structure
   even if pale fills and hairline rules lose contrast.
+- If whitespace remains after a revision, move structural anchors before adding
+  more copy; a footer can turn dead space into intentional bottom margin.
+- Align secondary bullets to the explanatory-text baseline, not to the step
+  headings, when a row mixes primary instructions with secondary use cases.

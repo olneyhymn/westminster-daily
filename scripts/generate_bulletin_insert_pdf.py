@@ -198,11 +198,11 @@ def draw_step(
         c,
         text,
         x + 20,
-        y - 10,
+        y - 14,
         width - 20,
         fonts["body"],
         7.8,
-        9.2,
+        10.6,
         BROWN_TEXT,
     )
 
@@ -220,7 +220,7 @@ def draw_cta_panel(
     c.setLineWidth(0.9)
     c.roundRect(x, y_top - height, width, height, 5, stroke=1, fill=1)
 
-    qr_size = 0.9 * inch
+    qr_size = 0.88 * inch
     qr_x = x + (width - qr_size) / 2
     qr_y = y_top - 0.16 * inch - qr_size
     draw_qr(c, START_URL, qr_x, qr_y, qr_size)
@@ -232,8 +232,8 @@ def draw_cta_panel(
     c.setFont(fonts["body"], 7.4)
     c.drawCentredString(x + width / 2, qr_y - 31, "Scan or visit")
     c.setFont(fonts["bold"], 6.6)
-    c.drawCentredString(x + width / 2, qr_y - 43, "reformedconfessions.com")
-    c.drawCentredString(x + width / 2, qr_y - 53, "/westminster-daily")
+    c.drawCentredString(x + width / 2, qr_y - 43, "reformedconfessions.com/")
+    c.drawCentredString(x + width / 2, qr_y - 53, "westminster-daily")
 
 
 def draw_insert(c: canvas.Canvas, y0: float, fonts: dict[str, str]) -> None:
@@ -257,7 +257,7 @@ def draw_insert(c: canvas.Canvas, y0: float, fonts: dict[str, str]) -> None:
     right = x0 + w - 0.33 * inch
     top = panel_y + h - 0.32 * inch
     cta_w = 1.66 * inch
-    cta_h = 2.05 * inch
+    cta_h = 1.9 * inch
     cta_x = right - cta_w
     cta_top = top + 4
     text_width = 3.72 * inch
@@ -345,20 +345,20 @@ def draw_insert(c: canvas.Canvas, y0: float, fonts: dict[str, str]) -> None:
     c.setFillColor(BURGUNDY)
     c.setFont(fonts["bold"], 9.4)
     c.drawString(right_col_x, section_top, "Use it for")
-    y = section_top - 0.23 * inch
+    y = section_top - 0.5 * inch
     use_cases = [
-        "Private reading",
+        "Personal reading",
         "Family worship",
-        "Reading together as a church",
+        "Reading as a church",
     ]
     for item in use_cases:
         y = draw_bullet(c, item, right_col_x, y, right_col_width, fonts, 7.85, 9.8) - 1.2
 
-    footer_y = panel_y + 0.33 * inch
+    footer_y = panel_y + 0.52 * inch
     draw_rule(c, left, footer_y + 0.19 * inch, right, LIGHT_RULE, 0.65)
     c.setFillColor(BROWN_TEXT)
     c.setFont(fonts["body"], 8.2)
-    c.drawString(left, footer_y, "Free / No advertising")
+    c.drawString(left, footer_y, "Free \u00b7 No advertising")
     c.drawRightString(
         right,
         footer_y,
