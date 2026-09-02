@@ -48,3 +48,9 @@ skill. Lessons:
   more copy; a footer can turn dead space into intentional bottom margin.
 - Align secondary bullets to the explanatory-text baseline, not to the step
   headings, when a row mixes primary instructions with secondary use cases.
+- When a designed artifact still feels awkward after direct revisions, get an
+  independent design pass on the rendered output before changing copy or adding
+  elements; ask for concrete hierarchy, spacing, and print-robustness findings.
+- QR panels on editorial print pieces should look typeset into the page:
+  prefer open rules, smaller action headings, and enough scan whitespace over
+  shaded cards that read like pasted-in promotions.

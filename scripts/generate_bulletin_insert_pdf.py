@@ -142,7 +142,7 @@ def draw_rule(
     y: float,
     x2: float,
     color: str = GOLD,
-    width: float = 0.8,
+    width: float = 0.9,
 ) -> None:
     c.setStrokeColor(color)
     c.setLineWidth(width)
@@ -160,7 +160,7 @@ def draw_bullet(
     leading: float = 12.0,
 ) -> float:
     c.setFillColor(GOLD)
-    c.circle(x + 3, y + 3.5, 2.3, stroke=0, fill=1)
+    c.circle(x + 3, y + 3.5, 2.15, stroke=0, fill=1)
     return draw_wrapped(
         c,
         text,
@@ -185,7 +185,7 @@ def draw_step(
 ) -> None:
     c.setStrokeColor(GOLD)
     c.setFillColor(CREAM)
-    c.setLineWidth(0.8)
+    c.setLineWidth(0.95)
     c.circle(x + 7, y + 5, 8, stroke=1, fill=1)
 
     c.setFillColor(BURGUNDY)
@@ -215,25 +215,24 @@ def draw_cta_panel(
     height: float,
     fonts: dict[str, str],
 ) -> None:
-    c.setFillColor(PARCHMENT)
     c.setStrokeColor(BORDER)
     c.setLineWidth(0.9)
-    c.roundRect(x, y_top - height, width, height, 5, stroke=1, fill=1)
+    c.rect(x, y_top - height, width, height, stroke=1, fill=0)
 
-    qr_size = 0.88 * inch
+    qr_size = 0.86 * inch
     qr_x = x + (width - qr_size) / 2
     qr_y = y_top - 0.16 * inch - qr_size
     draw_qr(c, START_URL, qr_x, qr_y, qr_size)
 
     c.setFillColor(BURGUNDY)
-    c.setFont(fonts["bold"], 12.0)
-    c.drawCentredString(x + width / 2, qr_y - 17, "Start today")
+    c.setFont(fonts["bold"], 10.9)
+    c.drawCentredString(x + width / 2, qr_y - 15, "Start today")
     c.setFillColor(BROWN_TEXT)
-    c.setFont(fonts["body"], 7.4)
-    c.drawCentredString(x + width / 2, qr_y - 31, "Scan or visit")
+    c.setFont(fonts["body"], 7.2)
+    c.drawCentredString(x + width / 2, qr_y - 28, "Scan or visit")
     c.setFont(fonts["bold"], 6.6)
-    c.drawCentredString(x + width / 2, qr_y - 43, "reformedconfessions.com/")
-    c.drawCentredString(x + width / 2, qr_y - 53, "westminster-daily")
+    c.drawCentredString(x + width / 2, qr_y - 40, "reformedconfessions.com/")
+    c.drawCentredString(x + width / 2, qr_y - 50, "westminster-daily")
 
 
 def draw_insert(c: canvas.Canvas, y0: float, fonts: dict[str, str]) -> None:
@@ -245,33 +244,33 @@ def draw_insert(c: canvas.Canvas, y0: float, fonts: dict[str, str]) -> None:
     panel_y = y0 + y_margin
     c.setFillColor(CREAM)
     c.setStrokeColor(BORDER)
-    c.setLineWidth(0.75)
+    c.setLineWidth(0.85)
     c.rect(x0, panel_y, w, h, stroke=1, fill=1)
 
     inset = 0.12 * inch
     c.setStrokeColor(LIGHT_RULE)
-    c.setLineWidth(0.55)
+    c.setLineWidth(0.65)
     c.rect(x0 + inset, panel_y + inset, w - 2 * inset, h - 2 * inset, stroke=1, fill=0)
 
     left = x0 + 0.33 * inch
     right = x0 + w - 0.33 * inch
     top = panel_y + h - 0.32 * inch
     cta_w = 1.66 * inch
-    cta_h = 1.9 * inch
+    cta_h = 1.78 * inch
     cta_x = right - cta_w
     cta_top = top + 4
     text_width = 3.72 * inch
 
     draw_label(c, "Westminster Daily", left, top, fonts["bold"], 12.0)
     c.setFillColor(BURGUNDY)
-    c.setFont(fonts["bold"], 22.2)
-    c.drawString(left, top - 0.35 * inch, "Read the Westminster")
-    c.drawString(left, top - 0.69 * inch, "Standards in a year")
+    c.setFont(fonts["bold"], 21.2)
+    c.drawString(left, top - 0.34 * inch, "Read the Westminster")
+    c.drawString(left, top - 0.67 * inch, "Standards in a year")
 
-    draw_rule(c, left, top - 0.85 * inch, left + 2.18 * inch, GOLD, 1.1)
+    draw_rule(c, left, top - 0.82 * inch, left + 2.18 * inch, GOLD, 1.2)
     draw_cta_panel(c, cta_x, cta_top, cta_w, cta_h, fonts)
 
-    y = top - 1.08 * inch
+    y = top - 1.03 * inch
     y = draw_wrapped(
         c,
         "One short daily reading from the Westminster Confession of Faith, "
@@ -308,8 +307,8 @@ def draw_insert(c: canvas.Canvas, y0: float, fonts: dict[str, str]) -> None:
         BURGUNDY,
     )
 
-    section_top = panel_y + 2.33 * inch
-    draw_rule(c, left, section_top + 0.17 * inch, right, LIGHT_RULE, 0.65)
+    section_top = panel_y + 2.14 * inch
+    draw_rule(c, left, section_top + 0.17 * inch, right, GOLD, 0.8)
 
     steps_width = 4.4 * inch
     step_width = 1.38 * inch
@@ -343,8 +342,8 @@ def draw_insert(c: canvas.Canvas, y0: float, fonts: dict[str, str]) -> None:
     )
 
     c.setFillColor(BURGUNDY)
-    c.setFont(fonts["bold"], 9.4)
-    c.drawString(right_col_x, section_top, "Use it for")
+    c.setFont(fonts["bold"], 8.9)
+    c.drawString(right_col_x, section_top - 0.11 * inch, "Use it for")
     y = section_top - 0.5 * inch
     use_cases = [
         "Personal reading",
@@ -355,14 +354,14 @@ def draw_insert(c: canvas.Canvas, y0: float, fonts: dict[str, str]) -> None:
         y = draw_bullet(c, item, right_col_x, y, right_col_width, fonts, 7.85, 9.8) - 1.2
 
     footer_y = panel_y + 0.52 * inch
-    draw_rule(c, left, footer_y + 0.19 * inch, right, LIGHT_RULE, 0.65)
+    draw_rule(c, left, footer_y + 0.19 * inch, right, GOLD, 0.8)
     c.setFillColor(BROWN_TEXT)
     c.setFont(fonts["body"], 8.2)
     c.drawString(left, footer_y, "Free \u00b7 No advertising")
     c.drawRightString(
         right,
         footer_y,
-        f"Questions: {FEEDBACK_LABEL}",
+        f"Feedback: {FEEDBACK_LABEL}",
     )
 
 
